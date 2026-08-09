@@ -1,5 +1,5 @@
 ---
-timeMs: 577
+timeMs: 181
 exitCode: 0
 ---
 Optional Chaining user?.profile?.email: alice@example.com

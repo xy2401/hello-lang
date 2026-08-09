@@ -1,5 +1,5 @@
 ---
-timeMs: 716
+timeMs: 180
 exitCode: 0
 ---
 Command: Move(x=10, y=20) -> Moving to (10, 20)

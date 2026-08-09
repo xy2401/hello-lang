@@ -1,5 +1,5 @@
 ---
-timeMs: 1996
+timeMs: 790
 exitCode: 0
 ---
 String API Enhancements:

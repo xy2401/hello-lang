@@ -1,5 +1,5 @@
 ---
-timeMs: 2034
+timeMs: 685
 exitCode: 0
 ---
 Pattern Matching for switch with Guard when:

@@ -1,5 +1,5 @@
 ---
-timeMs: 10632
+timeMs: 2916
 exitCode: 0
 ---
 Go 1.18+ Generics Demo:

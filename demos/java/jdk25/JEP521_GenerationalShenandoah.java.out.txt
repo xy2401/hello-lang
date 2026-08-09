@@ -1,5 +1,5 @@
 ---
-timeMs: 1762
+timeMs: 574
 exitCode: 0
 ---
 JEP 521 Generational Shenandoah GC (-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational):

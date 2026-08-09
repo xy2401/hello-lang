@@ -1,5 +1,5 @@
 ---
-timeMs: 910
+timeMs: 184
 exitCode: 0
 ---
 Node.js 14 LTS Version: v14.21.3

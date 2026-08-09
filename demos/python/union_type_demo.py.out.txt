@@ -1,5 +1,5 @@
 ---
-timeMs: 685
+timeMs: 177
 exitCode: 0
 ---
 Union Type Operator int | str:

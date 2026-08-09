@@ -1,5 +1,5 @@
 ---
-timeMs: 1785
+timeMs: 699
 exitCode: 0
 ---
 Deconstructed Record Pattern:

@@ -1,5 +1,5 @@
 ---
-timeMs: 1956
+timeMs: 657
 exitCode: 0
 ---
 SequencedCollection Operations:

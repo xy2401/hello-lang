@@ -1,6 +1,6 @@
 ---
-timeMs: 1870
+timeMs: 644
 exitCode: 0
 ---
 RandomGeneratorFactory (L128X128MixRandom):
-Generated pseudo-random int: 639
+Generated pseudo-random int: 914

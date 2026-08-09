@@ -1,5 +1,5 @@
 ---
-timeMs: 1525
+timeMs: 618
 exitCode: 0
 ---
 Pattern Matching instanceof:

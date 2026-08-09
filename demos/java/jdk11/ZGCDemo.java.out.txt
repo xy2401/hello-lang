@@ -1,5 +1,5 @@
 ---
-timeMs: 1685
+timeMs: 589
 exitCode: 0
 ---
 ZGC Low-Latency Collector:

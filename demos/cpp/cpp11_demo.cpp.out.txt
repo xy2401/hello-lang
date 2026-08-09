@@ -1,5 +1,5 @@
 ---
-timeMs: 1948
+timeMs: 523
 exitCode: 0
 ---
 C++11 Auto & Lambda Demo:

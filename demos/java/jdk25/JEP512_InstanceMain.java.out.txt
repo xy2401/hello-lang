@@ -1,5 +1,5 @@
 ---
-timeMs: 2263
+timeMs: 628
 exitCode: 0
 ---
 JDK 25 Instance Main Method:

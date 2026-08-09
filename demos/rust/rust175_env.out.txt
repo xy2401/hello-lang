@@ -1,5 +1,5 @@
 ---
-timeMs: 715
+timeMs: 181
 exitCode: 0
 ---
 rustc 1.75.0 (82e1608df 2023-12-21)

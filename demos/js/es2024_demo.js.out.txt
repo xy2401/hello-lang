@@ -1,5 +1,5 @@
 ---
-timeMs: 974
+timeMs: 193
 exitCode: 0
 ---
 ES2024 Object.groupBy Fruit Count: 2

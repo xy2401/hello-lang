@@ -1,5 +1,5 @@
 ---
-timeMs: 2445
+timeMs: 700
 exitCode: 0
 ---
 Var in Lambda with Annotations:

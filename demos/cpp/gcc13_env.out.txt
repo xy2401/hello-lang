@@ -1,5 +1,5 @@
 ---
-timeMs: 536
+timeMs: 150
 exitCode: 0
 ---
 gcc (GCC) 13.4.0

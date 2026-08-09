@@ -1,5 +1,5 @@
 ---
-timeMs: 40
+timeMs: 22
 exitCode: 0
 ---
 Kotlin 2.0 Runtime Output:

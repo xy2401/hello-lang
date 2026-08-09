@@ -1,5 +1,5 @@
 ---
-timeMs: 625
+timeMs: 169
 exitCode: 0
 ---
 Rest properties: { b: 2, c: 3 }

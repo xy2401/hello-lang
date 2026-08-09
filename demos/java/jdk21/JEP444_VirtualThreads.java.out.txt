@@ -1,5 +1,5 @@
 ---
-timeMs: 2688
+timeMs: 846
 exitCode: 0
 ---
 VirtualThread Per Task Executor Launched!

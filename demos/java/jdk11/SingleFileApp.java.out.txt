@@ -1,5 +1,5 @@
 ---
-timeMs: 1718
+timeMs: 620
 exitCode: 0
 ---
 Single-File Execution:

@@ -1,5 +1,5 @@
 ---
-timeMs: 556
+timeMs: 180
 exitCode: 0
 ---
 Array.prototype.flat(2): [ 1, 2, 3 ]

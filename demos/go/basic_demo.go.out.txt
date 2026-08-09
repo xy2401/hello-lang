@@ -1,5 +1,5 @@
 ---
-timeMs: 10699
+timeMs: 8912
 exitCode: 0
 ---
 Language: Go

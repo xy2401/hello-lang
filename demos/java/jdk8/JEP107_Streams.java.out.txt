@@ -1,5 +1,5 @@
 ---
-timeMs: 1704
+timeMs: 640
 exitCode: 0
 ---
 Stream Pipeline:

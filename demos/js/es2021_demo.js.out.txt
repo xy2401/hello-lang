@@ -1,5 +1,5 @@
 ---
-timeMs: 647
+timeMs: 186
 exitCode: 0
 ---
 String.prototype.replaceAll: baz-bar-baz

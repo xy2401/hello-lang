@@ -1,5 +1,5 @@
 ---
-timeMs: 1196
+timeMs: 484
 exitCode: 0
 ---
 HashMap Collision Treeification:

@@ -1,5 +1,5 @@
 ---
-timeMs: 2252
+timeMs: 657
 exitCode: 0
 ---
 Record UserRecord[id=101, username=Alice, role=ADMIN]
