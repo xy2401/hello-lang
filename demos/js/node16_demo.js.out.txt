@@ -1,0 +1,7 @@
+---
+timeMs: 865
+exitCode: 0
+---
+Node.js 16 LTS Version: v16.20.2
+V8 9.0 Engine with RegExp Match Indices (.indices / d flag)
+Corepack Package Manager Manager: Enabled

@@ -1,0 +1,7 @@
+---
+timeMs: 610
+exitCode: 0
+---
+Node.js Runtime Version: v20.20.2
+Global fetch & Web Streams: Enabled natively
+Native Test Runner & Permission Model: Ready

@@ -1,0 +1,7 @@
+---
+timeMs: 1179
+exitCode: 0
+---
+C++20 Concepts Demo:
+Add(10, 20) = 30 [Integral]
+Add(3.14, 2.71) = 5.85 [FloatingPoint]

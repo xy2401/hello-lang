@@ -1,0 +1,7 @@
+---
+timeMs: 517
+exitCode: 0
+---
+Formalized F-String Demo:
+f"User: {user['name']!r}, List: {', '.join(['a', 'b'])}"
+Output: User: 'Alice', List: a, b

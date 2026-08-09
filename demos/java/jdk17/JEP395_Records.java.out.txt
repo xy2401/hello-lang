@@ -1,0 +1,7 @@
+---
+timeMs: 2252
+exitCode: 0
+---
+Record UserRecord[id=101, username=Alice, role=ADMIN]
+Equals check: true
+Accessor role(): ADMIN

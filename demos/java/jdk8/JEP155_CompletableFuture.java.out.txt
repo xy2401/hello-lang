@@ -1,0 +1,7 @@
+---
+timeMs: 1622
+exitCode: 0
+---
+CompletableFuture Async Result: finished in 15ms
+LongAdder sum under 100 threads: 1,000,000
+StampedLock Optimistic Read: Success

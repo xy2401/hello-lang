@@ -1,0 +1,9 @@
+---
+timeMs: 1232
+exitCode: 0
+---
+Language: JavaScript
+Status: Active Worker
+Skills: V8 Engine Async/Await ES6+
+Calculated Bonus: $850.0500000000001
+Person Info: Alice (25 years old)

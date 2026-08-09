@@ -1,0 +1,6 @@
+---
+timeMs: 2034
+exitCode: 0
+---
+Pattern Matching for switch with Guard when:
+Long string matched: Hello JDK 21 Switch Pattern

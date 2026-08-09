@@ -1,0 +1,94 @@
+:root {
+  --vp-c-brand-1: #6366f1;
+  --vp-c-brand-2: #818cf8;
+  --vp-c-brand-3: #4f46e5;
+  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+
+  --hw-glow-purple: rgba(168, 85, 247, 0.15);
+  --hw-glow-blue: rgba(59, 130, 246, 0.15);
+  --hw-border-glass: rgba(255, 255, 255, 0.08);
+}
+
+.dark {
+  --vp-c-bg: #090d16;
+  --vp-c-bg-soft: #111827;
+  --vp-c-bg-alt: #0f172a;
+}
+
+/* Glassmorphic card styling */
+.hw-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--hw-border-glass);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.hw-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.15);
+}
+
+/* Version badge styles */
+.hw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hw-badge-lts {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+}
+
+.hw-badge-new {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #ffffff;
+}
+
+.hw-badge-legacy {
+  background: rgba(156, 163, 175, 0.2);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+/* Code runner & console styling */
+.hw-console {
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace;
+  background-color: #030712;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #f3f4f6;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.hw-console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.hw-tag-docker {
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+}

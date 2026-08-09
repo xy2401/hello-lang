@@ -1,0 +1,7 @@
+---
+timeMs: 1785
+exitCode: 0
+---
+Deconstructed Record Pattern:
+Rectangle TopLeft(0,0), BottomRight(100,200)
+Calculated Area = 20000

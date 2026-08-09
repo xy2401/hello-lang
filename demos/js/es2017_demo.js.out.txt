@@ -1,0 +1,6 @@
+---
+timeMs: 615
+exitCode: 0
+---
+Object.entries: [ [ 'a', 1 ], [ 'b', 2 ] ]
+ES2017 Output: Async/Await Data Fetched

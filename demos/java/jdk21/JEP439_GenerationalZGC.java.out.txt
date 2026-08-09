@@ -1,0 +1,7 @@
+---
+timeMs: 1606
+exitCode: 0
+---
+Generational ZGC (-XX:+UseZGC -XX:+ZGenerational):
+Young & Old Generation separated.
+Throughput increased by 40%, pauses remains < 1ms!

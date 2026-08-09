@@ -1,0 +1,7 @@
+---
+timeMs: 1403
+exitCode: 0
+---
+Metaspace JVM Info:
+PermGen Removed -> Native Memory Metaspace Active.
+MaxMetaspaceSize: Unlimited (Native RAM)

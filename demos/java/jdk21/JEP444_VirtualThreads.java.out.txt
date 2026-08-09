@@ -1,0 +1,7 @@
+---
+timeMs: 2688
+exitCode: 0
+---
+VirtualThread Per Task Executor Launched!
+Executing 100,000 Concurrent Virtual Tasks...
+All 100,000 tasks finished in 42ms! Carrier Threads: 8

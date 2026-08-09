@@ -1,0 +1,7 @@
+---
+timeMs: 1718
+exitCode: 0
+---
+Single-File Execution:
+$ java SingleFileApp.java
+Running directly without manual javac!

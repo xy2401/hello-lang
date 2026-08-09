@@ -1,0 +1,9 @@
+---
+timeMs: 3185
+exitCode: 0
+---
+Language: Rust
+Status: Active Worker
+Skills: Ownership Borrow Checker Cargo
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

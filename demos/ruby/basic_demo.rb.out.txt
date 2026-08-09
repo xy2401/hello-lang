@@ -1,0 +1,9 @@
+---
+timeMs: 772
+exitCode: 0
+---
+Language: Ruby
+Status: Active Worker
+Skills: Rails Blocks Metaprogramming
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

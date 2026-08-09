@@ -1,0 +1,7 @@
+---
+timeMs: 577
+exitCode: 0
+---
+Optional Chaining user?.profile?.email: alice@example.com
+Nullish Coalescing null ?? 'default': default
+BigInt 9007199254740991n + 1n: 9007199254740992n

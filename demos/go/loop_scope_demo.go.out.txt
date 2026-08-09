@@ -1,0 +1,9 @@
+---
+timeMs: 10354
+exitCode: 0
+---
+Go 1.22 Loop Var Scope Fix & Range Over Int:
+Goroutine item: a
+Goroutine item: b
+Goroutine item: c
+Range over int 5: 0 1 2 3 4

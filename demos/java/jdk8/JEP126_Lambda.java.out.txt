@@ -1,0 +1,6 @@
+---
+timeMs: 2125
+exitCode: 0
+---
+Lambda Math Operation (10 + 5) = 15
+Filtered names starting with A: [ALICE, ALEX]

@@ -1,0 +1,6 @@
+---
+timeMs: 31
+exitCode: 0
+---
+Hello, C# Developer! Age: 25, Salary: $8500.5
+Skills: LINQ, ASP.NET Core, Entity Framework

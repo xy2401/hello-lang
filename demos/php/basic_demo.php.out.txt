@@ -1,0 +1,9 @@
+---
+timeMs: 850
+exitCode: 0
+---
+Language: PHP
+Status: Active Worker
+Skills: Composer Laravel OpCache
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

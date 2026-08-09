@@ -1,0 +1,7 @@
+---
+timeMs: 2804
+exitCode: 0
+---
+Rust 2018 Async/Await Tokio Runtime:
+Fetched 200 OK response.
+Non-Lexical Lifetimes NLL check: Passed

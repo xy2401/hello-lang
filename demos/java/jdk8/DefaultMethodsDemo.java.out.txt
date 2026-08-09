@@ -1,0 +1,6 @@
+---
+timeMs: 1247
+exitCode: 0
+---
+Brand from default method: Generic Vehicle
+Wheel count from static method: 4

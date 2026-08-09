@@ -1,0 +1,7 @@
+---
+timeMs: 1309
+exitCode: 0
+---
+LocalDate: 2026-08-05
+ZonedDateTime Tokyo: 2026-08-05T17:29:19.272+09:00[Asia/Tokyo]
+Period diff: 12 Years

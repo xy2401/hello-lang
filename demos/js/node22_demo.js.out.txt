@@ -1,0 +1,9 @@
+---
+timeMs: 814
+exitCode: 0
+---
+Node.js 22 LTS Runtime Version: v22.23.2
+Global WebSocket Client: Native Available
+V8 12.4 Maglev SSA JIT Compiler: Active
+Require ESM (--experimental-require-module): Enabled
+Native Array Object.groupBy: [ 'prod', 'dev' ]

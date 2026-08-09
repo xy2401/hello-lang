@@ -1,0 +1,7 @@
+---
+timeMs: 1147
+exitCode: 0
+---
+Nashorn JS Engine Evaluation:
+Executing JS: "Hello from Nashorn Engine"
+JS Result: 42

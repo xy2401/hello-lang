@@ -1,0 +1,7 @@
+---
+timeMs: 740
+exitCode: 0
+---
+Ruby Version: 3.3.12
+YJIT Enabled: false
+User: Alice (ID: 101) -> Full Administrator

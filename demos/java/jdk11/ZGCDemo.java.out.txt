@@ -1,0 +1,7 @@
+---
+timeMs: 1685
+exitCode: 0
+---
+ZGC Low-Latency Collector:
+-XX:+UseZGC enabled.
+Max Pause Time: < 1ms on 128GB heap!

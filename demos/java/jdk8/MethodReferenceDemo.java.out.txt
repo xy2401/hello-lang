@@ -1,0 +1,6 @@
+---
+timeMs: 1595
+exitCode: 0
+---
+Static Method Ref: World
+Sorted via Method Ref: [alice, bob, charlie]

@@ -1,0 +1,6 @@
+---
+timeMs: 40
+exitCode: 0
+---
+Kotlin 2.0 Runtime Output:
+User: Alice (ID: 101) -> Active since 2026-08-05

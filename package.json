@@ -1,0 +1,19 @@
+{
+  "name": "hello-lang",
+  "version": "1.0.0",
+  "description": "全主流编程语言概念、基础语法与版本演进大典 (Multi-Language Concept Explorer & Version Evolution Matrix)",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "collect-outputs": "node scripts/run-docker-demos.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vitepress": "^1.0.0",
+    "vue": "^3.4.0"
+  }
+}

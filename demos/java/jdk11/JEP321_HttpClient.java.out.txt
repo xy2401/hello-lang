@@ -1,0 +1,7 @@
+---
+timeMs: 2871
+exitCode: 0
+---
+HTTP/2 Client Initialized.
+Async GET Request -> Status Code: 200 OK
+Protocol: HTTP/2

@@ -1,0 +1,7 @@
+---
+timeMs: 1704
+exitCode: 0
+---
+Stream Pipeline:
+Parallel Stream Sum: 220
+Collector Map: {EVEN=[2, 4, 6, 8, 10], ODD=[1, 3, 5, 7, 9]}

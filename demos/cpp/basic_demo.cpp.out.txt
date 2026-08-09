@@ -1,0 +1,9 @@
+---
+timeMs: 1850
+exitCode: 0
+---
+Language: C++
+Status: Active Worker
+Skills: RAII Pointers Templates 
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

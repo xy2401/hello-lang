@@ -1,0 +1,7 @@
+---
+timeMs: 1612
+exitCode: 0
+---
+Sealed Class Hierarchy permits Circle, Rectangle:
+Circle Area: 78.53981633974483
+Compiler Exhaustive Switch Check Passed.

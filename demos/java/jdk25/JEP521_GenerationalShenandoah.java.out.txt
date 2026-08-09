@@ -1,0 +1,7 @@
+---
+timeMs: 1762
+exitCode: 0
+---
+JEP 521 Generational Shenandoah GC (-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational):
+Young & Old generation separated for Shenandoah GC.
+Sub-millisecond pause times preserved with +50% throughput!

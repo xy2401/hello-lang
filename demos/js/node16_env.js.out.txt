@@ -1,0 +1,7 @@
+---
+timeMs: 824
+exitCode: 0
+---
+Node.js Version: v16.20.2
+V8 Engine Version: 9.4.146.26-node.26
+Platform Architecture: linux / x64

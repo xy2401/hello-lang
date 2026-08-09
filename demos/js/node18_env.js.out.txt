@@ -1,0 +1,7 @@
+---
+timeMs: 962
+exitCode: 0
+---
+Node.js Version: v18.20.8
+V8 Engine Version: 10.2.154.26-node.39
+Platform Architecture: linux / x64

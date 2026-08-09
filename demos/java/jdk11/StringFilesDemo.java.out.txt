@@ -1,0 +1,9 @@
+---
+timeMs: 1996
+exitCode: 0
+---
+String API Enhancements:
+" ".isBlank(): true
+"A\nB\nC".lines(): [A, B, C]
+"  hello  ".strip(): "hello"
+Files.readString() / writeString(): Success -> Hello JDK 11 Files.writeString

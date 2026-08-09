@@ -1,0 +1,9 @@
+---
+timeMs: 10699
+exitCode: 0
+---
+Language: Go
+Status: Active Worker
+Skills: Goroutines Channels Interfaces
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

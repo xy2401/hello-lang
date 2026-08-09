@@ -1,0 +1,45 @@
+name: Automated Docker Output Collector & Site Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'demos/**'
+      - 'scripts/**'
+      - 'docs/**'
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  collect-and-build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 检出项目代码
+        uses: actions/checkout@v4
+
+      - name: 🟢 配置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 安装依赖
+        run: npm ci || npm install
+
+      - name: 🐳 运行 Docker 代码输出自动化收集
+        run: npm run collect-outputs
+
+      - name: 🏗️ 验证 VitePress 生产构建
+        run: npm run docs:build
+
+      - name: 🚀 自动提交更新后的 demos/ 同级 *.out.txt 到 GitHub
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(auto): update Docker execution *.out.txt files [skip ci]"
+          file_pattern: "demos/**/*.out.txt"

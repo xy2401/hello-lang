@@ -1,0 +1,8 @@
+---
+timeMs: 1956
+exitCode: 0
+---
+SequencedCollection Operations:
+First Element: Alpha
+Last Element: Omega
+Reversed View: [Omega, Gamma, Beta, Alpha]

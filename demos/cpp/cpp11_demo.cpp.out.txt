@@ -1,0 +1,7 @@
+---
+timeMs: 1948
+exitCode: 0
+---
+C++11 Auto & Lambda Demo:
+Calculated Factorial(5) = 120
+Vector elements: 1 2 3 4 5

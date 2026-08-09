@@ -1,0 +1,6 @@
+---
+timeMs: 556
+exitCode: 0
+---
+Array.prototype.flat(2): [ 1, 2, 3 ]
+Object.fromEntries: { name: 'Alice', role: 'Admin' }

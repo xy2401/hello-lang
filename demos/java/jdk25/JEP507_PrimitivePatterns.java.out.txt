@@ -1,0 +1,6 @@
+---
+timeMs: 31
+exitCode: 0
+---
+Primitive Types in Pattern Matching:
+switch(val = 42) -> large int 42

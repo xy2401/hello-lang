@@ -1,0 +1,7 @@
+---
+timeMs: 2445
+exitCode: 0
+---
+Var in Lambda with Annotations:
+BiFunction: (@Deprecated var a, var b) -> a + " " + b
+Result: Hello JDK 11

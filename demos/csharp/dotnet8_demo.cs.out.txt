@@ -1,0 +1,7 @@
+---
+timeMs: 27
+exitCode: 0
+---
+.NET Version: 8.0.2
+User: Alice (Role: Admin) -> Full Access Granted
+Collection Expression count: 5, roles count: 2

@@ -1,0 +1,9 @@
+---
+timeMs: 2449
+exitCode: 0
+---
+Language: Java
+Status: Active Worker
+Skills: OOP Concurrency JVM 
+Calculated Bonus: $850.0500000000001
+Person Info: Alice (25 years old)

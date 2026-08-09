@@ -1,0 +1,7 @@
+---
+timeMs: 1339
+exitCode: 0
+---
+Rust Ownership & Borrowing Demo:
+Borrowed string length: 16
+Mutated string: Hello, Rust 2021 World!

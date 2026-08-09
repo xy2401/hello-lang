@@ -1,0 +1,6 @@
+---
+timeMs: 2263
+exitCode: 0
+---
+JDK 25 Instance Main Method:
+void main() executed directly without public static void main(String[] args)!

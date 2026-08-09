@@ -1,0 +1,8 @@
+---
+timeMs: 10632
+exitCode: 0
+---
+Go 1.18+ Generics Demo:
+Sum Ints: 60
+Sum Floats: 9.99
+Generic Map Keys: ["go", "rust", "java"]

@@ -1,0 +1,6 @@
+---
+timeMs: 1892
+exitCode: 0
+---
+Validated value before super(): 1
+Flexible Constructor Body executed! val = 1

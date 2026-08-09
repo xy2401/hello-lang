@@ -1,0 +1,7 @@
+---
+timeMs: 1196
+exitCode: 0
+---
+HashMap Collision Treeification:
+Inserted 1,000 conflicting keys into bucket.
+Node type: java.util.HashMap$TreeNode (Red-Black Tree O(log n))

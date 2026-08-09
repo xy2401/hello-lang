@@ -1,0 +1,7 @@
+---
+timeMs: 639
+exitCode: 0
+---
+PHP Version: 8.3.33
+User: Alice (ID: 101)
+Status: active -> Server is running normally

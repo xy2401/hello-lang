@@ -1,0 +1,9 @@
+---
+timeMs: 568
+exitCode: 0
+---
+Node.js 20 LTS Runtime Version: v20.20.2
+Native Test Runner (node:test): Available natively
+Permission Model (--experimental-permission): Supported
+Single Executable Applications (SEA): Ready
+Ada 2.0 Fast URL Hostname: example.com Port: 8080

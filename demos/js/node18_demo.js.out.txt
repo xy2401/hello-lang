@@ -1,0 +1,8 @@
+---
+timeMs: 1187
+exitCode: 0
+---
+Node.js 18 LTS Runtime Version: v18.20.8
+Global fetch API: Native Available
+Web Streams ReadableStream: Active
+Blob content: Hello Node.js 18 Blob
