@@ -1,5 +1,5 @@
 ---
-timeMs: 322
+timeMs: 408
 exitCode: 0
 ---
 Rust 2018 Async/Await Tokio Runtime:

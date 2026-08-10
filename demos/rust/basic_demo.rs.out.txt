@@ -1,5 +1,5 @@
 ---
-timeMs: 10518
+timeMs: 7940
 exitCode: 0
 ---
 Language: Rust

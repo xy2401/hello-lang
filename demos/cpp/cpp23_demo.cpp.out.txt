@@ -1,5 +1,5 @@
 ---
-timeMs: 388
+timeMs: 592
 exitCode: 0
 ---
 C++23 std::expected & std::print:

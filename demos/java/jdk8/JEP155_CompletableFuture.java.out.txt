@@ -1,5 +1,5 @@
 ---
-timeMs: 568
+timeMs: 762
 exitCode: 0
 ---
 CompletableFuture Async Result: finished in 15ms

@@ -1,5 +1,5 @@
 ---
-timeMs: 29
+timeMs: 28
 exitCode: 0
 ---
 Primitive Types in Pattern Matching:

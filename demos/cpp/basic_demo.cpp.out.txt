@@ -1,5 +1,5 @@
 ---
-timeMs: 22126
+timeMs: 18401
 exitCode: 0
 ---
 Language: C++

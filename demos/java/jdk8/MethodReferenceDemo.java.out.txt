@@ -1,5 +1,5 @@
 ---
-timeMs: 605
+timeMs: 786
 exitCode: 0
 ---
 Static Method Ref: World

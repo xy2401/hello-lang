@@ -1,5 +1,5 @@
 ---
-timeMs: 596
+timeMs: 762
 exitCode: 0
 ---
 Generational ZGC (-XX:+UseZGC -XX:+ZGenerational):

@@ -1,5 +1,5 @@
 ---
-timeMs: 185
+timeMs: 237
 exitCode: 0
 ---
 Object.entries: [ [ 'a', 1 ], [ 'b', 2 ] ]

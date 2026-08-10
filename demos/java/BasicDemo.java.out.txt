@@ -1,5 +1,5 @@
 ---
-timeMs: 14711
+timeMs: 6454
 exitCode: 0
 ---
 Language: Java

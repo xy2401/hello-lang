@@ -1,5 +1,5 @@
 ---
-timeMs: 157
+timeMs: 188
 exitCode: 0
 ---
 go version go1.22.12 linux/amd64

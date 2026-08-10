@@ -1,5 +1,5 @@
 ---
-timeMs: 194
+timeMs: 228
 exitCode: 0
 ---
 ES6 Class & Promise Output: Hello, Alice

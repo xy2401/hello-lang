@@ -1,5 +1,5 @@
 ---
-timeMs: 394
+timeMs: 571
 exitCode: 0
 ---
 C++20 Concepts Demo:

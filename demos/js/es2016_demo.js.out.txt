@@ -1,5 +1,5 @@
 ---
-timeMs: 172
+timeMs: 239
 exitCode: 0
 ---
 Array.prototype.includes('banana'): true

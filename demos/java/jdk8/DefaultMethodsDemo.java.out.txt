@@ -1,5 +1,5 @@
 ---
-timeMs: 493
+timeMs: 660
 exitCode: 0
 ---
 Brand from default method: Generic Vehicle

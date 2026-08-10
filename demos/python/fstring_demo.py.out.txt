@@ -1,5 +1,5 @@
 ---
-timeMs: 150
+timeMs: 215
 exitCode: 0
 ---
 Formalized F-String Demo:

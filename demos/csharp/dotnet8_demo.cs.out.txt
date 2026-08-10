@@ -1,5 +1,5 @@
 ---
-timeMs: 20
+timeMs: 34
 exitCode: 0
 ---
 .NET Version: 8.0.2

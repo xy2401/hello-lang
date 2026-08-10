@@ -1,5 +1,5 @@
 ---
-timeMs: 2920
+timeMs: 3810
 exitCode: 0
 ---
 Go 1.22 Loop Var Scope Fix & Range Over Int:

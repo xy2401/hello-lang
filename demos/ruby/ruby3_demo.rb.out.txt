@@ -1,5 +1,5 @@
 ---
-timeMs: 211
+timeMs: 277
 exitCode: 0
 ---
 Ruby Version: 3.3.12
