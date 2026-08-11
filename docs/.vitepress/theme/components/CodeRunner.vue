@@ -3,12 +3,12 @@
     <div class="runner-header">
       <div class="runner-title">
         <span class="runner-icon">⚡</span>
-        <strong>{{ title || '纯前端 WebAssembly 浏览器即时运行沙箱' }}</strong>
+        <strong>{{ title || '浏览器本地即时运行沙箱' }}</strong>
         <span class="lang-badge">{{ language.toUpperCase() }}</span>
       </div>
       <button class="run-btn" :disabled="isRunning" @click="runCode">
         <span v-if="isRunning">⏳ WASM 执行中...</span>
-        <span v-else>▶️ 运行代码 (Client WASM)</span>
+        <span v-else>▶️ 运行代码 ({{ runtimeLabel }})</span>
       </button>
     </div>
 
@@ -46,14 +46,75 @@ const props = withDefaults(
 );
 
 function formatCode(raw: string): string {
-  if (!raw) return '';
-  return raw.replace(/\\n/g, '\n');
+  return raw || '';
 }
 
 const editableCode = ref(formatCode(props.initialCode));
 const isRunning = ref(false);
 const output = ref<string | null>(null);
 const execTime = ref<number | null>(null);
+const runtimeLabel = props.language === 'javascript' ? 'Web Worker' : 'Client WASM';
+
+function runJavaScriptInWorker(code: string, timeoutMs = 5000): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const workerSource = `
+      self.fetch = undefined;
+      self.XMLHttpRequest = undefined;
+      self.WebSocket = undefined;
+      self.EventSource = undefined;
+      self.Worker = undefined;
+      self.SharedWorker = undefined;
+      self.importScripts = undefined;
+
+      self.onmessage = async ({ data }) => {
+        const logs = [];
+        const stringify = (value) => {
+          if (typeof value !== 'object' || value === null) return String(value);
+          try { return JSON.stringify(value); } catch { return String(value); }
+        };
+        const safeConsole = {
+          log: (...args) => logs.push(args.map(stringify).join(' ')),
+          error: (...args) => logs.push('[ERROR] ' + args.map(stringify).join(' ')),
+          warn: (...args) => logs.push('[WARN] ' + args.map(stringify).join(' ')),
+        };
+
+        try {
+          const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+          const execute = new AsyncFunction('console', '"use strict";\\n' + data);
+          const result = await execute(safeConsole);
+          if (result !== undefined) logs.push('=> ' + stringify(result));
+          self.postMessage({ type: 'done', output: logs.join('\\n') || '(程序已运行，无输出)' });
+        } catch (error) {
+          self.postMessage({ type: 'error', message: error?.message || String(error) });
+        }
+      };
+    `;
+
+    const objectUrl = URL.createObjectURL(new Blob([workerSource], { type: 'text/javascript' }));
+    const worker = new Worker(objectUrl);
+    const cleanup = () => {
+      worker.terminate();
+      URL.revokeObjectURL(objectUrl);
+    };
+    const timer = window.setTimeout(() => {
+      cleanup();
+      reject(new Error(`执行超过 ${timeoutMs}ms，Worker 已终止`));
+    }, timeoutMs);
+
+    worker.onmessage = ({ data }) => {
+      window.clearTimeout(timer);
+      cleanup();
+      if (data.type === 'done') resolve(data.output);
+      else reject(new Error(data.message || 'Worker 执行失败'));
+    };
+    worker.onerror = (event) => {
+      window.clearTimeout(timer);
+      cleanup();
+      reject(new Error(event.message || 'Worker 加载失败'));
+    };
+    worker.postMessage(code);
+  });
+}
 
 watch(() => props.initialCode, (newVal) => {
   editableCode.value = formatCode(newVal);
@@ -67,19 +128,7 @@ async function runCode() {
   try {
     // 1. JavaScript (原生 Web Worker 沙箱)
     if (props.language === 'javascript') {
-      const logs: string[] = [];
-      const customConsole = {
-        log: (...args: any[]) => logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a) : String(a)).join(' ')),
-        error: (...args: any[]) => logs.push('[ERROR] ' + args.join(' ')),
-        warn: (...args: any[]) => logs.push('[WARN] ' + args.join(' ')),
-      };
-
-      const runnerFunc = new Function('console', editableCode.value);
-      const res = runnerFunc(customConsole);
-      if (res !== undefined) {
-        logs.push(`=> ${typeof res === 'object' ? JSON.stringify(res) : res}`);
-      }
-      output.value = logs.length > 0 ? logs.join('\n') : '(程序已运行，无输出)';
+      output.value = await runJavaScriptInWorker(editableCode.value);
     }
 
     // 2. Python (Pyodide CPython WASM 虚拟机)

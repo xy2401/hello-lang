@@ -1,5 +1,6 @@
 ---
-timeMs: 886
+status: snapshot
+timeMs: 2252
 exitCode: 0
 ---
 Record UserRecord[id=101, username=Alice, role=ADMIN]

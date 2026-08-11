@@ -1,0 +1,49 @@
+@layer tokens, card;
+
+@layer tokens {
+  :root {
+    --accent: oklch(62% 0.2 265deg);
+    --surface: oklch(98% 0.01 265deg);
+  }
+}
+
+@layer card {
+  .card-list {
+    container: cards / inline-size;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: clamp(1rem, 3cqi, 2rem);
+    border: 1px solid color-mix(in oklch, var(--accent), transparent 65%);
+    border-radius: 1rem;
+    background: var(--surface);
+
+    & h2 {
+      color: var(--accent);
+      text-wrap: balance;
+    }
+
+    &:has(a:focus-visible) {
+      outline: 0.2rem solid var(--accent);
+      outline-offset: 0.2rem;
+    }
+  }
+
+  @container cards (width > 42rem) {
+    .card-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition: translate 180ms ease;
+  }
+
+  .card:hover {
+    translate: 0 -0.25rem;
+  }
+}

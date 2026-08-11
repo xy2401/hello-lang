@@ -2,6 +2,9 @@
 
 > 在现代高并发与分布式系统开发中，不同编程语言选择了完全不同的并发演进路径。本文深度对比 **Java (虚拟线程)**、**Go (Goroutine)**、**Rust (Async/Tokio)**、**Node.js/Python (Event Loop)** 以及 **C# (TAP Task)** 的底层调度原理与代码形态。
 
+> [!NOTE]
+> HTML 与 CSS 是由浏览器解析的声明式语言，没有独立线程或协程模型，因此不列入并发性能矩阵；Web 并发由 JavaScript、Worker 和浏览器引擎承担。
+
 ---
 
 ## 1. 📊 八大语言并发模型横向矩阵

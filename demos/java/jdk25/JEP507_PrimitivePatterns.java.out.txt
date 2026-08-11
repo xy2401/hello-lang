@@ -1,5 +1,6 @@
 ---
-timeMs: 28
+status: snapshot
+timeMs: 31
 exitCode: 0
 ---
 Primitive Types in Pattern Matching:

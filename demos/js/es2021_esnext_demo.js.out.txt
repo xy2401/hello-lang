@@ -1,7 +1,0 @@
----
-timeMs: 673
-exitCode: 0
----
-ES2021 ~ ESNext Result:
-Account Balance: $1500
-Last Item via .at(-1): cherry

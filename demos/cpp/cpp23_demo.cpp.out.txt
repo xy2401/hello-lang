@@ -1,5 +1,6 @@
 ---
-timeMs: 592
+status: snapshot
+timeMs: 1335
 exitCode: 0
 ---
 C++23 std::expected & std::print:

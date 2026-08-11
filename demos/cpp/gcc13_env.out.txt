@@ -1,5 +1,6 @@
 ---
-timeMs: 200
+status: snapshot
+timeMs: 536
 exitCode: 0
 ---
 gcc (GCC) 13.4.0

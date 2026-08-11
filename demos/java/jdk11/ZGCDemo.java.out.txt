@@ -1,5 +1,6 @@
 ---
-timeMs: 805
+status: snapshot
+timeMs: 1685
 exitCode: 0
 ---
 ZGC Low-Latency Collector:

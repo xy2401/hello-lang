@@ -1,5 +1,6 @@
 ---
-timeMs: 651
+status: snapshot
+timeMs: 1196
 exitCode: 0
 ---
 HashMap Collision Treeification:

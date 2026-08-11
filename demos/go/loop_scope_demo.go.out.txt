@@ -1,5 +1,6 @@
 ---
-timeMs: 3810
+status: snapshot
+timeMs: 10354
 exitCode: 0
 ---
 Go 1.22 Loop Var Scope Fix & Range Over Int:

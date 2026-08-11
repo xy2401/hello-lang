@@ -1,6 +1,7 @@
 ---
-timeMs: 869
+status: snapshot
+timeMs: 1870
 exitCode: 0
 ---
 RandomGeneratorFactory (L128X128MixRandom):
-Generated pseudo-random int: 834
+Generated pseudo-random int: 639

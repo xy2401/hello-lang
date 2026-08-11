@@ -1,5 +1,6 @@
 ---
-timeMs: 38
+status: snapshot
+timeMs: 40
 exitCode: 0
 ---
 Kotlin 2.0 Runtime Output:

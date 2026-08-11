@@ -1,7 +1,0 @@
----
-timeMs: 233
-exitCode: 0
----
-Class Private Field #balance: 1000
-Array.prototype.at(-1): c
-Object.hasOwn({x: 1}, 'x'): true

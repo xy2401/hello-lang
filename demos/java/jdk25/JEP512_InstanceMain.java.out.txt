@@ -1,5 +1,6 @@
 ---
-timeMs: 857
+status: snapshot
+timeMs: 2263
 exitCode: 0
 ---
 JDK 25 Instance Main Method:

@@ -1,5 +1,6 @@
 ---
-timeMs: 906
+status: snapshot
+timeMs: 2034
 exitCode: 0
 ---
 Pattern Matching for switch with Guard when:

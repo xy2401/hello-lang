@@ -19,25 +19,22 @@ hero:
 features:
   - icon: 🔀
     title: 多版本 LTS 语法演进 Diff
-    details: 精确对比 Java (JDK 8~25 LTS)、JS/Node (14~22)、Python (3.8~3.12)、C++ (11~23)、Rust、Go、PHP、C# 等大版本演进。
+    details: 精确对比 Java、JS/Node、Python、C++、Rust、Go 等版本演进，并独立梳理 HTML 语义与 CSS 平台能力。
   - icon: 🐳
     title: Docker 自动化验证与结果捕获
-    details: 本地/CI 自动化使用官方真实 Docker 镜像隔离编译运行 Demo，自动捕获真实 stdout 控制台日志与执行耗时。
+    details: Java、Python、C++、Rust 等运行时语言使用固定版本 Docker 镜像；浏览器原生语言直接 Live 预览。
   - icon: ⚡
-    title: 浏览器零延迟 WASM 运行
-    details: 集成 Pyodide (Python CPython WASM) 与 Safe JS Worker 运行时，无需后端服务器即可在浏览器中即时编辑与运行代码。
+    title: 高亮源码 / Live 效果
+    details: HTML、CSS、JavaScript 支持语法高亮编辑、源码与效果切换，并在隔离页面中即时运行。
   - icon: 📌
-    title: 10 大语言基础语法与矩阵
-    details: 按统一的 4 步标准代码骨架与包管理、并发、内存等 6 大横向矩阵维度对所有主流语言进行标准化剖析。
+    title: 12 门语言基础语法与矩阵
+    details: 对 10 门编程语言和 HTML、CSS 两门声明式 Web 语言进行标准化拆解，并明确不适用的并发、内存等维度。
 ---
 
 <script setup>
 import { javaVersions } from './.vitepress/theme/data/versionData';
 import { getOutput, getTimeMs } from './.vitepress/theme/data/outputsHelper';
-
-const jsDemoCode = `const languages = ['JavaScript', 'Python', 'Java', 'Rust', 'Go', 'PHP', 'C#', 'Ruby', 'Kotlin'];
-const formatted = languages.map(lang => \`🚀 Hello \${lang}!\`);
-console.log(formatted.join('\\n'));`;
+import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveExamples';
 </script>
 
 ## 🌟 语言演进矩阵速览 (Version Evolution Highlights)
@@ -62,10 +59,11 @@ console.log(formatted.join('\\n'));`;
 
 ## ⚡ 浏览器在线交互体验 (Interactive Sandbox)
 
-直接在浏览器中修改下方 JavaScript 代码并运行：
+在高亮源码与 Live 效果之间切换，直接修改并运行 JavaScript：
 
-<CodeRunner
-  language="javascript"
+<WebLivePlayground
+  mode="javascript"
   title="JavaScript / ESNext 交互运行"
-  :initialCode="jsDemoCode"
+  :initial-code="homeJsLiveCode"
+  :preview-html="homeJsLiveMarkup"
 />

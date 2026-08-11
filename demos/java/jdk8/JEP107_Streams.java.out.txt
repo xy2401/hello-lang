@@ -1,5 +1,6 @@
 ---
-timeMs: 795
+status: snapshot
+timeMs: 1704
 exitCode: 0
 ---
 Stream Pipeline:

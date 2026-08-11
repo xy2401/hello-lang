@@ -1,5 +1,6 @@
 ---
-timeMs: 7940
+status: snapshot
+timeMs: 3185
 exitCode: 0
 ---
 Language: Rust

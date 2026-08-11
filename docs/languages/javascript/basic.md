@@ -1,8 +1,8 @@
-# JavaScript 基础语法全典
-
 <script setup>
-import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
+import { basicJsLiveCode, basicJsLiveMarkup } from '../../.vitepress/theme/data/liveExamples';
 </script>
+
+# JavaScript 基础语法全典
 
 > 本页面按照统一标准拆解 JavaScript 基础语法结构：变量声明、数据类型、条件分支、集合循环、函数定义与类结构。
 
@@ -57,7 +57,13 @@ const p = new Person("Alice", age);
 console.log("Person Info:", p.getInfo());
 ```
 
-<DockerOutput
-  image="node:20-alpine"
-  sourceFile="demos/js/basic_demo.js"
+## ⚡ 在浏览器中直接运行
+
+示例已经放入编辑器。修改源码后切换到“效果”，即可同时查看 DOM 与 Console 输出。
+
+<WebLivePlayground
+  mode="javascript"
+  title="JavaScript 基础语法"
+  :initial-code="basicJsLiveCode"
+  :preview-html="basicJsLiveMarkup"
 />

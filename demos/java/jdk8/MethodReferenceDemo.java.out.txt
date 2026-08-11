@@ -1,5 +1,6 @@
 ---
-timeMs: 786
+status: snapshot
+timeMs: 1595
 exitCode: 0
 ---
 Static Method Ref: World

@@ -1,5 +1,6 @@
 ---
-timeMs: 887
+status: snapshot
+timeMs: 1956
 exitCode: 0
 ---
 SequencedCollection Operations:

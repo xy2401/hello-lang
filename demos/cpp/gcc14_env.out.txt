@@ -1,0 +1,7 @@
+---
+status: snapshot
+timeMs: 0
+exitCode: -1
+dockerImage: "gcc:14"
+---
+GCC 14 环境快照尚未采集。请运行 npm run collect-outputs 完成 Docker 验证。

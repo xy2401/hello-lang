@@ -1,5 +1,6 @@
 ---
-timeMs: 762
+status: snapshot
+timeMs: 1606
 exitCode: 0
 ---
 Generational ZGC (-XX:+UseZGC -XX:+ZGenerational):

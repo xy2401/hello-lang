@@ -11,11 +11,11 @@ import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper'
 
 ## 🐳 容器运行环境 (Runtime Environment)
 
-在标准 Docker 镜像 `gcc:13` 中执行控制台诊断指令 `g++ --version`：
+在标准 Docker 镜像 `gcc:14` 中执行控制台诊断指令 `g++ --version`：
 
 <DockerOutput
-  image="gcc:13"
-  sourceFile="demos/cpp/gcc13_env.out"
+  image="gcc:14"
+  sourceFile="demos/cpp/gcc14_env.out"
 />
 
 ---

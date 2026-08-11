@@ -1,5 +1,6 @@
 ---
-timeMs: 242
+status: snapshot
+timeMs: 1187
 exitCode: 0
 ---
 Node.js 18 LTS Runtime Version: v18.20.8

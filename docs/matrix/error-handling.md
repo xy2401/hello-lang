@@ -2,6 +2,9 @@
 
 > 错误处理是设计语言时最具争议的领域。本文对比 **Java/Python/C# 异常机制 (Exceptions)** vs **Rust `Result<T, E>`** vs **Go 显式返回值 `err`** vs **C++23 `std::expected`**。
 
+> [!NOTE]
+> HTML/CSS 没有异常控制流。浏览器通常容错解析 HTML，并忽略无法识别或无效的 CSS 声明；工程中应通过 Validator、Stylelint 和浏览器测试提前发现问题。
+
 ---
 
 ## 1. 📊 八大语言错误处理机制对照表

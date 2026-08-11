@@ -1,5 +1,6 @@
 ---
-timeMs: 210
+status: snapshot
+timeMs: 772
 exitCode: 0
 ---
 v20.20.2

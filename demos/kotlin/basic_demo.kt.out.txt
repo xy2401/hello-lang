@@ -1,5 +1,6 @@
 ---
-timeMs: 22
+status: snapshot
+timeMs: 25
 exitCode: 0
 ---
 Hello, Kotlin Developer! Age: 25, Salary: $8500.5

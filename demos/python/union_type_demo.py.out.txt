@@ -1,5 +1,6 @@
 ---
-timeMs: 231
+status: snapshot
+timeMs: 685
 exitCode: 0
 ---
 Union Type Operator int | str:

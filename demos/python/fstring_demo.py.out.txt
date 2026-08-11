@@ -1,5 +1,6 @@
 ---
-timeMs: 215
+status: snapshot
+timeMs: 517
 exitCode: 0
 ---
 Formalized F-String Demo:

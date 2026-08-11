@@ -1,5 +1,6 @@
 ---
-timeMs: 1030
+status: snapshot
+timeMs: 1996
 exitCode: 0
 ---
 String API Enhancements:

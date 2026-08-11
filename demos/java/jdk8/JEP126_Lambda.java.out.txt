@@ -1,5 +1,6 @@
 ---
-timeMs: 817
+status: snapshot
+timeMs: 2125
 exitCode: 0
 ---
 Lambda Math Operation (10 + 5) = 15

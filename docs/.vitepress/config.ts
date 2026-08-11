@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
+  base: process.env.DOCS_BASE || '/hello-lang/',
   title: 'Hello Lang',
   description: '全主流编程语言概念、基础语法与版本演进大典 (Multi-Language Concept Explorer & Version Evolution Matrix)',
   themeConfig: {
@@ -13,6 +14,8 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: 'Java LTS', link: '/languages/java/' },
       { text: 'JS / Node', link: '/languages/javascript/' },
+      { text: 'HTML', link: '/languages/html/' },
+      { text: 'CSS', link: '/languages/css/' },
       { text: 'Python PEP', link: '/languages/python/' },
       { text: 'C++ 标准', link: '/languages/cpp/' },
       { text: 'Rust Edition', link: '/languages/rust/' },
@@ -44,17 +47,11 @@ export default defineConfig({
           text: '🟨 JS & ECMAScript 规范大典',
           items: [
             { text: 'JS / Node.js 全景图', link: '/languages/javascript/' },
+            { text: '⚡ JavaScript Live 演示', link: '/languages/javascript/#javascript-live-dom-实验室' },
             { text: '📌 JS 基础语法全典', link: '/languages/javascript/basic' },
-            { text: 'ES6 (ES2015) 奠基革命', link: '/languages/javascript/es6' },
-            { text: 'ES2016 (ES7 includes / **)', link: '/languages/javascript/es2016' },
-            { text: 'ES2017 (ES8 async / await)', link: '/languages/javascript/es2017' },
-            { text: 'ES2018 (ES9 Rest/Spread)', link: '/languages/javascript/es2018' },
-            { text: 'ES2019 (ES10 flat / fromEntries)', link: '/languages/javascript/es2019' },
-            { text: 'ES2020 (ES11 可选链 ?. / ??)', link: '/languages/javascript/es2020' },
-            { text: 'ES2021 (ES12 replaceAll)', link: '/languages/javascript/es2021' },
-            { text: 'ES2022 (ES13 #privateField)', link: '/languages/javascript/es2022' },
-            { text: 'ES2023 (ES14 toSorted)', link: '/languages/javascript/es2023' },
-            { text: 'ES2024 (ES15 Object.groupBy)', link: '/languages/javascript/es2024' },
+            { text: 'ES6 之前：ES1～ES5 经典时代', link: '/languages/javascript/pre-es6' },
+            { text: 'ES6：现代 JavaScript 奠基', link: '/languages/javascript/es6' },
+            { text: '现代 JavaScript：异步、数据与模块', link: '/languages/javascript/modern-javascript' },
           ],
         },
         {
@@ -160,12 +157,38 @@ export default defineConfig({
           ],
         },
       ],
+      '/languages/html/': [
+        {
+          text: '🟧 HTML 结构与语义全典',
+          items: [
+            { text: 'HTML 定位与演进', link: '/languages/html/' },
+            { text: '⚡ HTML Live 演示', link: '/languages/html/#live-html-实验室' },
+            { text: '📌 HTML 基础结构与语义', link: '/languages/html/basic' },
+            { text: 'HTML5 之前：HTML 2～4 / XHTML', link: '/languages/html/pre-html5' },
+            { text: 'HTML5：语义、媒体与表单', link: '/languages/html/html5' },
+            { text: '现代 HTML Living Standard', link: '/languages/html/modern-html' },
+          ],
+        },
+      ],
+      '/languages/css/': [
+        {
+          text: '🟦 CSS 样式与布局全典',
+          items: [
+            { text: 'CSS 定位与演进', link: '/languages/css/' },
+            { text: '⚡ CSS Live 演示', link: '/languages/css/#live-css-实验室' },
+            { text: '📌 CSS 基础、层叠与布局', link: '/languages/css/basic' },
+            { text: 'CSS3 之前：CSS1 / CSS2.1', link: '/languages/css/pre-css3' },
+            { text: 'CSS3：模块化与响应式', link: '/languages/css/css3' },
+            { text: '现代 CSS 平台能力', link: '/languages/css/modern-css' },
+          ],
+        },
+      ],
       '/matrix/': [
         {
           text: '🌐 横向概念对比矩阵大屏',
           items: [
             { text: '矩阵总览 Matrix Index', link: '/matrix/' },
-            { text: '📌 10 大语言基础语法跨语言对照', link: '/matrix/basic-syntax' },
+            { text: '📌 12 门语言基础语法跨语言对照', link: '/matrix/basic-syntax' },
             { text: '⚡ 并发与异步模型大比拼', link: '/matrix/concurrency' },
             { text: '🧠 内存管理与 GC 垃圾回收大比拼', link: '/matrix/memory' },
             { text: '📦 包管理与构建工具链大比拼', link: '/matrix/package-management' },

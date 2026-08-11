@@ -1,6 +1,0 @@
----
-timeMs: 238
-exitCode: 0
----
-ES2024 Object.groupBy Fruit Count: 2
-ES2024 Promise.withResolvers: Promise.withResolvers resolved!

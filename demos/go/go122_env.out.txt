@@ -1,5 +1,6 @@
 ---
-timeMs: 188
+status: snapshot
+timeMs: 532
 exitCode: 0
 ---
 go version go1.22.12 linux/amd64

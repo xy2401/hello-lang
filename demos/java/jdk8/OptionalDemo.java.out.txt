@@ -1,5 +1,6 @@
 ---
-timeMs: 765
+status: snapshot
+timeMs: 1514
 exitCode: 0
 ---
 Optional Processed Name: DEFAULT_GUEST

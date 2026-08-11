@@ -4,11 +4,11 @@
     <div class="hw-console-header">
       <div class="header-left">
         <span
-          class="hw-tag-docker"
+          :class="['hw-tag-docker', `status-${parsedData.status}`]"
           @click="copyDockerCmd"
           :title="copied ? '已复制 Docker 命令！' : '点击复制本地一键复现 Docker 命令'"
         >
-          <span>🐳 Docker Verified</span>
+          <span>{{ statusLabel }}</span>
           <span class="icon-holder">{{ copied ? '✓' : '📋' }}</span>
         </span>
         <span class="image-tag" v-if="image">
@@ -17,8 +17,8 @@
       </div>
       <div class="header-right">
         <span class="exec-time" v-if="parsedData.timeMs">⏱️ {{ parsedData.timeMs }}ms</span>
-        <span :class="['status-badge', parsedData.exitCode === 0 ? 'success' : 'error']">
-          Exit Code: {{ parsedData.exitCode }}
+        <span :class="['status-badge', statusBadgeClass]">
+          {{ exitCodeLabel }}
         </span>
       </div>
     </div>
@@ -51,13 +51,33 @@ const parsedData = computed(() => {
       timeMs: props.timeMs ?? fileResult.timeMs,
       exitCode: props.exitCode ?? fileResult.exitCode,
       output: props.output ?? fileResult.output,
+      status: fileResult.status,
     };
   }
   return {
     timeMs: props.timeMs ?? 0,
     exitCode: props.exitCode ?? 0,
     output: props.output ?? '(暂无日志)',
+    status: 'snapshot' as const,
   };
+});
+
+const statusLabel = computed(() => {
+  if (parsedData.value.status === 'verified') return '🐳 Docker Verified';
+  if (parsedData.value.status === 'error') return '❌ Docker Failed';
+  if (parsedData.value.status === 'missing') return '⚠️ Missing Output';
+  return '📸 Unverified Snapshot';
+});
+
+const statusBadgeClass = computed(() => {
+  if (parsedData.value.status !== 'verified') return 'neutral';
+  return parsedData.value.exitCode === 0 ? 'success' : 'error';
+});
+
+const exitCodeLabel = computed(() => {
+  return parsedData.value.status === 'verified'
+    ? `Exit Code: ${parsedData.value.exitCode}`
+    : 'Not verified';
 });
 
 const copyableDockerCmd = computed(() => {
@@ -79,6 +99,14 @@ const copyableDockerCmd = computed(() => {
       return `docker run --rm ${img} rustc --version`;
     } else if (file.includes('go')) {
       return `docker run --rm ${img} go version`;
+    } else if (file.includes('kotlin')) {
+      return `docker run --rm ${img} kotlinc -version`;
+    } else if (file.includes('php')) {
+      return `docker run --rm ${img} php -v`;
+    } else if (file.includes('csharp')) {
+      return `docker run --rm ${img} dotnet --version`;
+    } else if (file.includes('ruby')) {
+      return `docker run --rm ${img} ruby -v`;
     }
   }
 
@@ -89,21 +117,31 @@ const copyableDockerCmd = computed(() => {
 
   if (file.endsWith('.java')) {
     if (file.includes('jdk25')) {
-      return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} sh -c "javac --enable-preview --source 25 ${fileName} && java --enable-preview ${className}"`;
+      return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "mkdir -p /tmp/classes && javac --enable-preview --source 25 -d /tmp/classes ${fileName} && java --enable-preview -cp /tmp/classes ${className}"`;
     }
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} sh -c "javac ${fileName} && java ${className}"`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "mkdir -p /tmp/classes && javac -d /tmp/classes ${fileName} && java -cp /tmp/classes ${className}"`;
   } else if (file.endsWith('.py')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} python ${fileName}`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} python ${fileName}`;
   } else if (file.endsWith('.ts')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} npx -y tsx ${fileName}`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} npx -y tsx ${fileName}`;
   } else if (file.endsWith('.js')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} node ${fileName}`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} node ${fileName}`;
   } else if (file.endsWith('.cpp')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} sh -c "g++ -std=c++20 ${fileName} -o app && ./app"`;
+    const standard = fileName.includes('cpp11') ? 'c++11' : fileName.includes('cpp23') ? 'c++23' : 'c++20';
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "g++ -std=${standard} ${fileName} -o /tmp/demo && /tmp/demo"`;
   } else if (file.endsWith('.rs')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} sh -c "rustc ${fileName} -o app && ./app"`;
+    const edition = fileName.includes('async') ? '2018' : '2021';
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "rustc --edition ${edition} ${fileName} -o /tmp/demo && /tmp/demo"`;
   } else if (file.endsWith('.go')) {
-    return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} go run ${fileName}`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} go run ${fileName}`;
+  } else if (file.endsWith('.php')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} php ${fileName}`;
+  } else if (file.endsWith('.rb')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} ruby ${fileName}`;
+  } else if (file.endsWith('.kt')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "kotlinc ${fileName} -include-runtime -d /tmp/demo.jar && java -jar /tmp/demo.jar"`;
+  } else if (file.endsWith('.cs')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "mkdir -p /tmp/demo && cp ${fileName} /tmp/demo/Program.cs && cp /app/scripts/csharp-demo.csproj /tmp/demo/Demo.csproj && dotnet run --project /tmp/demo/Demo.csproj"`;
   }
   return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} cat ${fileName}`;
 });
@@ -172,6 +210,19 @@ async function copyDockerCmd() {
   transform: translateY(-1px);
 }
 
+.hw-tag-docker.status-snapshot,
+.hw-tag-docker.status-missing {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.35);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.hw-tag-docker.status-error {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.12);
+}
+
 .icon-holder {
   display: inline-block;
   width: 1.4em;
@@ -221,6 +272,12 @@ async function copyDockerCmd() {
   background: rgba(239, 68, 68, 0.15);
   color: #f87171;
   border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.status-badge.neutral {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 .console-output {

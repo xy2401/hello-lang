@@ -1,5 +1,6 @@
 ---
-timeMs: 916
+status: snapshot
+timeMs: 1785
 exitCode: 0
 ---
 Deconstructed Record Pattern:

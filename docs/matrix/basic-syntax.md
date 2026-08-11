@@ -1,6 +1,6 @@
-# 📌 10 大语言基础语法跨语言对照大屏
+# 📌 12 门语言基础语法跨语言对照大屏
 
-> 本页面提取了 **Java, JS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 十大语言在标准代码骨架下的核心语法形态，方便开发者按小节横向比对不同语言的语法差异。
+> 本页面对比 **Java, JS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 十门编程语言，并将 **HTML** 与 **CSS** 作为两门声明式 Web 语言独立说明。HTML/CSS 不具备通用函数、循环或类模型，不应强行套入命令式语法骨架。
 
 ---
 
@@ -476,5 +476,37 @@ end
 ```kotlin
 class Person(val name: String, val age: Int) {
     fun getInfo(): String = "$name ($age years old)"
+}
+```
+
+---
+
+## 5. HTML 与 CSS 的声明式语法模型
+
+| 编程语言概念 | HTML 对应模型 | CSS 对应模型 |
+| :--- | :--- | :--- |
+| 变量与数据 | 元素、属性、文本与 DOM 状态 | 自定义属性、属性值与计算值 |
+| 条件与循环 | 无通用控制流；由文档结构和浏览器行为表达 | 媒体查询、容器查询等条件规则；无通用循环 |
+| 函数 | 无通用函数 | `calc()`、`min()`、`color-mix()` 等值函数 |
+| 类 | `class` 是元素分类属性，不是面向对象的类 | 类选择器匹配具有相应 `class` 属性的元素 |
+
+### 🟧 HTML：结构与语义
+
+```html
+<article class="card">
+  <h2>HTML 描述内容角色</h2>
+  <p>元素和属性共同构成浏览器可解析的文档树。</p>
+</article>
+```
+
+### 🟦 CSS：选择器与声明
+
+```css
+:root { --accent: #4f46e5; }
+
+.card {
+  display: grid;
+  gap: 1rem;
+  border-color: var(--accent);
 }
 ```

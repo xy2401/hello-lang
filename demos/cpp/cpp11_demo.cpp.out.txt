@@ -1,5 +1,6 @@
 ---
-timeMs: 795
+status: snapshot
+timeMs: 1948
 exitCode: 0
 ---
 C++11 Auto & Lambda Demo:

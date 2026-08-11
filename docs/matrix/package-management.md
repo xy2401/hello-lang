@@ -1,10 +1,10 @@
 # 📦 跨语言包管理与构建工具链大比拼
 
-> 现代软件工程离不开高效的包管理器与构建工具链。本文深度对比 **Java (Maven/Gradle)**、**JS (npm/pnpm)**、**Python (pip/poetry/uv)**、**Rust (Cargo)**、**Go (go.mod)**、**PHP (Composer)**、**C# (NuGet)**、**Ruby (Bundler)** 和 **C++ (CMake/vcpkg)**。
+> 现代软件工程离不开高效的包管理器与构建工具链。HTML/CSS 本身没有语言专属包管理器，通常复用 npm 生态中的验证、转换、打包与设计系统工具。
 
 ---
 
-## 1. 📊 10 大语言包管理工具链横向对照表
+## 1. 📊 12 门语言包管理工具链横向对照表
 
 | 语言 | 主流包管理器 | 依赖清单文件 (Manifest) | 依赖锁定文件 (Lockfile) | 官方中央包仓库 | 典型安装/添加依赖命令 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -18,6 +18,8 @@
 | **Ruby** | Bundler | `Gemfile` | `Gemfile.lock` | RubyGems (rubygems.org) | `bundle add <gem>` |
 | **Kotlin** | Gradle (Kotlin DSL) | `build.gradle.kts` | `gradle.lockfile` | Maven Central | `./gradlew build` |
 | **C++** | CMake + vcpkg / Conan | `CMakeLists.txt` / `vcpkg.json` | `vcpkg-configuration.json` | vcpkg / Conan Center | `vcpkg install <package>` |
+| **HTML** | npm / pnpm（工程工具） | `package.json` | `package-lock.json` / `pnpm-lock.yaml` | npmjs.com | `npx html-validate index.html` |
+| **CSS** | npm / pnpm（工程工具） | `package.json` / Stylelint 配置 | `package-lock.json` / `pnpm-lock.yaml` | npmjs.com | `npx stylelint "**/*.css"` |
 
 ---
 

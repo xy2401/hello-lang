@@ -1,5 +1,6 @@
 ---
-timeMs: 799
+status: snapshot
+timeMs: 1678
 exitCode: 0
 ---
 JEP 506 Scoped Values:

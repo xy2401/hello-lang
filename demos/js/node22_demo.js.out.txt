@@ -1,5 +1,6 @@
 ---
-timeMs: 267
+status: snapshot
+timeMs: 814
 exitCode: 0
 ---
 Node.js 22 LTS Runtime Version: v22.23.2

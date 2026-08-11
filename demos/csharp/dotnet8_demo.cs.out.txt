@@ -1,5 +1,6 @@
 ---
-timeMs: 34
+status: snapshot
+timeMs: 27
 exitCode: 0
 ---
 .NET Version: 8.0.2

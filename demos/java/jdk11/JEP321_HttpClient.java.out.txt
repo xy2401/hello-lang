@@ -1,5 +1,6 @@
 ---
-timeMs: 1413
+status: snapshot
+timeMs: 2871
 exitCode: 0
 ---
 HTTP/2 Client Initialized.

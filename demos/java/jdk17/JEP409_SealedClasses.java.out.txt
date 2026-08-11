@@ -1,5 +1,6 @@
 ---
-timeMs: 818
+status: snapshot
+timeMs: 1612
 exitCode: 0
 ---
 Sealed Class Hierarchy permits Circle, Rectangle:

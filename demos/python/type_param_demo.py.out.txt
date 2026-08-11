@@ -1,5 +1,6 @@
 ---
-timeMs: 298
+status: snapshot
+timeMs: 875
 exitCode: 0
 ---
 Generic Stack[int]: [10, 20, 30]

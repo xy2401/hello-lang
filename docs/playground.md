@@ -8,11 +8,9 @@ console.log(greeting.join('\\n'));
 
 // 测试 ESNext / 异步 API
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-(async () => {
-    console.log('⏳ 正在测试 Async/Await 延时任务...');
-    await delay(300);
-    console.log('✅ 任务运行完成！');
-})();`;
+console.log('⏳ 正在测试 Async/Await 延时任务...');
+await delay(300);
+console.log('✅ 任务运行完成！');`;
 
 const pyCode = `# 🐍 Python 3.12 纯前端 CPython WASM 虚拟机 (Pyodide)
 import math
@@ -46,7 +44,7 @@ numbers = [1, 2, 3, 4, 5]
 puts "Squares: #{numbers.map { |x| x**2 }.join(', ')}"`;
 </script>
 
-> **完全无需任何后端服务器与 API**，所有代码均在您的浏览器本地 **JS Worker**、**Pyodide CPython WASM**、**PHP-WASM** 与 **Ruby-WASM** 虚拟机中安全零延迟独立运行！
+> **无需项目后端服务器与 API**。JavaScript 在可超时终止的独立 Worker 中运行；Python、PHP 与 Ruby 运行时按需从 CDN 加载并在浏览器本地执行。
 
 ---
 

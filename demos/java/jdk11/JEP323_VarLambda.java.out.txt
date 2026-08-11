@@ -1,5 +1,6 @@
 ---
-timeMs: 951
+status: snapshot
+timeMs: 2445
 exitCode: 0
 ---
 Var in Lambda with Annotations:

@@ -1,5 +1,6 @@
 ---
-timeMs: 656
+status: snapshot
+timeMs: 1147
 exitCode: 0
 ---
 Nashorn JS Engine Evaluation:

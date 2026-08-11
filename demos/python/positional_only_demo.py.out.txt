@@ -1,5 +1,6 @@
 ---
-timeMs: 211
+status: snapshot
+timeMs: 506
 exitCode: 0
 ---
 Positional-Only Args (/):

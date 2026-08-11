@@ -11,10 +11,10 @@ import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper'
 
 ## 🐳 容器运行环境 (Runtime Environment)
 
-在标准 Docker 镜像 `eclipse-temurin:21-jdk-alpine` JVM 中执行 Kotlin 2.0 诊断：
+在固定版本 Docker 镜像 `croquiscom/kotlin-base:2.0.10` 中执行 Kotlin 编译器诊断：
 
 <DockerOutput
-  image="eclipse-temurin:21-jdk-alpine"
+  image="croquiscom/kotlin-base:2.0.10"
   sourceFile="demos/kotlin/env.out"
 />
 

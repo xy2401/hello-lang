@@ -1,5 +1,6 @@
 ---
-timeMs: 660
+status: snapshot
+timeMs: 1247
 exitCode: 0
 ---
 Brand from default method: Generic Vehicle

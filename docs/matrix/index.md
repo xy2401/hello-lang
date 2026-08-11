@@ -1,6 +1,6 @@
 # 🌐 跨语言横向概念矩阵总览大屏
 
-> 本维度将全主流编程语言（Java, JS/TS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin）打通，按计算机科学底层核心支柱、基础语法结构与工具链进行横向对比拆解。
+> 本维度将 Java、JS/TS、Python、C++、Rust、Go、PHP、C#、Ruby、Kotlin、HTML、CSS 打通。HTML/CSS 作为声明式 Web 语言单独标注适用边界，不参与不适用的运行时指标排名。
 
 ---
 
@@ -8,7 +8,7 @@
 
 <div class="matrix-grid">
 
-### 1. 📌 [10 大语言基础语法跨语言对照大屏](./basic-syntax.md)
+### 1. 📌 [12 门语言基础语法跨语言对照大屏](./basic-syntax.md)
 基于统一的 4 步标准代码骨架，横向拆解对比 **变量与常量声明 (`1.1`)**、**基本数据类型 (`1.2`)**、**条件分支 (`2.1`)**、**集合循环 (`2.2`)**、**函数与默认参数 (`3.1`)** 以及 **类与结构体 (`4.1`)**。
 
 ---
@@ -54,3 +54,5 @@
 | **C#** | 云原生全栈 / 主构造函数 | NuGet / dotnet CLI | Task / async-await (TAP) | CoreCLR 分代 GC | 运行时具象化 (Reified Generics) | try-catch 异常捕获 |
 | **Ruby** | 极具表达力 / 万物皆对象 | Bundler (`Gemfile`) | Ractor 真正并行 / Fiber 协程 | Mark-Sweep 垃圾回收 | 动态类型 / Steep 签名 | begin-rescue 异常捕获 |
 | **Kotlin** | 空安全 / JVM 优先 | Gradle (`build.gradle.kts`) | Coroutines 协程状态机 | JVM 垃圾回收器 | 编译期类型擦除 + `inline reified` | Unchecked Exception |
+| **HTML** | 声明式文档结构与语义 | npm 生态验证/构建工具 | 不适用；交互由浏览器与 JS 提供 | DOM 由浏览器管理 | 无泛型；元素与属性内容模型 | 规范校验、容错解析与可访问性检查 |
+| **CSS** | 声明式样式、层叠与布局 | npm 生态验证/构建工具 | 不适用；动画由渲染引擎调度 | CSSOM 由浏览器管理 | 无泛型；选择器与值语法 | 无异常机制；无效声明被忽略并由 Lint 检出 |

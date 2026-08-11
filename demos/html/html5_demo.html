@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="现代 HTML 原生交互元素示例">
+    <title>Modern HTML Demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>现代 HTML 原生能力</h1>
+
+      <section aria-labelledby="disclosure-title">
+        <h2 id="disclosure-title">无需 JavaScript 的内容展开</h2>
+        <details>
+          <summary>查看学习进度</summary>
+          <label for="course-progress">HTML 课程进度</label>
+          <progress id="course-progress" max="100" value="72">72%</progress>
+        </details>
+      </section>
+
+      <section aria-labelledby="dialog-title">
+        <h2 id="dialog-title">原生对话框</h2>
+        <dialog open aria-labelledby="welcome-title">
+          <h3 id="welcome-title">欢迎学习 HTML</h3>
+          <p>dialog 元素提供对话框语义和浏览器原生行为。</p>
+          <form method="dialog">
+            <button type="submit" value="confirm">知道了</button>
+          </form>
+        </dialog>
+      </section>
+
+      <template id="card-template">
+        <article><h2>模板标题</h2><p>template 内容在实例化前不会渲染。</p></article>
+      </template>
+    </main>
+  </body>
+</html>

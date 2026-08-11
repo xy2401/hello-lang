@@ -1,6 +1,0 @@
----
-timeMs: 239
-exitCode: 0
----
-Array.prototype.includes('banana'): true
-Exponentiation Operator 2 ** 10: 1024

@@ -1,4 +1,5 @@
 ---
+status: snapshot
 timeMs: 2564
 exitCode: 0
 ---

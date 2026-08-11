@@ -1,7 +1,7 @@
 // Kotlin 2.0 Core Features Demo
 
 sealed interface UserStatus {
-    data class Active(const val lastLogin: String) : UserStatus
+    data class Active(val lastLogin: String) : UserStatus
     object Maintenance : UserStatus
 }
 

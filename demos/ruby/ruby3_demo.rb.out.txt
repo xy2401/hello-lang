@@ -1,5 +1,6 @@
 ---
-timeMs: 277
+status: snapshot
+timeMs: 740
 exitCode: 0
 ---
 Ruby Version: 3.3.12

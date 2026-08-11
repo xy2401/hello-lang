@@ -2,6 +2,8 @@ export interface ParsedOutput {
   output: string;
   timeMs: number;
   exitCode: number;
+  status: 'verified' | 'snapshot' | 'error' | 'missing';
+  capturedAt?: string;
   runtimeVersion?: string;
   dockerImage?: string;
 }
@@ -23,7 +25,8 @@ export function parseOutFile(relativeSourceFile: string): ParsedOutput {
     return {
       output: `(暂无 Docker 运行日志: ${relativeSourceFile})`,
       timeMs: 0,
-      exitCode: 0,
+      exitCode: -1,
+      status: 'missing',
       runtimeVersion: 'unknown',
       dockerImage: '',
     };
@@ -33,6 +36,8 @@ export function parseOutFile(relativeSourceFile: string): ParsedOutput {
   let exitCode = 0;
   let runtimeVersion = '';
   let dockerImage = '';
+  let status: ParsedOutput['status'] = 'snapshot';
+  let capturedAt = '';
   let output = rawContent;
 
   const fmMatch = rawContent.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -43,7 +48,7 @@ export function parseOutFile(relativeSourceFile: string): ParsedOutput {
     const timeMatch = fmText.match(/timeMs:\s*(\d+)/);
     if (timeMatch) timeMs = parseInt(timeMatch[1], 10);
 
-    const codeMatch = fmText.match(/exitCode:\s*(\d+)/);
+    const codeMatch = fmText.match(/exitCode:\s*(-?\d+)/);
     if (codeMatch) exitCode = parseInt(codeMatch[1], 10);
 
     const verMatch = fmText.match(/runtimeVersion:\s*"(.*?)"/);
@@ -51,9 +56,15 @@ export function parseOutFile(relativeSourceFile: string): ParsedOutput {
 
     const imgMatch = fmText.match(/dockerImage:\s*"(.*?)"/);
     if (imgMatch) dockerImage = imgMatch[1];
+
+    const statusMatch = fmText.match(/status:\s*(verified|snapshot|error|missing)/);
+    if (statusMatch) status = statusMatch[1] as ParsedOutput['status'];
+
+    const capturedMatch = fmText.match(/capturedAt:\s*"(.*?)"/);
+    if (capturedMatch) capturedAt = capturedMatch[1];
   }
 
-  return { output, timeMs, exitCode, runtimeVersion, dockerImage };
+  return { output, timeMs, exitCode, status, capturedAt, runtimeVersion, dockerImage };
 }
 
 export function getOutput(relativeSourceFile: string): string {

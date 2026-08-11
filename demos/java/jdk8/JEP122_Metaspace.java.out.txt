@@ -1,5 +1,6 @@
 ---
-timeMs: 660
+status: snapshot
+timeMs: 1403
 exitCode: 0
 ---
 Metaspace JVM Info:

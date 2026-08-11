@@ -1,6 +1,0 @@
----
-timeMs: 229
-exitCode: 0
----
-String.prototype.replaceAll: baz-bar-baz
-Logical Assignment x ??= 'initialized': initialized

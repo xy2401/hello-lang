@@ -147,6 +147,16 @@ for _, v := range values {
 
 export const jsVersions = [
   {
+    version: 'ES1 → ES5',
+    releaseYear: '1997–2009',
+    summary: '原型、函数作用域、DOM 脚本与 JSON 奠定语言基础',
+    code: `var users = [{ name: "Ada", active: true }];
+var activeNames = users
+  .filter(function (user) { return user.active; })
+  .map(function (user) { return user.name; });`,
+    notes: '这一阶段形成 JavaScript 的动态对象、闭包、原型委托与事件驱动模型；ES5 带来严格模式和关键数组迭代方法。',
+  },
+  {
     version: 'ES6 (ES2015)',
     releaseYear: '2015',
     summary: '现代 JS 基石：Class、Arrow Functions、Promise',
@@ -154,16 +164,88 @@ export const jsVersions = [
 class User {
   constructor(name) { this.name = name; }
 }`,
-    notes: '奠定现代前端与 Node.js 模块化开端。',
+    notes: 'let/const、箭头函数、类、Promise、迭代器与 ES Modules 共同奠定现代 JavaScript 工程基础。',
   },
   {
-    version: 'ES2022',
-    releaseYear: '2022',
-    summary: 'Top-level await、Private Class Fields (#field)',
-    code: `class BankAccount {
-  #balance = 0;
-  deposit(amount) { this.#balance += amount; }
+    version: 'Modern JavaScript',
+    releaseYear: '2016–至今',
+    summary: '按能力持续演进：async/await、可选链、私有字段与不可变数组',
+    code: `const response = await fetch(url);
+const names = (await response.json())
+  ?.items
+  ?.toSorted((a, b) => a.rank - b.rank)
+  .map(item => item.name) ?? [];`,
+    notes: 'ES2016 以后采用年度发布节奏，但学习时应按异步控制流、数据变换、对象封装、模块化和运行时兼容性理解，而不是背年份。',
+  },
+];
+
+export const htmlVersions = [
+  {
+    version: 'HTML 2.0 → 4.01 / XHTML',
+    releaseYear: '1995–2000',
+    summary: '从超文本页面走向表格、表单、样式表与更严格的文档类型',
+    code: `<table summary="课程表">
+  <tr><th>课程</th><th>阶段</th></tr>
+  <tr><td>HTML</td><td>HTML 4.01</td></tr>
+</table>`,
+    notes: '早期 HTML 奠定链接、图像、表格与表单模型；HTML 4 开始强调结构与表现分离，XHTML 尝试用 XML 规则约束标记。',
+  },
+  {
+    version: 'HTML5',
+    releaseYear: '2014',
+    summary: '语义元素、原生媒体、表单能力与统一 Web 平台',
+    code: `<main>
+  <article>
+    <h1>Semantic document</h1>
+    <p>Meaningful structure for browsers and assistive technology.</p>
+  </article>
+</main>`,
+    notes: 'HTML5 将语义结构、媒体与应用能力纳入统一标准，现代 HTML 标准随后转向持续演进的 Living Standard。',
+  },
+  {
+    version: 'Modern HTML',
+    releaseYear: 'Living Standard',
+    summary: 'Dialog、Details、Template 与持续演进的原生组件',
+    code: `<details>
+  <summary>Show details</summary>
+  <p>Native disclosure without a custom component.</p>
+</details>`,
+    notes: '优先使用原生元素可以获得浏览器维护的语义、键盘行为和渐进增强能力。',
+  },
+];
+
+export const cssVersions = [
+  {
+    version: 'CSS1 → CSS2.1',
+    releaseYear: '1996–2011',
+    summary: '字体、颜色、盒模型、定位、媒体类型与层叠规则定型',
+    code: `#content {
+  width: 760px;
+  margin: 0 auto;
+}
+.nav li { float: left; }`,
+    notes: 'CSS1/2 建立选择器、层叠、盒模型与定位基础；布局长期依赖 table、float 和 position 等间接手段。',
+  },
+  {
+    version: 'CSS3 Modules',
+    releaseYear: 'Modular Era',
+    summary: '媒体查询、Flexbox、Grid 与模块化规范演进',
+    code: `.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
 }`,
-    notes: '原生支持带 # 前缀的真正私有属性与顶层 await。',
+    notes: 'CSS 不再以单一大版本发布，而是由选择器、颜色、布局等模块独立演进。',
+  },
+  {
+    version: 'Modern CSS',
+    releaseYear: '2020s',
+    summary: '容器查询、级联层、:has()、嵌套与 OKLCH',
+    code: `@layer components {
+  .card:has(a:focus-visible) {
+    outline: 0.2rem solid oklch(62% 0.2 265deg);
+  }
+}`,
+    notes: '越来越多过去依赖预处理器或 JavaScript 的表达能力已经进入浏览器原生 CSS。',
   },
 ];

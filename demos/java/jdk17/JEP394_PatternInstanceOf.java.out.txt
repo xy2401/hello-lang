@@ -1,5 +1,6 @@
 ---
-timeMs: 803
+status: snapshot
+timeMs: 1525
 exitCode: 0
 ---
 Pattern Matching instanceof:

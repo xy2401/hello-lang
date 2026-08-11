@@ -1,5 +1,6 @@
 ---
-timeMs: 794
+status: snapshot
+timeMs: 1671
 exitCode: 0
 ---
 JEP 519 Compact Object Headers (-XX:+UseCompactObjectHeaders):
