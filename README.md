@@ -77,7 +77,7 @@ npm run collect-outputs
 ```bash
 npm run docs:dev
 ```
-访问 `http://localhost:5173/hello-lang/` 或控制台输出的地址即可进行实时预览。
+访问 `http://localhost:5173/` 或控制台输出的地址即可进行实时预览。
 
 ### 5. 构建生产静态页面
 ```bash

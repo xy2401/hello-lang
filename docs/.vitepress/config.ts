@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  base: process.env.DOCS_BASE || '/hello-lang/',
+  base: process.env.DOCS_BASE || '/',
   title: 'Hello Lang',
   description: '全主流编程语言概念、基础语法与版本演进大典 (Multi-Language Concept Explorer & Version Evolution Matrix)',
   themeConfig: {

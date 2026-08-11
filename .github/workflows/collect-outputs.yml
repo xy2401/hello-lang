@@ -1,15 +1,6 @@
-name: Automated Docker Output Collector & Site Build
+name: Manual Docker Output Collector & Site Build
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'demos/**'
-      - 'scripts/**'
-      - 'docs/**'
-  schedule:
-    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:

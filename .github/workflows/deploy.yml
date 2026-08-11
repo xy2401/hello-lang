@@ -39,6 +39,8 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Check and build with VitePress
+        env:
+          DOCS_BASE: /hello-lang/
         run: npm run check
 
       - name: Upload artifact
