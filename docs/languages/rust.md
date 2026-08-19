@@ -1,4 +1,4 @@
-# Rust 概念与 Editions 版本演进
+# Rust 概览
 
 <script setup>
 import { rustVersions } from '../.vitepress/theme/data/versionData';
@@ -12,7 +12,7 @@ Rust 是一门无 GC 垃圾回收、保证 100% 内存安全与并发无数据�
 ## 🔀 Rust Editions 版本对比
 
 <VersionDiff
-  title="🦀 Rust Editions (2018 -> 2021 -> 2024)"
+  title="Rust Editions (2018 -> 2021 -> 2024)"
   :items="rustVersions"
 />
 
@@ -31,7 +31,7 @@ Rust 是一门无 GC 垃圾回收、保证 100% 内存安全与并发无数据�
 
 ## 🧠 核心概念剖析：所有权模型 (Ownership & Borrowing)
 
-Rust 的核心基石是编译期静态检查的**所有权模型**：
+Rust 的核心机制是编译期静态检查的**所有权模型**：
 1. 每个值在任何时刻有且仅有一个所有者 (Owner)。
 2. 当所有者离开作用域，值将被自动 Drop 释放（无 GC 延迟）。
 3. 支持不可变借用 `&T`（可同时存在多个）和可变借用 `&mut T`（同一时刻排他独占）。

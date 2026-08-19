@@ -2,7 +2,7 @@
 import { basicCssLiveCode, basicCssPreviewHtml } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# CSS 基础、层叠与布局全典
+# CSS 基础语法
 
 ## 1. 规则集与选择器
 

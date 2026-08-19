@@ -3,12 +3,12 @@ import { htmlVersions } from '../../.vitepress/theme/data/versionData';
 import { htmlLiveCode } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# 🟧 HTML 结构与语义语言全典
+# 🟧 HTML 结构与语义
 
 HTML（HyperText Markup Language）不是通用编程语言，而是一门描述 Web 文档**结构、内容角色和语义关系**的声明式标记语言。浏览器解析 HTML 后构建 DOM，CSS 和 JavaScript 再以 DOM 为共同接口完成表现与行为。
 
 <VersionDiff
-  title="🟧 HTML 标准能力演进"
+  title="HTML 标准能力演进"
   :items="htmlVersions"
 />
 

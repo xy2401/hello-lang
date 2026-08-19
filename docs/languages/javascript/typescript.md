@@ -1,4 +1,4 @@
-# TypeScript 5.x 工业级类型系统大典
+# TypeScript 5.x 类型系统
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

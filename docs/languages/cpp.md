@@ -1,4 +1,4 @@
-# C++ 概念与现代标准演进 (C++11 ~ C++23)
+# C++ 概览
 
 <script setup>
 import { cppVersions } from '../.vitepress/theme/data/versionData';
@@ -12,7 +12,7 @@ C++ 是兼具底层的硬件控制力与高层级零成本抽象（Zero-Cost Abs
 ## 🔀 C++ 标准演进 Diff (C++11 -> C++20 -> C++23)
 
 <VersionDiff
-  title="⚡ C++ 现代标准演进 (Modern C++)"
+  title="C++ 现代标准演进 (Modern C++)"
   :items="cppVersions"
 />
 

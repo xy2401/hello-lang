@@ -7,12 +7,163 @@
   --hw-glow-purple: rgba(168, 85, 247, 0.15);
   --hw-glow-blue: rgba(59, 130, 246, 0.15);
   --hw-border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Use one page background across the header, sidebar and content area. */
+  --vp-sidebar-bg-color: var(--vp-c-bg);
 }
 
 .dark {
   --vp-c-bg: #090d16;
   --vp-c-bg-soft: #111827;
   --vp-c-bg-alt: #0f172a;
+}
+
+/* Keep the top navigation aligned consistently on pages with a sidebar. */
+@media (min-width: 960px) {
+  html .VPNavBar.has-sidebar.has-sidebar .wrapper {
+    padding: 0 32px;
+  }
+
+  html .VPNavBar.has-sidebar.has-sidebar .container {
+    max-width: calc(var(--vp-layout-max-width) - 64px);
+  }
+
+  html .VPNavBar.has-sidebar.has-sidebar .container > .title {
+    position: static;
+    padding: 0;
+    width: auto;
+    height: calc(var(--vp-nav-height) - 1px);
+  }
+
+  html .VPNavBar.has-sidebar.has-sidebar .container > .content {
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  html .VPNavBar.has-sidebar.has-sidebar .divider {
+    padding-left: 0;
+  }
+
+  html .VPNavBar.has-sidebar.has-sidebar .VPNavBarTitle.has-sidebar .title {
+    border-bottom-color: transparent;
+  }
+}
+
+/* Language brand icons shared by navigation, sidebars and Markdown content. */
+.language-brand-icon,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href*="/languages/"]::before,
+.VPSidebarItem.level-0:has(a[href*="/languages/"]) > .item .text::before,
+.VPSidebar a[href*="/playground/"][href$=".html"] .text::before {
+  width: 1.1rem;
+  height: 1.1rem;
+  background-image: var(--language-brand-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.language-brand-icon {
+  display: inline-block;
+  margin-right: 0.25rem;
+  vertical-align: -0.2rem;
+}
+
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href*="/languages/"]::before,
+.VPSidebarItem.level-0:has(a[href*="/languages/"]) > .item .text::before,
+.VPSidebar a[href*="/playground/"][href$=".html"] .text::before {
+  content: '';
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-right: 0.35rem;
+  vertical-align: -0.2rem;
+}
+
+.language-brand-icon--html,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/html/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/html/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/html5/html5-original.svg');
+}
+
+.language-brand-icon--css,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/css/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/css/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/css3/css3-original.svg');
+}
+
+.language-brand-icon--java,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/java/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/java/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/java/java-original.svg');
+}
+
+.language-brand-icon--javascript,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/javascript/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/javascript/"]),
+.VPSidebar a[href$="/playground/javascript.html"] {
+  --language-brand-image: url('../../../node_modules/devicon/icons/javascript/javascript-original.svg');
+}
+
+.language-brand-icon--typescript,
+.VPSidebarItem.level-0:has(a[href$="/languages/javascript/typescript.html"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/typescript/typescript-original.svg');
+}
+
+.language-brand-icon--python,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/python/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/python/"]),
+.VPSidebar a[href$="/playground/python.html"] {
+  --language-brand-image: url('../../../node_modules/devicon/icons/python/python-original.svg');
+}
+
+.language-brand-icon--cpp,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/cpp/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/cpp/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/cplusplus/cplusplus-original.svg');
+}
+
+.language-brand-icon--rust,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/rust/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/rust/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/rust/rust-original.svg');
+}
+
+.language-brand-icon--go,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/go/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/go/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/go/go-original.svg');
+}
+
+.language-brand-icon--php,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/php/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/php/"]),
+.VPSidebar a[href$="/playground/php.html"] {
+  --language-brand-image: url('../../../node_modules/devicon/icons/php/php-original.svg');
+}
+
+.language-brand-icon--csharp,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/csharp/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/csharp/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/csharp/csharp-original.svg');
+}
+
+.language-brand-icon--kotlin,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/kotlin/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/kotlin/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/kotlin/kotlin-original.svg');
+}
+
+.language-brand-icon--ruby,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/ruby/"],
+.VPSidebarItem.level-0:has(a[href$="/languages/ruby/"]),
+.VPSidebar a[href$="/playground/ruby.html"] {
+  --language-brand-image: url('../../../node_modules/devicon/icons/ruby/ruby-original.svg');
+}
+
+.dark .language-brand-icon--rust,
+.dark :where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/languages/rust/"]::before,
+.dark .VPSidebarItem.level-0:has(a[href$="/languages/rust/"]) > .item .text::before {
+  filter: invert(1);
 }
 
 /* Glassmorphic card styling */

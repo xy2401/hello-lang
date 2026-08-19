@@ -1,11 +1,11 @@
-# C++23 现代化标准精进大典
+# C++23：expected、print 与标准库改进
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方标准**: [ISO/IEC 14882:2023 C++23 Standard](https://en.cppreference.com/w/cpp/23)  
-> C++23 是面向实用主义的精进标准，引入了 **`std::expected` 错误处理容器**、**`std::print` 高性能打印** 以及 **`deducing this` 显式对象参数**。
+> C++23 引入了 **`std::expected` 错误处理容器**、**`std::print` 格式化输出** 和 **`deducing this` 显式对象参数**。
 
 ---
 

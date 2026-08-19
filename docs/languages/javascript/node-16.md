@@ -1,4 +1,4 @@
-# Node.js 16 LTS 官方 Release Notes 深度拆解大典
+# Node.js 16 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

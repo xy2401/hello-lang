@@ -1,11 +1,11 @@
-# Kotlin 2.0 官方 Release Notes 深度拆解大典
+# Kotlin 2.0
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [Kotlin 2.0.0 Released](https://kotlinlang.org/docs/whatsnew20.html)  
-> Kotlin 2.0 是 JetBrains 团队划时代的里程碑版本。它全面默认启用了全新的 **K2 编译器**，编译速度提升 2 倍，并带来了 **Smart Casts 2.0 (智能类型转换)** 与改进的 **Sealed Interfaces**。
+> Kotlin 2.0 默认使用 **K2 编译器**，并改进了智能类型转换与密封接口支持。
 
 ---
 

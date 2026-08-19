@@ -1,11 +1,11 @@
-# JDK 8 LTS 官方 Release Notes 深度拆解大典
+# JDK 8 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [Oracle JDK 8 Official Release Notes](https://www.oracle.com/java/technologies/javase/8-relnotes.html)  
-> JDK 8 是 Java 历史上最具颠覆性的 LTS 版本。JEP (JDK Enhancement Proposal) 提案系统在 JDK 8 时代全面确立。本文结合 Oracle 官方发行说明与 JEP 提案规范，系统化梳理 JDK 8 的核心维度。
+> JDK 8 引入了 Lambda、Stream API、新的日期时间 API，并用 Metaspace 替代 PermGen。本文按相关 JEP 整理这些变化。
 
 ---
 
@@ -128,7 +128,7 @@ String name = Optional.ofNullable(username)
 
 ---
 
-## 3. 🧠 JVM 内存架构革命 (PermGen 移除与 Metaspace 诞生)
+## 3. 🧠 JVM 内存：移除 PermGen，引入 Metaspace
 
 ### JEP 122: Remove the Permanent Generation (PermGen 废除)
 彻底废除了堆内永久代，代之以存在于**本地内存 (Native Memory)** 中的 **元空间 (Metaspace)**。消除了 `OutOfMemoryError: PermGen space` 报错。

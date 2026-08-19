@@ -2,7 +2,7 @@
 import { htmlLiveCode } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# HTML 基础结构与语义全典
+# HTML 基础语法
 
 > HTML 的重点不是“让页面显示出来”，而是用正确元素表达内容含义。良好的语义结构同时改善可访问性、SEO、默认交互和长期维护性。
 

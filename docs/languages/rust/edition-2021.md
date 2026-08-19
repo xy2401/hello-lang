@@ -1,4 +1,4 @@
-# Rust Edition 2021 官方 Release Notes 深度拆解大典
+# Rust Edition 2021
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

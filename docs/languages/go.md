@@ -1,4 +1,4 @@
-# Go 概念与版本演进 (1.18+ 泛型时代)
+# Go 概览
 
 <script setup>
 import { goVersions } from '../.vitepress/theme/data/versionData';
@@ -12,7 +12,7 @@ Go 是由 Google 设计的简洁、强并发（Goroutine/CSP Channel）且快速
 ## 🔀 Go 版本演进节点 (Go 1.18 Generics ~ 1.22)
 
 <VersionDiff
-  title="🐹 Go 现代大版本演进"
+  title="Go 现代大版本演进"
   :items="goVersions"
 />
 

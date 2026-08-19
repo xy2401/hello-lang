@@ -1,11 +1,11 @@
-# PHP 8.3 官方 Release Notes 深度拆解大典
+# PHP 8.3
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [PHP 8.3 Official Release Notes](https://www.php.net/releases/8.3/en.php)  
-> PHP 8.x 是 PHP 语言史上最伟大的演进时代。它通过 **JIT 编译器**、**Typed Class Constants (类型化常量)**、**`readonly` 只读类与属性**、**`enum` 枚举** 和 **`match` 表达式** 彻底把 PHP 转化为了兼具极速与强类型的现代语言。
+> PHP 8.x 引入了 **JIT 编译器**、**Typed Class Constants（类型化常量）**、**`readonly` 类与属性**、**`enum` 枚举** 和 **`match` 表达式**。
 
 ---
 

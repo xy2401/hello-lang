@@ -1,11 +1,11 @@
-# Node.js 22 LTS 官方 Release Notes 深度拆解大典
+# Node.js 22 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [Node.js 22 LTS (Jod) Official Release Notes](https://nodejs.org/en/blog/release/v22.0.0)  
-> Node.js 22 是全栈时代极致性能与规范合流的现代化 LTS 版本。它带来了原生 **WebSocket 客户端**、**Maglev SSA JIT 编译器** 以及允许 `require()` 直接同步加载 ESM 模块的突破性能力。
+> Node.js 22 包含原生 WebSocket 客户端、Maglev 编译器，以及 `require()` 同步加载部分 ESM 模块等变化。
 
 ---
 

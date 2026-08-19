@@ -1,4 +1,4 @@
-# JavaScript / TypeScript 概念与现代演进
+# JavaScript 与 TypeScript 概览
 
 <script setup>
 import { jsVersions } from '../.vitepress/theme/data/versionData';
@@ -6,14 +6,14 @@ import { jsLiveCode, jsLiveMarkup } from '../.vitepress/theme/data/liveExamples'
 
 </script>
 
-JavaScript 是全栈 Web 的核心语言，结合 TypeScript 5.x 带来工业级静态类型分析。完整内容已经按语言能力重组，不再为 ES2016 之后的每个年份建立低信息量页面。
+JavaScript 用于浏览器和服务端开发，TypeScript 5.x 在此基础上提供静态类型检查。内容按语言能力组织，不再为 ES2016 之后的每个年份单独建立页面。
 
 ---
 
 ## 🔀 三阶段演进
 
 <VersionDiff
-  title="🟨 JavaScript / TypeScript 语法演进"
+  title="JavaScript / TypeScript 语法演进"
   :items="jsVersions"
 />
 
@@ -21,7 +21,7 @@ JavaScript 是全栈 Web 的核心语言，结合 TypeScript 5.x 带来工业级
 2. [ES6：现代 JavaScript 奠基](./javascript/es6.md)
 3. [现代 JavaScript：按能力持续演进](./javascript/modern-javascript.md)
 
-[进入 JavaScript 语言全典 →](./javascript/index.md)
+[进入 JavaScript 模块 →](./javascript/index.md)
 
 ---
 

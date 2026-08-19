@@ -1,11 +1,11 @@
-# JDK 11 LTS 官方 Release Notes 深度拆解大典
+# JDK 11 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [OpenJDK JDK 11 Official Features & Release Notes](https://openjdk.org/projects/jdk/11/)  
-> JDK 11 是继 JDK 8 之后的第二个 LTS 长期支持版本。它带来了 **标准化 HTTP Client**、**单文件免编译直接运行**、**ZGC 超低延迟垃圾回收器** 以及 **JFR (Java Flight Recorder) 开源**。本文严格对照 OpenJDK 官方 17 个 JEP 提案进行规范化深度拆解。
+> JDK 11 是继 JDK 8 之后的第二个 LTS 版本，包含标准 HTTP Client、单文件源码运行、ZGC 和开源 JFR。本文按 OpenJDK 的 17 个 JEP 整理相关变化。
 
 ---
 

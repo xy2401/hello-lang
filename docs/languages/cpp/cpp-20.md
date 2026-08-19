@@ -1,11 +1,11 @@
-# C++20 现代标准深度拆解大典
+# C++20：Concepts、Modules、Coroutines 与 Ranges
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方标准**: [ISO/IEC 14882:2020 C++20 Standard](https://en.cppreference.com/w/cpp/20)  
-> C++20 是继 C++11 之后最宏大的 C++ 标准变革。它引入了四大支柱：**Concepts (概念)**、**Ranges (范围库)**、**Coroutines (协程)** 与 **Modules (模块)**。
+> C++20 引入了 **Concepts（概念）**、**Ranges（范围库）**、**Coroutines（协程）** 与 **Modules（模块）**。
 
 ---
 

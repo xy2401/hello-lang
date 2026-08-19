@@ -1,11 +1,11 @@
-# JDK 25 LTS 官方 Release Notes 深度拆解大典
+# JDK 25 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [OpenJDK JDK 25 Official Features & Release Notes](https://openjdk.org/projects/jdk/25/)  
-> JDK 25 是 JVM 演进史上极其关键的 LTS 长期支持版本。从初学者入门简化到 AOT 编译优化，再到底层堆内存头部压缩与高性能并发控制，JDK 25 代表了现代 Java 的最新顶峰。
+> JDK 25 涵盖简化程序入口、AOT 优化、紧凑对象头、Scoped Values 和分代 Shenandoah 等变化。
 
 ---
 
@@ -100,7 +100,7 @@ ScopedValue<UserContext> USER = ScopedValue.newInstance();
 
 ---
 
-## 3. 🧠 内存架构与 GC 终极优化 (Compact Headers & Shenandoah)
+## 3. 🧠 内存与 GC（Compact Headers、Shenandoah）
 
 ### JEP 519: Compact Object Headers (紧凑对象头)
 在 64 位 HotSpot JVM 中将对象头大小从 128 位（16 字节）压缩降至 **64 位（8 字节）**，直接降低 10% ~ 20% 的 JVM 堆内存开销！

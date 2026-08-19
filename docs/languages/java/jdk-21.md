@@ -1,11 +1,11 @@
-# JDK 21 LTS 官方 Release Notes 深度拆解大典
+# JDK 21 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [OpenJDK JDK 21 Official Features & Release Notes](https://openjdk.org/projects/jdk/21/)  
-> JDK 21 是现代 Java 发展史上的里程碑式 LTS 长期支持版本。它包含了著名的 **Project Loom (虚拟线程)**、**Project Panama (FFM API)** 以及语言层面解构匹配与有序集合的重大变革。本文严格按照 OpenJDK 官方 15 个 JEP 提案进行系统化规范梳理。
+> JDK 21 包含虚拟线程、FFM API、记录模式和有序集合等变化。本文按 OpenJDK 的 15 个 JEP 整理。
 
 ---
 
@@ -43,7 +43,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 2. 🧩 集合与模式匹配革命 (Language & Collections)
+## 2. 🧩 集合与模式匹配
 
 ### JEP 431: Sequenced Collections (有序集合)
 为 `List`, `Deque`, `Set` 补全统一的头部与尾部访问与反转视图 API（`getFirst()`, `getLast()`, `addFirst()`, `addLast()`, `reversed()`）。

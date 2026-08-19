@@ -1,4 +1,4 @@
-# Java 基础语法与 Hello World 全典
+# Java 基础语法
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

@@ -2,7 +2,7 @@
 import { es6LiveCode, es6LiveMarkup } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# ES6（ES2015）：现代 JavaScript 奠基
+# ES6（ES2015）：let、模块、Promise 与类
 
 ES6 是 JavaScript 由浏览器脚本走向模块化应用语言的分水岭。它不是几个 API 的集合，而是同时升级了作用域、函数、对象、异步、集合、迭代和模块系统。
 

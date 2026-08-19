@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "devicon": "^2.17.0",
     "html-validate": "10.17.0",
     "stylelint": "17.14.1",
     "typescript": "^5.0.0",

@@ -1,11 +1,11 @@
-# Node.js 20 LTS 官方 Release Notes 深度拆解大典
+# Node.js 20 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [Node.js 20 LTS (Iron) Official Release Notes](https://nodejs.org/en/blog/release/v20.0.0)  
-> Node.js 20 是服务端极度安全的 LTS 长期支持版本。它带来了颠覆性的 **权限模型 (Permission Model)**、稳定版 **`node:test` 测试框架** 以及 **单二进制可执行文件打包 (SEA)**。
+> Node.js 20 包含实验性权限模型、稳定版 `node:test` 和单可执行文件应用（SEA）等变化。
 
 ---
 
@@ -38,8 +38,8 @@ import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper'
 
 ---
 
-## 4. ⚡ Ada 2.0 WHATWG URL 解析器性能提升 200%
-引入用 C++ 重写的高性能 WHATWG URL 解析器 Ada 2.0，将 `new URL()` 的解析吞吐量与基准性能提升了近 2 倍！
+## 4. ⚡ Ada 2.0 WHATWG URL 解析器
+WHATWG URL 解析改用 C++ 实现的 Ada 2.0，影响 `new URL()` 等 API 的解析路径。
 
 ---
 

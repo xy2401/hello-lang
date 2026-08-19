@@ -1,4 +1,4 @@
-# Python 概念与版本演进 (含 Pyodide 在线运行)
+# Python 概览
 
 <script setup>
 import { pythonVersions } from '../.vitepress/theme/data/versionData';
@@ -26,7 +26,7 @@ Python 是一种高层级、动态强类型、表达力极强且拥有庞大数�
 ## 🔀 Python 大版本演进 Diff (3.8 -> 3.10 -> 3.12)
 
 <VersionDiff
-  title="🐍 Python 3.8 ~ 3.12 语法演进里程碑"
+  title="Python 3.8 ~ 3.12 语法演进里程碑"
   :items="pythonVersions"
 />
 

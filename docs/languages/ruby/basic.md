@@ -1,4 +1,4 @@
-# Ruby 基础语法全典
+# Ruby 基础语法
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

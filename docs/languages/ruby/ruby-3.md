@@ -1,4 +1,4 @@
-# Ruby 3.3 官方 Release Notes 深度拆解大典
+# Ruby 3.3
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

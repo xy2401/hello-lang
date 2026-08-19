@@ -2,7 +2,7 @@
 import { basicJsLiveCode, basicJsLiveMarkup } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# JavaScript 基础语法全典
+# JavaScript 基础语法
 
 > 本页面按照统一标准拆解 JavaScript 基础语法结构：变量声明、数据类型、条件分支、集合循环、函数定义与类结构。
 

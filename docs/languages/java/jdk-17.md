@@ -1,11 +1,11 @@
-# JDK 17 LTS 官方 Release Notes 深度拆解大典
+# JDK 17 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [OpenJDK JDK 17 Official Features & Release Notes](https://openjdk.org/projects/jdk/17/)  
-> JDK 17 是极其重量级的 LTS 长期支持版本。它带来了 **Sealed 密封类**、**Apple Silicon (macOS/AArch64) 原生支持**、**强封装 JDK 内部 API** 以及伪随机数引擎增强。本文严格对照 OpenJDK 官方 14 个 JEP 提案进行规范化深度拆解。
+> JDK 17 包含密封类、Apple Silicon（macOS/AArch64）支持、JDK 内部 API 强封装和伪随机数生成器改进。本文按 OpenJDK 的 14 个 JEP 整理相关变化。
 
 ---
 

@@ -40,7 +40,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 ## 🌟 语言演进矩阵速览 (Version Evolution Highlights)
 
 <VersionDiff
-  title="☕ Java JDK LTS 核心语法演进"
+  title="Java JDK LTS 核心语法演进"
   :items="javaVersions"
 />
 

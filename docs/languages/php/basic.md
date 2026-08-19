@@ -1,4 +1,4 @@
-# PHP 基础语法全典
+# PHP 基础语法
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

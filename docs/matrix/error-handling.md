@@ -1,4 +1,4 @@
-# 🛡️ 跨语言错误处理与控制流哲学
+# 🛡️ 错误处理
 
 > 错误处理是设计语言时最具争议的领域。本文对比 **Java/Python/C# 异常机制 (Exceptions)** vs **Rust `Result<T, E>`** vs **Go 显式返回值 `err`** vs **C++23 `std::expected`**。
 

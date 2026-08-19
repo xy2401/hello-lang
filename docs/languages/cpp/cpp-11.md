@@ -1,4 +1,4 @@
-# C++11 现代 C++ 奠基标准拆解大典
+# C++11：类型推导、移动语义与 Lambda
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

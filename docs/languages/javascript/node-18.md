@@ -1,11 +1,11 @@
-# Node.js 18 LTS 官方 Release Notes 深度拆解大典
+# Node.js 18 LTS
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 > **参考官方文档**: [Node.js 18 LTS (Hydrogen) Official Release Notes](https://nodejs.org/en/blog/release/v18.0.0)  
-> Node.js 18 是服务端 JavaScript 发展史上的里程碑 LTS 版本。它标志着 Node.js 全面拥抱现代 W3C / WHATWG Web 标准，消除了浏览器与 Node.js 之间的最后一公里隔阂。
+> Node.js 18 加入了全局 `fetch`、Web Streams、内置测试模块等 Web 平台 API。
 
 ---
 
@@ -31,7 +31,7 @@ import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper'
 ---
 
 ## 3. 🧪 原生内置测试运行器 (`node:test`)
-引入极简的内置测试模块 `node:test`，开发者无需安装 Jest、Mocha 等重型第三方框架，即可通过 `import test from 'node:test'` 编写异步单元测试。
+引入内置测试模块 `node:test`，可通过 `import test from 'node:test'` 编写异步单元测试。
 
 ---
 
