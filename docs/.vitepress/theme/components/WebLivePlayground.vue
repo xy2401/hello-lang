@@ -1,5 +1,5 @@
 <template>
-  <div class="web-live" :aria-label="props.title || `${languageLabel} Live 实验室`">
+  <div class="web-live" :class="{ 'is-dark': isDark }" :aria-label="props.title || `${languageLabel} Live 实验室`">
     <div class="workbench-bar">
       <div class="toolbar-left">
         <span class="language-label">{{ languageLabel }}</span>
@@ -63,6 +63,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useData } from 'vitepress';
 
 const props = withDefaults(defineProps<{
   mode: 'html' | 'css' | 'javascript';
@@ -72,6 +73,8 @@ const props = withDefaults(defineProps<{
 }>(), {
   previewHtml: '<main class="demo"><h2>Live Web Demo</h2><p>编辑代码，观察页面变化。</p><button>交互按钮</button></main>',
 });
+
+const { isDark } = useData();
 
 const editableCode = ref(props.initialCode);
 const activeView = ref<'source' | 'live'>('source');
@@ -387,7 +390,54 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.web-live { margin: 1.25rem 0 2rem; padding: .7rem; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 14px; background: var(--vp-c-bg); box-shadow: 0 10px 30px rgb(15 23 42 / 7%); }
+.web-live {
+  --live-shadow: 0 10px 30px rgb(15 23 42 / 7%);
+  --live-editor-bg: #f8fafc;
+  --live-editor-border: #cbd5e1;
+  --live-code-color: #1e293b;
+  --live-caret-color: #0f172a;
+  --live-scrollbar-color: #94a3b8;
+  --live-scrollbar-border: #f8fafc;
+  --live-selection-color: rgb(59 130 246 / 24%);
+  --live-console-bg: #f1f5f9;
+  --live-console-color: #0369a1;
+  --live-token-comment: #64748b;
+  --live-token-keyword: #7c3aed;
+  --live-token-builtin: #2563eb;
+  --live-token-string: #15803d;
+  --live-token-number: #b45309;
+  --live-token-attribute: #0e7490;
+  --live-token-selector: #be185d;
+  --live-token-punctuation: #475569;
+
+  margin: 1.25rem 0 2rem;
+  padding: .7rem;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg);
+  box-shadow: var(--live-shadow);
+}
+.web-live.is-dark {
+  --live-shadow: 0 10px 30px rgb(0 0 0 / 24%);
+  --live-editor-bg: #08111f;
+  --live-editor-border: #1e293b;
+  --live-code-color: #dbeafe;
+  --live-caret-color: #f8fafc;
+  --live-scrollbar-color: #334155;
+  --live-scrollbar-border: #08111f;
+  --live-selection-color: rgb(59 130 246 / 42%);
+  --live-console-bg: #050b14;
+  --live-console-color: #7dd3fc;
+  --live-token-comment: #64748b;
+  --live-token-keyword: #c084fc;
+  --live-token-builtin: #60a5fa;
+  --live-token-string: #86efac;
+  --live-token-number: #fbbf24;
+  --live-token-attribute: #67e8f9;
+  --live-token-selector: #f9a8d4;
+  --live-token-punctuation: #94a3b8;
+}
 .workbench-bar, .toolbar-left { display: flex; align-items: center; }
 .workbench-bar { min-height: 2.25rem; justify-content: space-between; gap: 1rem; padding: 0 .15rem .65rem; }
 .toolbar-left { gap: .65rem; }
@@ -398,28 +448,28 @@ onBeforeUnmount(() => {
 .reset-button { border: 0; padding: .35rem .5rem; border-radius: 6px; background: transparent; color: var(--vp-c-text-2); cursor: pointer; font-size: .78rem; }
 .reset-button:hover { color: var(--vp-c-text-1); background: var(--vp-c-bg-soft); }
 .source-view, .live-view { margin: 0; }
-.editor-shell { position: relative; height: clamp(290px, 46vh, 430px); overflow: hidden; border: 1px solid #1e293b; border-radius: 10px; background: #08111f; }
+.editor-shell { position: relative; height: clamp(290px, 46vh, 430px); overflow: hidden; border: 1px solid var(--live-editor-border); border-radius: 10px; background: var(--live-editor-bg); }
 .highlight-layer, .live-editor { box-sizing: border-box !important; position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: .9rem 1rem !important; border: 0 !important; border-radius: 0 !important; font: 13.5px/1.65 ui-monospace, SFMono-Regular, Consolas, monospace !important; tab-size: 2; white-space: pre-wrap !important; overflow-wrap: anywhere; overflow-x: hidden !important; overflow-y: auto !important; }
-.highlight-layer { z-index: 1; pointer-events: none; color: #dbeafe !important; background: transparent !important; scrollbar-width: none; }
+.highlight-layer { z-index: 1; pointer-events: none; color: var(--live-code-color) !important; background: transparent !important; scrollbar-width: none; }
 .highlight-layer code { display: block; margin: 0; padding: 0; color: inherit; font: inherit; background: transparent; }
-.live-editor { z-index: 2; resize: none; color: transparent !important; caret-color: #f8fafc; background: transparent !important; outline: none; -webkit-text-fill-color: transparent !important; scrollbar-width: thin; scrollbar-color: #334155 transparent; }
+.live-editor { z-index: 2; resize: none; color: transparent !important; caret-color: var(--live-caret-color); background: transparent !important; outline: none; -webkit-text-fill-color: transparent !important; scrollbar-width: thin; scrollbar-color: var(--live-scrollbar-color) transparent; }
 .live-editor::-webkit-scrollbar { width: 8px; }
 .live-editor::-webkit-scrollbar-track { background: transparent; }
-.live-editor::-webkit-scrollbar-thumb { border: 2px solid #08111f; border-radius: 999px; background: #334155; }
-.live-editor::selection { background: rgb(59 130 246 / 42%); }
+.live-editor::-webkit-scrollbar-thumb { border: 2px solid var(--live-scrollbar-border); border-radius: 999px; background: var(--live-scrollbar-color); }
+.live-editor::selection { background: var(--live-selection-color); }
 .editor-shell:focus-within { border-color: var(--vp-c-brand-1); box-shadow: 0 0 0 2px color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent); }
 .live-hint { margin: .45rem .15rem 0; color: var(--vp-c-text-3); font-size: .72rem; text-align: right; }
 .live-preview { display: block; width: 100%; height: clamp(320px, 50vh, 500px); border: 0; border-radius: 10px; background: #fff; }
 .console-panel { margin-top: .8rem; color: var(--vp-c-text-2); font-size: .78rem; font-weight: 700; }
-.console-panel pre { min-height: 3rem; max-height: 12rem; margin: .35rem 0 0; overflow: auto; background: #050b14; color: #7dd3fc; }
-:deep(.tok-comment) { color: #64748b !important; font-style: italic; }
-:deep(.tok-keyword) { color: #c084fc !important; font-weight: 600; }
-:deep(.tok-builtin), :deep(.tok-tag) { color: #60a5fa !important; }
-:deep(.tok-string) { color: #86efac !important; }
-:deep(.tok-number) { color: #fbbf24 !important; }
-:deep(.tok-attribute), :deep(.tok-property) { color: #67e8f9 !important; }
-:deep(.tok-selector) { color: #f9a8d4 !important; }
-:deep(.tok-punctuation) { color: #94a3b8 !important; }
+.console-panel pre { min-height: 3rem; max-height: 12rem; margin: .35rem 0 0; overflow: auto; border: 1px solid var(--vp-c-divider); background: var(--live-console-bg); color: var(--live-console-color); }
+:deep(.tok-comment) { color: var(--live-token-comment) !important; font-style: italic; }
+:deep(.tok-keyword) { color: var(--live-token-keyword) !important; font-weight: 600; }
+:deep(.tok-builtin), :deep(.tok-tag) { color: var(--live-token-builtin) !important; }
+:deep(.tok-string) { color: var(--live-token-string) !important; }
+:deep(.tok-number) { color: var(--live-token-number) !important; }
+:deep(.tok-attribute), :deep(.tok-property) { color: var(--live-token-attribute) !important; }
+:deep(.tok-selector) { color: var(--live-token-selector) !important; }
+:deep(.tok-punctuation) { color: var(--live-token-punctuation) !important; }
 @media (max-width: 760px) {
   .web-live { padding: .55rem; border-radius: 12px; }
   .editor-shell { height: 340px; }

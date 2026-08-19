@@ -168,19 +168,19 @@
 
 /* Glassmorphic card styling */
 .hw-card {
-  background: rgba(17, 24, 39, 0.6);
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 82%, transparent);
   backdrop-filter: blur(12px);
-  border: 1px solid var(--hw-border-glass);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   padding: 1.25rem;
   margin: 1rem 0;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 28px rgb(15 23 42 / 9%);
   transition: all 0.3s ease;
 }
 
 .hw-card:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.15);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 42%, var(--vp-c-divider));
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent);
 }
 
 /* Version badge styles */
@@ -215,11 +215,11 @@
 /* Code runner & console styling */
 .hw-console {
   font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace;
-  background-color: #030712;
-  border: 1px solid #1f2937;
+  background-color: var(--vp-code-block-bg);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 1rem;
-  color: #f3f4f6;
+  color: var(--vp-code-block-color);
   font-size: 0.875rem;
   line-height: 1.5;
   overflow-x: auto;
@@ -229,11 +229,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 1px solid var(--vp-c-divider);
   padding-bottom: 0.5rem;
   margin-bottom: 0.75rem;
   font-size: 0.75rem;
-  color: #9ca3af;
+  color: var(--vp-c-text-3);
 }
 
 .hw-tag-docker {
