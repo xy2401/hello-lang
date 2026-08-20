@@ -2,7 +2,7 @@
 
 > **全主流编程语言概念、基础语法与版本演进大典 (Multi-Language Concept Explorer & Version Evolution Matrix)**
 > 
-> `hello-lang` 是开发者横向学习与纵深对比全主流编程语言的终极知识库。属于 `hello-*` 系列开源矩阵（未来规划包含 `hello-lang`、`hello-sql`、`hello-shell`）。
+> `hello-lang` 是开发者横向学习与纵深对比全主流编程语言的终极知识库。属于 `hello-*` 系列开源学习矩阵（已落地 `hello-lang`、`hello-sql`、`hello-mq`，`hello-shell` 规划中）。
 
 ---
 
