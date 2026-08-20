@@ -1,4 +1,4 @@
-name: Manual Docker Output Collector & Site Build
+name: collect-docker-outputs
 
 on:
   workflow_dispatch:
