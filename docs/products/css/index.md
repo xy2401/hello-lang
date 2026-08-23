@@ -5,6 +5,8 @@ import { cssLiveCode, cssPreviewHtml } from '../../.vitepress/theme/data/liveExa
 
 # 🟦 CSS 样式与布局
 
+<DockerTooling product="css" />
+
 CSS（Cascading Style Sheets）是一门描述文档**表现、布局和响应式规则**的声明式样式表语言。它的核心不是按顺序执行语句，而是让选择器匹配元素，再由层叠、继承和优先级共同决定最终样式。
 
 <VersionDiff

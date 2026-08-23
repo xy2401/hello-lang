@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "unresolved"
+exitCode: -1
+---
+PENDING: typescript 的镜像指纹、PATH 与 vendor bin 完整清单尚未由 Docker 工作流采集。

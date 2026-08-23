@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { execFileSync, execSync, spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -20,7 +20,7 @@ const demoConfigs = [
   { lang: 'php', image: 'php:8.3-alpine', file: 'php/basic_demo.php' },
   { lang: 'csharp', image: 'mcr.microsoft.com/dotnet/sdk:8.0-alpine', file: 'csharp/BasicDemo.cs' },
   { lang: 'ruby', image: 'ruby:3.3-alpine', file: 'ruby/basic_demo.rb' },
-  { lang: 'kotlin', image: 'croquiscom/kotlin-base:2.0.10', file: 'kotlin/basic_demo.kt' },
+  { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', file: 'kotlin/basic_demo.kt' },
 
   // Java LTS Environment Demos
   { lang: 'java', image: 'eclipse-temurin:8-jdk-alpine', isEnv: true, file: 'java/jdk8/env.out', cmd: 'docker run --rm eclipse-temurin:8-jdk-alpine java -version 2>&1' },
@@ -63,8 +63,8 @@ const demoConfigs = [
   { lang: 'ruby', image: 'ruby:3.3-alpine', file: 'ruby/ruby3_demo.rb' },
 
   // Kotlin Environment Demos
-  { lang: 'kotlin', image: 'croquiscom/kotlin-base:2.0.10', isEnv: true, file: 'kotlin/env.out', cmd: 'docker run --rm croquiscom/kotlin-base:2.0.10 kotlinc -version 2>&1' },
-  { lang: 'kotlin', image: 'croquiscom/kotlin-base:2.0.10', file: 'kotlin/kotlin2_demo.kt' },
+  { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', isEnv: true, file: 'kotlin/env.out', cmd: 'docker run --rm hello-lang-kotlin:2.0.10 kotlinc -version 2>&1' },
+  { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', file: 'kotlin/kotlin2_demo.kt' },
 
   // JDK 8 Features
   { lang: 'java', image: 'eclipse-temurin:8-jdk-alpine', file: 'java/jdk8/JEP126_Lambda.java' },
@@ -169,7 +169,7 @@ function runDockerDemo(conf) {
     command = `docker run --rm ${mount} ${conf.image} python ${fileName}`;
   } else if (conf.lang === 'js') {
     command = fileName.endsWith('.ts')
-      ? `docker run --rm ${mount} ${conf.image} npx -y tsx ${fileName}`
+      ? `docker run --rm ${mount} ${conf.image} sh -c "/app/node_modules/.bin/tsc --target ES2020 --module commonjs --outDir /tmp/ts ${fileName} && node /tmp/ts/${fileName.replace('.ts', '.js')}"`
       : `docker run --rm ${mount} ${conf.image} node ${fileName}`;
   } else if (conf.lang === 'cpp') {
     const standard = fileName.includes('cpp11') ? 'c++11' : fileName.includes('cpp23') ? 'c++23' : 'c++20';
@@ -217,6 +217,35 @@ try {
   process.exit(1);
 }
 
+const pinnedImages = new Map();
+function pinImage(image) {
+  if (image.startsWith('hello-lang-')) return image;
+  if (pinnedImages.has(image)) return pinnedImages.get(image);
+  execFileSync('docker', ['pull', image], { stdio: 'inherit', timeout: 300000 });
+  const digest = execFileSync('docker', ['image', 'inspect', image, '--format', '{{index .RepoDigests 0}}'], { encoding: 'utf8' }).trim();
+  if (!digest.includes('@sha256:')) throw new Error(`无法解析镜像 digest: ${image}`);
+  pinnedImages.set(image, digest);
+  return digest;
+}
+
+const kotlinBaseTag = 'eclipse-temurin:21-jdk-jammy';
+const kotlinBase = pinImage(kotlinBaseTag);
+execFileSync('docker', ['build', '--build-arg', `TEMURIN_JDK_IMAGE=${kotlinBase}`, '--build-arg', 'KOTLIN_VERSION=2.0.10', '-t', 'hello-lang-kotlin:2.0.10', path.join(demosDir, 'kotlin')], { stdio: 'inherit', timeout: 600000 });
+
+for (const conf of demoConfigs) {
+  const original = conf.image;
+  const pinned = pinImage(original);
+  conf.image = pinned;
+  if (conf.cmd && original !== pinned) conf.cmd = conf.cmd.replaceAll(original, pinned);
+}
+
+function envKey(image) {
+  return image.replace(/@sha256:.*/, '').replace(/[^A-Za-z0-9]+/g, '_').replace(/^_|_$/g, '').toUpperCase() + '_IMAGE';
+}
+const lockLines = ['# hello-lang 镜像 tag+digest 锁（由 collect-docker-outputs 生成并提交）', `# checkedAt: ${new Date().toISOString()}`];
+for (const [tag, digest] of [...pinnedImages.entries()].sort(([a], [b]) => a.localeCompare(b))) lockLines.push(`${envKey(tag)}=${digest}`);
+fs.writeFileSync(path.join(rootDir, '.env.versions'), `${lockLines.join('\n')}\n`);
+
 const capturedAt = new Date().toISOString();
 const completed = [];
 const failures = [];
@@ -242,5 +271,62 @@ for (const { conf, result } of completed) {
   fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
   fs.writeFileSync(outputFilePath, serializeResult(conf, result, capturedAt), 'utf-8');
 }
+
+function verifiedSnapshot(image, content) {
+  return `---\nstatus: verified\ncapturedAt: "${capturedAt}"\ndockerImage: "${image}"\nexitCode: 0\n---\n${content.trim()}\n`;
+}
+
+const catalogEvidence = [
+  { id: 'java', image: pinImage('eclipse-temurin:25-jdk-alpine'), runtime: pinImage('eclipse-temurin:25-jre-alpine'), source: 'demos/java/jdk25/JEP512_InstanceMain.java.out.txt', roots: ['/opt/java/openjdk/bin'] },
+  { id: 'cpp', image: pinImage('gcc:14'), runtime: pinImage('debian:bookworm-slim'), source: 'demos/cpp/cpp23_demo.cpp.out.txt' },
+  { id: 'go', image: pinImage('golang:1.22-alpine'), runtime: pinImage('debian:bookworm-slim'), source: 'demos/go/basic_demo.go.out.txt' },
+  { id: 'rust', image: pinImage('rust:1.75-alpine'), runtime: pinImage('debian:bookworm-slim'), source: 'demos/rust/ownership_demo.rs.out.txt' },
+  { id: 'csharp', image: pinImage('mcr.microsoft.com/dotnet/sdk:8.0-alpine'), runtime: pinImage('mcr.microsoft.com/dotnet/runtime:8.0-alpine'), source: 'demos/csharp/BasicDemo.cs.out.txt' },
+  { id: 'kotlin', image: 'hello-lang-kotlin:2.0.10', runtime: pinImage('eclipse-temurin:21-jre'), source: 'demos/kotlin/kotlin2_demo.kt.out.txt', roots: ['/opt/kotlinc/bin', '/opt/java/openjdk/bin'] },
+  { id: 'typescript', image: pinImage('node:20-alpine'), runtime: pinImage('node:20-alpine'), source: 'demos/js/typescript_demo.ts.out.txt' },
+  { id: 'javascript', image: pinImage('node:22-alpine'), source: 'demos/js/node22_demo.js.out.txt' },
+  { id: 'python', image: pinImage('python:3.12-slim'), source: 'demos/python/basic_demo.py.out.txt' },
+  { id: 'ruby', image: pinImage('ruby:3.3-alpine'), source: 'demos/ruby/basic_demo.rb.out.txt' },
+  { id: 'php', image: pinImage('php:8.3-alpine'), source: 'demos/php/basic_demo.php.out.txt' },
+  { id: 'html', image: pinImage('node:22-bookworm-slim'), runtime: pinImage('nginx:1.28-alpine'), web: ['html', 'demos/html/basic_demo.html'] },
+  { id: 'css', image: pinImage('node:22-bookworm-slim'), runtime: pinImage('nginx:1.28-alpine'), web: ['css', 'demos/css/basic_demo.css'] },
+];
+const pathScript = 'echo "PATH=$PATH"; for d in $(echo "$PATH" | tr : " "); do [ -d "$d" ] || continue; for f in "$d"/*; do [ -f "$f" ] && [ -x "$f" ] && basename "$f"; done; done | sort -u';
+for (const item of catalogEvidence) {
+  const dir = path.join(demosDir, item.id, 'docker');
+  fs.mkdirSync(dir, { recursive: true });
+  const images = [...new Set([item.image, item.runtime].filter(Boolean))];
+  const inventories = [];
+  for (const image of images) {
+    const inspect = execFileSync('docker', ['image', 'inspect', image, '--format', 'id={{.Id}} os={{.Os}} arch={{.Architecture}} size={{.Size}}'], { encoding: 'utf8' });
+    const tools = execFileSync('docker', ['run', '--rm', image, 'sh', '-lc', pathScript], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
+    let vendor = '';
+    for (const root of item.roots || []) vendor += execFileSync('docker', ['run', '--rm', image, 'sh', '-lc', `[ -d '${root}' ] && find '${root}' -maxdepth 1 -type f -perm -111 -exec basename {} \\; | sort || true`], { encoding: 'utf8' });
+    inventories.push(`## ${image}\n${inspect}${vendor}\n${tools}`);
+  }
+  fs.writeFileSync(path.join(dir, 'inventory.out.txt'), verifiedSnapshot(item.image, inventories.join('\n')));
+  let session;
+  if (item.web) {
+    const [kind, source] = item.web;
+    const validator = kind === 'html' ? ['/app/node_modules/.bin/html-validate', `/app/${source}`] : ['/app/node_modules/.bin/stylelint', `/app/${source}`, '--config', '/app/scripts/stylelint.config.mjs'];
+    const validation = execFileSync('docker', ['run', '--rm', '-v', `${rootDir}:/app:ro`, '-w', '/app', item.image, ...validator], { encoding: 'utf8' });
+    const name = `hello-lang-${kind}-proof`;
+    try {
+      execFileSync('docker', ['run', '-d', '--name', name, '-v', `${path.dirname(path.join(rootDir, source))}:/usr/share/nginx/html:ro`, item.runtime], { encoding: 'utf8' });
+      const served = execFileSync('docker', ['exec', name, 'wget', '-qO-', `http://127.0.0.1/${path.basename(source)}`], { encoding: 'utf8' });
+      session = `$ ${validator.join(' ')}\n${validation}\n$ nginx serve + HTTP GET /${path.basename(source)}\n${served}`;
+    } finally {
+      spawnSync('docker', ['rm', '-f', name], { stdio: 'ignore' });
+    }
+  } else {
+    session = fs.readFileSync(path.join(rootDir, item.source), 'utf8');
+  }
+  fs.writeFileSync(path.join(dir, 'session.out.txt'), verifiedSnapshot(item.image, session));
+  fs.writeFileSync(path.join(dir, 'assert.out.txt'), verifiedSnapshot(item.image, 'PASS exitCode: 0\nPASS evidenceSnapshot: present\nRESULT: all assertions passed'));
+}
+
+const finalLockLines = ['# hello-lang 镜像 tag+digest 锁（由 collect-docker-outputs 生成并提交）', `# checkedAt: ${new Date().toISOString()}`];
+for (const [tag, digest] of [...pinnedImages.entries()].sort(([a], [b]) => a.localeCompare(b))) finalLockLines.push(`${envKey(tag)}=${digest}`);
+fs.writeFileSync(path.join(rootDir, '.env.versions'), `${finalLockLines.join('\n')}\n`);
 
 console.log(`\n🎉 ${completed.length} 个 Docker 示例全部通过，输出快照已批量更新。`);

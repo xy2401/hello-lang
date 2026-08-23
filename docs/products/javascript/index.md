@@ -5,6 +5,8 @@ import { jsLiveCode, jsLiveMarkup } from '../../.vitepress/theme/data/liveExampl
 
 # 🟨 JavaScript 与 Node.js
 
+<DockerTooling product="javascript" />
+
 JavaScript 是以**原型委托、词法闭包、事件循环和动态对象**为核心的语言。浏览器、Node.js 和其他宿主为它提供不同 API；TypeScript 则在 JavaScript 之上增加静态类型分析。
 
 学习 JavaScript 不应按 ES2016、ES2017……逐年背 API。更有效的路线是先理解语言模型，再掌握 ES6 的结构性变化，最后按异步、数据、封装、模块等问题域吸收现代能力。

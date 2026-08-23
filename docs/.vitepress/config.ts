@@ -269,6 +269,7 @@ export default defineConfig({
             { text: '📦 包管理与构建', link: '/matrix/package-management' },
             { text: '🔀 类型系统、泛型与模式匹配', link: '/matrix/type-system' },
             { text: '🛡️ 错误处理', link: '/matrix/error-handling' },
+            { text: '🐳 Docker 工具', link: '/matrix/docker-tools' },
           ],
         },
       ],

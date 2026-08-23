@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 90
 
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: 📥 检出项目代码
@@ -28,13 +28,17 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: 🐳 运行 Docker 代码输出自动化收集
-        run: npm run collect-outputs
+        run: npm run collect:docker
 
       - name: 🏗️ 验证项目与 VitePress 生产构建
         run: npm run check
 
-      - name: 🚀 自动提交更新后的 demos/ 同级 *.out.txt 到 GitHub
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: 📦 上传待审查的镜像锁与证据快照
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: "chore(auto): update Docker execution *.out.txt files [skip ci]"
-          file_pattern: "demos/**/*.out.txt"
+          name: hello-lang-docker-evidence-${{ github.run_id }}
+          path: |
+            .env.versions
+            demos/**/docker/*.out.txt
+          include-hidden-files: true
+          if-no-files-found: error

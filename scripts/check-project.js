@@ -89,7 +89,7 @@ for (const file of generatedFiles) errors.push(`不应提交编译产物: ${rela
 const snapshotFiles = walk(path.join(rootDir, 'demos'), (file) => file.endsWith('.out.txt'));
 for (const file of snapshotFiles) {
   const content = fs.readFileSync(file, 'utf8');
-  if (!/^---\r?\n[\s\S]*?^status:\s*(verified|snapshot|error|missing)\s*$/m.test(content)) {
+  if (!/^---\r?\n[\s\S]*?^status:\s*(verified|snapshot|documented|partial|unsupported|error|missing)\s*$/m.test(content)) {
     errors.push(`输出快照缺少可信状态: ${relative(file)}`);
   }
 }
