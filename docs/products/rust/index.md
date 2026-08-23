@@ -1,6 +1,5 @@
 # Rust Editions
 
-<DockerTooling product="rust" />
 
 Rust 通过 Edition 机制每 3 年梳理一次语言规范，在保障 100% 后向兼容性的前提下升级语法。
 

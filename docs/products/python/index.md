@@ -1,6 +1,5 @@
 # Python 版本与 PEP
 
-<DockerTooling product="python" />
 
 Python 作为表达力极强的高级语言，通过 PEP (Python Enhancement Proposal) 社区机制推进语言规范的快速演进。
 

@@ -1,6 +1,5 @@
 # TypeScript 5.x 类型系统
 
-<DockerTooling product="typescript" />
 
 <script setup>
 import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';

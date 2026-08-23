@@ -1,6 +1,5 @@
 # ☕ Java LTS 版本
 
-<DockerTooling product="java" />
 
 这里按 LTS 版本整理 Java 的主要语言、类库与 JVM 变化，涵盖 **JDK 8、JDK 11、JDK 17、JDK 21、JDK 25**。
 

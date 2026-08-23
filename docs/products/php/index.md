@@ -1,6 +1,5 @@
 # PHP 版本
 
-<DockerTooling product="php" />
 
 Welcome to PHP 8.x Modern Era!
 
