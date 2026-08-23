@@ -52,7 +52,7 @@
 
 /* Language brand icons shared by navigation, sidebars and Markdown content. */
 .language-brand-icon,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href*="/products/"]::before,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/"]::before,
 .VPSidebarItem.level-0:has(a[href*="/products/"]) > .item .text::before,
 .VPSidebar a[href*="/playground/"][href$=".html"] .text::before {
   width: 1.1rem;
@@ -69,7 +69,7 @@
   vertical-align: -0.2rem;
 }
 
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href*="/products/"]::before,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/"]::before,
 .VPSidebarItem.level-0:has(a[href*="/products/"]) > .item .text::before,
 .VPSidebar a[href*="/playground/"][href$=".html"] .text::before {
   content: '';
@@ -80,81 +80,82 @@
 }
 
 .language-brand-icon--html,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/html/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/html/"],
 .VPSidebarItem.level-0:has(a[href$="/products/html/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/html5/html5-original.svg');
 }
 
 .language-brand-icon--css,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/css/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/css/"],
 .VPSidebarItem.level-0:has(a[href$="/products/css/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/css3/css3-original.svg');
 }
 
 .language-brand-icon--java,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/java/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/java/"],
 .VPSidebarItem.level-0:has(a[href$="/products/java/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/java/java-original.svg');
 }
 
 .language-brand-icon--javascript,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/javascript/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/javascript/"],
 .VPSidebarItem.level-0:has(a[href$="/products/javascript/"]),
 .VPSidebar a[href$="/playground/javascript.html"] {
   --language-brand-image: url('../../../node_modules/devicon/icons/javascript/javascript-original.svg');
 }
 
 .language-brand-icon--typescript,
-.VPSidebarItem.level-0:has(a[href$="/products/typescript/"]) {
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href*="/products/typescript"],
+.VPSidebarItem.level-0:has(a[href*="/products/typescript"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/typescript/typescript-original.svg');
 }
 
 .language-brand-icon--python,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/python/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/python/"],
 .VPSidebarItem.level-0:has(a[href$="/products/python/"]),
 .VPSidebar a[href$="/playground/python.html"] {
   --language-brand-image: url('../../../node_modules/devicon/icons/python/python-original.svg');
 }
 
 .language-brand-icon--cpp,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/cpp/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/cpp/"],
 .VPSidebarItem.level-0:has(a[href$="/products/cpp/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/cplusplus/cplusplus-original.svg');
 }
 
 .language-brand-icon--rust,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/rust/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/rust/"],
 .VPSidebarItem.level-0:has(a[href$="/products/rust/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/rust/rust-original.svg');
 }
 
 .language-brand-icon--go,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/go/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/go/"],
 .VPSidebarItem.level-0:has(a[href$="/products/go/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/go/go-original.svg');
 }
 
 .language-brand-icon--php,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/php/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/php/"],
 .VPSidebarItem.level-0:has(a[href$="/products/php/"]),
 .VPSidebar a[href$="/playground/php.html"] {
   --language-brand-image: url('../../../node_modules/devicon/icons/php/php-original.svg');
 }
 
 .language-brand-icon--csharp,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/csharp/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/csharp/"],
 .VPSidebarItem.level-0:has(a[href$="/products/csharp/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/csharp/csharp-original.svg');
 }
 
 .language-brand-icon--kotlin,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/kotlin/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/kotlin/"],
 .VPSidebarItem.level-0:has(a[href$="/products/kotlin/"]) {
   --language-brand-image: url('../../../node_modules/devicon/icons/kotlin/kotlin-original.svg');
 }
 
 .language-brand-icon--ruby,
-:where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/ruby/"],
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/ruby/"],
 .VPSidebarItem.level-0:has(a[href$="/products/ruby/"]),
 .VPSidebar a[href$="/playground/ruby.html"] {
   --language-brand-image: url('../../../node_modules/devicon/icons/ruby/ruby-original.svg');

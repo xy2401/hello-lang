@@ -1,33 +1,23 @@
-# TypeScript 5.x 类型系统
-
-<script setup>
-import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
-</script>
-
+---
+title: TypeScript 文档已迁移
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0; url=/products/typescript/
+  - - link
+    - rel: canonical
+      href: /products/typescript/
 ---
 
-## 1. 强类型系统与泛型约束 (`Generic Constraints`)
-利用静态类型推导与条件类型 (`Conditional Types`) 确保复杂的工程开发类型安全。
+# TypeScript 文档已迁移
 
-```typescript
-type Role = "ADMIN" | "DEVELOPER" | "GUEST";
+TypeScript 已提升为独立产品，请访问 [TypeScript 5.x 类型系统](/products/typescript/)。
 
-interface User<T extends Role> {
-  id: number;
-  username: String;
-  role: T;
-}
+<script setup>
+import { onMounted } from 'vue';
+import { withBase } from 'vitepress';
 
-const dev: User<"DEVELOPER"> = {
-  id: 1,
-  username: "Alice",
-  role: "DEVELOPER"
-};
-
-console.log("TypeScript 5.x User Role:", dev.role);
-```
-
-<DockerOutput
-  image="node:20-alpine"
-  sourceFile="demos/js/typescript_demo.ts"
-/>
+onMounted(() => {
+  window.location.replace(withBase('/products/typescript/'));
+});
+</script>

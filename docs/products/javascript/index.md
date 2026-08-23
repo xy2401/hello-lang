@@ -99,4 +99,4 @@ Node LTS 页面保留，是因为运行时版本涉及 V8、系统 API、模块�
 - [Node.js 18 LTS](./node-18.md)
 - [Node.js 20 LTS](./node-20.md)
 - [Node.js 22 LTS](./node-22.md)
-- [TypeScript 5.x 类型系统](./typescript.md)
+- [TypeScript 5.x 独立产品文档](/products/typescript/)

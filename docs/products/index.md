@@ -3,7 +3,7 @@
 从下列语言进入对应的版本路线与学习资料。
 
 - [Java](/products/java/)
-- [TypeScript](/products/javascript/typescript)
+- [TypeScript](/products/typescript/)
 - [Python](/products/python/)
 - [Rust](/products/rust/)
 - [Go](/products/go/)

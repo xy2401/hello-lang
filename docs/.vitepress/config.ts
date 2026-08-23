@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress';
-import { allLanguages } from './theme/data/languageNavigation';
+import { allLanguages, featuredLanguages, moreLanguages } from './theme/data/languageNavigation';
+
+const docsBase = process.env.DOCS_BASE || '/';
 
 const languageBrandPatterns = [
   { language: 'html', pattern: /🟧(?=\s*HTML)/gu },
@@ -58,10 +60,11 @@ function renderLanguageBrandIcons(md: any) {
 }
 
 export default defineConfig({
-  base: process.env.DOCS_BASE || '/',
+  base: docsBase,
   title: '🚀 Hello Lang',
   description: '编程语言的终极知识库（12 门语言 · 统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
   cleanUrls: true,
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
   markdown: {
     config: renderLanguageBrandIcons,
   },
@@ -77,14 +80,16 @@ export default defineConfig({
       label: '本页导航 (On this page)',
     },
     nav: [
-      { text: '首页', link: '/' },
+      ...featuredLanguages.map(language => ({
+        text: language.name,
+        link: language.link ?? `/products/${language.id}/`,
+      })),
       {
-        text: '产品',
+        text: '更多',
         items: [
-          { text: '产品总览', link: '/products/' },
-          ...allLanguages.map(l => ({
-            text: l.name,
-            link: l.link ?? `/products/${l.id}/`,
+          ...moreLanguages.map(language => ({
+            text: language.name,
+            link: language.link ?? `/products/${language.id}/`,
           })),
         ],
       },
@@ -93,11 +98,11 @@ export default defineConfig({
       { text: '参考资料', link: '/reference/' },
     ],
     sidebar: {
-      '/products/javascript/typescript': [
+      '/products/typescript/': [
         {
           text: 'TypeScript',
           items: [
-            { text: 'TypeScript 5.x 类型系统', link: '/products/javascript/typescript' },
+            { text: 'TypeScript 5.x 类型系统', link: '/products/typescript/' },
           ],
         },
       ],
@@ -163,7 +168,6 @@ export default defineConfig({
             { text: 'Node.js 18 LTS', link: '/products/javascript/node-18' },
             { text: 'Node.js 20 LTS', link: '/products/javascript/node-20' },
             { text: 'Node.js 22 LTS', link: '/products/javascript/node-22' },
-            { text: 'TypeScript 5.x', link: '/products/javascript/typescript' },
           ],
         },
       ],
