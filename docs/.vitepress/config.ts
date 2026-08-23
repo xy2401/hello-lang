@@ -74,7 +74,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/favicon.svg',
     outline: {
       level: [2, 3],
       label: '本页导航 (On this page)',

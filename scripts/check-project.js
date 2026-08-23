@@ -109,8 +109,8 @@ for (const file of javascriptDemos) {
   }
 }
 
-const logoPath = path.join(docsDir, 'public', 'logo.svg');
-if (!fs.existsSync(logoPath)) errors.push('缺少 docs/public/logo.svg');
+const faviconPath = path.join(docsDir, 'public', 'favicon.svg');
+if (!fs.existsSync(faviconPath)) errors.push('缺少 docs/public/favicon.svg');
 
 if (errors.length > 0) {
   console.error(`项目检查失败（${errors.length} 项）：`);
