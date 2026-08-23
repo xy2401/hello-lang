@@ -62,7 +62,7 @@ function renderLanguageBrandIcons(md: any) {
 export default defineConfig({
   base: docsBase,
   title: '🚀 Hello Lang',
-  description: '编程语言的终极知识库（12 门语言 · 统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
+  description: '编程语言对比文档（统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
   cleanUrls: true,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
   markdown: {
@@ -307,5 +307,6 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Hello-Lang Platform',
     },
+    search: { provider: 'local' },
   },
 });

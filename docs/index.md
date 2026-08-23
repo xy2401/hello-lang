@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "🚀 Hello Lang"
-  text: "编程语言的终极知识库"
+  text: "编程语言对比与版本资料"
   tagline: "12 门主流语言 · 统一语法骨架 · 版本演进矩阵 · Docker 真实验证"
   image: /logo.svg
   alt: Hello Lang - 编程语言学习平台
