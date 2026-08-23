@@ -40,7 +40,7 @@ features:
 | 语言 | 类型 | 核心特色 | 快速开始 |
 | :--- | :--- | :--- | --- |
 | [Java](/products/java/) ☕ | OOP/MPP | JVM 生态王者、企业级首选、虚拟线程革命 | [查看详情](/products/java/) → |
-| [TypeScript](/products/typescript/) 🎨 | OOP/Turing | JavaScript 超集、静态类型、前端开发标配 | [查看详情](/products/typescript/) → |
+| [TypeScript](/products/javascript/typescript) 🎨 | OOP/Turing | JavaScript 超集、静态类型、前端开发标配 | [查看详情](/products/javascript/typescript) → |
 | [Python](/products/python/) 🐍 | Scripting/Data | AI/ML 首选、简洁优雅、全栈万能钥匙 | [查看详情](/products/python/) → |
 | [Rust](/products/rust/) 🦀 | Systems | 内存安全无 GC、零开销抽象、系统级编程新标准 | [查看详情](/products/rust/) → |
 | [Go](/products/go/) 🐹 | Cloud-Native | Goroutine 并发、简单高效、云原生基础设施语言 | [查看详情](/products/go/) → |
@@ -103,12 +103,12 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 | 概念维度 | 核心要点 | 深入学习 |
 |---------|---------|---------|
-| **变量声明** | `var`/`let`/`const` vs `$var` vs `int x` | [见 unified-syntax](/matrix/basic-syntax-concept/) |
-| **函数定义** | `function f()` vs `=>` vs `def` | [见 unified-syntax](/matrix/basic-syntax-concept/) |
-| **控制流** | `if/else`、`for/while`、`switch` 通用模式 | [见 unified-syntax](/matrix/basic-syntax-concept/) |
-| **面向对象** | 类/继承/多态实现差异 | [见 object-model](/matrix/object-model/) |
-| **内存管理** | 手动/引用计数/GC 回收/所有权 | [见 memory](/matrix/memory/) |
-| **并发范式** | 线程/Goroutine/Event Loop/async-await | [见 concurrency](/matrix/concurrency/) |
+| **变量声明** | `var`/`let`/`const` vs `$var` vs `int x` | [见 unified-syntax](/matrix/basic-syntax-concept) |
+| **函数定义** | `function f()` vs `=>` vs `def` | [见 unified-syntax](/matrix/basic-syntax-concept) |
+| **控制流** | `if/else`、`for/while`、`switch` 通用模式 | [见 unified-syntax](/matrix/basic-syntax-concept) |
+| **面向对象** | 类/继承/多态实现差异 | [见 object-model](/matrix/object-model) |
+| **内存管理** | 手动/引用计数/GC 回收/所有权 | [见 memory](/matrix/memory) |
+| **并发范式** | 线程/Goroutine/Event Loop/async-await | [见 concurrency](/matrix/concurrency) |
 
 ### 延伸概念
 

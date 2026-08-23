@@ -80,21 +80,171 @@ export default defineConfig({
       // 前 5 个语言全部平铺在主导航，每个都能点击
       ...allLanguages.slice(0, 5).map(l => ({
         text: l.name,
-        link: `/products/${l.id}/`,
+        link: l.link ?? `/products/${l.id}/`,
       })),
       // 第 6 个起在「更多」下拉中展开选择
       {
         text: '更多',
         items: allLanguages.slice(5).map(l => ({
           text: l.name,
-          link: `/products/${l.id}/`,
+          link: l.link ?? `/products/${l.id}/`,
         })),
       },
-      }],
-      
+    ],
+    sidebar: {
+      '/products/javascript/typescript': [
+        {
+          text: 'TypeScript',
+          items: [
+            { text: 'TypeScript 5.x 类型系统', link: '/products/javascript/typescript' },
+          ],
+        },
+      ],
+      '/products/java/': [
+        {
+          text: 'Java',
+          items: [
+            { text: '版本总览', link: '/products/java/' },
+            { text: '基础语法', link: '/products/java/basic' },
+            { text: 'JDK 8 LTS', link: '/products/java/jdk-8' },
+            { text: 'JDK 11 LTS', link: '/products/java/jdk-11' },
+            { text: 'JDK 17 LTS', link: '/products/java/jdk-17' },
+            { text: 'JDK 21 LTS', link: '/products/java/jdk-21' },
+            { text: 'JDK 25 LTS', link: '/products/java/jdk-25' },
+          ],
+        },
+      ],
+      '/products/python/': [
+        {
+          text: 'Python',
+          items: [
+            { text: '版本总览', link: '/products/python/' },
+            { text: '基础语法', link: '/products/python/basic' },
+            { text: 'Python 3.8', link: '/products/python/py-38' },
+            { text: 'Python 3.10', link: '/products/python/py-310' },
+            { text: 'Python 3.12', link: '/products/python/py-312' },
+          ],
+        },
+      ],
+      '/products/rust/': [
+        {
+          text: 'Rust',
+          items: [
+            { text: 'Edition 总览', link: '/products/rust/' },
+            { text: '基础语法', link: '/products/rust/basic' },
+            { text: 'Edition 2018', link: '/products/rust/edition-2018' },
+            { text: 'Edition 2021', link: '/products/rust/edition-2021' },
+          ],
+        },
+      ],
+      '/products/go/': [
+        {
+          text: 'Go',
+          items: [
+            { text: '版本总览', link: '/products/go/' },
+            { text: '基础语法', link: '/products/go/basic' },
+            { text: 'Go 1.18', link: '/products/go/go-118' },
+            { text: 'Go 1.22', link: '/products/go/go-122' },
+          ],
+        },
+      ],
+      '/products/javascript/': [
+        {
+          text: 'JavaScript',
+          items: [
+            { text: '版本总览', link: '/products/javascript/' },
+            { text: '基础语法', link: '/products/javascript/basic' },
+            { text: 'ES1–ES5', link: '/products/javascript/pre-es6' },
+            { text: 'ES6（ES2015）', link: '/products/javascript/es6' },
+            { text: '现代 JavaScript', link: '/products/javascript/modern-javascript' },
+            { text: 'Node.js 14 LTS', link: '/products/javascript/node-14' },
+            { text: 'Node.js 16 LTS', link: '/products/javascript/node-16' },
+            { text: 'Node.js 18 LTS', link: '/products/javascript/node-18' },
+            { text: 'Node.js 20 LTS', link: '/products/javascript/node-20' },
+            { text: 'Node.js 22 LTS', link: '/products/javascript/node-22' },
+            { text: 'TypeScript 5.x', link: '/products/javascript/typescript' },
+          ],
+        },
+      ],
+      '/products/cpp/': [
+        {
+          text: 'C++',
+          items: [
+            { text: '标准演进总览', link: '/products/cpp/' },
+            { text: '基础语法', link: '/products/cpp/basic' },
+            { text: 'C++11', link: '/products/cpp/cpp-11' },
+            { text: 'C++20', link: '/products/cpp/cpp-20' },
+            { text: 'C++23', link: '/products/cpp/cpp-23' },
+          ],
+        },
+      ],
+      '/products/php/': [
+        {
+          text: 'PHP',
+          items: [
+            { text: '版本总览', link: '/products/php/' },
+            { text: '基础语法', link: '/products/php/basic' },
+            { text: 'PHP 8.3', link: '/products/php/php-8' },
+          ],
+        },
+      ],
+      '/products/csharp/': [
+        {
+          text: 'C#',
+          items: [
+            { text: '版本总览', link: '/products/csharp/' },
+            { text: '基础语法', link: '/products/csharp/basic' },
+            { text: 'C# 12 / .NET 8', link: '/products/csharp/dotnet-8' },
+          ],
+        },
+      ],
+      '/products/ruby/': [
+        {
+          text: 'Ruby',
+          items: [
+            { text: '版本总览', link: '/products/ruby/' },
+            { text: '基础语法', link: '/products/ruby/basic' },
+            { text: 'Ruby 3.3', link: '/products/ruby/ruby-3' },
+          ],
+        },
+      ],
+      '/products/kotlin/': [
+        {
+          text: 'Kotlin',
+          items: [
+            { text: '版本总览', link: '/products/kotlin/' },
+            { text: '基础语法', link: '/products/kotlin/basic' },
+            { text: 'Kotlin 2.0', link: '/products/kotlin/kotlin-2' },
+          ],
+        },
+      ],
+      '/products/html/': [
+        {
+          text: 'HTML',
+          items: [
+            { text: '总览', link: '/products/html/' },
+            { text: '基础语法', link: '/products/html/basic' },
+            { text: 'HTML5 之前', link: '/products/html/pre-html5' },
+            { text: 'HTML5', link: '/products/html/html5' },
+            { text: '现代 HTML', link: '/products/html/modern-html' },
+          ],
+        },
+      ],
+      '/products/css/': [
+        {
+          text: 'CSS',
+          items: [
+            { text: '总览', link: '/products/css/' },
+            { text: '基础语法', link: '/products/css/basic' },
+            { text: 'CSS3 之前', link: '/products/css/pre-css3' },
+            { text: 'CSS3', link: '/products/css/css3' },
+            { text: '现代 CSS', link: '/products/css/modern-css' },
+          ],
+        },
+      ],
       '/products/': allLanguages.map(l => ({
         text: l.name,
-        link: `/products/${l.id}/`,
+        link: l.link ?? `/products/${l.id}/`,
       })),
       '/matrix/': [
         {

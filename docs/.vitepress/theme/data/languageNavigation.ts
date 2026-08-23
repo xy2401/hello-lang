@@ -4,6 +4,7 @@
 export interface LanguageItem {
   id: string;
   name: string;
+  link?: string;
   priority: number; // 1-5 为典型产品，6+ 为更多下拉
   category?: 'command' | 'declarative'; // command: 命令式，declarative: 声明式
 }
@@ -12,7 +13,7 @@ export interface LanguageItem {
 export const allLanguages: readonly LanguageItem[] = [
   // 前 5 个典型产品（主导航平铺）
   { id: 'java', name: 'Java', priority: 1, category: 'command' },
-  { id: 'typescript', name: 'TypeScript', priority: 2, category: 'command' },
+  { id: 'typescript', name: 'TypeScript', link: '/products/javascript/typescript', priority: 2, category: 'command' },
   { id: 'python', name: 'Python', priority: 3, category: 'command' },
   { id: 'rust', name: 'Rust', priority: 4, category: 'command' },
   { id: 'go', name: 'Go', priority: 5, category: 'command' },
