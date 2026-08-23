@@ -1,7 +1,9 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "ruby@sha256:2f763b37070564bb00b736f1d4dba6e8f8d203b5f93b94463879fd8d79966f28"
+exitCode: 0
 ---
-RESULT: not executed — documented catalog entry, not verified evidence.
+PASS exitCode: 0
+PASS evidenceSnapshot: present
+RESULT: all assertions passed

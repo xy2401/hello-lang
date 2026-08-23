@@ -1,7 +1,18 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "php@sha256:afdf8b1fee58486ccc0dab5f30f634b86873d56dac985f71ba217945647c05ad"
+exitCode: 0
 ---
-PENDING: php 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "php@sha256:afdf8b1fee58486ccc0dab5f30f634b86873d56dac985f71ba217945647c05ad"
+timeMs: 313
+exitCode: 0
+---
+Language: PHP
+Status: Active Worker
+Skills: Composer Laravel OpCache
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

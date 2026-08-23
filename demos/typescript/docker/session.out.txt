@@ -1,7 +1,15 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "node@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293"
+exitCode: 0
 ---
-PENDING: typescript 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "node@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293"
+timeMs: 3971
+exitCode: 0
+---
+TypeScript 5.x Type System Result:
+User: TypeScript Developer (Architect)

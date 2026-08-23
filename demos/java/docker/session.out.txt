@@ -1,7 +1,15 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "eclipse-temurin@sha256:09349d79941fd53bb3d487b393ca118d8853c08c09193f416fe6a8718df9e732"
+exitCode: 0
 ---
-PENDING: java 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "eclipse-temurin@sha256:09349d79941fd53bb3d487b393ca118d8853c08c09193f416fe6a8718df9e732"
+timeMs: 807
+exitCode: 0
+---
+JDK 25 Instance Main Method:
+void main() executed directly without public static void main(String[] args)!

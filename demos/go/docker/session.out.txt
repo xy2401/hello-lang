@@ -1,7 +1,18 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "golang@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052"
+exitCode: 0
 ---
-PENDING: go 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "golang@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052"
+timeMs: 3829
+exitCode: 0
+---
+Language: Go
+Status: Active Worker
+Skills: Goroutines Channels Interfaces
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

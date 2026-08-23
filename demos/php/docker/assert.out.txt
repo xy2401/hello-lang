@@ -1,7 +1,9 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "php@sha256:afdf8b1fee58486ccc0dab5f30f634b86873d56dac985f71ba217945647c05ad"
+exitCode: 0
 ---
-RESULT: not executed — documented catalog entry, not verified evidence.
+PASS exitCode: 0
+PASS evidenceSnapshot: present
+RESULT: all assertions passed

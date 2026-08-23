@@ -1,7 +1,54 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436"
+exitCode: 0
 ---
-PENDING: html 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+$ /app/node_modules/.bin/html-validate /app/demos/html/basic_demo.html
+
+$ nginx serve + HTTP GET /basic_demo.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML 语义化页面结构示例">
+    <title>Hello HTML</title>
+    <link rel="stylesheet" href="../css/basic_demo.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">Hello Lang</a>
+      <nav aria-label="主导航">
+        <ul class="nav-list">
+          <li><a aria-current="page" href="#intro">HTML</a></li>
+          <li><a href="#features">语义元素</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="intro" class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Declarative Web Language</p>
+        <h1 id="page-title">HTML 描述页面的结构与语义</h1>
+        <p>元素表达内容角色，属性补充机器可读的信息，浏览器据此构建 DOM。</p>
+        <a class="button" href="#features">查看语义结构</a>
+      </section>
+
+      <section id="features" aria-labelledby="feature-title">
+        <h2 id="feature-title">语义化页面骨架</h2>
+        <ul class="feature-grid">
+          <li><article><h3>结构</h3><p>header、nav、main 与 footer 划分页面区域。</p></article></li>
+          <li><article><h3>内容</h3><p>heading、paragraph 与 list 建立内容层次。</p></article></li>
+          <li><article><h3>可访问性</h3><p>原生语义与 ARIA 名称帮助辅助技术理解页面。</p></article></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <time datetime="2026">2026</time> Hello Lang</small>
+    </footer>
+  </body>
+</html>

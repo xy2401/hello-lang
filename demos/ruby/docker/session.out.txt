@@ -1,7 +1,18 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "ruby@sha256:2f763b37070564bb00b736f1d4dba6e8f8d203b5f93b94463879fd8d79966f28"
+exitCode: 0
 ---
-PENDING: ruby 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "ruby@sha256:2f763b37070564bb00b736f1d4dba6e8f8d203b5f93b94463879fd8d79966f28"
+timeMs: 282
+exitCode: 0
+---
+Language: Ruby
+Status: Active Worker
+Skills: Rails Blocks Metaprogramming
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)

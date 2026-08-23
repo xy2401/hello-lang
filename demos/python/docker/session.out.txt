@@ -1,7 +1,18 @@
 ---
-status: documented
-capturedAt: null
-dockerImage: "unresolved"
-exitCode: -1
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "python@sha256:2c941e860699f878900b0edc2403613c234d4b32eda3cc9fa7036991a2a63c4a"
+exitCode: 0
 ---
-PENDING: python 的构建/检查与运行会话尚未执行；采集规格见 docs/.vitepress/theme/data/dockerCatalog.ts。
+---
+status: verified
+capturedAt: "2026-08-23T15:17:11.373Z"
+dockerImage: "python@sha256:2c941e860699f878900b0edc2403613c234d4b32eda3cc9fa7036991a2a63c4a"
+timeMs: 216
+exitCode: 0
+---
+Language: Python
+Status: Active Worker
+Skills: Dynamic Typing List Comprehension GIL
+Calculated Bonus: $850.05
+Person Info: Alice (25 years old)
