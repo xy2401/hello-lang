@@ -34,6 +34,7 @@ jobs:
         run: npm run check
 
       - name: 📦 上传待审查的镜像锁与证据快照
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: hello-lang-docker-evidence-${{ github.run_id }}
