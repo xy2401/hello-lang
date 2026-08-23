@@ -90,16 +90,6 @@ export default defineConfig({
           link: `/products/${l.id}/`,
         })),
       },
-      { text: '基础概念', link: '/concepts/' },
-      { text: '横向矩阵', link: '/matrix/' },
-      { text: '⚡ 在线沙箱', link: '/playground/' },
-    ],
-    sidebar: {
-      '/concepts/': [{
-        text: '基础概念',
-        items: [
-          { text: '统一语法骨架', link: '/concepts/unified-syntax' },
-        ],
       }],
       
       '/products/': allLanguages.map(l => ({
