@@ -1,8 +1,8 @@
 # C++ 概览
 
 <script setup>
-import { cppVersions } from '../.vitepress/theme/data/versionData';
-import { getOutput, getTimeMs } from '../.vitepress/theme/data/outputsHelper';
+import { cppVersions } from '../../.vitepress/theme/data/versionData';
+import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 C++ 是兼具底层的硬件控制力与高层级零成本抽象（Zero-Cost Abstractions）的现代系统级编程语言。

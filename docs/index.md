@@ -89,7 +89,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 ## 💡 学习方法建议
 
-1. **先看统一语法** (`/concepts/unified-syntax`) —— 理解跨语言的共性模式
+1. **先看统一语法** (`/#core-concepts`) —— 理解跨语言的共性模式
 2. **再选目标语言** (`/products/{lang}/`) —— 掌握具体特性与最佳实践
 3. **最后看矩阵** (`/matrix/`) —— 建立全局选型依据
 
@@ -97,7 +97,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 ---
 
-## 🧠 核心概念速览
+## 🧠 核心概念速览 {#core-concepts}
 
 掌握编程语言的**统一语义骨架**，再深入具体语言细节。
 
@@ -144,7 +144,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 ## 核心内容
 
-### 1. [统一语法骨架](unified-syntax.md)
+### 1. [统一语法骨架](/matrix/basic-syntax-concept)
 
 对比 **Java, JavaScript, TypeScript, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 十门主流语言的核心语法：
 
@@ -192,13 +192,13 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 - **产品分卷**: [`/products`](/products/java/) - 12 门语言的详细文档
 - **横向对比**: [`/matrix`](/matrix/basic-syntax) - 6 大技术维度深度对比
-- **实验验证**: [`demos`](../../demos) - Docker 自动化运行验证
+- **实验验证**: [`demos`](https://github.com/xy2401/hello-lang/tree/main/demos) - Docker 自动化运行验证
 
 ---
 
 ## 💡 学习方法
 
-1. **先看统一语法** (`unified-syntax.md`) —— 理解共性模式
+1. **先看统一语法**（[统一语法骨架](/matrix/basic-syntax-concept)）——理解共性模式
 2. **再看具体语言** (`/products/{lang}/`) —— 了解特性差异
 3. **最后看矩阵对比** (`/matrix/`) —— 掌握选型依据
 

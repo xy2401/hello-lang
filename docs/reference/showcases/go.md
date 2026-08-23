@@ -1,8 +1,8 @@
 # Go 概览
 
 <script setup>
-import { goVersions } from '../.vitepress/theme/data/versionData';
-import { getOutput, getTimeMs } from '../.vitepress/theme/data/outputsHelper';
+import { goVersions } from '../../.vitepress/theme/data/versionData';
+import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 Go 是由 Google 设计的简洁、强并发（Goroutine/CSP Channel）且快速编译的云原生基础语言。

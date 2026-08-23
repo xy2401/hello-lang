@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress';
-import { allLanguages, featuredLanguages, moreLanguages } from './theme/data/languageNavigation';
+import { allLanguages } from './theme/data/languageNavigation';
 
 const languageBrandPatterns = [
   { language: 'html', pattern: /🟧(?=\s*HTML)/gu },
@@ -61,10 +61,10 @@ export default defineConfig({
   base: process.env.DOCS_BASE || '/',
   title: '🚀 Hello Lang',
   description: '编程语言的终极知识库（12 门语言 · 统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
+  cleanUrls: true,
   markdown: {
     config: renderLanguageBrandIcons,
   },
-  ignoreDeadLinks: true, // 忽略所有 dead link 检查（demos 在项目根目录而非 docs）
   transformPageData(pageData) {
     for (const { pattern } of languageBrandPatterns) {
       pageData.title = pageData.title.replace(pattern, '');
@@ -77,19 +77,20 @@ export default defineConfig({
       label: '本页导航 (On this page)',
     },
     nav: [
-      // 前 5 个语言全部平铺在主导航，每个都能点击
-      ...allLanguages.slice(0, 5).map(l => ({
-        text: l.name,
-        link: l.link ?? `/products/${l.id}/`,
-      })),
-      // 第 6 个起在「更多」下拉中展开选择
+      { text: '首页', link: '/' },
       {
-        text: '更多',
-        items: allLanguages.slice(5).map(l => ({
-          text: l.name,
-          link: l.link ?? `/products/${l.id}/`,
-        })),
+        text: '产品',
+        items: [
+          { text: '产品总览', link: '/products/' },
+          ...allLanguages.map(l => ({
+            text: l.name,
+            link: l.link ?? `/products/${l.id}/`,
+          })),
+        ],
       },
+      { text: '对比矩阵', link: '/matrix/' },
+      { text: '试验场', link: '/playground/' },
+      { text: '参考资料', link: '/reference/' },
     ],
     sidebar: {
       '/products/javascript/typescript': [
@@ -270,6 +271,21 @@ export default defineConfig({
             { text: 'Python', link: '/playground/python' },
             { text: 'PHP', link: '/playground/php' },
             { text: 'Ruby', link: '/playground/ruby' },
+          ],
+        },
+      ],
+      '/reference/': [
+        {
+          text: '参考资料',
+          items: [
+            { text: '参考资料总览', link: '/reference/' },
+            { text: 'Docker 验证说明', link: '/reference/docker-validation' },
+            { text: 'C++ 交互展示', link: '/reference/showcases/cpp' },
+            { text: 'Go 交互展示', link: '/reference/showcases/go' },
+            { text: 'Java LTS 索引', link: '/reference/showcases/java' },
+            { text: 'JavaScript 交互展示', link: '/reference/showcases/javascript' },
+            { text: 'Python 交互展示', link: '/reference/showcases/python' },
+            { text: 'Rust 交互展示', link: '/reference/showcases/rust' },
           ],
         },
       ],

@@ -1,8 +1,8 @@
 # Rust 概览
 
 <script setup>
-import { rustVersions } from '../.vitepress/theme/data/versionData';
-import { getOutput, getTimeMs } from '../.vitepress/theme/data/outputsHelper';
+import { rustVersions } from '../../.vitepress/theme/data/versionData';
+import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 </script>
 
 Rust 是一门无 GC 垃圾回收、保证 100% 内存安全与并发无数据竞争（Data-Race Free）的现代系统级编程语言。

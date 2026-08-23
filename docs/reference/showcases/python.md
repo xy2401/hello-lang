@@ -1,8 +1,8 @@
 # Python 概览
 
 <script setup>
-import { pythonVersions } from '../.vitepress/theme/data/versionData';
-import { getOutput, getTimeMs } from '../.vitepress/theme/data/outputsHelper';
+import { pythonVersions } from '../../.vitepress/theme/data/versionData';
+import { getOutput, getTimeMs } from '../../.vitepress/theme/data/outputsHelper';
 
 const pythonDemoCode = `import math
 
