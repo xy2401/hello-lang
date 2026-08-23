@@ -20,7 +20,7 @@ export const allLanguages: readonly LanguageItem[] = [
   
   // 更多产品（在「更多编程语言」下拉中）
   { id: 'javascript', name: 'JavaScript', priority: 6, category: 'command' },
-  { id: 'cpp', name: 'C++', priority: 7, category: 'command' },
+  { id: 'cpp', name: 'C & C++', priority: 7, category: 'command' },
   { id: 'php', name: 'PHP', priority: 8, category: 'command' },
   { id: 'csharp', name: 'C#', priority: 9, category: 'command' },
   { id: 'ruby', name: 'Ruby', priority: 10, category: 'command' },

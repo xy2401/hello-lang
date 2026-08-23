@@ -50,7 +50,7 @@ features:
 <a href="/products/" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
     <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">📚 查看所有 12 门语言</h3>
-    <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">包括 C++、JavaScript、PHP、C#、Ruby、Kotlin、HTML、CSS</p>
+    <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">包括 C & C++、JavaScript、PHP、C#、Ruby、Kotlin、HTML、CSS</p>
   </div>
 </a>
 

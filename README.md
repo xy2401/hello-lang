@@ -9,7 +9,7 @@
 ## 🌟 核心特色 (Key Features)
 
 - 📌 **统一标准基础语法骨架 (Standardized Basic Syntax)**
-  - 覆盖 **Java, JS/TS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin, HTML, CSS** 12 门语言。
+  - 覆盖 **Java, JS/TS, Python, C/C++, Rust, Go, PHP, C#, Ruby, Kotlin, HTML, CSS** 等主流语言。
   - 10 门编程语言使用统一语法骨架；HTML 与 CSS 以结构/语义、层叠/布局等声明式模型独立讲解。
 
 - 🌐 **6 大横向概念对比大屏 (`docs/matrix/`)**
@@ -39,7 +39,7 @@ hello-lang/
 │   ├── html/                 # 语义化结构与现代 HTML 原生元素
 │   ├── css/                  # 层叠、布局、容器查询与现代 CSS
 │   ├── python/               # basic_demo.py, PEP 572, 634, 695
-│   ├── cpp/                  # basic_demo.cpp, C++11, C++20, C++23
+│   ├── cpp/                  # C 语言介绍、basic_demo.cpp、C++11/20/23
 │   ├── rust/                 # basic_demo.rs, Edition 2018, 2021
 │   ├── go/                   # basic_demo.go, Go 1.18 泛型, 1.22 循环
 │   ├── php/                  # basic_demo.php, PHP 8.3 属性/Enum

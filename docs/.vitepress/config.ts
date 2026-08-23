@@ -173,10 +173,16 @@ export default defineConfig({
       ],
       '/products/cpp/': [
         {
-          text: 'C++',
+          text: 'C & C++',
           items: [
-            { text: '标准演进总览', link: '/products/cpp/' },
-            { text: '基础语法', link: '/products/cpp/basic' },
+            { text: 'C / C++ 总览', link: '/products/cpp/' },
+            { text: 'C 语言介绍', link: '/products/cpp/c' },
+            { text: 'C89 / C90', link: '/products/cpp/c-89' },
+            { text: 'C99', link: '/products/cpp/c-99' },
+            { text: 'C11', link: '/products/cpp/c-11' },
+            { text: 'C17 / C18', link: '/products/cpp/c-17' },
+            { text: 'C23', link: '/products/cpp/c-23' },
+            { text: 'C++ 基础语法', link: '/products/cpp/basic' },
             { text: 'C++11', link: '/products/cpp/cpp-11' },
             { text: 'C++20', link: '/products/cpp/cpp-20' },
             { text: 'C++23', link: '/products/cpp/cpp-23' },

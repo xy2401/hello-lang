@@ -8,7 +8,7 @@
 - [Rust](/products/rust/)
 - [Go](/products/go/)
 - [JavaScript](/products/javascript/)
-- [C++](/products/cpp/)
+- [C & C++](/products/cpp/)
 - [PHP](/products/php/)
 - [C#](/products/csharp/)
 - [Ruby](/products/ruby/)
