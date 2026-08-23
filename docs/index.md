@@ -8,13 +8,13 @@ hero:
   actions:
     - theme: brand
       text: 🚀 探索语言演进库
-      link: /languages/java
+      link: /products/java
     - theme: alt
       text: 📊 横向范式对比大屏
       link: /matrix/
     - theme: alt
       text: ⚡ Pyodide 浏览器在线体验
-      link: /languages/python#pyodide-run
+      link: /products/python#pyodide-run
 
 features:
   - icon: 🔀
