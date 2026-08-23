@@ -59,8 +59,8 @@ function renderLanguageBrandIcons(md: any) {
 
 export default defineConfig({
   base: process.env.DOCS_BASE || '/',
-  title: 'Hello Lang',
-  description: '编程语言概念、基础语法与版本演进 (Multi-Language Concept Explorer & Version Evolution Matrix)',
+  title: '🚀 Hello Lang',
+  description: '编程语言的终极知识库（12 门语言 · 统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
   markdown: {
     config: renderLanguageBrandIcons,
   },
