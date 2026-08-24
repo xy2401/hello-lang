@@ -15,4 +15,4 @@
 | Python / Ruby / PHP | 官方语言镜像 | 同一解释器环境 | 解释器、包管理器、文档/交互工具 | 语法检查 → 运行 |
 | HTML / CSS | Node 工具链 | Nginx | `html-validate` / `stylelint` / `nginx` | 校验 → 静态服务 → HTTP 断言 |
 
-完整 PATH 与 vendor bin 清单、命令原文和断言位于各产品页的“Docker 工具证据”。首次真实采集由手动 `collect-docker-outputs` 工作流完成。
+完整 PATH 与 vendor bin 清单、命令原文和断言位于各产品页的“Docker 验证证据”。首次真实采集由手动 `collect-docker-outputs` 工作流完成。
