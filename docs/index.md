@@ -1,9 +1,10 @@
 ---
 layout: home
+title: "Hello Lang"
 
 hero:
   name: "🚀 Hello Lang"
-  text: "编程语言对比与版本资料"
+  text: "按统一维度理解常用编程语言。"
   tagline: "12 门主流语言 · 统一语法骨架 · 版本演进矩阵 · Docker 真实验证"
   image: /favicon.svg
   alt: Hello Lang - 编程语言学习平台
@@ -15,7 +16,7 @@ hero:
       text: 📊 横向对比矩阵
       link: /matrix/
     - theme: alt
-      text: ⚡ 在线沙箱
+      text: ⚡ 浏览器实验台
       link: /playground/
 
 features:
@@ -63,7 +64,7 @@ features:
 
 <a href="/playground/" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
-    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚡ 浏览器交互沙箱</h3>
+    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚡ 浏览器语言实验台</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">JavaScript、Python、PHP、Ruby 在线编辑器实时试写代码并查看效果</p>
   </div>
 </a>

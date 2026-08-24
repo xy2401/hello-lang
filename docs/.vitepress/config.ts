@@ -61,7 +61,8 @@ function renderLanguageBrandIcons(md: any) {
 
 export default defineConfig({
   base: docsBase,
-  title: '🚀 Hello Lang',
+  title: 'Hello Lang',
+  titleTemplate: ':title | 编程语言手册',
   description: '编程语言对比文档（统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
   cleanUrls: true,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
@@ -94,7 +95,7 @@ export default defineConfig({
         ],
       },
       { text: '对比矩阵', link: '/matrix/' },
-      { text: '试验场', link: '/playground/' },
+      { text: '实验台', link: '/playground/' },
       { text: '参考资料', link: '/reference/' },
     ],
     sidebar: {
@@ -301,9 +302,9 @@ export default defineConfig({
       ],
       '/playground/': [
         {
-          text: '⚡ 在线沙箱',
+          text: '⚡ 浏览器实验台',
           items: [
-            { text: '总览', link: '/playground/' },
+            { text: '实验台总览', link: '/playground/' },
             { text: 'JavaScript', link: '/playground/javascript' },
             { text: 'Python', link: '/playground/python' },
             { text: 'PHP', link: '/playground/php' },

@@ -1,4 +1,4 @@
-# ⚡ 在线沙箱
+# ⚡ 浏览器语言实验台
 
 > 无需项目后端服务与 API。JavaScript 在可超时终止的独立 Web Worker 中运行；Python、PHP 与 Ruby 运行时按需在浏览器中加载。
 
