@@ -86,7 +86,7 @@ export default defineConfig({
         link: language.link ?? `/products/${language.id}/`,
       })),
       {
-        text: '更多',
+        text: '📦 更多',
         items: [
           ...moreLanguages.map(language => ({
             text: language.name,
