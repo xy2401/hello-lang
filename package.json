@@ -17,7 +17,8 @@
     "check:versions": "node scripts/check-version-docs.js",
     "check:installs": "node scripts/check-install-docs.js",
     "check:cli": "node scripts/check-cli-docs.js",
-    "check": "npm run check:versions && npm run check:installs && npm run check:cli && node scripts/check-project.js && npm run check:docker-catalog && npm run check:web && npm run docs:build"
+    "check:packages": "node scripts/check-package-docs.js",
+    "check": "npm run check:versions && npm run check:installs && npm run check:cli && npm run check:packages && node scripts/check-project.js && npm run check:docker-catalog && npm run check:web && npm run docs:build"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

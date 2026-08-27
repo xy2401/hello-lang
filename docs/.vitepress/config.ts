@@ -106,6 +106,7 @@ export default defineConfig({
             { text: 'TypeScript 5.x 类型系统', link: '/products/typescript/' },
             { text: '安装与切换', link: '/products/typescript/install' },
             { text: '编译与运行', link: '/products/typescript/cli' },
+            { text: '依赖与包管理', link: '/products/typescript/package' },
             {
               text: '版本演进',
               link: '/products/typescript/version/',
@@ -129,6 +130,7 @@ export default defineConfig({
             { text: '概览', link: '/products/java/' },
             { text: '安装与切换', link: '/products/java/install' },
             { text: '编译与运行', link: '/products/java/cli' },
+            { text: '依赖与包管理', link: '/products/java/package' },
             { text: '基础语法', link: '/products/java/basic' },
             {
               text: '版本演进',
@@ -159,6 +161,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/python/' },
             { text: '安装与切换', link: '/products/python/install' },
             { text: '编译与运行', link: '/products/python/cli' },
+            { text: '依赖与包管理', link: '/products/python/package' },
             { text: '基础语法', link: '/products/python/basic' },
             {
               text: '版本演进',
@@ -184,6 +187,7 @@ export default defineConfig({
             { text: 'Edition 总览', link: '/products/rust/' },
             { text: '安装与切换', link: '/products/rust/install' },
             { text: '编译与运行', link: '/products/rust/cli' },
+            { text: '依赖与包管理', link: '/products/rust/package' },
             { text: '基础语法', link: '/products/rust/basic' },
             {
               text: '版本演进',
@@ -207,6 +211,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/go/' },
             { text: '安装与切换', link: '/products/go/install' },
             { text: '编译与运行', link: '/products/go/cli' },
+            { text: '依赖与包管理', link: '/products/go/package' },
             { text: '基础语法', link: '/products/go/basic' },
             {
               text: '版本演进',
@@ -235,6 +240,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/javascript/' },
             { text: '安装与切换', link: '/products/javascript/install' },
             { text: '编译与运行', link: '/products/javascript/cli' },
+            { text: '依赖与包管理', link: '/products/javascript/package' },
             { text: '基础语法', link: '/products/javascript/basic' },
             {
               text: '版本演进',
@@ -264,6 +270,7 @@ export default defineConfig({
             { text: 'C / C++ 总览', link: '/products/cpp/' },
             { text: '安装与切换', link: '/products/cpp/install' },
             { text: '编译与运行', link: '/products/cpp/cli' },
+            { text: '依赖与包管理', link: '/products/cpp/package' },
             { text: 'C 语言介绍', link: '/products/cpp/c' },
             { text: 'C++ 基础语法', link: '/products/cpp/basic' },
             {
@@ -293,6 +300,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/php/' },
             { text: '安装与切换', link: '/products/php/install' },
             { text: '编译与运行', link: '/products/php/cli' },
+            { text: '依赖与包管理', link: '/products/php/package' },
             { text: '基础语法', link: '/products/php/basic' },
             {
               text: '版本演进',
@@ -317,6 +325,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/csharp/' },
             { text: '安装与切换', link: '/products/csharp/install' },
             { text: '编译与运行', link: '/products/csharp/cli' },
+            { text: '依赖与包管理', link: '/products/csharp/package' },
             { text: '基础语法', link: '/products/csharp/basic' },
             {
               text: '版本演进',
@@ -341,6 +350,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/ruby/' },
             { text: '安装与切换', link: '/products/ruby/install' },
             { text: '编译与运行', link: '/products/ruby/cli' },
+            { text: '依赖与包管理', link: '/products/ruby/package' },
             { text: '基础语法', link: '/products/ruby/basic' },
             {
               text: '版本演进',
@@ -364,6 +374,7 @@ export default defineConfig({
             { text: '版本总览', link: '/products/kotlin/' },
             { text: '安装与切换', link: '/products/kotlin/install' },
             { text: '编译与运行', link: '/products/kotlin/cli' },
+            { text: '依赖与包管理', link: '/products/kotlin/package' },
             { text: '基础语法', link: '/products/kotlin/basic' },
             {
               text: '版本演进',
@@ -387,6 +398,7 @@ export default defineConfig({
             { text: '总览', link: '/products/html/' },
             { text: '安装与切换', link: '/products/html/install' },
             { text: '预览与验证', link: '/products/html/cli' },
+            { text: '工程依赖', link: '/products/html/package' },
             { text: '基础语法', link: '/products/html/basic' },
             {
               text: '版本演进',
@@ -410,6 +422,7 @@ export default defineConfig({
             { text: '总览', link: '/products/css/' },
             { text: '安装与切换', link: '/products/css/install' },
             { text: '预览与验证', link: '/products/css/cli' },
+            { text: '工程依赖', link: '/products/css/package' },
             { text: '基础语法', link: '/products/css/basic' },
             {
               text: '版本演进',
