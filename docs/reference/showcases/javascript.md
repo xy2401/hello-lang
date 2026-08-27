@@ -17,9 +17,9 @@ JavaScript 用于浏览器和服务端开发，TypeScript 5.x 在此基础上提
   :items="jsVersions"
 />
 
-1. [ES6 之前：ES1～ES5 经典时代](/products/javascript/pre-es6.md)
-2. [ES6：现代 JavaScript 奠基](/products/javascript/es6.md)
-3. [现代 JavaScript：按能力持续演进](/products/javascript/modern-javascript.md)
+1. [ES6 之前：ES1～ES5 经典时代](/products/javascript/version/pre-es6)
+2. [ES6：现代 JavaScript 奠基](/products/javascript/version/es6)
+3. [现代 JavaScript：按能力持续演进](/products/javascript/version/modern-javascript)
 
 [进入 JavaScript 模块 →](/products/javascript/index.md)
 

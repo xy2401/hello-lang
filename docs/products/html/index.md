@@ -26,9 +26,9 @@ HTML（HyperText Markup Language）不是通用编程语言，而是一门描述
 ## 学习路线
 
 - [HTML 基础结构与语义元素](./basic.md)：文档骨架、内容模型、表单与可访问性。
-- [HTML5 之前](./pre-html5.md)：从 HTML 2.0、3.2、4.01 到 XHTML，理解历史包袱和结构/表现分离的起点。
-- [HTML5](./html5.md)：语义地标、音视频、表单增强、Canvas 与更简洁的文档骨架。
-- [现代 HTML Living Standard](./modern-html.md)：`details`、`dialog`、`template`、Popover、惰性加载等持续演进的平台能力。
+- [HTML5 之前](./version/pre-html5.md)：从 HTML 2.0、3.2、4.01 到 XHTML，理解历史包袱和结构/表现分离的起点。
+- [HTML5](./version/html5.md)：语义地标、音视频、表单增强、Canvas 与更简洁的文档骨架。
+- [现代 HTML Living Standard](./version/modern-html.md)：`details`、`dialog`、`template`、Popover、惰性加载等持续演进的平台能力。
 
 ## 三阶段看懂 HTML
 

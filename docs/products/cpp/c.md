@@ -77,10 +77,10 @@ C 没有垃圾回收，也没有由语言自动执行的 RAII。接口必须约�
 
 ## 标准版本路线
 
-- [C89 / C90](/products/cpp/c-89)：标准化基线
-- [C99](/products/cpp/c-99)：现代 C 的重要扩展
-- [C11](/products/cpp/c-11)：原子、线程与编译期检查
-- [C17 / C18](/products/cpp/c-17)：缺陷修订与稳定基线
-- [C23](/products/cpp/c-23)：当前正式标准
+- [C89 / C90](/products/cpp/version/c-89)：标准化基线
+- [C99](/products/cpp/version/c-99)：现代 C 的重要扩展
+- [C11](/products/cpp/version/c-11)：原子、线程与编译期检查
+- [C17 / C18](/products/cpp/version/c-17)：缺陷修订与稳定基线
+- [C23](/products/cpp/version/c-23)：当前正式标准
 
-继续阅读：[C++ 基础语法](/products/cpp/basic)与[C++11 现代化起点](/products/cpp/cpp-11)。
+继续阅读：[C++ 基础语法](/products/cpp/basic)与[C++11 现代化起点](/products/cpp/version/cpp-11)。

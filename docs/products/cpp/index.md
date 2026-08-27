@@ -20,11 +20,11 @@ C 与 C++ 共享大量基础语法和系统编程传统，但它们由不同的�
 
 | 标准 | 定位 | 代表变化 |
 | --- | --- | --- |
-| [C89 / C90](/products/cpp/c-89) | ANSI C 与首个 ISO C 基线 | 函数原型、标准库、`void`、`const` / `volatile` |
-| [C99](/products/cpp/c-99) | 现代 C 的重要扩展 | 混合声明、指定初始化、复合字面量、`inline`、`stdint.h` |
-| [C11](/products/cpp/c-11) | 并发与编译期检查 | 原子、线程、`_Generic`、`_Static_assert`、对齐控制 |
-| [C17 / C18](/products/cpp/c-17) | 缺陷修订与稳定基线 | 集中修正 C11，没有加入大型语言功能 |
-| [C23](/products/cpp/c-23) | 当前正式 C 标准 | `nullptr`、`typeof`、`constexpr` 对象、`#embed`、二进制字面量 |
+| [C89 / C90](/products/cpp/version/c-89) | ANSI C 与首个 ISO C 基线 | 函数原型、标准库、`void`、`const` / `volatile` |
+| [C99](/products/cpp/version/c-99) | 现代 C 的重要扩展 | 混合声明、指定初始化、复合字面量、`inline`、`stdint.h` |
+| [C11](/products/cpp/version/c-11) | 并发与编译期检查 | 原子、线程、`_Generic`、`_Static_assert`、对齐控制 |
+| [C17 / C18](/products/cpp/version/c-17) | 缺陷修订与稳定基线 | 集中修正 C11，没有加入大型语言功能 |
+| [C23](/products/cpp/version/c-23) | 当前正式 C 标准 | `nullptr`、`typeof`、`constexpr` 对象、`#embed`、二进制字面量 |
 
 WG14 的正式版本记录将 C89、C90、C95、C99、C11、C17 和 C23 分别列出；本站将 C95 归入 C89/C90 页，将 C17/C18 作为同一版标准说明。
 
@@ -32,6 +32,6 @@ WG14 的正式版本记录将 C89、C90、C95、C99、C11、C17 和 C23 分别�
 
 ISO C++ 委员会通常以约 3 年为周期推进标准更新：
 
-- [**C++11：现代 C++ 奠基标准**](/products/cpp/cpp-11)（`auto`、Lambda、移动语义、智能指针）
-- [**C++20**](/products/cpp/cpp-20)（Concepts、Modules、Coroutines、Ranges）
-- [**C++23：标准库与语言能力补充**](/products/cpp/cpp-23)（`std::expected`、`std::print`、Deducing `this`）
+- [**C++11：现代 C++ 奠基标准**](/products/cpp/version/cpp-11)（`auto`、Lambda、移动语义、智能指针）
+- [**C++20**](/products/cpp/version/cpp-20)（Concepts、Modules、Coroutines、Ranges）
+- [**C++23：标准库与语言能力补充**](/products/cpp/version/cpp-23)（`std::expected`、`std::print`、Deducing `this`）

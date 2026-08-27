@@ -27,9 +27,9 @@ CSS（Cascading Style Sheets）是一门描述文档**表现、布局和响应�
 ## 学习路线
 
 - [CSS 基础、层叠与布局](./basic.md)：选择器、盒模型、自定义属性、Flexbox 与 Grid。
-- [CSS3 之前](./pre-css3.md)：CSS1、CSS2/2.1、盒模型、浮动与定位，以及旧式布局为何难以维护。
-- [CSS3 模块化时代](./css3.md)：媒体查询、圆角、阴影、渐变、过渡、动画、Flexbox 与模块化标准。
-- [现代 CSS 平台能力](./modern-css.md)：Grid、容器查询、级联层、`:has()`、嵌套与现代颜色空间。
+- [CSS3 之前](./version/pre-css3.md)：CSS1、CSS2/2.1、盒模型、浮动与定位，以及旧式布局为何难以维护。
+- [CSS3 模块化时代](./version/css3.md)：媒体查询、圆角、阴影、渐变、过渡、动画、Flexbox 与模块化标准。
+- [现代 CSS 平台能力](./version/modern-css.md)：Grid、容器查询、级联层、`:has()`、嵌套与现代颜色空间。
 
 ## 三阶段看懂 CSS
 

@@ -28,7 +28,7 @@ JavaScript 是以**原型委托、词法闭包、事件循环和动态对象**�
 
 ## 三阶段学习路线
 
-### 1. [ES6 之前：ES1～ES5 经典时代](./pre-es6.md)
+### 1. [ES6 之前：ES1～ES5 经典时代](./version/pre-es6.md)
 
 理解仍然支配今天代码的底层机制：
 
@@ -38,7 +38,7 @@ JavaScript 是以**原型委托、词法闭包、事件循环和动态对象**�
 - ES5 严格模式、JSON、数组高阶方法
 - IIFE、CommonJS、AMD 等模块化前史
 
-### 2. [ES6：现代 JavaScript 奠基](./es6.md)
+### 2. [ES6：现代 JavaScript 奠基](./version/es6.md)
 
 一次结构性升级，而不是普通年度增量：
 
@@ -47,7 +47,7 @@ JavaScript 是以**原型委托、词法闭包、事件循环和动态对象**�
 - Iterator、Generator、Map、Set、Symbol
 - ES Modules、Proxy 与 Reflect
 
-### 3. [现代 JavaScript：按能力持续演进](./modern-javascript.md)
+### 3. [现代 JavaScript：按能力持续演进](./version/modern-javascript.md)
 
 把 ES2016 之后的年度更新合并为可应用的能力专题：
 
@@ -97,7 +97,7 @@ Node LTS 页面保留，是因为运行时版本涉及 V8、系统 API、模块�
 ## 快速入口
 
 - [JavaScript 基础语法](./basic.md)
-- [Node.js 18 LTS](./node-18.md)
-- [Node.js 20 LTS](./node-20.md)
-- [Node.js 22 LTS](./node-22.md)
+- [Node.js 18 LTS](./version/node-18.md)
+- [Node.js 20 LTS](./version/node-20.md)
+- [Node.js 22 LTS](./version/node-22.md)
 - [TypeScript 5.x 独立产品文档](/products/typescript/)

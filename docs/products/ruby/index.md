@@ -3,4 +3,4 @@
 
 Welcome to Ruby 3.3 Era!
 
-- [Ruby 3.3](./ruby-3.md)
+- [Ruby 3.3](./version/ruby-3.md)
