@@ -59,17 +59,25 @@ function renderLanguageBrandIcons(md: any) {
   });
 }
 
+function markProductPage(pageData: any) {
+  if (!pageData.relativePath.startsWith('products/')) return;
+  const pageClasses = String(pageData.frontmatter.pageClass ?? '').split(/\s+/).filter(Boolean);
+  pageData.frontmatter.pageClass = [...new Set([...pageClasses, 'product-doc-page'])].join(' ');
+}
+
 export default defineConfig({
   base: docsBase,
   title: 'Hello Lang',
   titleTemplate: ':title | 编程语言手册',
   description: '编程语言对比文档（统一语法骨架 · 版本演进矩阵 · Docker 验证） (Multi-Language Concept Explorer & Version Evolution Matrix)',
   cleanUrls: true,
+  lastUpdated: true,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
   markdown: {
     config: renderLanguageBrandIcons,
   },
   transformPageData(pageData) {
+    markProductPage(pageData);
     for (const { pattern } of languageBrandPatterns) {
       pageData.title = pageData.title.replace(pattern, '');
     }
@@ -78,8 +86,10 @@ export default defineConfig({
     logo: '/favicon.svg',
     outline: {
       level: [2, 3],
-      label: '本页导航 (On this page)',
+      label: '本页目录',
     },
+    lastUpdated: { text: '最后更新' },
+    docFooter: { prev: '上一篇', next: '下一篇' },
     nav: [
       ...featuredLanguages.map(language => ({
         text: language.name,
@@ -462,13 +472,31 @@ export default defineConfig({
       ],
       '/playground/': [
         {
-          text: '⚡ 浏览器实验台',
+          text: '轻量 WebAssembly',
           items: [
             { text: '实验台总览', link: '/playground/' },
             { text: 'JavaScript', link: '/playground/javascript' },
             { text: 'Python', link: '/playground/python' },
             { text: 'PHP', link: '/playground/php' },
             { text: 'Ruby', link: '/playground/ruby' },
+          ],
+        },
+        {
+          text: 'RISC-V 64 容器',
+          items: [
+            { text: 'Java', link: '/playground/container-java' },
+            { text: 'JavaScript', link: '/playground/container-javascript' },
+            { text: 'TypeScript', link: '/playground/container-typescript' },
+            { text: 'Python', link: '/playground/container-python' },
+            { text: 'C & C++', link: '/playground/container-cpp' },
+            { text: 'Go', link: '/playground/container-go' },
+            { text: 'Rust', link: '/playground/container-rust' },
+            { text: 'C#（暂不可用）', link: '/playground/container-csharp' },
+            { text: 'Kotlin', link: '/playground/container-kotlin' },
+            { text: 'PHP', link: '/playground/container-php' },
+            { text: 'Ruby', link: '/playground/container-ruby' },
+            { text: 'HTML', link: '/playground/container-html' },
+            { text: 'CSS', link: '/playground/container-css' },
           ],
         },
       ],

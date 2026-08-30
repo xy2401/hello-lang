@@ -282,7 +282,7 @@ async function copyDockerCmd() {
 
 .console-output {
   margin-top: 0.5rem;
-  background: #030712;
+  background: var(--lang-deep-surface);
   border: 1px solid #1e293b;
   border-radius: 6px;
   padding: 10px 14px;

@@ -5,6 +5,7 @@ node_modules/
 # VitePress build outputs & cache
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+out/
 
 # Demo compiler outputs
 *.class

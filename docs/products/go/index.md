@@ -1,4 +1,4 @@
-# Go 版本与提案
+# Go 总览
 
 
 - 🐹 [**Go 1.18 泛型**](/products/go/version/go-118) (Type Parameters / Generics)

@@ -426,13 +426,13 @@ async function runCode() {
   --runner-card-shadow: 0 8px 32px rgb(0 0 0 / 37%);
   --runner-badge-bg: rgb(99 102 241 / 20%);
   --runner-badge-color: #a5b4fc;
-  --runner-editor-bg: #030712;
+  --runner-editor-bg: var(--lang-deep-surface);
   --runner-editor-border: #1f2937;
   --runner-code-color: #e5e7eb;
   --runner-caret-color: #f8fafc;
   --runner-scrollbar-color: #334155;
   --runner-selection-color: rgb(59 130 246 / 42%);
-  --runner-output-bg: #090d16;
+  --runner-output-bg: var(--lang-deep-surface);
   --runner-output-border: #1e293b;
   --runner-output-meta: #9ca3af;
   --runner-output-color: #38bdf8;

@@ -7,15 +7,10 @@
   --hw-glow-purple: rgba(168, 85, 247, 0.15);
   --hw-glow-blue: rgba(59, 130, 246, 0.15);
   --hw-border-glass: rgba(255, 255, 255, 0.08);
-
-  /* Use one page background across the header, sidebar and content area. */
-  --vp-sidebar-bg-color: var(--vp-c-bg);
-}
-
-.dark {
-  --vp-c-bg: #090d16;
-  --vp-c-bg-soft: #111827;
-  --vp-c-bg-alt: #0f172a;
+  --lang-deep-surface: #090d16;
+  --lang-deep-surface-soft: #111827;
+  --lang-deep-surface-alt: #0f172a;
+  --lang-panel-bg: color-mix(in srgb, var(--vp-c-bg-soft) 82%, transparent);
 }
 
 /* Keep the top navigation aligned consistently on pages with a sidebar. */
@@ -169,7 +164,7 @@
 
 /* Glassmorphic card styling */
 .hw-card {
-  background: color-mix(in srgb, var(--vp-c-bg-soft) 82%, transparent);
+  background: var(--lang-panel-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;

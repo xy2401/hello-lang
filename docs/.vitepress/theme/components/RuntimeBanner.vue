@@ -27,7 +27,11 @@ const parsedData = computed(() => {
 
 <style scoped>
 .runtime-banner {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--lang-deep-surface-alt) 80%, transparent) 0%,
+    color-mix(in srgb, var(--lang-deep-surface-soft) 60%, transparent) 100%
+  );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 8px;

@@ -1,4 +1,4 @@
-# TypeScript 5.x 类型系统
+# TypeScript 总览
 
 
 <script setup>

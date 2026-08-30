@@ -3,7 +3,7 @@ import { jsVersions } from '../../.vitepress/theme/data/versionData';
 import { jsLiveCode, jsLiveMarkup } from '../../.vitepress/theme/data/liveExamples';
 </script>
 
-# 🟨 JavaScript 与 Node.js
+# 🟨 JavaScript 总览
 
 
 JavaScript 是以**原型委托、词法闭包、事件循环和动态对象**为核心的语言。浏览器、Node.js 和其他宿主为它提供不同 API；TypeScript 则在 JavaScript 之上增加静态类型分析。

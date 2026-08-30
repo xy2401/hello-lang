@@ -1,0 +1,160 @@
+name: build-c2w-riscv64-runtimes
+
+on:
+  workflow_dispatch:
+    inputs:
+      runtime:
+        description: Runtime to build
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - java
+          - javascript
+          - typescript
+          - python
+          - cpp
+          - go
+          - rust
+          - kotlin
+          - php
+          - ruby
+          - html
+          - css
+      chunk_size:
+        description: Uncompressed chunk size
+        required: true
+        default: 10M
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hello-lang-c2w-riscv64-main
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      runtimes: ${{ steps.matrix.outputs.runtimes }}
+    steps:
+      - id: matrix
+        env:
+          SELECTED: ${{ inputs.runtime || 'all' }}
+        run: |
+          if [ "$SELECTED" = all ]; then
+            echo 'runtimes=["java","javascript","typescript","python","cpp","go","rust","kotlin","php","ruby","html","css"]' >> "$GITHUB_OUTPUT"
+          else
+            printf 'runtimes=["%s"]\n' "$SELECTED" >> "$GITHUB_OUTPUT"
+          fi
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        runtime: ${{ fromJson(needs.prepare.outputs.runtimes) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: riscv64
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Install container2wasm
+        run: |
+          curl -fsSL https://github.com/container2wasm/container2wasm/releases/download/v0.8.4/container2wasm-v0.8.4-linux-amd64.tar.gz | sudo tar -xz -C /usr/local/bin
+          sudo chmod +x /usr/local/bin/c2w
+          c2w --version
+
+      - name: Build RISC-V 64 language image
+        env:
+          RUNTIME: ${{ matrix.runtime }}
+        run: |
+          docker buildx build \
+            --platform linux/riscv64 \
+            --build-arg LANGUAGE="$RUNTIME" \
+            --build-arg KOTLIN_VERSION=2.3.20 \
+            --file docs/public/runtime/c2w/Dockerfile \
+            --tag "hello-lang-$RUNTIME:rv64" \
+            --load .
+          docker run --rm --platform linux/riscv64 "hello-lang-$RUNTIME:rv64" hello-lang-version | tee runtime-version.txt
+
+      - name: Convert and package runtime
+        env:
+          RUNTIME: ${{ matrix.runtime }}
+          CHUNK_SIZE: ${{ inputs.chunk_size || '10M' }}
+        run: |
+          mkdir -p "out/$RUNTIME" "artifact/docs/public/runtime/c2w-$RUNTIME"
+          c2w \
+            --build-arg SOURCE_REPO=https://github.com/container2wasm/container2wasm.git \
+            --build-arg SOURCE_REPO_VERSION=v0.8.4 \
+            --target-arch=riscv64 \
+            "hello-lang-$RUNTIME:rv64" "out/$RUNTIME/runtime.wasm"
+          node scripts/package-c2w-runtime.js \
+            --input "out/$RUNTIME/runtime.wasm" \
+            --dest "artifact/docs/public/runtime/c2w-$RUNTIME" \
+            --runtime-id "$RUNTIME" \
+            --runtime-version "$(tr '\n' ' ' < runtime-version.txt)" \
+            --chunk-size "$CHUNK_SIZE"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c2w-riscv64-${{ matrix.runtime }}
+          path: artifact/
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ needs.build.result == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: c2w-riscv64-*
+          path: .
+          merge-multiple: true
+
+      - name: Install pinned browser engine
+        env:
+          ENGINE_COMMIT: a5875a659fc1975fbe200fb052568fcf37e77541
+        run: |
+          mkdir -p docs/public/runtime/c2w/engine
+          for file in stack-worker.js stack.js wasi-util.js worker-preload-adapter.js worker-util.js worker.js workerTools.js ws-delegate.js xterm-pty.js; do
+            curl -fsSL "https://raw.githubusercontent.com/xy2401/hello-shell/$ENGINE_COMMIT/docs/public/runtime/c2w/engine/$file" \
+              -o "docs/public/runtime/c2w/engine/$file"
+          done
+
+      - name: Validate generated assets
+        run: |
+          node scripts/check-c2w-runtimes.js --assets
+          test "$(find docs/public/runtime -path '*/manifest.json' -print | wc -l)" -ge 1
+
+      - name: Commit runtime assets
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add docs/public/runtime/c2w*/manifest.json docs/public/runtime/c2w*/*.gz docs/public/runtime/c2w/engine
+          if git diff --cached --quiet; then
+            echo 'Runtime assets are unchanged.'
+            exit 0
+          fi
+          git commit -m 'chore(runtime): update RISC-V 64 language runtimes [skip ci]'
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
