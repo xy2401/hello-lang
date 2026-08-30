@@ -4,6 +4,7 @@
 
 ## 编译器与多语言运行时
 
+- [GCC 编译架构：GNU 编译器套件与中间表示分层](./gcc)
 - [LLVM 编译架构：前端解耦与统一中间表示](./llvm)
 - [JVM 字节码体系：统一虚拟机与多语言互操作](./jvm)
 - [GraalVM & Truffle：通用 Polyglot 多语言运行时](./graalvm)
