@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + groovy-5.1.0"
+exitCode: -1
+---
+PENDING: groovy、groovyc 与 groovysh 会话尚未执行；本文件不是伪造的验证输出。

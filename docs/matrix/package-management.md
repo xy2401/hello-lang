@@ -13,6 +13,9 @@
 | --- | --- | --- | --- | --- | --- |
 | [Java](/products/java/package) | Maven / Gradle | `pom.xml` / `build.gradle.kts` | Gradle dependency lock；Maven 固定版本与 BOM | Maven Central | Maven 求稳；复杂构建用 Gradle Wrapper |
 | [Kotlin](/products/kotlin/package) | Gradle Kotlin DSL / Maven | `build.gradle.kts` / `pom.xml` | Gradle lock / Maven 固定解析 | Maven Central | JVM/KMP 优先 Gradle，并统一 Kotlin 插件版本 |
+| [Groovy](/products/groovy/package) | Gradle / Maven / Grape | `build.gradle` / `pom.xml` / `@Grab` | Gradle lock / Maven 固定版本 | Maven Central | 应用优先 Gradle Wrapper；一次性脚本才用 Grape |
+| [Scala](/products/scala/package) | sbt / Scala CLI / Mill | `build.sbt` / 源码指令 / `build.mill` | Coursier 解析与受控锁定 | Maven Central | 成熟项目用 sbt；单文件和小项目用 Scala CLI |
+| [Clojure](/products/clojure/package) | Clojure CLI / Leiningen | `deps.edn` / `project.clj` | 固定 Maven 版本与 Git SHA | Maven Central / Clojars | 新项目优先 tools.deps + tools.build；遗留项目保留 Leiningen |
 | [JavaScript](/products/javascript/package) | npm / pnpm / Yarn / Bun | `package.json` | 各工具自己的 lockfile | npm registry | pnpm 或 npm；固定包管理器版本且只留一个锁文件 |
 | [TypeScript](/products/typescript/package) | JavaScript 包管理器 + `tsc` | `package.json`、`tsconfig.json` | 同所选包管理器 | npm registry | 编译器放开发依赖，明确 `types` 与生成物边界 |
 | [Python](/products/python/package) | uv / pip-tools / Poetry / pip | `pyproject.toml`、`requirements.in` | `uv.lock` / `poetry.lock` / 固定 requirements | PyPI | 新应用优先 uv；保守项目用 venv + pip-tools |

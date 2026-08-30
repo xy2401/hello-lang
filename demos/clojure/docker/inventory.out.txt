@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + clojure-tools-1.12.5.1664"
+exitCode: -1
+---
+PENDING: Clojure 1.12.5、CLI 1.12.5.1664、OpenJDK 25 与离线缓存清单尚未由 Docker 工作流采集。

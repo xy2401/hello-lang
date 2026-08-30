@@ -1,6 +1,6 @@
 # 🚀 Hello Lang
 
-> **全主流编程语言概念、基础语法与版本演进大典 (Multi-Language Concept Explorer & Version Evolution Matrix)**
+> **常用编程语言概念、基础语法与版本演进手册 (Multi-Language Concept Explorer & Version Evolution Matrix)**
 > 
 > `hello-lang` 是面向开发者的编程语言学习与横向对比项目。属于 `hello-*` 系列开源学习矩阵（已落地 `hello-lang`、`hello-sql`、`hello-mq`，`hello-shell`）。
 
@@ -9,11 +9,11 @@
 ## 🌟 核心特色 (Key Features)
 
 - 📌 **统一标准基础语法骨架 (Standardized Basic Syntax)**
-  - 覆盖 **Java, JS/TS, Python, C/C++, Rust, Go, PHP, C#, Ruby, Kotlin, HTML, CSS** 等主流语言。
-  - 10 门编程语言使用统一语法骨架；HTML 与 CSS 以结构/语义、层叠/布局等声明式模型独立讲解。
+  - 覆盖 **Java、Kotlin、Groovy、Scala、Clojure、JS/TS、Python、C/C++、Rust、Go、PHP、C#、Ruby、HTML、CSS**。
+  - 深度 Matrix 选择代表语言横向比较；完整产品分卷保留每门语言自己的工具链和版本结构。
 
 - 🌐 **6 大横向概念对比大屏 (`docs/matrix/`)**
-  - **[📌 基础语法跨语言对照](docs/matrix/basic-syntax.md)**: 12 门语言原生代码块与适用边界对比。
+  - **[📌 基础语法跨语言对照](docs/matrix/basic-syntax.md)**: 代表语言原生代码块与适用边界对比。
   - **[⚡ 并发与异步模型](docs/matrix/concurrency.md)**: 虚拟线程 vs Goroutine vs Tokio vs Event Loop vs Task。
   - **[🧠 内存管理与 GC 回收](docs/matrix/memory.md)**: Rust 0-GC 所有权 vs Java ZGC 亚毫秒停顿 vs Go 三色标记。
   - **[📦 包管理与工具链](docs/matrix/package-management.md)**: Maven/Gradle vs npm/pnpm vs uv/Poetry vs Cargo vs Go Modules vs Composer vs NuGet.
@@ -33,7 +33,7 @@
 
 ```text
 hello-lang/
-├── demos/                    # 12 门语言源码 Demo 目录
+├── demos/                    # 16 个语言与 Web 技术产品的 Demo / Docker 证据目录
 │   ├── java/                 # BasicDemo.java, JDK 8~25 进阶特性代码
 │   ├── js/                   # basic_demo.js, ES6~ES2024, Node 14~22
 │   ├── html/                 # 语义化结构与现代 HTML 原生元素
@@ -45,9 +45,12 @@ hello-lang/
 │   ├── php/                  # basic_demo.php, PHP 8.3 属性/Enum
 │   ├── csharp/               # BasicDemo.cs, C# 12 / .NET 8 LTS
 │   ├── ruby/                 # basic_demo.rb, Ruby 3.3 YJIT
-│   └── kotlin/               # basic_demo.kt, Kotlin 2.0 K2 编译器
+│   ├── kotlin/               # basic_demo.kt, Kotlin K2 编译器
+│   ├── groovy/               # Groovy Docker 证据目录
+│   ├── scala/                # Scala Docker 证据目录
+│   └── clojure/              # Clojure Docker 证据目录
 ├── docs/                     # VitePress 文档源码
-│   ├── languages/            # 12 门语言分卷详细文档与 basic.md
+│   ├── products/             # 16 个产品的独立手册
 │   ├── matrix/               # 6 大横向概念对比大屏目录
 │   └── .vitepress/           # 主题组件 (DockerOutput, CodeRunner, VersionDiff)
 ├── scripts/

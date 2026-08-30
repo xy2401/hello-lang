@@ -35,7 +35,7 @@ let resizeObserver: ResizeObserver | undefined
 let worker: Worker | undefined
 let ttyServer: { start(worker: Worker): void; stop?(): void } | undefined
 const runtimeBase = String(import.meta.env.VITE_WASM_RUNTIME_BASE || 'https://hello-wasm.pages.dev/runtime').replace(/\/$/, '')
-const runtimeAssetBase = () => `${runtimeBase}/lang/${props.runtimeId}/riscv64`
+const runtimeAssetBase = () => `${runtimeBase}/lang/${runtime.value.assetId}/riscv64`
 
 const actionLabel = computed(() => {
   if (status.value === 'downloading') return `正在下载 · ${progress.value}%`
@@ -159,7 +159,7 @@ async function startRuntime() {
     if (manifest.schemaVersion !== 1) throw new Error(`不支持的运行时清单版本：${manifest.schemaVersion}`)
     await loadScript(`${baseUrl}runtime/c2w/engine/xterm-pty.js`)
     if (manifest.targetArch !== 'riscv64') throw new Error(`拒绝加载非 RISC-V 64 资产：${manifest.targetArch}`)
-    if (manifest.runtimeId !== `lang/${props.runtimeId}`) throw new Error(`运行时目录不匹配：${manifest.runtimeId}`)
+    if (manifest.runtimeId !== `lang/${runtime.value.assetId}`) throw new Error(`运行时目录不匹配：${manifest.runtimeId}`)
     message.value = `正在并发下载 ${manifest.chunks.length} 个分片…`
     const wasm = await loadRuntime(manifest, assetBase)
     if (!WebAssembly.validate(wasm)) throw new Error('WebAssembly 运行时完整性校验失败。')

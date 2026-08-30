@@ -5,6 +5,25 @@ CSS 由浏览器解析，不需要独立运行时。命令行主要负责静态�
 - [MDN：CSS](https://developer.mozilla.org/docs/Web/CSS)
 - [Stylelint CLI](https://stylelint.io/user-guide/cli/)
 - [CSSOM](https://developer.mozilla.org/docs/Web/API/CSS_Object_Model)
+- [Sass CLI](https://sass-lang.com/documentation/cli/dart-sass/)
+- [PostCSS CLI](https://github.com/postcss/postcss-cli)
+
+## SCSS 到浏览器 CSS
+
+原生 CSS 不需要编译。SCSS 是 Sass 的源码语法，PostCSS 则对已经生成的 CSS 做插件化转换；Autoprefixer 根据浏览器目标补充必要前缀。最终产物仍然是浏览器直接解析的标准 CSS。
+
+```bash
+mkdir -p dist
+cat > style.scss <<'SCSS'
+$accent: #336699;
+.box { color: $accent; display: flex; user-select: none; }
+SCSS
+sass style.scss style.css
+postcss style.css --use autoprefixer -o dist/style.css
+stylelint dist/style.css
+```
+
+对照 `style.scss`、`style.css` 和 `dist/style.css` 可以区分变量展开、CSS 生成与兼容性后处理。Stylelint 检查最终产物，但不替代浏览器布局和目标兼容性验证。
 
 ## 启动预览页面
 

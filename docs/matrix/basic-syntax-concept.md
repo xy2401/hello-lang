@@ -1,6 +1,6 @@
 # 统一语法骨架
 
-> 本页面对比 **Java, JavaScript, TypeScript, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 十门主流编程语言的核心语法，并将 **HTML/CSS** 作为声明式 Web 语言独立说明。
+> 本页面精选 **Java, JavaScript, TypeScript, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 做核心语法对比，并将 **HTML/CSS** 作为声明式 Web 技术独立说明。Groovy、Scala、Clojure 在各自产品分卷中展开，避免在深度矩阵中重复同一 JVM 基础。
 
 ## 1. 变量声明与常量
 

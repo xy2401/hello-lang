@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + scala-3.3.8"
+exitCode: -1
+---
+PENDING: Scala 3.3.8 LTS、OpenJDK 25、PATH 与工具目录清单尚未由 Docker 工作流采集。

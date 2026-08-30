@@ -5,6 +5,28 @@ HTML 不需要语言编译器。可靠的命令行闭环是通过本地 HTTP 服
 - [MDN：HTML](https://developer.mozilla.org/docs/Web/HTML)
 - [Python http.server](https://docs.python.org/3/library/http.server.html)
 - [html-validate](https://html-validate.org/usage/cli.html)
+- [Pug API](https://pugjs.org/api/getting-started.html)
+
+## Pug 转换为标准 HTML
+
+原生 HTML 由浏览器直接解析，不需要编译。Pug 是工程源码格式：它先生成标准 HTML，再由验证器检查最终产物。浏览器只接收生成后的 `.html`。
+
+```bash
+mkdir -p dist
+cat > index.pug <<'PUG'
+doctype html
+html(lang="zh-CN")
+  head
+    title Hello
+  body
+    h1 Hello HTML
+PUG
+pug-build index.pug dist/index.html
+html-validate dist/index.html
+python -m http.server 8000 --directory dist
+```
+
+应把 `index.pug` 与 `dist/index.html` 分开观察：前者便于模板复用，后者才是 HTML 规范意义上的页面。实验运行时把 Pug 和 html-validate 固定在共享 Node 工具链中，不会把 Pug 冒充为 HTML 编译器。
 
 ## 启动本地预览
 

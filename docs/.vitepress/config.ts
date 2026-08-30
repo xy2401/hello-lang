@@ -403,6 +403,55 @@ export default defineConfig({
           ],
         },
       ],
+      '/products/groovy/': [
+        { text: 'Groovy', items: [
+          { text: '总览', link: '/products/groovy/' },
+          { text: '安装与切换', link: '/products/groovy/install' },
+          { text: '编译与运行', link: '/products/groovy/cli' },
+          { text: '依赖与包管理', link: '/products/groovy/package' },
+          { text: '基础语法', link: '/products/groovy/basic' },
+          { text: '版本演进', link: '/products/groovy/version/', collapsed: false, items: [
+            { text: 'Groovy 5.1', link: '/products/groovy/version/groovy-5.1' },
+            { text: 'Groovy 5.0', link: '/products/groovy/version/groovy-5.0' },
+            { text: 'Groovy 4.0', link: '/products/groovy/version/groovy-4.0' },
+            { text: 'Groovy 3.0', link: '/products/groovy/version/groovy-3.0' },
+            { text: 'Groovy 2.4', link: '/products/groovy/version/groovy-2.4' },
+          ] },
+          { text: 'Docker 验证', link: '/products/groovy/DockerTooling' },
+        ] },
+      ],
+      '/products/scala/': [
+        { text: 'Scala', items: [
+          { text: '总览', link: '/products/scala/' },
+          { text: '安装与切换', link: '/products/scala/install' },
+          { text: '编译与运行', link: '/products/scala/cli' },
+          { text: '依赖与包管理', link: '/products/scala/package' },
+          { text: '基础语法', link: '/products/scala/basic' },
+          { text: '版本演进', link: '/products/scala/version/', collapsed: false, items: [
+            { text: 'Scala 3.8', link: '/products/scala/version/scala-3.8' },
+            { text: 'Scala 3.3 LTS', link: '/products/scala/version/scala-3.3' },
+            { text: 'Scala 2.13', link: '/products/scala/version/scala-2.13' },
+            { text: 'Scala 2.12', link: '/products/scala/version/scala-2.12' },
+          ] },
+          { text: 'Docker 验证', link: '/products/scala/DockerTooling' },
+        ] },
+      ],
+      '/products/clojure/': [
+        { text: 'Clojure', items: [
+          { text: '总览', link: '/products/clojure/' },
+          { text: '安装与切换', link: '/products/clojure/install' },
+          { text: '编译与运行', link: '/products/clojure/cli' },
+          { text: '依赖与包管理', link: '/products/clojure/package' },
+          { text: '基础语法', link: '/products/clojure/basic' },
+          { text: '版本演进', link: '/products/clojure/version/', collapsed: false, items: [
+            { text: 'Clojure 1.12', link: '/products/clojure/version/clojure-1.12' },
+            { text: 'Clojure 1.11', link: '/products/clojure/version/clojure-1.11' },
+            { text: 'Clojure 1.10', link: '/products/clojure/version/clojure-1.10' },
+            { text: 'Clojure 1.8', link: '/products/clojure/version/clojure-1.8' },
+          ] },
+          { text: 'Docker 验证', link: '/products/clojure/DockerTooling' },
+        ] },
+      ],
       '/products/html/': [
         {
           text: 'HTML',
@@ -495,6 +544,9 @@ export default defineConfig({
             { text: 'Rust', link: '/playground/container-rust' },
             { text: 'C#（暂不可用）', link: '/playground/container-csharp' },
             { text: 'Kotlin', link: '/playground/container-kotlin' },
+            { text: 'Groovy', link: '/playground/container-groovy' },
+            { text: 'Scala', link: '/playground/container-scala' },
+            { text: 'Clojure', link: '/playground/container-clojure' },
             { text: 'PHP', link: '/playground/container-php' },
             { text: 'Ruby', link: '/playground/container-ruby' },
             { text: 'HTML', link: '/playground/container-html' },

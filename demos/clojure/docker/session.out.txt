@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + clojure-tools-1.12.5.1664"
+exitCode: -1
+---
+PENDING: clojure 表达式、脚本与离线执行会话尚未采集；本文件不是伪造的验证输出。

@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + clojure-tools-1.12.5.1664"
+exitCode: -1
+---
+RESULT: not executed — documented catalog entry, not verified evidence.

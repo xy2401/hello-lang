@@ -13,5 +13,8 @@
 - [C#](/products/csharp/)
 - [Ruby](/products/ruby/)
 - [Kotlin](/products/kotlin/)
+- [Groovy](/products/groovy/)
+- [Scala](/products/scala/)
+- [Clojure](/products/clojure/)
 - [HTML](/products/html/)
 - [CSS](/products/css/)

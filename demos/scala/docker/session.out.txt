@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + scala-3.3.8"
+exitCode: -1
+---
+PENDING: scala、scalac 与 REPL 会话尚未执行；本文件不是伪造的验证输出。

@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + scala-3.3.8"
+exitCode: -1
+---
+RESULT: not executed — documented catalog entry, not verified evidence.

@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const products = ['cpp', 'csharp', 'css', 'go', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'typescript']
+const products = ['clojure', 'cpp', 'csharp', 'css', 'go', 'groovy', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'scala', 'typescript']
 const root = process.cwd()
 const sidebar = fs.readFileSync(path.join(root, 'docs/.vitepress/config.ts'), 'utf8')
 const failures = []

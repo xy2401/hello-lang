@@ -1,6 +1,6 @@
 # 📌 基础语法
 
-> 本页面对比 **Java, JS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 十门编程语言，并将 **HTML** 与 **CSS** 作为两门声明式 Web 语言独立说明。HTML/CSS 不具备通用函数、循环或类模型，不应强行套入命令式语法骨架。
+> 本页面精选 **Java, JS, Python, C++, Rust, Go, PHP, C#, Ruby, Kotlin** 做深度语法对比，并将 **HTML** 与 **CSS** 作为声明式 Web 技术独立说明。产品分卷还包含 TypeScript、Groovy、Scala 与 Clojure；它们不为凑数量而重复加入本表。
 
 ---
 

@@ -2,8 +2,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const root = process.cwd()
-const supported = ['java', 'javascript', 'typescript', 'python', 'cpp', 'go', 'rust', 'kotlin', 'php', 'ruby', 'html', 'css']
-const all = [...supported.slice(0, 7), 'csharp', ...supported.slice(7)]
+const assetByProduct = {
+  java: 'jvm', javascript: 'node', typescript: 'node', python: 'python', cpp: 'cpp', go: 'go', rust: 'rust',
+  csharp: 'csharp', kotlin: 'jvm', groovy: 'jvm', scala: 'jvm', clojure: 'jvm', php: 'php', ruby: 'ruby',
+  html: 'node', css: 'node',
+}
+const all = Object.keys(assetByProduct)
+const supported = all.filter((runtime) => runtime !== 'csharp')
+const physicalAssets = new Set(Object.entries(assetByProduct).filter(([runtime]) => runtime !== 'csharp').map(([, asset]) => asset))
 const engineFiles = [
   'stack-worker.js', 'stack.js', 'wasi-util.js', 'worker-preload-adapter.js',
   'worker-util.js', 'worker.js', 'workerTools.js', 'ws-delegate.js', 'xterm-pty.js',
@@ -30,13 +36,14 @@ for (const runtime of all) {
   expect(config.includes(`/playground/container-${runtime}`), `侧栏缺少 ${runtime}`)
   expect(index.includes(`./container-${runtime}.md`), `实验台总览缺少 ${runtime}`)
   expect(catalog.includes(`id: '${runtime}'`), `运行时目录缺少 ${runtime}`)
+  expect(catalog.includes(`id: '${runtime}', assetId: '${assetByProduct[runtime]}'`), `运行时目录的 ${runtime} 缺少正确 assetId`)
 }
 
 expect(catalog.includes("id: 'csharp'") && catalog.includes('supported: false'), 'C# 必须明确标记为不可用')
 expect(component.includes("VITE_WASM_RUNTIME_BASE || 'https://hello-wasm.pages.dev/runtime'"), '组件缺少 Hello WASM 默认资源地址')
-expect(component.includes('/lang/${props.runtimeId}/riscv64'), '组件缺少统一远程运行时路径')
+expect(component.includes('/lang/${runtime.value.assetId}/riscv64'), '组件缺少共享物理资产路径')
 expect(component.includes("manifest.targetArch !== 'riscv64'"), '组件必须拒绝非 riscv64 资产')
-expect(component.includes("manifest.runtimeId !== `lang/${props.runtimeId}`"), '组件必须校验远程运行时 ID')
+expect(component.includes("manifest.runtimeId !== `lang/${runtime.value.assetId}`"), '组件必须按 assetId 校验远程运行时 ID')
 expect(component.includes("crypto.subtle.digest('SHA-256'"), '组件必须校验 gzip 分片 SHA-256')
 expect(headers.includes('Cross-Origin-Embedder-Policy: require-corp'), '缺少 Cross-Origin Isolation 响应头')
 expect(viteConfig.includes("'Cross-Origin-Opener-Policy': 'same-origin'") && viteConfig.includes("'Cross-Origin-Embedder-Policy': 'require-corp'"), '本地 Vite 服务缺少 Cross-Origin Isolation 响应头')
@@ -66,4 +73,4 @@ if (failures.length) {
   console.error(failures.map((failure) => `- ${failure}`).join('\n'))
   process.exit(1)
 }
-console.log(`Hello Lang remote runtime check passed: ${all.length} entries, ${supported.length} remote RISC-V 64 runtimes.`)
+console.log(`Hello Lang remote runtime check passed: ${all.length} products, ${supported.length} runnable entries, ${physicalAssets.size} physical RISC-V 64 assets.`)

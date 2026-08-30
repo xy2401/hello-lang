@@ -50,6 +50,9 @@
 - [Rust · Cargo](./container-rust.md)
 - [C# · .NET 10 LTS](./container-csharp.md)（暂无 riscv64 SDK）
 - [Kotlin 2.3.20 · OpenJDK 25 LTS](./container-kotlin.md)
+- [Groovy 5.1 · OpenJDK 25 LTS](./container-groovy.md)
+- [Scala 3.3 LTS · OpenJDK 25 LTS](./container-scala.md)
+- [Clojure 1.12 · OpenJDK 25 LTS](./container-clojure.md)
 - [PHP 8.4 · Alpine 3.23](./container-php.md)
 - [Ruby](./container-ruby.md)
 - [HTML · html-validate](./container-html.md)

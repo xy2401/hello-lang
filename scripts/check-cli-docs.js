@@ -1,22 +1,26 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const products = ['cpp', 'csharp', 'css', 'go', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'typescript']
+const products = ['clojure', 'cpp', 'csharp', 'css', 'go', 'groovy', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'scala', 'typescript']
 const officialHosts = {
+  clojure: ['clojure.org'],
   cpp: ['gcc.gnu.org', 'clang.llvm.org', 'learn.microsoft.com'], csharp: ['learn.microsoft.com'],
   css: ['developer.mozilla.org', 'stylelint.io'], go: ['go.dev'],
+  groovy: ['groovy-lang.org'],
   html: ['developer.mozilla.org', 'docs.python.org', 'html-validate.org'], java: ['docs.oracle.com'],
   javascript: ['nodejs.org'], kotlin: ['kotlinlang.org'], php: ['www.php.net'],
-  python: ['docs.python.org'], ruby: ['docs.ruby-lang.org'], rust: ['doc.rust-lang.org'],
+  python: ['docs.python.org'], ruby: ['docs.ruby-lang.org'], rust: ['doc.rust-lang.org'], scala: ['docs.scala-lang.org'],
   typescript: ['www.typescriptlang.org', 'nodejs.org'],
 }
 const requiredCommands = {
+  clojure: ['clojure -M', 'clojure -Stree', 'clojure -Spath'],
   cpp: ['gcc', 'g++', 'clang++', 'cl'], csharp: ['dotnet run --file', 'dotnet build'],
   css: ['stylelint', 'http.server'], go: ['go run', 'go build'],
+  groovy: ['groovy', 'groovyc', 'groovysh'],
   html: ['http.server', 'html-validate'], java: ['javac', 'java -jar', 'jshell'],
   javascript: ['node', 'process.argv'], kotlin: ['kotlinc', 'java -jar'],
   php: ['php -a', 'php -S', 'php -l'], python: ['python -m', 'py_compile'],
-  ruby: ['ruby -c', 'irb'], rust: ['rustc', '--edition 2024'], typescript: ['tsc', 'node'],
+  ruby: ['ruby -c', 'irb'], rust: ['rustc', '--edition 2024'], scala: ['scala', 'scalac', '@main'], typescript: ['tsc', 'node'],
 }
 
 const root = process.cwd()

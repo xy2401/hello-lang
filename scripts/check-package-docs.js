@@ -1,12 +1,14 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const products = ['cpp', 'csharp', 'css', 'go', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'typescript']
+const products = ['clojure', 'cpp', 'csharp', 'css', 'go', 'groovy', 'html', 'java', 'javascript', 'kotlin', 'php', 'python', 'ruby', 'rust', 'scala', 'typescript']
 const officialHosts = {
+  clojure: ['clojure.org'],
   cpp: ['cmake.org', 'learn.microsoft.com', 'docs.conan.io'],
   csharp: ['learn.microsoft.com'],
   css: ['sass-lang.com', 'stylelint.io'],
   go: ['go.dev'],
+  groovy: ['groovy-lang.org', 'docs.gradle.org'],
   html: ['developer.mozilla.org'],
   java: ['ant.apache.org', 'maven.apache.org', 'docs.gradle.org'],
   javascript: ['docs.npmjs.com', 'pnpm.io'],
@@ -15,13 +17,16 @@ const officialHosts = {
   python: ['packaging.python.org', 'pip.pypa.io', 'docs.astral.sh'],
   ruby: ['guides.rubygems.org', 'bundler.io'],
   rust: ['doc.rust-lang.org', 'crates.io'],
+  scala: ['www.scala-sbt.org', 'docs.scala-lang.org'],
   typescript: ['www.typescriptlang.org', 'docs.npmjs.com'],
 }
 const requiredTerms = {
+  clojure: ['tools.deps', 'deps.edn', 'Leiningen', 'tools.build', 'Clojars'],
   cpp: ['pkg-config', 'FetchContent', 'Conan', 'vcpkg', 'CMake'],
   csharp: ['packages.config', 'PackageReference', 'Central Package Management', 'Paket'],
   css: ['Sass', 'PostCSS', 'Stylelint', 'npm', 'pnpm', 'CDN'],
   go: ['GOPATH', 'Go Modules', 'go.mod', 'go.sum', 'vendor', 'workspace'],
+  groovy: ['Grape', 'Ivy', 'Maven', 'Gradle', 'Groovy 插件'],
   html: ['Bower', 'npm', 'pnpm', 'import maps', 'CDN'],
   java: ['Ant', 'Ivy', 'Maven', 'Gradle', 'Wrapper', 'BOM'],
   javascript: ['npm', 'Yarn', 'pnpm', 'Bun', 'packageManager'],
@@ -30,6 +35,7 @@ const requiredTerms = {
   python: ['pip', 'venv', 'pip-tools', 'Poetry', 'uv', 'Conda'],
   ruby: ['RubyGems', 'Bundler', 'gemspec', 'Gemfile', 'Gemfile.lock'],
   rust: ['Cargo', 'features', 'workspace', 'Cargo.lock', 'registry', 'vendor'],
+  scala: ['sbt', 'Maven', 'Gradle', 'Coursier', 'Scala CLI'],
   typescript: ['typescript', '@types', 'peerDependencies', 'exports', 'devDependencies'],
 }
 

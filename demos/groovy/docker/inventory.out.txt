@@ -1,0 +1,7 @@
+---
+status: documented
+capturedAt: null
+dockerImage: "eclipse-temurin:25-jdk + groovy-5.1.0"
+exitCode: -1
+---
+PENDING: Groovy 5.1.0、OpenJDK 25、PATH 与工具目录清单尚未由 Docker 工作流采集。
