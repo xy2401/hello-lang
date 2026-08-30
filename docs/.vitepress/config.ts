@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import { fileURLToPath } from 'node:url';
 import { allLanguages, featuredLanguages, moreLanguages } from './theme/data/languageNavigation';
 
 const docsBase = process.env.DOCS_BASE || '/';
@@ -73,6 +74,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
+  vite: { configFile: fileURLToPath(new URL('../vite.config.ts', import.meta.url)) },
   markdown: {
     config: renderLanguageBrandIcons,
   },

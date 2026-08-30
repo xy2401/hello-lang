@@ -7,12 +7,14 @@ import { languageContainerRuntime, type LanguageRuntimeId } from '../data/langua
 import '@xterm/xterm/css/xterm.css'
 
 type RuntimeStatus = 'idle' | 'downloading' | 'initializing' | 'running' | 'error' | 'unavailable'
-interface RuntimeChunk { filename: string; rawSize?: number; compressedSize?: number; sha256?: string }
+interface RuntimeChunk { filename: string; rawSize: number; compressedSize: number; sha256: string }
 interface RuntimeManifest {
-  version: string
+  schemaVersion: 1
   targetArch: 'riscv64'
   runtimeId: string
-  runtimeVersion?: string
+  runtimeVersion: string
+  systemVersion: string
+  container2wasmVersion: string
   chunks: RuntimeChunk[]
 }
 
@@ -23,6 +25,7 @@ const terminalHost = ref<HTMLElement>()
 const status = ref<RuntimeStatus>(runtime.value.supported ? 'idle' : 'unavailable')
 const message = ref(runtime.value.note ?? '运行时按需加载，不会在打开页面时下载。')
 const runtimeVersion = ref(runtime.value.baseline)
+const systemVersion = ref('Alpine Linux 3.23')
 const chunkDisplay = ref(runtime.value.supported ? '等待清单' : '不适用')
 const progress = ref(0)
 const errorText = ref('')
@@ -31,6 +34,8 @@ let fitAddon: FitAddon | undefined
 let resizeObserver: ResizeObserver | undefined
 let worker: Worker | undefined
 let ttyServer: { start(worker: Worker): void; stop?(): void } | undefined
+const runtimeBase = String(import.meta.env.VITE_WASM_RUNTIME_BASE || 'https://hello-wasm.pages.dev/runtime').replace(/\/$/, '')
+const runtimeAssetBase = () => `${runtimeBase}/lang/${props.runtimeId}/riscv64`
 
 const actionLabel = computed(() => {
   if (status.value === 'downloading') return `正在下载 · ${progress.value}%`
@@ -69,16 +74,23 @@ async function decompress(buffer: ArrayBuffer) {
 }
 
 async function verifyChunk(buffer: ArrayBuffer, expected?: string) {
-  if (!expected) return
+  if (!expected || !/^[a-f0-9]{64}$/.test(expected)) throw new Error('运行时清单缺少有效的 SHA-256。')
   const digest = await crypto.subtle.digest('SHA-256', buffer)
   const actual = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('')
   if (actual !== expected) throw new Error('运行时分片哈希校验失败。')
 }
 
 async function fetchManifest(url: string) {
-  const response = await fetch(url)
-  if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) return undefined
-  try { return await response.json() as RuntimeManifest } catch { return undefined }
+  try {
+    const response = await fetch(url)
+    if (response.status === 404) return undefined
+    if (!response.ok) throw new Error(`运行时清单请求失败（HTTP ${response.status}）。`)
+    if (!response.headers.get('content-type')?.includes('application/json')) throw new Error('运行时清单响应不是 JSON。')
+    try { return await response.json() as RuntimeManifest } catch { throw new Error('运行时清单 JSON 已损坏。') }
+  } catch (error) {
+    if (error instanceof Error && error.message.startsWith('运行时')) throw error
+    throw new Error('无法访问 Hello WASM 运行时站点；请检查部署状态、CORS 或网络连接。')
+  }
 }
 
 function loadScript(url: string) {
@@ -92,15 +104,17 @@ function loadScript(url: string) {
   })
 }
 
-async function loadRuntime(manifest: RuntimeManifest, baseUrl: string) {
+async function loadRuntime(manifest: RuntimeManifest, assetBase: string) {
   const buffers: ArrayBuffer[] = new Array(manifest.chunks.length)
   let completed = 0
   await Promise.all(manifest.chunks.map(async (chunk, index) => {
-    const response = await fetch(`${baseUrl}runtime/c2w-${props.runtimeId}/${chunk.filename}`)
+    const response = await fetch(`${assetBase}/${chunk.filename}`)
     if (!response.ok) throw new Error(`分片 ${chunk.filename} 下载失败（${response.status}）`)
     const compressed = await response.arrayBuffer()
+    if (chunk.compressedSize !== undefined && compressed.byteLength !== chunk.compressedSize) throw new Error(`分片 ${chunk.filename} 压缩体积与清单不一致。`)
     await verifyChunk(compressed, chunk.sha256)
     buffers[index] = await decompress(compressed)
+    if (chunk.rawSize !== undefined && buffers[index].byteLength !== chunk.rawSize) throw new Error(`分片 ${chunk.filename} 解压体积与清单不一致。`)
     completed += 1
     progress.value = Math.round(completed / manifest.chunks.length * 100)
   }))
@@ -134,17 +148,20 @@ async function startRuntime() {
     if (typeof SharedArrayBuffer === 'undefined') throw new Error('当前站点未开启 Cross-Origin Isolation，无法使用多线程容器终端。')
 
     const baseUrl = import.meta.env.BASE_URL || '/'
-    const manifest = await fetchManifest(`${baseUrl}runtime/c2w-${props.runtimeId}/manifest.json`)
+    const assetBase = runtimeAssetBase()
+    const manifest = await fetchManifest(`${assetBase}/manifest.json`)
     if (!manifest) {
       status.value = 'unavailable'
       message.value = 'RISC-V 64 运行时尚未由 GitHub Actions 构建。'
       chunkDisplay.value = '尚未构建'
       return
     }
+    if (manifest.schemaVersion !== 1) throw new Error(`不支持的运行时清单版本：${manifest.schemaVersion}`)
     await loadScript(`${baseUrl}runtime/c2w/engine/xterm-pty.js`)
     if (manifest.targetArch !== 'riscv64') throw new Error(`拒绝加载非 RISC-V 64 资产：${manifest.targetArch}`)
+    if (manifest.runtimeId !== `lang/${props.runtimeId}`) throw new Error(`运行时目录不匹配：${manifest.runtimeId}`)
     message.value = `正在并发下载 ${manifest.chunks.length} 个分片…`
-    const wasm = await loadRuntime(manifest, baseUrl)
+    const wasm = await loadRuntime(manifest, assetBase)
     if (!WebAssembly.validate(wasm)) throw new Error('WebAssembly 运行时完整性校验失败。')
 
     status.value = 'initializing'
@@ -199,8 +216,7 @@ function clearTerminal() { terminal?.clear() }
 onMounted(async () => {
   if (!runtime.value.supported) return
   try {
-    const baseUrl = import.meta.env.BASE_URL || '/'
-    const manifest = await fetchManifest(`${baseUrl}runtime/c2w-${props.runtimeId}/manifest.json`)
+    const manifest = await fetchManifest(`${runtimeAssetBase()}/manifest.json`)
     if (!manifest) {
       chunkDisplay.value = '尚未构建'
       return
@@ -211,7 +227,8 @@ onMounted(async () => {
     }
     const compressed = manifest.chunks.reduce((total, chunk) => total + (chunk.compressedSize ?? 0), 0)
     chunkDisplay.value = `${manifest.chunks.length} 个分片 · ${(compressed / 1024 / 1024).toFixed(1)} MB`
-    if (manifest.runtimeVersion) runtimeVersion.value = manifest.runtimeVersion
+    runtimeVersion.value = manifest.runtimeVersion
+    systemVersion.value = manifest.systemVersion
   } catch { chunkDisplay.value = '清单读取失败' }
 })
 
@@ -237,7 +254,7 @@ watch(isDark, (dark) => {
         <button type="button" :disabled="status === 'downloading' || status === 'initializing' || !runtime.supported" @click="startRuntime">{{ actionLabel }}</button>
       </header>
       <dl>
-        <div><dt>系统</dt><dd><a href="https://alpinelinux.org/" target="_blank" rel="noopener noreferrer">Alpine Linux 3.23</a></dd></div>
+        <div><dt>系统</dt><dd><a href="https://alpinelinux.org/" target="_blank" rel="noopener noreferrer">{{ systemVersion }}</a></dd></div>
         <div><dt>架构</dt><dd>RISC-V 64</dd></div>
         <div><dt>工具链</dt><dd>{{ runtimeVersion }}</dd></div>
         <div><dt>加载</dt><dd>{{ chunkDisplay }}</dd></div>

@@ -37,7 +37,7 @@
 
 ## RISC-V 64 容器
 
-下面的环境使用 `container2wasm` 在浏览器中启动精简 Alpine Linux。每个镜像只安装基础命令和对应语言工具链，点击“启动容器”后才下载；构建清单会记录实际版本和体积。
+下面的环境使用 `container2wasm` 在浏览器中启动精简 Alpine Linux。每个镜像只安装基础命令和对应语言工具链，点击“启动容器”后才从 Hello WASM 运行时站点下载；构建清单会记录实际版本和体积。
 
 只发布 **RISC-V 64** 资产，不提供 x64 回退。没有可核验 riscv64 工具链的语言会直接说明不可用。
 
@@ -50,7 +50,7 @@
 - [Rust · Cargo](./container-rust.md)
 - [C# · .NET 10 LTS](./container-csharp.md)（暂无 riscv64 SDK）
 - [Kotlin 2.3.20 · OpenJDK 25 LTS](./container-kotlin.md)
-- [PHP 8.5](./container-php.md)
+- [PHP 8.4 · Alpine 3.23](./container-php.md)
 - [Ruby](./container-ruby.md)
 - [HTML · html-validate](./container-html.md)
 - [CSS · Stylelint](./container-css.md)

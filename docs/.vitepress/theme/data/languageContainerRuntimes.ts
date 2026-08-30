@@ -60,7 +60,7 @@ export const languageContainerRuntimes: LanguageContainerRuntime[] = [
     { title: '编译运行', command: `printf 'fun main() = println("Hello Kotlin " + System.getProperty("os.arch"))\n' > hello.kt\nkotlinc hello.kt -include-runtime -d hello.jar && java -jar hello.jar` },
     { title: 'REPL', command: 'kotlinc-jvm' },
   ] },
-  { id: 'php', name: 'PHP', baseline: 'PHP 8.5 stable', command: 'php --version | head -n 1', supported: true, examples: [
+  { id: 'php', name: 'PHP', baseline: 'PHP 8.4（Alpine 3.23 稳定线）', command: 'php --version | head -n 1', supported: true, examples: [
     { title: '版本', command: 'php --version | head -n 1' },
     { title: '运行文件', command: `printf '<?php echo "Hello PHP ", php_uname("m"), PHP_EOL;\n' > hello.php\nphp hello.php` },
     { title: '交互模式', command: 'php -a' },
