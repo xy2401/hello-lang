@@ -7,6 +7,7 @@ import VersionDiff from './components/VersionDiff.vue';
 import DockerTooling from './components/DockerTooling.vue';
 import LanguageContainerWorkbench from './components/LanguageContainerWorkbench.vue';
 import './doc-baseline.css';
+import './browser-workbench.css';
 import './custom.css';
 
 export default {
