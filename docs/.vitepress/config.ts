@@ -556,6 +556,14 @@ export default defineConfig({
       ],
       '/reference/': [
         {
+          text: '编译器与多语言运行时',
+          items: [
+            { text: 'LLVM 编译架构', link: '/reference/llvm' },
+            { text: 'JVM 字节码体系', link: '/reference/jvm' },
+            { text: 'GraalVM 多语言运行时', link: '/reference/graalvm' },
+          ],
+        },
+        {
           text: '参考资料',
           items: [
             { text: '参考资料总览', link: '/reference/' },
