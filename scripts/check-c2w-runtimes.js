@@ -40,7 +40,7 @@ for (const runtime of all) {
 }
 
 expect(catalog.includes("id: 'csharp'") && catalog.includes('supported: false'), 'C# 必须明确标记为不可用')
-expect(component.includes("VITE_WASM_RUNTIME_BASE || 'https://hello-wasm.pages.dev/runtime'"), '组件缺少 Hello WASM 默认资源地址')
+expect(component.includes("VITE_WASM_RUNTIME_BASE || 'https://wasm.2401.xyz/runtime'"), '组件缺少 Hello WASM 默认资源地址')
 expect(component.includes('/lang/${runtime.value.assetId}/riscv64'), '组件缺少共享物理资产路径')
 expect(component.includes("manifest.targetArch !== 'riscv64'"), '组件必须拒绝非 riscv64 资产')
 expect(component.includes("manifest.runtimeId !== `lang/${runtime.value.assetId}`"), '组件必须按 assetId 校验远程运行时 ID')

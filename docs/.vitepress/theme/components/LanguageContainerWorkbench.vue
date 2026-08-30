@@ -54,7 +54,7 @@ let fitAddon: FitAddon | undefined
 let resizeObserver: ResizeObserver | undefined
 let worker: Worker | undefined
 let ttyServer: { start(worker: Worker): void; stop?(): void } | undefined
-const runtimeBase = String(import.meta.env.VITE_WASM_RUNTIME_BASE || 'https://hello-wasm.pages.dev/runtime').replace(/\/$/, '')
+const runtimeBase = String(import.meta.env.VITE_WASM_RUNTIME_BASE || 'https://wasm.2401.xyz/runtime').replace(/\/$/, '')
 const runtimeAssetBase = () => `${runtimeBase}/lang/${runtime.value.assetId}/riscv64`
 
 const actionLabel = computed(() => {
