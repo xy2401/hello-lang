@@ -1,24 +1,32 @@
-# C# 数据结构
+# C# 数据结构深度解析
 
-.NET 泛型集合提供统一、类型安全的容器体系，Record 和可空引用类型则适合表达节点数据及其生命周期约束。
+现代 .NET (C# 12 / .NET 8+) 在数据结构上融合了**极高性能的零分配内存原语与工业级泛型容器**：
+* **`Span<T>` 与 `Memory<T>`**：实现堆/栈/非托管内存统一的安全无拷贝切片。
+* **现代泛型集合 (`System.Collections.Generic`)**：`List<T>`、`Dictionary<TKey, TValue>`、`PriorityQueue<TElement, TPriority>` 提供了强类型与极致吞吐。
 
-## 核心容器
+---
 
-| 结构 | 类型 | 典型复杂度 |
-| --- | --- | --- |
-| 动态数组 | `List<T>` | 索引 O(1)，追加摊销 O(1) |
-| 映射/集合 | `Dictionary<K,V>` / `HashSet<T>` | 平均 O(1) |
-| 队列 | `Queue<T>` | 入队、出队 O(1) |
-| 优先队列 | `PriorityQueue<TElement,TPriority>` | O(log n) |
+## 📊 核心结构与复杂度
 
-## C# 的独特之处
+| 容器类型 | .NET 底层实现 | 典型复杂度 | 特性与场景 |
+| :--- | :--- | :--- | :--- |
+| **`List<T>`** | 动态扩容 `T[]` 数组 | 索引 $O(1)$，追加 $O(1)$ | 默认通用列表 |
+| **`Dictionary<K, V>`** | 质数桶哈希表 | 增删查平均 $O(1)$ | 高性能键值对映射 |
+| **`PriorityQueue<T, P>`** | 四叉堆 / 二叉堆实现 | 堆顶 $O(1)$，入堆/出堆 $O(\log n)$ | 任务调度、图最短路径 |
+| **`Span<T>`** | 栈上 Ref Struct 切片 | 零分配访问 $O(1)$ | 高性能切片操作与算法 |
 
-- 泛型在 CLR 中保留运行时类型信息，值类型通常无需装箱即可进入泛型集合。
-- Record 默认提供基于成员的值相等语义，适合不可变树节点。
-- `Span<T>` 能在不分配新数组的情况下查看连续内存，但不能逃逸到托管堆。
+---
 
-## 综合示例
+## 1. 线性结构：`List<T>` 与 `Span<T>` 内存切片
 
-<<< ../../../demos/csharp/DataStructuresDemo.cs
+<<< ../../../demos/csharp/dsa/linear/DynamicArrayDemo.cs
 
-<DockerOutput image="mcr.microsoft.com/dotnet/sdk:8.0-alpine" sourceFile="demos/csharp/DataStructuresDemo.cs" />
+<DockerOutput image="mcr.microsoft.com/dotnet/sdk:8.0-alpine" sourceFile="demos/csharp/dsa/linear/DynamicArrayDemo.cs" />
+
+---
+
+## 2. 优先队列：`PriorityQueue<TElement, TPriority>`
+
+<<< ../../../demos/csharp/dsa/trees/HeapDemo.cs
+
+<DockerOutput image="mcr.microsoft.com/dotnet/sdk:8.0-alpine" sourceFile="demos/csharp/dsa/trees/HeapDemo.cs" />

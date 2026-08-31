@@ -1,22 +1,30 @@
-# Ruby 算法
+# Ruby 算法实战全景
 
-Ruby 算法强调可枚举对象与代码块。`sort_by` 先生成排序键，复杂规则通常比反复调用三路比较块更清晰。
+Ruby 算法以**简洁优雅的 Block 闭包与链式调用**著称：
+* **`select` 过滤与分治**：用极少行数实现清晰无歧义的快速排序。
+* **`downto` 逆向步进**：优雅表达动态规划的状态倒序压缩。
 
-## 常用能力
+---
 
-| 操作 | API | 复杂度 |
-| --- | --- | --- |
-| 按键排序 | `sort_by` | O(n log n) |
-| 二分定位 | `bsearch` / `bsearch_index` | O(log n) |
-| 惰性流水线 | `Enumerator::Lazy` | 按消费量执行 |
-| BFS | Array 队列 + Hash 集合 | O(V + E) |
+## 📊 算法专题与复杂度
 
-## 语言特性
+| 算法专题 | 典型问题 / 算法 | 核心思想 | 时间复杂度 | 空间复杂度 |
+| :--- | :--- | :--- | :--- | :--- |
+| **排序** | Functional QuickSort / `sort` | Block 谓词划分 / C 内部排序 | $O(n \log n)$ | $O(n)$ |
+| **动态规划** | 0/1 背包问题 | `downto` 迭代倒序压缩 | $O(N \cdot W)$ | $O(W)$ |
 
-Block 是 Ruby 算法 API 的核心扩展点。大型队列在生产代码中应避免频繁 `Array#shift` 搬移元素，可使用游标或专用队列实现。
+---
 
-## 综合示例
+## 1. 快速排序算法 (QuickSort with Blocks)
 
-<<< ../../../demos/ruby/algorithms_demo.rb
+<<< ../../../demos/ruby/dsa/sorting/quick_sort.rb
 
-<DockerOutput image="ruby:3.3-alpine" sourceFile="demos/ruby/algorithms_demo.rb" />
+<DockerOutput image="ruby:3.3-alpine" sourceFile="demos/ruby/dsa/sorting/quick_sort.rb" />
+
+---
+
+## 2. 动态规划：0/1 背包问题
+
+<<< ../../../demos/ruby/dsa/dp/knapsack.rb
+
+<DockerOutput image="ruby:3.3-alpine" sourceFile="demos/ruby/dsa/dp/knapsack.rb" />

@@ -1,22 +1,30 @@
-# PHP 算法
+# PHP 算法实战全景
 
-PHP 提供丰富的数组函数；当算法需要明确的队列或堆语义时，SPL 能避免昂贵的数组头部操作。
+PHP 8 在算法实现上结合了**直观的数组操作与强类型声明**：
+* **分治排序**：利用 `foreach` 与 `array_merge` 编写纯函数式快速排序。
+* **状态压缩动态规划**：利用 `array_fill` 预分配紧凑状态数组。
 
-## 常用能力
+---
 
-| 操作 | API/实现 | 复杂度 |
-| --- | --- | --- |
-| 自定义排序 | `usort` | O(n log n) |
-| 二分查找 | 索引循环 | O(log n) |
-| BFS | `SplQueue` | O(V + E) |
-| 映射/过滤 | `array_map` / `array_filter` | O(n) |
+## 📊 算法专题与复杂度
 
-## 语言特性
+| 算法专题 | 典型问题 / 算法 | 核心思想 | 时间复杂度 | 空间复杂度 |
+| :--- | :--- | :--- | :--- | :--- |
+| **排序** | Functional QuickSort / `usort` | 分治递归 / 内置 C 快速排序 | $O(n \log n)$ | $O(n)$ |
+| **动态规划** | 0/1 背包问题 | 1D 数组倒序状态转移 | $O(N \cdot W)$ | $O(W)$ |
 
-三路比较运算符 `<=>` 很适合构建多级排序规则。`usort` 会重建数字索引，因此依赖原键时应选择保留键的排序函数。
+---
 
-## 综合示例
+## 1. 快速排序算法 (QuickSort)
 
-<<< ../../../demos/php/algorithms_demo.php
+<<< ../../../demos/php/dsa/sorting/quick_sort.php
 
-<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/algorithms_demo.php" />
+<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/dsa/sorting/quick_sort.php" />
+
+---
+
+## 2. 动态规划：0/1 背包问题
+
+<<< ../../../demos/php/dsa/dp/knapsack.php
+
+<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/dsa/dp/knapsack.php" />

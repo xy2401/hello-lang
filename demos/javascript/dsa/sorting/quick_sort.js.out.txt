@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== JavaScript QuickSort & V8 TimSort ===
+Sorted: [ 11, 12, 22, 25, 64 ]
+JavaScript QuickSort tests passed successfully.

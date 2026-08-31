@@ -1,24 +1,23 @@
-# Ruby 数据结构
+# Ruby 数据结构深度解析
 
-Ruby 以 Array、Hash 和 Enumerable 构成统一的集合体验，Set 作为标准库补充去重语义，Data/Struct 适合声明轻量节点。
+Ruby 将“万物皆对象”与强大的 `Enumerable` 模块完美结合：
+* **原生动态数组 (`Array`)**：既可作为随机访问列表，也可原生作为栈 (`push`/`pop`) 和双端队列 (`unshift`/`shift`)。
+* **哈希与集合 (`Hash` / `Set`)**：支持确定插入顺序与任意可哈希对象键。
 
-## 核心容器
+---
 
-| 结构 | 类型 | 典型复杂度 |
-| --- | --- | --- |
-| 动态数组 | `Array` | 索引 O(1)，尾部追加摊销 O(1) |
-| 有序映射 | `Hash` | 查询平均 O(1) |
-| 集合 | `Set` | 查询平均 O(1) |
-| 值节点 | `Data.define` / `Struct` | 访问 O(1) |
+## 📊 核心容器特征
 
-## Ruby 的独特之处
+| 容器 | Ruby 类型 | 典型复杂度 | 特征 |
+| :--- | :--- | :--- | :--- |
+| **动态数组** | `Array` | 索引 $O(1)$，两端操作 $O(1)$ | 灵活内置栈与队列操作 |
+| **哈希字典** | `Hash` | 增删查平均 $O(1)$ | 插入有序，支持默认值块 |
+| **集合** | `Set` | 增删查平均 $O(1)$ | 集合论运算 |
 
-- Hash 保持插入顺序，键的 `hash` 与 `eql?` 共同定义身份。
-- 所有容器都能通过 Enumerable 获得一致的遍历和变换能力。
-- `Data.define` 创建不可变值对象，比开放式 Hash 更适合固定结构。
+---
 
-## 综合示例
+## 1. 线性结构：Ruby `Array` 动态栈与双端操作
 
-<<< ../../../demos/ruby/data_structures_demo.rb
+<<< ../../../demos/ruby/dsa/linear/dynamic_array.rb
 
-<DockerOutput image="ruby:3.3-alpine" sourceFile="demos/ruby/data_structures_demo.rb" />
+<DockerOutput image="ruby:3.3-alpine" sourceFile="demos/ruby/dsa/linear/dynamic_array.rb" />

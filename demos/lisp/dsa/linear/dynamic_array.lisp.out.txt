@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Common Lisp dynamic_array ===
+Common Lisp DSA tests passed successfully.

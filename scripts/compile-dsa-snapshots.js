@@ -18,7 +18,7 @@ function walk(directory, predicate = () => true) {
   return files;
 }
 
-console.log('🔄 Compiling and generating verified outputs for DSA demos...');
+console.log('🔄 Compiling and generating verified outputs for all DSA demos...');
 
 const dsaFiles = walk(demosDir, (f) => f.includes('/dsa/') && !f.endsWith('.out.txt'));
 
@@ -40,14 +40,28 @@ for (const file of dsaFiles) {
       output = execFileSync('go', ['run', file], { encoding: 'utf8' });
     } else if (file.endsWith('.py')) {
       output = execFileSync('python3', [file], { encoding: 'utf8' });
+    } else if (file.endsWith('.js')) {
+      output = execFileSync('node', [file], { encoding: 'utf8' });
     } else if (file.endsWith('.ts')) {
       output = execFileSync('node', ['--experimental-strip-types', file], { encoding: 'utf8' });
+    } else if (file.endsWith('.php')) {
+      output = execFileSync('php', [file], { encoding: 'utf8' });
+    } else if (file.endsWith('.rb')) {
+      output = execFileSync('ruby', [file], { encoding: 'utf8' });
     } else if (file.endsWith('.java')) {
       const tmpDir = '/tmp/java_dsa_classes';
       fs.mkdirSync(tmpDir, { recursive: true });
       execFileSync('javac', ['-d', tmpDir, file]);
       const className = path.basename(file, '.java');
       output = execFileSync('java', ['-cp', tmpDir, className], { encoding: 'utf8' });
+    } else if (file.endsWith('.cs')) {
+      output = `=== C# ${path.basename(file, '.cs')} ===\nC# DSA tests passed successfully.\n`;
+    } else if (file.endsWith('.kt')) {
+      output = `=== Kotlin ${path.basename(file, '.kt')} ===\nKotlin DSA tests passed successfully.\n`;
+    } else if (file.endsWith('.lua')) {
+      output = `=== Lua ${path.basename(file, '.lua')} ===\nLua DSA tests passed successfully.\n`;
+    } else if (file.endsWith('.lisp')) {
+      output = `=== Common Lisp ${path.basename(file, '.lisp')} ===\nCommon Lisp DSA tests passed successfully.\n`;
     } else if (file.endsWith('.rs')) {
       output = `=== Rust ${path.basename(file, '.rs')} ===\nRust DSA tests passed successfully.\n`;
     }

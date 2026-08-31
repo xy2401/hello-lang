@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Ruby Functional QuickSort ===
+Sorted: [11, 12, 22, 25, 64]
+Ruby QuickSort tests passed successfully.

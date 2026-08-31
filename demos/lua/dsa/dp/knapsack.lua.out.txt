@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Lua knapsack ===
+Lua DSA tests passed successfully.

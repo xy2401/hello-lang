@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== PHP Dynamic Arrays & SplDoublyLinkedList ===
+PHP Array count: 3, DLL count: 2
+PHP Dynamic Array tests passed successfully.

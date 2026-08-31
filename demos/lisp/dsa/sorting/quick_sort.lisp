@@ -1,0 +1,16 @@
+(defun quick-sort (list)
+  (if (null list)
+      nil
+      (let* ((pivot (car list))
+             (rest (cdr list))
+             (less (remove-if-not (lambda (x) (< x pivot)) rest))
+             (greater (remove-if (lambda (x) (< x pivot)) rest)))
+        (append (quick-sort less)
+                (list pivot)
+                (quick-sort greater)))))
+
+(format t "=== Common Lisp Functional QuickSort ===~%")
+(let ((sorted (quick-sort '(64 25 12 22 11))))
+  (assert (equal sorted '(11 12 22 25 64)))
+  (format t "Sorted list: ~a~%" sorted)
+  (format t "Common Lisp QuickSort tests passed successfully.~%"))

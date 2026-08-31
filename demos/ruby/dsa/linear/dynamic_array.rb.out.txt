@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Ruby Array & Deque Demo ===
+Ruby Array: [10, 20], Deque: ["front", "center", "back"]
+Ruby Dynamic Array tests passed successfully.

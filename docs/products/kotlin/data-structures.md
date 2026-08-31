@@ -1,24 +1,23 @@
-# Kotlin 数据结构
+# Kotlin 数据结构深度解析
 
-Kotlin 在 JVM 集合上区分只读接口和可变接口，并通过 Data Class、Sealed 类型和空安全减少结构建模中的非法状态。
+Kotlin 在 JVM 集合生态之上，提供了**不可变性优先（Read-Only vs Mutable）与空安全契约**：
+* **只读视图与可变集合**：`List<T>`（只读）与 `MutableList<T>` 明确区分数据边界。
+* **原生双端队列与扩展函数**：提供 `ArrayDeque` 与丰富的集合操作符（`filter`、`map`、`associate`）。
 
-## 核心容器
+---
 
-| 结构 | 类型 | 典型复杂度 |
-| --- | --- | --- |
-| 只读/可变列表 | `List<T>` / `MutableList<T>` | 索引 O(1) |
-| 映射/集合 | `Map<K,V>` / `Set<T>` | 平均 O(1) |
-| 双端队列 | `ArrayDeque<T>` | 两端操作 O(1) |
-| 优先队列 | JVM `PriorityQueue<T>` | O(log n) |
+## 📊 核心结构特征
 
-## Kotlin 的独特之处
+| 容器接口 | Kotlin 标准实现 | 典型复杂度 | 特征与场景 |
+| :--- | :--- | :--- | :--- |
+| **`List<T>`** | 只读接口 (底层 `java.util.ArrayList`) | 索引 $O(1)$ | 不可变引用传递 |
+| **`MutableList<T>`** | 可变动态数组 | 追加均摊 $O(1)$ | 内部数据修改 |
+| **`ArrayDeque<T>`** | 双端循环数组 | 首尾操作 $O(1)$ | 栈与队列的首选 |
 
-- `List<T>` 表示只读视图，不保证底层对象真正不可变。
-- Data Class 提供值相等、复制和解构；Sealed 接口让递归树的分支可穷尽。
-- 空安全类型把“节点可能不存在”放进类型签名，而不是依赖运行时约定。
+---
 
-## 综合示例
+## 1. 线性结构：`MutableList` 与 `ArrayDeque`
 
-<<< ../../../demos/kotlin/data_structures_demo.kt
+<<< ../../../demos/kotlin/dsa/linear/DynamicArrayDemo.kt
 
-<DockerOutput image="hello-lang-kotlin:2.0.10" sourceFile="demos/kotlin/data_structures_demo.kt" />
+<DockerOutput image="hello-lang-kotlin:2.0.10" sourceFile="demos/kotlin/dsa/linear/DynamicArrayDemo.kt" />

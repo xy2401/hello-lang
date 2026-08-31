@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== JavaScript Binary Search Tree ===
+JavaScript BST tests passed successfully.

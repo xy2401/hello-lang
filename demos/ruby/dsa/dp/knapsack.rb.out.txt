@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Ruby 0/1 Knapsack DP ===
+Max Knapsack Value: 7
+Ruby Knapsack DP tests passed successfully.

@@ -1,24 +1,31 @@
-# PHP 数据结构
+# PHP 数据结构深度解析
 
-PHP 的 `array` 是保持插入顺序的哈希表，可同时表达列表和映射。对队列、堆等语义明确的结构，应优先考虑 SPL 容器。
+PHP 8 拥有高效的底层数组（Zend HashTable）与标准 SPL 数据结构扩展：
+* **统一数组（Array）**：结合有序映射与动态数组的混合 HashTable。
+* **SPL 专用容器**：`SplDoublyLinkedList`、`SplPriorityQueue`、`SplFixedArray` 提供专有数据结构的高性能原生支持。
 
-## 核心容器
+---
 
-| 结构 | 类型 | 典型复杂度 |
-| --- | --- | --- |
-| 有序映射/列表 | `array` | 键查询平均 O(1) |
-| 队列 | `SplQueue` | 两端操作 O(1) |
-| 优先队列 | `SplPriorityQueue` | 插入、弹出 O(log n) |
-| 对象树 | Readonly 类 + 子节点数组 | 遍历 O(n) |
+## 📊 核心容器特征
 
-## PHP 的独特之处
+| 结构 | PHP 实现 | 典型复杂度 | 特性 |
+| :--- | :--- | :--- | :--- |
+| **数组** | `array` (HashTable) | 增删查 $O(1)$ | 默认通用有序键值结构 |
+| **双向链表** | `SplDoublyLinkedList` | 两端操作 $O(1)$ | 栈与双端队列结构 |
+| **优先队列** | `SplPriorityQueue` | 入队出队 $O(\log n)$ | 基于堆的优先级调度 |
 
-- 数字键与字符串键可以共存，但自动转换规则需要谨慎处理。
-- 写时复制让数组按值传递易于使用，修改大型数组时仍需关注复制成本。
-- Readonly 类能把节点的引用关系固定下来，但内部引用对象仍有自己的可变性。
+---
 
-## 综合示例
+## 1. 线性结构：PHP 数组与 `SplDoublyLinkedList`
 
-<<< ../../../demos/php/data_structures_demo.php
+<<< ../../../demos/php/dsa/linear/dynamic_array.php
 
-<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/data_structures_demo.php" />
+<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/dsa/linear/dynamic_array.php" />
+
+---
+
+## 2. 堆与优先队列：`SplPriorityQueue`
+
+<<< ../../../demos/php/dsa/trees/heap.php
+
+<DockerOutput image="php:8.3-alpine" sourceFile="demos/php/dsa/trees/heap.php" />

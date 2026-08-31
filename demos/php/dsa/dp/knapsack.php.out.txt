@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== PHP 0/1 Knapsack DP ===
+Max Knapsack Value: 7
+PHP Knapsack DP tests passed successfully.

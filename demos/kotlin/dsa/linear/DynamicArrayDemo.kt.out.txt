@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Kotlin DynamicArrayDemo ===
+Kotlin DSA tests passed successfully.

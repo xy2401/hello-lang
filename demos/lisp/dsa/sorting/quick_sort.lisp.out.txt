@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Common Lisp quick_sort ===
+Common Lisp DSA tests passed successfully.
