@@ -1,0 +1,27 @@
+@layer tokens, layout, components;
+
+@layer tokens {
+  :root {
+    --space: 1rem;
+    --surface: #eef2ff;
+    --accent: #4f46e5;
+  }
+}
+
+@layer layout {
+  .topic-tree {
+    display: grid;
+    gap: var(--space);
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+@layer components {
+  .node {
+    padding: var(--space);
+    border-inline-start: 0.3rem solid var(--accent);
+    border-radius: 0.5rem;
+    background: var(--surface);
+    color: #1e1b4b;
+  }
+}

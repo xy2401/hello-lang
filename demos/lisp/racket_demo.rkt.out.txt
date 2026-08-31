@@ -1,0 +1,9 @@
+---
+status: snapshot
+exitCode: 0
+---
+lang=racket
+struct=#(struct:point 3 4)
+contract=25
+syntax-object=#t
+

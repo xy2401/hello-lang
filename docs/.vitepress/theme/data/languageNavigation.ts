@@ -9,7 +9,7 @@ export interface LanguageItem {
   category?: 'command' | 'declarative'; // command: 命令式，declarative: 声明式
 }
 
-// 16 个语言产品的优先级排序
+// 18 个语言产品的优先级排序
 export const allLanguages: readonly LanguageItem[] = [
   // 前 5 个典型产品（主导航平铺）
   { id: 'java', name: 'Java', priority: 1, category: 'command' },
@@ -28,8 +28,10 @@ export const allLanguages: readonly LanguageItem[] = [
   { id: 'groovy', name: 'Groovy', priority: 12, category: 'command' },
   { id: 'scala', name: 'Scala', priority: 13, category: 'command' },
   { id: 'clojure', name: 'Clojure', priority: 14, category: 'command' },
-  { id: 'html', name: 'HTML', priority: 15, category: 'declarative' },
-  { id: 'css', name: 'CSS', priority: 16, category: 'declarative' },
+  { id: 'lisp', name: 'Lisp 家族', priority: 15, category: 'command' },
+  { id: 'lua', name: 'Lua', priority: 16, category: 'command' },
+  { id: 'html', name: 'HTML', priority: 17, category: 'declarative' },
+  { id: 'css', name: 'CSS', priority: 18, category: 'declarative' },
 ] as const satisfies readonly LanguageItem[];
 
 // 导出前 5 个作为典型产品

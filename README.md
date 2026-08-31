@@ -9,11 +9,15 @@
 ## 🌟 核心特色 (Key Features)
 
 - 📌 **统一标准基础语法骨架 (Standardized Basic Syntax)**
-  - 覆盖 **Java、Kotlin、Groovy、Scala、Clojure、JS/TS、Python、C/C++、Rust、Go、PHP、C#、Ruby、HTML、CSS**。
-  - 深度 Matrix 选择代表语言横向比较；完整产品分卷保留每门语言自己的工具链和版本结构。
+  - 18 个产品分卷覆盖 **Java、Kotlin、Groovy、Scala、Clojure、JS/TS、Python、C/C++、Rust、Go、PHP、C#、Ruby、Lisp 家族、Lua、HTML、CSS**。
+  - 深度 Matrix 选择代表语言横向比较；Lisp 四方言、Lua 与其他语言在各自产品分卷保留原生模型、工具链和版本结构。
+
+- 🧱 **逐语言数据结构与算法专题**
+  - 每个产品分卷提供 `data-structures` 与 `algorithms` 两篇核心教程，突出标准库惯用法、复杂度与语言独有特性。
+  - 教程直接引用 `demos/` 中的真实源码；运行时语言配套输出快照，HTML/CSS 提供浏览器 Live 预览。
 
 - 🌐 **6 大横向概念对比大屏 (`docs/matrix/`)**
-  - **[📌 基础语法跨语言对照](docs/matrix/basic-syntax.md)**: 代表语言原生代码块与适用边界对比。
+  - **[📌 基础语法跨语言对照](docs/matrix/basic-syntax.md)**: 既有横向矩阵范围内的原生代码块与适用边界对比。
   - **[⚡ 并发与异步模型](docs/matrix/concurrency.md)**: 虚拟线程 vs Goroutine vs Tokio vs Event Loop vs Task。
   - **[🧠 内存管理与 GC 回收](docs/matrix/memory.md)**: Rust 0-GC 所有权 vs Java ZGC 亚毫秒停顿 vs Go 三色标记。
   - **[📦 包管理与工具链](docs/matrix/package-management.md)**: Maven/Gradle vs npm/pnpm vs uv/Poetry vs Cargo vs Go Modules vs Composer vs NuGet.
@@ -33,7 +37,7 @@
 
 ```text
 hello-lang/
-├── demos/                    # 16 个语言与 Web 技术产品的 Demo / Docker 证据目录
+├── demos/                    # 18 个语言与 Web 技术产品的 Demo / Docker 证据目录
 │   ├── java/                 # BasicDemo.java, JDK 8~25 进阶特性代码
 │   ├── js/                   # basic_demo.js, ES6~ES2024, Node 14~22
 │   ├── html/                 # 语义化结构与现代 HTML 原生元素
@@ -48,9 +52,11 @@ hello-lang/
 │   ├── kotlin/               # basic_demo.kt, Kotlin K2 编译器
 │   ├── groovy/               # Groovy Docker 证据目录
 │   ├── scala/                # Scala Docker 证据目录
-│   └── clojure/              # Clojure Docker 证据目录
+│   ├── clojure/              # Clojure Docker 证据目录
+│   ├── lisp/                 # Common Lisp, Scheme, Clojure, Racket
+│   └── lua/                  # Lua 5.5.1 与 Table/Coroutine 示例
 ├── docs/                     # VitePress 文档源码
-│   ├── products/             # 16 个产品的独立手册
+│   ├── products/             # 18 个产品的独立手册
 │   ├── matrix/               # 6 大横向概念对比大屏目录
 │   └── .vitepress/           # 主题组件 (DockerOutput, CodeRunner, VersionDiff)
 ├── scripts/

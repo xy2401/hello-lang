@@ -1,0 +1,13 @@
+ARG DEBIAN_IMAGE=debian:bookworm-slim
+FROM ${DEBIAN_IMAGE} AS builder
+ARG GUILE_VERSION=3.0.11
+ARG GUILE_SHA256=818c79d236657a7fa96fb364137cc7b41b3bdee0d65c6174ca03769559579460
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential ca-certificates curl xz-utils pkg-config libgc-dev libffi-dev libunistring-dev libreadline-dev libltdl-dev libgmp-dev && rm -rf /var/lib/apt/lists/*
+RUN curl -fsSLo /tmp/guile.tar.xz "https://ftp.gnu.org/gnu/guile/guile-${GUILE_VERSION}.tar.xz" && echo "${GUILE_SHA256}  /tmp/guile.tar.xz" | sha256sum -c - && mkdir /tmp/guile && tar -xJf /tmp/guile.tar.xz -C /tmp/guile --strip-components=1 && cd /tmp/guile && ./configure --prefix=/opt/guile && make -j2 && make install
+
+FROM ${DEBIAN_IMAGE}
+RUN apt-get update && apt-get install -y --no-install-recommends libgc1 libffi8 libunistring2 libreadline8 libltdl7 libgmp10 && rm -rf /var/lib/apt/lists/*
+COPY --from=builder /opt/guile /opt/guile
+ENV PATH="/opt/guile/bin:${PATH}" LD_LIBRARY_PATH="/opt/guile/lib"
+CMD ["guile", "--version"]
+

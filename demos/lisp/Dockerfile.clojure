@@ -1,0 +1,7 @@
+ARG CLOJURE_BASE_IMAGE=clojure:tools-deps-trixie-slim
+FROM ${CLOJURE_BASE_IMAGE}
+WORKDIR /opt/hello-lang
+COPY deps.edn ./deps.edn
+RUN clojure -P
+CMD ["clojure", "--version"]
+

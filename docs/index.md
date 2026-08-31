@@ -5,7 +5,7 @@ title: "Hello Lang"
 hero:
   name: "🚀 Hello Lang"
   text: "按统一维度理解常用编程语言。"
-  tagline: "16 门语言与 Web 技术 · 统一语法骨架 · 版本演进矩阵 · Docker 真实验证"
+  tagline: "18 个语言与 Web 技术产品 · 统一语法骨架 · 版本演进矩阵 · Docker 真实验证"
   image: /favicon.svg
   alt: Hello Lang - 编程语言学习平台
   actions:
@@ -36,7 +36,7 @@ features:
 
 ## 🌟 典型语言快速入口
 
-前 5 个为高频使用场景的代表性语言，其余产品可在导航栏「更多」下拉中查看完整列表。
+前 5 个为高频使用场景的代表性语言，其余 13 个产品可在导航栏「更多」下拉中查看完整列表。
 
 | 语言 | 类型 | 核心特色 | 快速开始 |
 | :--- | :--- | :--- | --- |
@@ -50,8 +50,8 @@ features:
 
 <a href="/products/" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
-    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">📚 查看全部 16 个产品</h3>
-    <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">包括 JVM 家族、脚本语言、系统语言以及 HTML、CSS 工程链</p>
+    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">📚 查看全部 18 个产品分卷</h3>
+    <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">包括 JVM 家族、Lisp 家族、Lua、脚本语言、系统语言以及 HTML、CSS 工程链</p>
   </div>
 </a>
 
@@ -191,7 +191,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 ## 🔗 相关资源
 
-- **产品分卷**: [`/products`](/products/java/) - 16 个语言与 Web 技术产品的详细文档
+- **产品分卷**: [`/products`](/products/) - 18 个语言与 Web 技术产品的详细文档
 - **横向对比**: [`/matrix`](/matrix/basic-syntax) - 6 大技术维度深度对比
 - **实验验证**: [`demos`](https://github.com/xy2401/hello-lang/tree/main/demos) - Docker 自动化运行验证
 

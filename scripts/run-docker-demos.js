@@ -21,6 +21,49 @@ const demoConfigs = [
   { lang: 'csharp', image: 'mcr.microsoft.com/dotnet/sdk:8.0-alpine', file: 'csharp/BasicDemo.cs' },
   { lang: 'ruby', image: 'ruby:3.3-alpine', file: 'ruby/basic_demo.rb' },
   { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', file: 'kotlin/basic_demo.kt' },
+  { lang: 'common-lisp', image: 'clfoundation/sbcl:2.6.8', file: 'lisp/basic_demo.lisp' },
+  { lang: 'common-lisp', image: 'clfoundation/sbcl:2.6.8', file: 'lisp/common_lisp_demo.lisp' },
+  { lang: 'scheme', image: 'hello-lang-guile:3.0.11', file: 'lisp/scheme_demo.scm' },
+  { lang: 'clojure', image: 'hello-lang-clojure:1.12.5', file: 'lisp/clojure_demo.clj' },
+  { lang: 'racket', image: 'hello-lang-racket:9.3', file: 'lisp/racket_demo.rkt' },
+  { lang: 'lua', image: 'hello-lang-lua:5.5.1', file: 'lua/basic_demo.lua' },
+  { lang: 'lua', image: 'hello-lang-lua:5.5.1', file: 'lua/lua55_demo.lua' },
+
+  // Data structures and algorithms topics
+  { lang: 'java', image: 'eclipse-temurin:21-jdk-alpine', file: 'java/DataStructuresDemo.java' },
+  { lang: 'java', image: 'eclipse-temurin:21-jdk-alpine', file: 'java/AlgorithmsDemo.java' },
+  { lang: 'js', image: 'node:20-alpine', file: 'typescript/data_structures_demo.ts' },
+  { lang: 'js', image: 'node:20-alpine', file: 'typescript/algorithms_demo.ts' },
+  { lang: 'python', image: 'python:3.12-slim', file: 'python/data_structures_demo.py' },
+  { lang: 'python', image: 'python:3.12-slim', file: 'python/algorithms_demo.py' },
+  { lang: 'rust', image: 'rust:1.75-alpine', file: 'rust/data_structures_demo.rs' },
+  { lang: 'rust', image: 'rust:1.75-alpine', file: 'rust/algorithms_demo.rs' },
+  { lang: 'go', image: 'golang:1.22-alpine', file: 'go/data_structures_demo.go' },
+  { lang: 'go', image: 'golang:1.22-alpine', file: 'go/algorithms_demo.go' },
+  { lang: 'js', image: 'node:22-alpine', file: 'javascript/data_structures_demo.js' },
+  { lang: 'js', image: 'node:22-alpine', file: 'javascript/algorithms_demo.js' },
+  { lang: 'c', image: 'gcc:13', file: 'cpp/c_data_structures_demo.c' },
+  { lang: 'c', image: 'gcc:13', file: 'cpp/c_algorithms_demo.c' },
+  { lang: 'cpp', image: 'gcc:13', file: 'cpp/data_structures_demo.cpp' },
+  { lang: 'cpp', image: 'gcc:13', file: 'cpp/algorithms_demo.cpp' },
+  { lang: 'php', image: 'php:8.3-alpine', file: 'php/data_structures_demo.php' },
+  { lang: 'php', image: 'php:8.3-alpine', file: 'php/algorithms_demo.php' },
+  { lang: 'csharp', image: 'mcr.microsoft.com/dotnet/sdk:8.0-alpine', file: 'csharp/DataStructuresDemo.cs' },
+  { lang: 'csharp', image: 'mcr.microsoft.com/dotnet/sdk:8.0-alpine', file: 'csharp/AlgorithmsDemo.cs' },
+  { lang: 'ruby', image: 'ruby:3.3-alpine', file: 'ruby/data_structures_demo.rb' },
+  { lang: 'ruby', image: 'ruby:3.3-alpine', file: 'ruby/algorithms_demo.rb' },
+  { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', file: 'kotlin/data_structures_demo.kt' },
+  { lang: 'kotlin', image: 'hello-lang-kotlin:2.0.10', file: 'kotlin/algorithms_demo.kt' },
+  { lang: 'common-lisp', image: 'clfoundation/sbcl:2.6.8', file: 'lisp/common_lisp_data_structures_demo.lisp' },
+  { lang: 'common-lisp', image: 'clfoundation/sbcl:2.6.8', file: 'lisp/common_lisp_algorithms_demo.lisp' },
+  { lang: 'scheme', image: 'hello-lang-guile:3.0.11', file: 'lisp/scheme_data_structures_demo.scm' },
+  { lang: 'scheme', image: 'hello-lang-guile:3.0.11', file: 'lisp/scheme_algorithms_demo.scm' },
+  { lang: 'clojure', image: 'hello-lang-clojure:1.12.5', file: 'lisp/clojure_data_structures_demo.clj' },
+  { lang: 'clojure', image: 'hello-lang-clojure:1.12.5', file: 'lisp/clojure_algorithms_demo.clj' },
+  { lang: 'racket', image: 'hello-lang-racket:9.3', file: 'lisp/racket_data_structures_demo.rkt' },
+  { lang: 'racket', image: 'hello-lang-racket:9.3', file: 'lisp/racket_algorithms_demo.rkt' },
+  { lang: 'lua', image: 'hello-lang-lua:5.5.1', file: 'lua/data_structures_demo.lua' },
+  { lang: 'lua', image: 'hello-lang-lua:5.5.1', file: 'lua/algorithms_demo.lua' },
 
   // Java LTS Environment Demos
   { lang: 'java', image: 'eclipse-temurin:8-jdk-alpine', isEnv: true, file: 'java/jdk8/env.out', cmd: 'docker run --rm eclipse-temurin:8-jdk-alpine java -version 2>&1' },
@@ -174,6 +217,8 @@ function runDockerDemo(conf) {
   } else if (conf.lang === 'cpp') {
     const standard = fileName.includes('cpp11') ? 'c++11' : fileName.includes('cpp23') ? 'c++23' : 'c++20';
     command = `docker run --rm ${mount} ${conf.image} sh -c "g++ -std=${standard} ${fileName} -o /tmp/demo && /tmp/demo"`;
+  } else if (conf.lang === 'c') {
+    command = `docker run --rm ${mount} ${conf.image} sh -c "gcc -std=c11 -Wall -Wextra -Wpedantic ${fileName} -o /tmp/demo && /tmp/demo"`;
   } else if (conf.lang === 'rust') {
     const edition = fileName.includes('async') ? '2018' : '2021';
     command = `docker run --rm ${mount} ${conf.image} sh -c "rustc --edition ${edition} ${fileName} -o /tmp/demo && /tmp/demo"`;
@@ -187,6 +232,16 @@ function runDockerDemo(conf) {
     command = `docker run --rm ${mount} ${conf.image} sh -c "mkdir -p /tmp/demo && cp ${fileName} /tmp/demo/Program.cs && cp /app/scripts/csharp-demo.csproj /tmp/demo/Demo.csproj && dotnet run --project /tmp/demo/Demo.csproj"`;
   } else if (conf.lang === 'kotlin') {
     command = `docker run --rm ${mount} ${conf.image} sh -c "kotlinc ${fileName} -include-runtime -d /tmp/demo.jar && java -jar /tmp/demo.jar"`;
+  } else if (conf.lang === 'common-lisp') {
+    command = `docker run --rm ${mount} ${conf.image} sbcl --script ${fileName}`;
+  } else if (conf.lang === 'scheme') {
+    command = `docker run --rm ${mount} ${conf.image} guile -s ${fileName}`;
+  } else if (conf.lang === 'clojure') {
+    command = `docker run --rm ${mount} ${conf.image} clojure -M ${fileName}`;
+  } else if (conf.lang === 'racket') {
+    command = `docker run --rm ${mount} ${conf.image} racket ${fileName}`;
+  } else if (conf.lang === 'lua') {
+    command = `docker run --rm ${mount} ${conf.image} lua ${fileName}`;
   }
 
   if (!command) throw new Error(`未配置 ${conf.lang} 的执行器`);
@@ -231,6 +286,14 @@ function pinImage(image) {
 const kotlinBaseTag = 'eclipse-temurin:21-jdk-jammy';
 const kotlinBase = pinImage(kotlinBaseTag);
 execFileSync('docker', ['build', '--build-arg', `TEMURIN_JDK_IMAGE=${kotlinBase}`, '--build-arg', 'KOTLIN_VERSION=2.0.10', '-t', 'hello-lang-kotlin:2.0.10', path.join(demosDir, 'kotlin')], { stdio: 'inherit', timeout: 600000 });
+
+const debianBase = pinImage('debian:bookworm-slim');
+const gccBase = pinImage('gcc:14');
+const clojureBase = pinImage('clojure:tools-deps-trixie-slim');
+execFileSync('docker', ['build', '-f', path.join(demosDir, 'lisp', 'Dockerfile.guile'), '--build-arg', `DEBIAN_IMAGE=${debianBase}`, '-t', 'hello-lang-guile:3.0.11', path.join(demosDir, 'lisp')], { stdio: 'inherit', timeout: 1200000 });
+execFileSync('docker', ['build', '-f', path.join(demosDir, 'lisp', 'Dockerfile.clojure'), '--build-arg', `CLOJURE_BASE_IMAGE=${clojureBase}`, '-t', 'hello-lang-clojure:1.12.5', path.join(demosDir, 'lisp')], { stdio: 'inherit', timeout: 600000 });
+execFileSync('docker', ['build', '-f', path.join(demosDir, 'lisp', 'Dockerfile.racket'), '--build-arg', `DEBIAN_IMAGE=${debianBase}`, '-t', 'hello-lang-racket:9.3', path.join(demosDir, 'lisp')], { stdio: 'inherit', timeout: 600000 });
+execFileSync('docker', ['build', '-f', path.join(demosDir, 'lua', 'Dockerfile'), '--build-arg', `GCC_IMAGE=${gccBase}`, '--build-arg', `DEBIAN_IMAGE=${debianBase}`, '-t', 'hello-lang-lua:5.5.1', path.join(demosDir, 'lua')], { stdio: 'inherit', timeout: 600000 });
 
 for (const conf of demoConfigs) {
   const original = conf.image;
@@ -290,12 +353,25 @@ const catalogEvidence = [
   { id: 'php', image: pinImage('php:8.3-alpine'), source: 'demos/php/basic_demo.php.out.txt' },
   { id: 'html', image: pinImage('node:22-bookworm-slim'), runtime: pinImage('nginx:1.28-alpine'), web: ['html', 'demos/html/basic_demo.html'] },
   { id: 'css', image: pinImage('node:22-bookworm-slim'), runtime: pinImage('nginx:1.28-alpine'), web: ['css', 'demos/css/basic_demo.css'] },
+  {
+    id: 'lisp',
+    image: pinImage('clfoundation/sbcl:2.6.8'),
+    images: [pinImage('clfoundation/sbcl:2.6.8'), 'hello-lang-guile:3.0.11', 'hello-lang-clojure:1.12.5', 'hello-lang-racket:9.3'],
+    sources: [
+      'demos/lisp/common_lisp_algorithms_demo.lisp.out.txt',
+      'demos/lisp/scheme_algorithms_demo.scm.out.txt',
+      'demos/lisp/clojure_algorithms_demo.clj.out.txt',
+      'demos/lisp/racket_algorithms_demo.rkt.out.txt',
+    ],
+    roots: ['/usr/local/bin', '/opt/guile/bin', '/usr/local/lib/clojure', '/opt/racket/bin'],
+  },
+  { id: 'lua', image: 'hello-lang-lua:5.5.1', sources: ['demos/lua/lua55_demo.lua.out.txt'], roots: ['/opt/lua/bin'] },
 ];
 const pathScript = 'echo "PATH=$PATH"; for d in $(echo "$PATH" | tr : " "); do [ -d "$d" ] || continue; for f in "$d"/*; do [ -f "$f" ] && [ -x "$f" ] && basename "$f"; done; done | sort -u';
 for (const item of catalogEvidence) {
   const dir = path.join(demosDir, item.id, 'docker');
   fs.mkdirSync(dir, { recursive: true });
-  const images = [...new Set([item.image, item.runtime].filter(Boolean))];
+  const images = [...new Set(item.images || [item.image, item.runtime].filter(Boolean))];
   const inventories = [];
   for (const image of images) {
     const inspect = execFileSync('docker', ['image', 'inspect', image, '--format', 'id={{.Id}} os={{.Os}} arch={{.Architecture}} size={{.Size}}'], { encoding: 'utf8' });
@@ -319,7 +395,9 @@ for (const item of catalogEvidence) {
       spawnSync('docker', ['rm', '-f', name], { stdio: 'ignore' });
     }
   } else {
-    session = fs.readFileSync(path.join(rootDir, item.source), 'utf8');
+    session = (item.sources || [item.source])
+      .map(source => fs.readFileSync(path.join(rootDir, source), 'utf8'))
+      .join('\n');
   }
   fs.writeFileSync(path.join(dir, 'session.out.txt'), verifiedSnapshot(item.image, session));
   fs.writeFileSync(path.join(dir, 'assert.out.txt'), verifiedSnapshot(item.image, 'PASS exitCode: 0\nPASS evidenceSnapshot: present\nRESULT: all assertions passed'));

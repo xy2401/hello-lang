@@ -123,12 +123,14 @@ const copyableDockerCmd = computed(() => {
   } else if (file.endsWith('.py')) {
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} python ${fileName}`;
   } else if (file.endsWith('.ts')) {
-    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} npx -y tsx ${fileName}`;
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "/app/node_modules/.bin/tsc --target ES2020 --module commonjs --outDir /tmp/ts ${fileName} && node /tmp/ts/${fileName.replace('.ts', '.js')}"`;
   } else if (file.endsWith('.js')) {
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} node ${fileName}`;
   } else if (file.endsWith('.cpp')) {
     const standard = fileName.includes('cpp11') ? 'c++11' : fileName.includes('cpp23') ? 'c++23' : 'c++20';
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "g++ -std=${standard} ${fileName} -o /tmp/demo && /tmp/demo"`;
+  } else if (file.endsWith('.c')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "gcc -std=c11 -Wall -Wextra -Wpedantic ${fileName} -o /tmp/demo && /tmp/demo"`;
   } else if (file.endsWith('.rs')) {
     const edition = fileName.includes('async') ? '2018' : '2021';
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "rustc --edition ${edition} ${fileName} -o /tmp/demo && /tmp/demo"`;
@@ -142,6 +144,16 @@ const copyableDockerCmd = computed(() => {
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "kotlinc ${fileName} -include-runtime -d /tmp/demo.jar && java -jar /tmp/demo.jar"`;
   } else if (file.endsWith('.cs')) {
     return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sh -c "mkdir -p /tmp/demo && cp ${fileName} /tmp/demo/Program.cs && cp /app/scripts/csharp-demo.csproj /tmp/demo/Demo.csproj && dotnet run --project /tmp/demo/Demo.csproj"`;
+  } else if (file.endsWith('.lisp')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} sbcl --script ${fileName}`;
+  } else if (file.endsWith('.scm')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} guile -s ${fileName}`;
+  } else if (file.endsWith('.clj')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} clojure -M ${fileName}`;
+  } else if (file.endsWith('.rkt')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} racket ${fileName}`;
+  } else if (file.endsWith('.lua')) {
+    return `docker run --rm -v "$(pwd):/app:ro" -w /app/${dir} ${img} lua ${fileName}`;
   }
   return `docker run --rm -v "$(pwd):/app" -w /app/${dir} ${img} cat ${fileName}`;
 });

@@ -1,0 +1,9 @@
+ARG DEBIAN_IMAGE=debian:bookworm-slim
+FROM ${DEBIAN_IMAGE}
+ARG RACKET_VERSION=9.3
+ARG RACKET_SHA256=7a1cc4b14a746add95eec2e549df54e5154b7dc94938a86330ce6a02ec7f75ce
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl && rm -rf /var/lib/apt/lists/*
+RUN curl -fsSLo /tmp/racket.sh "https://download.racket-lang.org/releases/${RACKET_VERSION}/installers/racket-minimal-${RACKET_VERSION}-x86_64-linux-cs.sh" && echo "${RACKET_SHA256}  /tmp/racket.sh" | sha256sum -c - && sh /tmp/racket.sh --in-place --dest /opt/racket && rm /tmp/racket.sh
+ENV PATH="/opt/racket/bin:${PATH}"
+CMD ["racket", "--version"]
+

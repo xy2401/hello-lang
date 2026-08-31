@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const expected=['clojure','cpp','csharp','css','go','groovy','html','java','javascript','kotlin','php','python','ruby','rust','scala','typescript'];
+const expected=['clojure','cpp','csharp','css','go','groovy','html','java','javascript','kotlin','lisp','lua','php','python','ruby','rust','scala','typescript'];
 const source=fs.readFileSync(path.join(root,'docs/.vitepress/theme/data/dockerCatalog.ts'),'utf8');
 const ids=[...source.matchAll(/(?:\bid:\s*|builderRuntime\()\s*['"]([^'"]+)['"]/g)].map(m=>m[1]);const failures=[];
 for(const declaration of['DockerImageRef','DockerCatalogEntry','DockerEvidenceStatus'])if(!source.includes(`interface ${declaration}`)&&!source.includes(`type ${declaration}`))failures.push(`missing unified type ${declaration}`);

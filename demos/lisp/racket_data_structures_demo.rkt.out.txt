@@ -1,0 +1,11 @@
+---
+status: snapshot
+exitCode: 0
+---
+list=1,2,3
+vector=4,5,6
+map=alice:3,bob:5
+set=blue,green,red
+tree=root(left,right)
+immutable=#t; transparent-struct=#t
+

@@ -16,5 +16,7 @@
 - [Groovy](/products/groovy/)
 - [Scala](/products/scala/)
 - [Clojure](/products/clojure/)
+- [Lisp 家族](/products/lisp/)
+- [Lua](/products/lua/)
 - [HTML](/products/html/)
 - [CSS](/products/css/)

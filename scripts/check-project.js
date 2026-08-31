@@ -7,6 +7,8 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
 const docsDir = path.join(rootDir, 'docs');
 const errors = [];
+const topicNames = ['data-structures', 'algorithms'];
+const topicRuntimeSources = new Set();
 
 function walk(directory, predicate = () => true) {
   const files = [];
@@ -67,8 +69,71 @@ for (const file of markdownFiles) {
   const content = fs.readFileSync(file, 'utf8');
   checkLinks(file, content);
   checkOutputReferences(file, content);
+
+  for (const match of content.matchAll(/^<<<\s+([^\s{]+)/gm)) {
+    const imported = match[1].split(/[?#]/, 1)[0];
+    const target = path.resolve(path.dirname(file), imported);
+    if (!fs.existsSync(target)) errors.push(`${relative(file)} 引用的源码不存在: ${imported}`);
+  }
+
+  if (topicNames.some(topic => file.endsWith(`${topic}.md`))) {
+    for (const match of content.matchAll(/sourceFile="([^"]+)"/g)) topicRuntimeSources.add(match[1]);
+  }
 }
 checkLinks(path.join(rootDir, 'README.md'), fs.readFileSync(path.join(rootDir, 'README.md'), 'utf8'));
+
+const productsDir = path.join(docsDir, 'products');
+const productIds = fs.readdirSync(productsDir, { withFileTypes: true })
+  .filter(entry => entry.isDirectory())
+  .map(entry => entry.name)
+  .sort();
+const expectedProductIds = ['clojure', 'cpp', 'csharp', 'css', 'go', 'groovy', 'html', 'java', 'javascript', 'kotlin', 'lisp', 'lua', 'php', 'python', 'ruby', 'rust', 'scala', 'typescript'];
+const topicProductIds = expectedProductIds.filter(productId => !['clojure', 'groovy', 'scala'].includes(productId));
+for (const productId of expectedProductIds) {
+  if (!productIds.includes(productId)) errors.push(`缺少产品分卷: ${productId}`);
+}
+for (const productId of productIds) {
+  if (!expectedProductIds.includes(productId)) errors.push(`未登记的产品分卷: ${productId}`);
+}
+const vitepressConfig = fs.readFileSync(path.join(docsDir, '.vitepress', 'config.ts'), 'utf8');
+for (const productId of topicProductIds) {
+  for (const topic of topicNames) {
+    const topicDoc = path.join(productsDir, productId, `${topic}.md`);
+    if (!fs.existsSync(topicDoc)) errors.push(`产品 ${productId} 缺少专题文档: ${topic}.md`);
+    const route = `/products/${productId}/${topic}`;
+    if (!vitepressConfig.includes(`link: '${route}'`)) errors.push(`侧栏缺少专题路由: ${route}`);
+  }
+}
+
+const familyRoutes = [
+  '/products/lisp/common-lisp', '/products/lisp/scheme', '/products/lisp/clojure', '/products/lisp/racket',
+  '/products/lisp/version/', '/products/lisp/DockerTooling', '/products/lua/lua-55',
+  '/products/lua/version/', '/products/lua/DockerTooling',
+];
+for (const route of familyRoutes) {
+  if (!vitepressConfig.includes(`link: '${route}'`)) errors.push(`侧栏缺少新增产品路由: ${route}`);
+}
+
+const releaseLocks = [
+  ['demos/lisp/Dockerfile.guile', 'GUILE_VERSION=3.0.11', '818c79d236657a7fa96fb364137cc7b41b3bdee0d65c6174ca03769559579460'],
+  ['demos/lisp/deps.edn', '1.12.5'],
+  ['demos/lisp/Dockerfile.racket', 'RACKET_VERSION=9.3', '7a1cc4b14a746add95eec2e549df54e5154b7dc94938a86330ce6a02ec7f75ce'],
+  ['demos/lua/Dockerfile', 'LUA_VERSION=5.5.1', '1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce'],
+];
+for (const [fileName, ...tokens] of releaseLocks) {
+  const content = fs.readFileSync(path.join(rootDir, fileName), 'utf8');
+  for (const token of tokens) {
+    if (!content.includes(token)) errors.push(`${fileName} 缺少版本或校验和锁: ${token}`);
+  }
+}
+
+const dockerRunnerSource = fs.readFileSync(path.join(rootDir, 'scripts', 'run-docker-demos.js'), 'utf8');
+for (const source of topicRuntimeSources) {
+  const demoRelative = source.replace(/^demos\//, '');
+  if (!dockerRunnerSource.includes(`file: '${demoRelative}'`)) {
+    errors.push(`专题示例未注册到 Docker 收集脚本: ${source}`);
+  }
+}
 
 const packageJson = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
 const packageLock = JSON.parse(fs.readFileSync(path.join(rootDir, 'package-lock.json'), 'utf8'));
@@ -100,7 +165,9 @@ try {
   errors.push(`Docker 收集脚本语法错误: ${String(error.stderr || error.message).trim()}`);
 }
 
-const javascriptDemos = walk(path.join(rootDir, 'demos', 'js'), (file) => file.endsWith('.js'));
+const javascriptDemos = ['js', 'javascript'].flatMap(directory =>
+  walk(path.join(rootDir, 'demos', directory), (file) => file.endsWith('.js')),
+);
 for (const file of javascriptDemos) {
   try {
     execFileSync(process.execPath, ['--check', file], { stdio: 'pipe' });

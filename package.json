@@ -13,7 +13,7 @@
     "collect:docker": "node scripts/initialize-docker-evidence.js && node scripts/run-docker-demos.js",
     "collect-outputs": "npm run collect:docker",
     "check:docker-catalog": "node scripts/check-docker-catalog.js",
-    "check:web": "html-validate --config scripts/htmlvalidate.json demos/html/basic_demo.html demos/html/html5_demo.html && stylelint demos/css/basic_demo.css demos/css/modern_css_demo.css --config scripts/stylelint.config.mjs",
+    "check:web": "html-validate --config scripts/htmlvalidate.json demos/html/basic_demo.html demos/html/html5_demo.html demos/html/data_structures_demo.html demos/html/algorithms_demo.html demos/css/data_structures_fixture.html demos/css/algorithms_fixture.html && stylelint demos/css/basic_demo.css demos/css/modern_css_demo.css demos/css/data_structures_demo.css demos/css/algorithms_demo.css --config scripts/stylelint.config.mjs",
     "check:versions": "node scripts/check-version-docs.js",
     "check:installs": "node scripts/check-install-docs.js",
     "check:cli": "node scripts/check-cli-docs.js",

@@ -76,6 +76,10 @@ export default defineConfig({
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${docsBase}favicon.svg` }]],
   vite: { configFile: fileURLToPath(new URL('../vite.config.ts', import.meta.url)) },
   markdown: {
+    languageAlias: {
+      scm: 'scheme',
+      rkt: 'racket',
+    },
     config: renderLanguageBrandIcons,
   },
   transformPageData(pageData) {
@@ -119,6 +123,8 @@ export default defineConfig({
             { text: '安装与切换', link: '/products/typescript/install' },
             { text: '编译与运行', link: '/products/typescript/cli' },
             { text: '依赖与包管理', link: '/products/typescript/package' },
+            { text: '数据结构', link: '/products/typescript/data-structures' },
+            { text: '算法', link: '/products/typescript/algorithms' },
             {
               text: '版本演进',
               link: '/products/typescript/version/',
@@ -144,6 +150,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/java/cli' },
             { text: '依赖与包管理', link: '/products/java/package' },
             { text: '基础语法', link: '/products/java/basic' },
+            { text: '数据结构', link: '/products/java/data-structures' },
+            { text: '算法', link: '/products/java/algorithms' },
             {
               text: '版本演进',
               link: '/products/java/version/',
@@ -175,6 +183,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/python/cli' },
             { text: '依赖与包管理', link: '/products/python/package' },
             { text: '基础语法', link: '/products/python/basic' },
+            { text: '数据结构', link: '/products/python/data-structures' },
+            { text: '算法', link: '/products/python/algorithms' },
             {
               text: '版本演进',
               link: '/products/python/version/',
@@ -201,6 +211,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/rust/cli' },
             { text: '依赖与包管理', link: '/products/rust/package' },
             { text: '基础语法', link: '/products/rust/basic' },
+            { text: '数据结构', link: '/products/rust/data-structures' },
+            { text: '算法', link: '/products/rust/algorithms' },
             {
               text: '版本演进',
               link: '/products/rust/version/',
@@ -225,6 +237,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/go/cli' },
             { text: '依赖与包管理', link: '/products/go/package' },
             { text: '基础语法', link: '/products/go/basic' },
+            { text: '数据结构', link: '/products/go/data-structures' },
+            { text: '算法', link: '/products/go/algorithms' },
             {
               text: '版本演进',
               link: '/products/go/version/',
@@ -254,6 +268,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/javascript/cli' },
             { text: '依赖与包管理', link: '/products/javascript/package' },
             { text: '基础语法', link: '/products/javascript/basic' },
+            { text: '数据结构', link: '/products/javascript/data-structures' },
+            { text: '算法', link: '/products/javascript/algorithms' },
             {
               text: '版本演进',
               link: '/products/javascript/version/',
@@ -285,6 +301,8 @@ export default defineConfig({
             { text: '依赖与包管理', link: '/products/cpp/package' },
             { text: 'C 语言介绍', link: '/products/cpp/c' },
             { text: 'C++ 基础语法', link: '/products/cpp/basic' },
+            { text: '数据结构', link: '/products/cpp/data-structures' },
+            { text: '算法', link: '/products/cpp/algorithms' },
             {
               text: '版本演进',
               link: '/products/cpp/version/',
@@ -314,6 +332,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/php/cli' },
             { text: '依赖与包管理', link: '/products/php/package' },
             { text: '基础语法', link: '/products/php/basic' },
+            { text: '数据结构', link: '/products/php/data-structures' },
+            { text: '算法', link: '/products/php/algorithms' },
             {
               text: '版本演进',
               link: '/products/php/version/',
@@ -339,6 +359,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/csharp/cli' },
             { text: '依赖与包管理', link: '/products/csharp/package' },
             { text: '基础语法', link: '/products/csharp/basic' },
+            { text: '数据结构', link: '/products/csharp/data-structures' },
+            { text: '算法', link: '/products/csharp/algorithms' },
             {
               text: '版本演进',
               link: '/products/csharp/version/',
@@ -364,6 +386,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/ruby/cli' },
             { text: '依赖与包管理', link: '/products/ruby/package' },
             { text: '基础语法', link: '/products/ruby/basic' },
+            { text: '数据结构', link: '/products/ruby/data-structures' },
+            { text: '算法', link: '/products/ruby/algorithms' },
             {
               text: '版本演进',
               link: '/products/ruby/version/',
@@ -388,6 +412,8 @@ export default defineConfig({
             { text: '编译与运行', link: '/products/kotlin/cli' },
             { text: '依赖与包管理', link: '/products/kotlin/package' },
             { text: '基础语法', link: '/products/kotlin/basic' },
+            { text: '数据结构', link: '/products/kotlin/data-structures' },
+            { text: '算法', link: '/products/kotlin/algorithms' },
             {
               text: '版本演进',
               link: '/products/kotlin/version/',
@@ -452,6 +478,41 @@ export default defineConfig({
           { text: 'Docker 验证', link: '/products/clojure/DockerTooling' },
         ] },
       ],
+      '/products/lisp/': [
+        {
+          text: 'Lisp 家族',
+          items: [
+            { text: '家族总览', link: '/products/lisp/' },
+            { text: '基础语法', link: '/products/lisp/basic' },
+            { text: '数据结构', link: '/products/lisp/data-structures' },
+            { text: '算法', link: '/products/lisp/algorithms' },
+            { text: 'Common Lisp', link: '/products/lisp/common-lisp' },
+            { text: 'Scheme', link: '/products/lisp/scheme' },
+            { text: 'Clojure', link: '/products/lisp/clojure' },
+            { text: 'Racket', link: '/products/lisp/racket' },
+            { text: '版本与方言路线', link: '/products/lisp/version/', collapsed: false, items: [
+              { text: '标准与运行时基线', link: '/products/lisp/version/runtime-baselines' },
+            ] },
+            { text: 'Docker 验证', link: '/products/lisp/DockerTooling' },
+          ],
+        },
+      ],
+      '/products/lua/': [
+        {
+          text: 'Lua',
+          items: [
+            { text: '版本总览', link: '/products/lua/' },
+            { text: '基础语法', link: '/products/lua/basic' },
+            { text: '数据结构', link: '/products/lua/data-structures' },
+            { text: '算法', link: '/products/lua/algorithms' },
+            { text: 'Lua 5.5', link: '/products/lua/lua-55' },
+            { text: '版本演进', link: '/products/lua/version/', collapsed: false, items: [
+              { text: 'Lua 5.5 运行基线', link: '/products/lua/version/lua-5.5' },
+            ] },
+            { text: 'Docker 验证', link: '/products/lua/DockerTooling' },
+          ],
+        },
+      ],
       '/products/html/': [
         {
           text: 'HTML',
@@ -461,6 +522,8 @@ export default defineConfig({
             { text: '预览与验证', link: '/products/html/cli' },
             { text: '工程依赖', link: '/products/html/package' },
             { text: '基础语法', link: '/products/html/basic' },
+            { text: '数据结构', link: '/products/html/data-structures' },
+            { text: '算法', link: '/products/html/algorithms' },
             {
               text: '版本演进',
               link: '/products/html/version/',
@@ -485,6 +548,8 @@ export default defineConfig({
             { text: '预览与验证', link: '/products/css/cli' },
             { text: '工程依赖', link: '/products/css/package' },
             { text: '基础语法', link: '/products/css/basic' },
+            { text: '数据结构', link: '/products/css/data-structures' },
+            { text: '算法', link: '/products/css/algorithms' },
             {
               text: '版本演进',
               link: '/products/css/version/',

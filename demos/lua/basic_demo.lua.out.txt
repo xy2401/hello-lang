@@ -1,0 +1,8 @@
+---
+status: snapshot
+exitCode: 0
+---
+table=user:Ada
+closure=12,15
+module=integer
+

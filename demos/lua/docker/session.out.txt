@@ -1,0 +1,7 @@
+---
+status: documented
+exitCode: 0
+---
+The committed Lua outputs are deterministic snapshots, not Docker evidence.
+Run npm run collect-outputs with Docker available to replace this record.
+

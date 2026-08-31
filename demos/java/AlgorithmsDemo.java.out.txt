@@ -1,0 +1,7 @@
+---
+status: snapshot
+exitCode: 0
+---
+sorted=[Score[name=Ada, value=95], Score[name=Kai, value=91], Score[name=Lin, value=91]]
+binary-search-13=3
+bfs=[A, B, C, D]

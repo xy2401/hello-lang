@@ -156,6 +156,30 @@
   --language-brand-image: url('../../../node_modules/devicon/icons/ruby/ruby-original.svg');
 }
 
+.language-brand-icon--lua,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/lua/"],
+.VPSidebarItem.level-0:has(a[href$="/products/lua/"]) {
+  --language-brand-image: url('../../../node_modules/devicon/icons/lua/lua-original.svg');
+}
+
+.language-brand-icon--lisp,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/lisp/"],
+.VPSidebarItem.level-0:has(a[href$="/products/lisp/"]) {
+  --language-brand-image: none;
+}
+
+.language-brand-icon--lisp::before,
+:where(.VPNavBarMenuLink, .VPNavScreenMenuLink, .VPMenu a)[href$="/products/lisp/"]::before,
+.VPSidebarItem.level-0:has(a[href$="/products/lisp/"]) > .item .text::before {
+  content: 'λ';
+  color: var(--vp-c-brand-1);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
 .dark .language-brand-icon--rust,
 .dark :where(.VPNavBarMenuLink, .VPNavScreenMenuLink)[href$="/products/rust/"]::before,
 .dark .VPSidebarItem.level-0:has(a[href$="/products/rust/"]) > .item .text::before {

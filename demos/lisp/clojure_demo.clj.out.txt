@@ -1,0 +1,9 @@
+---
+status: snapshot
+exitCode: 0
+---
+persistent={:language "Clojure", :runtime "JVM"}
+atom=2
+sequence=[1 9 25]
+interop=JVM
+

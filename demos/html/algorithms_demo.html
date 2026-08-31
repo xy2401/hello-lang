@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM 树遍历</title>
+</head>
+<body>
+  <main id="tree">
+    <h1>DOM Tree</h1>
+    <section><h2>A</h2><p>A1</p></section>
+    <section><h2>B</h2><p>B1</p></section>
+  </main>
+  <output id="result" aria-live="polite"></output>
+  <script>
+    const walker = document.createTreeWalker(
+      document.querySelector('#tree'),
+      NodeFilter.SHOW_ELEMENT
+    );
+    const order = [];
+    while (walker.nextNode()) order.push(walker.currentNode.tagName.toLowerCase());
+    document.querySelector('#result').textContent = `深度优先顺序：${order.join(' → ')}`;
+  </script>
+</body>
+</html>

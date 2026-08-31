@@ -1,0 +1,7 @@
+---
+status: documented
+exitCode: 0
+---
+Planned runtime: Lua 5.5.1 built from the official source tarball.
+Docker inventory has not been collected in this environment.
+

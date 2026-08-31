@@ -1,0 +1,8 @@
+---
+status: snapshot
+exitCode: 0
+---
+global=Lua 5.5
+named-varargs=alpha,beta,gamma
+gc-mode=generational
+

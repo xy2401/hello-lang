@@ -1,0 +1,10 @@
+---
+status: snapshot
+exitCode: 0
+---
+sorted=1,2,2,5,8
+stable=one-a,one-b,two
+binary-search(5)=4
+bfs=A,B,C,D,E
+style=1-based indexing plus coroutine iterator
+

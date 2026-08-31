@@ -1,0 +1,8 @@
+---
+status: snapshot
+exitCode: 0
+---
+tail-sum=15
+macro=hygienic-macro
+lexical-scope=15
+
