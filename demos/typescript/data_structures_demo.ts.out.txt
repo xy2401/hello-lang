@@ -1,7 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-stack=2:render
-scores=Ada:95,Lin:91
-tree=branch:root

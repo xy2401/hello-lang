@@ -1,9 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-array=parse,validate,render
-queue-first=parse
-scores=Ada:95,Lin:91
-tags=code,docs
-tree-children=2

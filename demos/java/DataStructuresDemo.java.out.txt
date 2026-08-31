@@ -1,8 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-list=[parse, validate, render]
-counts={p=1, v=1, r=1}
-next=tests
-tree-children=2

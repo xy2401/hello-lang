@@ -1,9 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-vec=["parse", "validate", "render"]
-queue-first=parse
-scores={"Ada": 95, "Lin": 91}
-next=tests
-tree=root:2

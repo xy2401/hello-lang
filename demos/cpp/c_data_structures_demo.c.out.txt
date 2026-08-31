@@ -1,6 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-array-length=4
-list=2,5

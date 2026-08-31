@@ -1,7 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-sorted=2,5,8,13,21,
-binary-search-13=3
-bfs=ABCD

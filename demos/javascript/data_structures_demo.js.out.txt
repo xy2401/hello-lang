@@ -1,9 +1,0 @@
----
-status: snapshot
-exitCode: 0
----
-stack=2:render
-scores=Ada:95,Lin:91
-tags=code,docs
-typed-array=72,105
-tree-children=1
