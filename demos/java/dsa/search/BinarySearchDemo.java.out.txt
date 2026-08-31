@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java Arrays.binarySearch ===
+Binary search index for 30: 2
+Java Binary Search tests passed successfully.

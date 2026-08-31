@@ -14,6 +14,7 @@ C 与 C++ 的算法体系体现了系统级编程从**底层指针操作**到**�
 | **二分查找** | `std::lower_bound` / `std::upper_bound` | 单调性折半搜索 | $O(\log n)$ | $O(1)$ |
 | **图遍历** | BFS / DFS | 队列层序扩展 / 递归回溯 | $O(V + E)$ | $O(V)$ |
 | **最短路径** | Dijkstra 算法 | 贪心选择 + 优先队列 (Min-Heap) 松弛边 | $O((V + E) \log V)$ | $O(V)$ |
+| **连通性** | 并查集 (Union-Find) | 路径压缩 + 按秩合并 | 接近反阿克曼 $O(\alpha(n))$ | $O(V)$ |
 | **动态规划** | 0/1 背包问题 | 状态定义、无后效性转移、空间压缩 (1D Array) | $O(N \cdot W)$ | 优化后 $O(W)$ |
 
 ---
@@ -36,7 +37,7 @@ C 与 C++ 的算法体系体现了系统级编程从**底层指针操作**到**�
 
 ---
 
-## 3. 图论算法：BFS 遍历与 Dijkstra 最短路径
+## 3. 图论算法：BFS 遍历、Dijkstra 最短路径与并查集
 
 ### 图的广度优先遍历 (BFS)
 <<< ../../../demos/cpp/dsa/graphs/bfs_dfs.cpp
@@ -47,6 +48,11 @@ C 与 C++ 的算法体系体现了系统级编程从**底层指针操作**到**�
 <<< ../../../demos/cpp/dsa/graphs/dijkstra.cpp
 
 <DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/graphs/dijkstra.cpp" />
+
+### 并查集 (Disjoint Set Union / Union-Find)
+<<< ../../../demos/cpp/dsa/graphs/union_find.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/graphs/union_find.cpp" />
 
 ---
 

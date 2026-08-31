@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java Binary Search Tree ===
+Java BST search tests passed successfully.

@@ -11,27 +11,34 @@ Java 集合框架（Java Collections Framework, JCF）是工业级面向对象�
 | 接口 | 核心实现类 | 底层原理 | 典型时间复杂度 | 最佳使用建议 |
 | :--- | :--- | :--- | :--- | :--- |
 | **`List`** | `ArrayList` | `Object[]` 动态扩容数组 | 索引 $O(1)$，尾插均摊 $O(1)$ | 绝大多数场景的首选序列容器 |
-| **`Deque`** | `ArrayDeque` | 循环数组双端队列 | 首尾操作 $O(1)$ | 比 `Stack` 和 `LinkedList` 更快 |
-| **`Map`** | `HashMap` | 数组 + 单链表 + 红黑树 (Treeify) | 增删查平均 $O(1)$ | 通用高性能键值映射 |
-| **`Map`** | `TreeMap` | 经典红黑树 (Red-Black Tree) | 增删查 $O(\log n)$ | 范围查询、键有序遍历 |
+| **`Deque`** | `LinkedList` / `ArrayDeque` | 双向链表 / 循环数组双端队列 | 首尾操作 $O(1)$ | 栈与双端操作 |
+| **`Map`** | `HashMap` / `TreeMap` | 哈希桶 / 经典红黑树 | 增删查平均 $O(1)$ / $O(\log n)$ | 通用键值映射与范围检索 |
 | **`Queue`** | `PriorityQueue` | 动态数组小顶堆 (Binary Heap) | 堆顶 $O(1)$，插入/弹出 $O(\log n)$ | 任务调度、Top-K 统计 |
 
 ---
 
-## 1. 线性结构：动态数组 (`ArrayList` 与 Stream 聚合)
+## 1. 线性结构：动态数组与双向链表
 
-展示 Java `ArrayList` 的泛型操作与基于 Stream 的函数式规约求和：
-
+### 动态数组 (`ArrayList` 与 Stream 聚合)
 <<< ../../../demos/java/dsa/linear/DynamicArrayDemo.java
 
 <DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/dsa/linear/DynamicArrayDemo.java" />
 
+### 双向链表与双端队列 (`LinkedList`)
+<<< ../../../demos/java/dsa/linear/LinkedListDemo.java
+
+<DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/dsa/linear/LinkedListDemo.java" />
+
 ---
 
-## 2. 树堆结构：优先队列 (`PriorityQueue`)
+## 2. 树与堆：二叉搜索树与优先队列
 
-展示 Java `PriorityQueue` 的小顶堆机制与堆顶元素检索：
+### 二叉搜索树实现 (BST)
+<<< ../../../demos/java/dsa/trees/BstDemo.java
 
+<DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/dsa/trees/BstDemo.java" />
+
+### 优先队列与小顶堆 (`PriorityQueue`)
 <<< ../../../demos/java/dsa/trees/HeapDemo.java
 
 <DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/dsa/trees/HeapDemo.java" />

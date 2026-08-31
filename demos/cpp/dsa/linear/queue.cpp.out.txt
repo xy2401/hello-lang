@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ std::queue & std::deque ===
+C++ Queue tests passed successfully.

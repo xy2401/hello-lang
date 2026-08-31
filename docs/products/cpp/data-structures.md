@@ -22,15 +22,11 @@ C 与 C++ 都能精确控制内存布局与生命周期，但二者的抽象哲�
 ## 1. 线性结构：动态数组 (Vector)
 
 ### C 语言实现：手动 realloc 扩容与显式内存管理
-C 语言需显式维护 `size` 和 `capacity`，并在超出容量时通过 `realloc` 进行双倍扩容：
-
 <<< ../../../demos/cpp/dsa/linear/dynamic_array.c
 
 <DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/dynamic_array.c" />
 
 ### C++ 实现：RAII 泛型动态数组与 std::vector 对照
-利用模板类与析构函数自动释放堆内存，移动语义避免深拷贝：
-
 <<< ../../../demos/cpp/dsa/linear/dynamic_array.cpp
 
 <DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/dynamic_array.cpp" />
@@ -51,7 +47,21 @@ C 语言需显式维护 `size` 和 `capacity`，并在超出容量时通过 `rea
 
 ---
 
-## 3. 树与堆：BST 与优先队列
+## 3. 受限线性结构：栈与队列 (Stack & Queue)
+
+### C 语言顺序栈实现 (Stack)
+<<< ../../../demos/cpp/dsa/linear/stack.c
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/stack.c" />
+
+### C++ std::queue 与 std::deque 容器适配器
+<<< ../../../demos/cpp/dsa/linear/queue.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/queue.cpp" />
+
+---
+
+## 4. 树与堆：BST、智能指针树与优先队列
 
 ### C 语言二叉搜索树 (BST)
 <<< ../../../demos/cpp/dsa/trees/bst.c

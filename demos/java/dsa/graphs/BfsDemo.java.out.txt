@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java Graph BFS Traversal ===
+BFS Traversal Order: [0, 1, 2, 3, 4]
+Java Graph BFS tests passed successfully.

@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== C LIFO Stack ===
+C Stack tests passed successfully.

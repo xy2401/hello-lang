@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java Dual-Pivot QuickSort & In-Place Sort ===
+Java QuickSort tests passed successfully.
