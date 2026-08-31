@@ -1,40 +1,33 @@
-# JavaScript 常用类库索引
+# JavaScript 常用外部依赖库
 
-JavaScript 生态极其丰富，是 Web 开发的首选语言。
+## 📦 Web 框架（前端）
+- **React** - UI 组件库（Facebook 开发）
+- **Vue.js** - 渐进式框架（渐进学习曲线）
+- **Angular** - 全功能企业级框架（Google 开发）
+- **Svelte** - 编译时框架，无运行时开销
 
-## 📦 核心类库分类
+## 🌐 Web 框架（后端）
+- **Express.js** - Node.js 最小化框架
+- **Fastify** - 高性能 HTTP 框架
+- **NestJS** - 企业级 TypeScript 框架
+- **Koa** - 轻量级中间件框架
 
-### 运行时与基础工具
-- **Node.js** - npm, Node API（fs, http, crypto）
-- **TypeScript** - JS 的超集，提供类型系统
-- **Babel** - ES6+ 转译器
-- **JSX** - React 语法扩展
+## 🔧 实用工具库
+- **Lodash** - 函数式编程工具集
+- **Axios** - HTTP 客户端
+- **Moment.js** 🔴 - 日期处理，已被 dayjs 替代
+- **Ramda** - 函数式编程库
 
-### Web 框架
-- **浏览器端** - React, Vue, Svelte, Angular
-- **服务端** - Express.js, Koa, Fastify, NestJS
-- **SSR/SSG** - Next.js, Nuxt.js, Remix, Astro
+## 🧪 测试工具
+- **Jest** - 单元测试框架（Facebook 开发）
+- **Mocha** - 灵活测试框架
+- **Cypress** - E2E 端到端测试
+- **Playwright** - 现代 E2E 测试工具
 
-### 状态管理
-- **全局状态** - Redux, Zustand, Jotai, Recoil, Pinia
-- **本地存储** - localStorage, sessionStorage, IndexedDB
-- **表单状态** - Formik, React Hook Form, VeeValidate
-
-### HTTP 与数据
-- **HTTP 客户端** - fetch（原生）、Axios, ky, SuperAgent
-- **API 调用** - SWR, React Query, Apollo Client
-- **数据验证** - Joi, Yup, Zod, class-validator
-
-### 测试工具
-- **单元测试** - Jest, Vitest, Mocha + Chai
-- **E2E 测试** - Cypress, Playwright, Puppeteer, Selenium
-- **可视化测试** - Percy, Chromatic
-
-### 工程化
-- **打包工具** - Webpack, Vite, Rollup, esbuild
-- **代码规范** - ESLint, Prettier
-- **CSS 处理** - Tailwind CSS, styled-components, Sass/Less
+## ⚠️ 已废弃/不推荐
+- **jQuery** 🔴 - DOM 操作，现代框架已完全替代
+- **Backbone.js** 🔴 - 过时 MVC 框架
 
 ---
 
-*注：JS 生态更新迅速，建议关注最新趋势*
+*注：部分经典库已过时，请参考现代替代方案*

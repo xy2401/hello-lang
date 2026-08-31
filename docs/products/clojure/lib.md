@@ -1,39 +1,32 @@
-# Clojure 常用类库索引
+# Clojure 常用外部依赖库（Clojars/Maven）
 
-Clojure 是 Lisp 家族在 JVM 上的现代方言，强调函数式编程。
+## 📦 Web 框架
+- **Ring** - HTTP 抽象层（基础）
+- **Compojure** - HTTP 路由库
+- **Pedestal** - 全功能 Web 栈
+- **Re-frame** - 前端 + 后端全栈框架
 
-## 📦 核心类库分类
+## 🗄️ 数据库与持久化
+- **Datomic** - 不可变数据库（原子）
+- **HikariCP** - JDBC 连接池
+- **Java-JDBC** - Java 生态兼容
 
-### 标准库（clojure.core）
-- **集合操作** - map, filter, reduce, concat
-- **并发原语** - Atom, Ref, Agent, Future
-- **函数式工具** - partial, comp, memoize
-- **数据结构** - persistent-trees, vectors
-- **宏系统** - Macro definitions
+## 🧪 测试工具
+- **clojure.test** - 标准测试库
+- **Midje** - BDD 风格测试
+- **Speccy** - 数据规格验证
 
-### Web 开发框架
-- **Web 框架** - Ring, Compojure, Pedestal
-- **全栈框架** - Re-frame（前端 + 后端）
-- **HTTP 客户端** - curl、clj-http
-- **服务器端** - Jetty、Undertow
+## 🔧 实用工具库
+- **Cheshire** - JSON 处理
+- **Core.async** - 异步编程通道
+- **Spec.alpha** - 数据规范验证
+- **Enlive** - HTML 模板
+- **Hiccup** - HTML 构建器
 
-### 数据与持久化
-- **数据库** - Datomic、PostgreSQL（java.jdbc）
-- **JSON 处理** - Cheshire、jsonista
-- **日志系统** - Slingshot、Clojure.tools.logging
-- **配置管理** - Enlive、Hiccup
-
-### 测试与工具
-- **测试框架** - clojure.test、core.match
-- **Mock 工具** - Midje、Mockery
-- **代码覆盖** - gen-coverage
-- **REPL 工具** - cider、nrepl-server
-
-### 函数式编程库
-- **spec.alpha** - 数据规格验证
-- **core.async** - 异步编程通道
-- **manifold** - 流处理工具集
+## ⚠️ 已废弃/不推荐
+- **Incani** 🔴 - 旧 HTTP 客户端，建议使用 Ring/HTTPer
+- **Carmen** 🔴 - CSS 生成器，较少维护
 
 ---
 
-*注：REPL 驱动的交互式开发是 Clojure 的核心优势*
+*注：部分经典库已过时，请参考现代替代方案*

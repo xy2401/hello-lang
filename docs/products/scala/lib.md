@@ -1,41 +1,38 @@
-# Scala 常用类库索引
+# Scala 常用外部依赖库（Sbt/Maven）
 
-Scala 是 JVM 上的函数式与面向对象融合语言。
+## 📦 Web 框架
+- **Play Framework** - 全功能 MVC 框架
+- **Akka HTTP** - 响应式 HTTP 框架
+- **Http4s** - 函数式 Web 框架
+- **Tapir** - API 定义与实现
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **Slick** - 类型安全数据库访问
+- **Doobie** - 函数式 JDBC 库
+- **Quill** - SQL 编译时生成
+- **Lakehouse** - Spark SQL 集成
 
-### 标准库（Scala stdlib）
-- **集合框架** - Seq, List, Vector, Map, Set
-- **函数式编程** - Option, Either, Try，monads
-- **并发性** - Akka, Future, Promise
-- **类型系统** - Generics, Variance, Higher-kinded types
+## 🧪 测试工具
+- **ScalaTest** - 最流行的测试框架
+- ** Specs2** - BDD 风格测试
+- **Munit** - 快速单元测试
+- **Mockito** - Java Mock 兼容
 
-### Web 开发框架
-- **Web 框架** - Play Framework, Scalatra, Http4s
-- **微服务** - Lagom, Akka HTTP
-- **API 构建** - Spray, Circe
+## 🔧 函数式编程库
+- **Cats** - 函数式编程核心库
+- **ZIO** - 现代并发模型（无未来）
+- **Scalaz** - 函数式工具箱
+- **Monocle** - 光学库（数据访问）
 
-### 数据处理与大数据
-- **大数据框架** - Apache Spark（Scala 原生支持）
-- **消息队列** - Kafka, RabbitMQ
-- **数据库** - Slick, Doobie, Quill
+## 🌐 异步与并发
+- **Akka** - 并发与分布式系统
+- **Future/Promise** - Scala 原生异步
+- **ZStream** - ZIO 流处理
 
-### 测试工具
-- **测试框架** - Specs2, Specs3, Munit, ScalaTest
-- **Mock 工具** - Mockito, Mockery
-- **QuickCheck** - 属性测试
-
-### 函数式编程库
-- **cats** - Cats Effect, cats-core
-- **scalaz** - Functional programming tools
-- **ZIO** - Zero-I/O (新一代并发模型)
-
-### 构建与工具链
-- **构建工具** - sbt（Scala Build Tool）
-- **包管理** - Maven, Gradle
-- **代码格式** - scalafmt
-- **静态分析** - scalastyle, scalameta
+## ⚠️ 已废弃/不推荐
+- **Shapeless 0.x** 🔴 - 旧版本，建议升级
+- **Scalatags** 🔴 - 较少维护
 
 ---
 
-*注：Spark 是最著名的 Scala 项目，适合大数据分析*
+*注：部分经典库已过时，请参考现代替代方案*

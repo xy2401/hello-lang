@@ -1,41 +1,36 @@
-# Hello-Lang 常用类库索引
+# Java 常用外部依赖库
 
-这里汇总了该编程语言生态中常用的类库和框架，帮助你快速找到所需工具。
+## 📦 Web 开发框架
+- **Spring Boot** - Spring 生态核心框架，用于构建微服务和 RESTful API
+- **Vert.x** - 响应式 Web 框架，高性能异步处理
+- **Play Framework** - 轻量级 Web 框架
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **Hibernate/JPA** - ORM 标准实现
+- **MyBatis** - 灵活的数据映射框架
+- **JDBC** - 原生数据库访问
 
-### 基础工具类库
-- **字符串处理** - String 操作、格式化、正则表达式
-- **集合框架** - List, Map, Set 等数据结构实现
-- **日期时间** - Date/Time 处理、时区转换
-- **IO/网络** - 文件操作、HTTP 客户端、JSON 解析
-- **并发编程** - 线程池、异步任务、锁机制
+## 🧪 测试框架
+- **JUnit 5** - 主流单元测试框架
+- **Mockito** - Mock 对象创建
+- **AssertJ** - 流畅断言库
 
-### Web 开发框架
-- **Web 框架** - RESTful API、路由、中间件
-- **ORM/数据库** - 对象关系映射、数据库连接池
-- **模板引擎** - 服务端渲染、前端模板
-- **认证授权** - JWT、OAuth2、安全配置
+## 🔧 实用工具库
+- **Lombok** - 简化代码（getter/setter 等）
+- **Apache Commons** - 通用工具集
+- **Guava** - Google 扩展库（集合、缓存等）
+- **SLF4J + Logback** - 日志框架
+- **Jackson** - JSON 序列化/反序列化
+- **Gson** 🔴 - 较旧，Jackson 更推荐
 
-### 测试与工具
-- **单元测试** - Test 框架、Mock 工具
-- **性能分析** - Profiler、监控工具
-- **构建工具** - Maven、Gradle 插件
+## 🌐 网络通信
+- **OkHttp** - HTTP 客户端
+- **Netty** - 高性能网络框架
 
-## 🔗 相关文档
-
-- [语言基础](/products/{lang}/basic/) - 语法基础和核心概念
-- [安装配置](/products/{lang}/install/) - 环境搭建指南
-- [版本路线](/products/{lang}/version/) - 版本演进路线图
-- [算法实现](/products/{lang}/algorithms/) - 经典算法的该语言实现
-- [数据结构](/products/{lang}/data-structures/) - 常用数据结构的实现
-
-## 💡 学习建议
-
-1. **入门阶段**：先掌握基础类库，理解核心 API
-2. **进阶阶段**：深入学习 Web 框架和 ORM
-3. **高级阶段**：关注性能优化、高并发场景
+## 🏗️ 构建工具
+- **Maven** - 构建与依赖管理
+- **Gradle** - 灵活构建系统
 
 ---
 
-*注：本索引会持续更新，新增类库推荐请贡献 Pull Request*
+*注：部分经典库已过时，请参考现代替代方案*

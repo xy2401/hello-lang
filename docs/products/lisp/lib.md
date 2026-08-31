@@ -1,40 +1,28 @@
-# Lisp 家族常用类库索引
-
-Lisp 是历史最悠久的编程语言之一，包含多种方言和实现。
+# Lisp 常用外部依赖库
 
 ## 📦 Common Lisp
+- **Quicklisp** - 包管理工具（必备）
+- **ASDF** - 构建系统
+- **Hunchentoot** - Web 服务器
+- **Trivial-HTTP-Server** - 轻量级 HTTP 服务
+- **Postmodern** - PostgreSQL 适配器
+- **Cl-JSON** - JSON 处理
 
-### 核心系统
-- **CLISP** - GNU 的 Common Lisp 实现
-- **SBCL** - Steel Bank Common Lisp（高性能）
-- **CCL** - Cocoa's Common Lisp
-- **ALISP** - ANSI Common Lisp
+## 🎨 GUI 框架
+- **Clover** - Common Lisp GUI 框架
+- **XBL** - XBL 绑定库
+- **Qtools** - Qt 封装
 
-### Web 与网络
-- **Web 框架** - Hunchentoot、Serve-Handler
-- **HTTP 客户端** - Quicklisp、Httper
-- **模板引擎** - Alexandria、cl-markup
+## 🔧 实用工具库
+- **Alexandria** - 通用工具函数
+- **Serve-Handler** - 请求处理
+- **Clack** - HTTP 服务器抽象层
+- **Incanter** - 数据分析与可视化
 
-### 数据库与 ORM
-- **PostgreSQL** - Clack、Postmodern
-- **SQLite** - SQL-Toolkit
-- **Redis** - Red-lisp、redis-lisp
-
-## 📦 Emacs Lisp
-
-### 核心扩展
-- **编辑器功能** - EIEIO、Eshell
-- **包管理** - MELPA、Marmalade
-- **开发工具** - Magit、Projectile
-
-## 📦 Scheme
-
-### 实现与库
-- **Racket** - 教学与研究首选
-- **Chicken** - Chicken Scheme
-- **Guile** - GNU 的 Scheme 实现
-- **SICP** - Structure and Interpretation of Computer Programs
+## ⚠️ 已废弃/不推荐
+- **CL-HTTP** 🔴 - 旧 Web 框架，已被 Hunchentoot 替代
+- **MARC21** 🔴 - 过时的元数据标准
 
 ---
 
-*注：Lisp 以宏系统和函数式编程为核心特色*
+*注：部分经典库已过时，请参考现代替代方案*

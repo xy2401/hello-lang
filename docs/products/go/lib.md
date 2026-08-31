@@ -1,44 +1,40 @@
-# Go 常用类库索引
+# Go 常用外部依赖库
 
-Go 标准库丰富，第三方生态也在快速增长。
+## 📦 Web 框架
+- **Gin** - 高性能 HTTP 路由框架
+- **Echo** - 高性能、可扩展的 Web 框架
+- **Fiber** - 基于 Express 灵感的快速框架
+- **Chi** - 轻量级路由工具
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **GORM** - 最流行的 ORM（类似 ActiveRecord）
+- **sqlc** - 类型安全的 SQL 生成器
+- **Ent** - Facebook 开发的 ORM
+- **UpperDB** - 灵活的数据访问层
 
-### 标准库精选（std）
-- **context** - 取消传播、超时控制
-- **sync** - Mutex, RWMutex, WaitGroup, Pool
-- **sync/atomic** - 原子操作
-- **io/ioutil** - IO 基础操作
-- **encoding/json/xml** - 序列化/反序列化
-- **time** - 时间处理与定时器
-- **net/http** - HTTP 服务器与客户端
-- **strings/slices** - 字符串与切片操作
+## 🧪 测试工具
+- **Testify** - Mock 和断言框架
+- **gomock** - Google Mock for Go
+- **testgo** - 测试执行工具
 
-### Web 开发栈
-- **Web 框架** - Gin, Echo, Beego, Fiber, Chi
-- **ORM** - GORM, Ent, sqlc, SQLBoiler
-- **数据库驱动** - database/sql 内置支持
-- **gRPC** - golang.org/x/net/grpc（官方）、grpc-go
-- **消息队列** - NATS, Kafka (sarama)
+## 🔧 实用工具库
+- **Viper** - 配置管理工具
+- **Cobra** - CLI 应用框架
+- **Zap** - 高性能日志库
+- ** Zerolog** - 极简日志包
+- **Afero** - 文件系统抽象层
+- **Go-Rejson** - Redis JSON 操作
 
-### 工具与基础设施
-- **日志** - logrus, zap, zerolog, go-kit/log
-- **配置管理** - viper, flag, cobra
-- **命令行** - cobra, urfave/cli
-- **错误处理** - errors（Go 1.13+）, pkg/errors
+## 🌐 网络通信
+- **gRPC-Go** - RPC 框架
+- **Go-Redis** - Redis 客户端
+- **NATS Client** - 消息队列
 
-### 测试与质量
-- **测试框架** - testing（内置），testify, gomock
-- **模糊测试** - go-fuzz
-- **代码分析** - go vet, staticcheck
-- **性能分析** - pprof（内置）, trace
-
-### 云原生与 DevOps
-- **容器化** - Docker SDK for Go
-- **K8s** - client-go, controller-runtime
-- **Prometheus** - prometheus/client_golang
-- **OpenTelemetry** - opentelemetry-go
+## 🏗️ 云原生工具
+- **Client-Go** - Kubernetes API 客户端
+- **Prometheus Client** - 指标收集
+- **OpenTelemetry** - 可观测性框架
 
 ---
 
-*注：Go 的"简单实用"理念体现在其标准库的设计中*
+*注：部分经典库已过时，请参考现代替代方案*

@@ -1,46 +1,43 @@
-# Rust 常用类库索引
+# Rust 常用外部依赖库（Crate）
 
-Rust 的标准库和第三方 crate 提供了强大的功能支持。
+## 📦 Web 框架
+- **Actix-web** - 高性能异步 Web 框架
+- **Axum** - Tokio 生态 Web 框架（Tokio 官方推荐）
+- **Rocket** - 易用性高、类型安全
+- **Warp** - 函数式 Web 框架
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **SeaORM** - 异步 ORM（生成器驱动）
+- **SQLx** - 静态查询 SQL（编译时验证）
+- **Diesel** - 传统 ORM（同步）
+- **Tide** - 异步微框架
 
-### 标准库精选
-- **Option/Result** - 错误处理模式
-- **Iterator** - 迭代器适配器
-- **Vec/String** - 基础容器类型
-- **HashMap** - 哈希表实现
-- **Arc/RwLock/Mutex** - 线程安全引用计数和锁
-- **async/await** - 异步编程原语
+## 🧪 测试工具
+- **Criterion** - 性能基准测试
+- **Mockall** - Mock 对象生成
+- **Wiremock** - HTTP Mock 服务器
 
-### Web 开发栈
-- **Web 框架** - Actix-web, Axum, Rocket, Warp
-- **ORM/查询** - SeaORM, Diesel, SQLx, Tide
-- **HTTP 客户端** - reqwest, hyper
-- **序列化** - serde, serde_json
+## 🔧 实用工具库
+- **Serde** - 序列化/反序列化（必备）
+- **Tokio** - 异步运行时（主流）
+- **Async-std** - 异步标准库
+- **Clap** - CLI 参数解析
+- **Anyhow** - 错误处理
+- **Thiserror** - 自定义错误类型
+- **Tracing** - 结构化日志/追踪
+- **Reqwest** - HTTP 客户端
 
-### 系统与工具
-- **日志** - log, tracing, env_logger
-- **命令行** - clap, structopt, anyhow, thiserror
-- **构建系统** - Cargo（内置包管理器）
-- **进程管理** - tokio-process, crossbeam
+## 🏗️ 构建与工具
+- **Cargo** - 包管理器和构建工具（内置）
+- **Rustfmt** - 代码格式化（内置）
+- **Clippy** - 静态分析工具（内置）
 
-### 并发与网络
-- **运行时** - tokio, async-std
-- **消息传递** - crossbeam-channel, flume
-- **内存池** - mimalloc, jemallocator
-
-### 测试与质量
-- **测试框架** - builtin test macro, criterion（基准测试）
-- **Mock 工具** - mockall, wiremock
-- **类型检查** - clippy（静态分析工具）
-- **代码格式** - rustfmt（官方格式化工具）
-
-### 特定领域
-- **数据处理** - arrow, parquet, datafusion
-- **AI/ML** - burn, dfdx
-- **区块链** - solana, near-sdk-rs
-- **游戏引擎** - bevy, macroquad
+## 🎮 特定领域
+- **Bevy** - 现代游戏引擎
+- **Arrow/Parquet** - 大数据处理
+- **Burn/Dfdx** - 深度学习框架
+- **Solana** - 区块链开发
 
 ---
 
-*注：Rust 强调零成本抽象和安全并发的特点*
+*注：部分经典库已过时，请参考现代替代方案*

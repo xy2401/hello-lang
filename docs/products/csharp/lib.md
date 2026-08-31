@@ -1,46 +1,40 @@
-# C# 常用类库索引
+# C# 常用外部依赖库（NuGet）
 
-C# 作为微软生态的核心语言，拥有强大的 .NET 支持。
+## 📦 Web 框架（ASP.NET Core）
+- **ASP.NET Core** - 微软官方全功能 Web 框架
+- **Minimal APIs** - ASP.NET Core 轻量级 API
+- **SignalR** - 实时 WebSocket 通信
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **Entity Framework Core** - 微软官方 ORM（主流）
+- **Dapper** - 微 ORM（高性能）
+- **Npgsql** - PostgreSQL 驱动
+- **MySql.Data** - MySQL 官方驱动
 
-### .NET Framework / .NET Core / .NET 5+
-- **基础库** - System, Collections.Generic
-- **LINQ** - 语言集成查询
-- **异步编程** - async/await, Task, CancellationToken
-- **序列化的** - Newtonsoft.Json, System.Text.Json
-- **IO操作** - System.IO, System.IO.Pipelines
+## 🧪 测试工具
+- **xUnit** - 现代单元测试框架
+- **NUnit** - 传统测试框架
+- **MSTest** - 微软官方测试框架
+- **Moq** - Mock 对象库
 
-### Web 开发（ASP.NET）
-- **Web框架** - ASP.NET Core, Minimal APIs
-- **ORM** - Entity Framework Core, Dapper
-- **依赖注入** - Microsoft.Extensions.DependencyInjection
-- **日志** - Serilog, NLog, Microsoft.Extensions.Logging
-- **信号处理** - SignalR（实时通信）
+## 🔧 实用工具库
+- **Newtonsoft.Json** - JSON 序列化（最流行）
+- **Serilog** - 结构化日志框架
+- **AutoMapper** - 对象映射工具
+- **FluentValidation** - 验证器链式 API
+- **Hangfire** - 后台任务处理
+- **MediatR** - 中间件模式实现
 
-### 桌面与移动开发
-- **跨平台 UI** - Avalonia UI, MAUI
-- **WPF/Electrium** - Windows 桌面应用
-- **Blazor** - WebAssembly 前端
-- **Xamarin/MAUI** - 移动端开发
+## 🎨 跨平台 UI
+- **MAUI** - .NET 跨平台 UI（最新）
+- **Avalonia UI** - 开源跨平台 GUI
+- **Blazor** - WebAssembly 前端框架
 
-### 游戏开发
-- **Unity** - Unity Engine（C#脚本）
-- **Godot** - Godot Engine 支持 C#
-- **NAudio** - 音频处理
-
-### 测试与工具
-- **单元测试** - NUnit, xUnit, MSTest
-- **Mock 工具** - Moq, NSubstitute
-- **性能分析** - BenchmarkDotNet, dotTrace
-- **依赖注入** - Autofac, StructureMap
-
-### 云原生与微服务
-- **容器化** - Docker, Kubernetes
-- **消息队列** - MassTransit, RabbitMQ.Client
-- **gRPC** - Grpc.Net
-- **OpenAPI** - Swashbuckle
+## ⚠️ 已废弃/不推荐
+- **.NET Framework 4.x** 🔴 - 已过时，建议迁移到 .NET 6+
+- **WCF** 🔴 - 遗留服务框架，逐渐被 gRPC 替代
+- **jQuery** 🔴 - ASP.NET MVC3 时代技术
 
 ---
 
-*注：.NET 跨平台后功能日益强大，推荐使用 .NET 6+*
+*注：部分经典库已过时，请参考现代替代方案*

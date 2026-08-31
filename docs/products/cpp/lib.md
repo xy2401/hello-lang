@@ -1,40 +1,42 @@
-# C & C++ 常用类库索引
+# C++ 常用外部依赖库（第三方）
 
-C/C++ 作为系统级编程的基础，拥有丰富的底层库支持。
+## 📦 功能扩展库
+- **Boost** - C++ 功能扩展大全（必备知识）
+- **fmt** - 类型安全的格式化库（现代 printf 替代）
+- **ABI 兼容性工具** - abseil（Google 开源库）
 
-## 📦 C 语言核心库
+## 🎨 GUI 与图形
+- **Qt** - 跨平台 GUI 框架（最成熟）
+- **SDL2** - 简单游戏和多媒体开发
+- **Dear ImGui** - Immediate Mode GUI
+- **imgui** - 即时模式 UI 库
 
-### 标准库（libc）
-- **stdio.h** - 输入输出操作
-- **stdlib.h** - 内存管理、进程控制
-- **string.h** - 字符串处理
-- **time.h** - 时间日期处理
-- **math.h** - 数学函数
-- **ctype.h** - 字符分类
-- **assert.h** - 断言机制
+## 🔬 专业领域库
+- **OpenCV** - 计算机视觉（最流行）
+- **Eigen** - 线性代数运算
+- **Bullet Physics** - 物理引擎
+- **Assimp** - 3D 模型导入导出
 
-## 📦 C++ 核心库
+## 🌐 网络与序列化
+- **Boost.Asio** - 异步网络编程
+- **gRPC-Cpp** - Google RPC 框架
+- **Protocol Buffers** - Google 序列化协议
+- **CURL** - HTTP/FTP客户端库
 
-### STL（Standard Template Library）
-- **容器** - vector, deque, list, map, set, unordered_map
-- **迭代器** - 算法遍历的统一接口
-- **算法** - sort, find, transform, accumulate
-- **函子** - function, bind, lambda 表达式
+## 🧪 测试工具
+- **Catch2** - 现代 C++ 测试框架
+- **GoogleTest** - Google 单元测试框架
+- **Benchmark** - Google 性能基准测试
 
-### C++11/14/17/20 特性
-- **智能指针** - unique_ptr, shared_ptr, weak_ptr
-- **多线程** - std::thread, mutex, async, future
-- **移动语义** - move semantics, perfect forwarding
-- **类型推导** - auto, decltype, tuple
+## 🏗️ 构建工具
+- **CMake** - 跨平台构建系统（标准）
+- **vcpkg** - 包管理器（Microsoft）
+- **Conan** - C/C++包管理工具
 
-### 第三方库精选
-- **boost** - C++ 功能扩展大全
-- **Qt** - 跨平台 GUI 框架
-- **SDL** - 多媒体和游戏开发
-- **OpenCV** - 计算机视觉
-- **Eigen** - 线性代数
-- **protobuf** - 序列化框架
+## ⚠️ 已废弃/不推荐
+- **Tr1** 🔴 - C++03 TR1，已被 C++11 原生支持替代
+- **Xtreme** 🔴 - 非标准扩展库
 
 ---
 
-*注：C++ 生态历史悠久，选择库时注意稳定性与活跃程度*
+*注：部分经典库已过时，请参考现代替代方案*

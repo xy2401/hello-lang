@@ -1,42 +1,33 @@
-# PHP 常用类库索引
+# PHP 常用外部依赖库（Composer）
 
-PHP 作为 Web 服务器端开发的主流语言，有成熟的框架和工具生态。
+## 📦 Web 框架
+- **Laravel** - 现代全功能 Web 框架（最流行）
+- **Symfony** - 企业级组件式框架
+- **Slim** - 轻量级微框架
+- **Lumen** - Laravel 的微服务版本
 
-## 📦 核心类库分类
+## 🗄️ 数据库与 ORM
+- **Eloquent** - Laravel ORM（内置）
+- **Doctrine** - 强大的 ORM 框架
+- **Phinx** - 数据库迁移工具
 
-### 标准扩展（PECL/PEAR）
-- **字符串** - mbstring, iconv, intl（国际化）
-- **数据库** - PDO, mysqli, redis, memcached
-- **JSON/XML** - json, SimpleXML, dom
-- **加密** - openssl, hash, sodium（PHP 7.2+）
-- **异步 IO** - Swoole, Amp
+## 🧪 测试工具
+- **PHPUnit** - PHP 标准测试框架
+- **Pest** - 现代简约测试框架（Laravel 推荐）
+- **Mockery** - Mock 对象库
+- **Xdebug** - 调试和代码覆盖工具
 
-### Web 框架
-- **现代框架** - Laravel, Symfony, Slim, Lumen
-- **微服务** - API Platform, Sapi
-- **传统框架** - CodeIgniter, Yii2, CakePHP
+## 🔧 实用工具库
+- **Composer** - 包管理器（必备）
+- **Monolog** - 日志记录器
+- ** Guzzle** - HTTP 客户端
+- **Carbon** - 日期时间处理
+- **Twig** - 模板引擎
 
-### ORM 与数据访问
-- **ORM** - Doctrine, Eloquent (Laravel)
-- **查询构建器** - Query Builder, Fluent
-- **数据库迁移** - Phinx, Alembic
-
-### 测试与质量
-- **测试框架** - PHPUnit, Pest
-- **代码覆盖** - Xdebug, Blackfire
-- **静态分析** - PHPStan, Psalm
-- **代码规范** - PHPSpec, PHP-CS-Fixer
-
-### 实用工具
-- **Composer** - 依赖管理工具
-- **队列处理** - RabbitMQ, Beanstalkd
-- **缓存系统** - Memcached, Redis, APCu
-- **任务调度** - Laravel Scheduler, cron
-
-### DevOps 工具
-- **打包部署** - Docker, Kubernetes
-- **自动化** - Deployer, Ansible
+## ⚠️ 已废弃/不推荐
+- **CodeIgniter 2** 🔴 - 旧版本，建议升级到 CI3/4
+- **Zend Framework** 🔴 - 已更名为 Laminas
 
 ---
 
-*注：Laravel 是目前最流行的 PHP 框架，推荐优先学习*
+*注：部分经典库已过时，请参考现代替代方案*

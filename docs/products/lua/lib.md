@@ -1,42 +1,36 @@
-# Lua 常用类库索引
+# Lua 常用外部依赖库（ Luarocks）
 
-Lua 是轻量级脚本语言，广泛用于游戏开发和嵌入式场景。
+## 📦 Web 框架
+- **Luakit** - Web 浏览器框架
+- **Lapis** - OpenResty Web 框架
+- **Wren** - Web 应用框架
 
-## 📦 核心类库分类
+## 🔧 实用工具库
+- **luasocket** - TCP/UDP 网络通信（必备）
+- **lualib** - 标准库扩展
+- **Penlight** - 函数式编程库
+- **Fennel** - Lisp 语法变体
+- **LuaSQL** - 数据库访问
 
-### 标准库（Lua stdlib）
-- **基本功能** - print、type、tonumber
-- **字符串操作** - string.sub、string.gsub、string.match
-- **表操作** - table.insert、table.sort、table.concat
-- **数学函数** - math.sin、math.random、math.max
-- **调试模块** - debug.traceback、debug.getinfo
-- **IO 操作** - io.open、io.read、io.write
+## 🎮 游戏开发
+- **Love2D (LÖVE)** - 2D 游戏引擎
+- **Corona SDK** - 移动游戏开发
+- **Solar2D** - Corona 开源替代版
 
-### Web 开发
-- **Web 框架** - Luakit、Lapis（基于 OpenResty）
-- **HTTP 客户端** - luasocket、resty.http
-- **API 服务** - Skyway、Wren
+## 🗄️ 数据库与缓存
+- **LuaSQL** - 多数据库支持
+- **lua-redis** - Redis 客户端
+- **lfs** - 文件系统操作
 
-### 游戏开发
-- **引擎** - Love2D、Corona SDK、Solar2D
-- **游戏脚本** - Roblox、World of Warcraft（UI）、CryEngine
-- **图形处理** - LÖVE、OpenGL bindings
+## 🧪 测试工具
+- **Busted** - Lua 测试框架
+- **LuaSpec** - BDD 测试
+- **Toss** - 轻量级测试框架
 
-### 测试与工具
-- **测试框架** - Busted、LuaSpec、Toss
-- **Mock 工具** - luacov、mock-lua
-- **包管理** - Luarocks、Mooncake
-
-### 数据库与缓存
-- **MySQL/PostgreSQL** - luasql
-- **Redis** - lua-redis、hiredis-lua
-- **SQLite** - lsqlite3、lfs
-
-### 网络通信
-- **sockets** - luasocket、lua-corosocket
-- **websocket** - lua-websocket、wscapi
-- **MQTT** - mqtt.lua、paho.mqtt.c
+## ⚠️ 已废弃/不推荐
+- **LuaRocks 1.x** 🔴 - 旧版本包管理器
+- **ZeroMQ-lua** 🔴 - 使用减少，建议使用 luazmq
 
 ---
 
-*注：Lua 5.4+ 引入了协程和垃圾回收机制的改进*
+*注：部分经典库已过时，请参考现代替代方案*
