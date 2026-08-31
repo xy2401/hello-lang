@@ -4,6 +4,7 @@ import { allLanguages, featuredLanguages, moreLanguages } from './theme/data/lan
 
 const docsBase = process.env.DOCS_BASE || '/';
 
+// 匹配各语言名称前的占位 Emoji（使用先行断言精确匹配 Emoji 本身，不影响语言名）
 const languageBrandPatterns = [
   { language: 'html', pattern: /🟧(?=\s*HTML)/gu },
   { language: 'css', pattern: /🟦(?=\s*CSS)/gu },
@@ -20,6 +21,10 @@ const languageBrandPatterns = [
   { language: 'ruby', pattern: /💎(?=\s*Ruby)/gu },
 ];
 
+/**
+ * Markdown 自定义渲染插件：
+ * 将正文中的占位 Emoji 替换为统一的高清矢量品牌图标组件（避开代码块）
+ */
 function renderLanguageBrandIcons(md: any) {
   md.core.ruler.before('block', 'language-brand-icons', (state: any) => {
     let fenceMarker: '```' | '~~~' | null = null;
@@ -84,6 +89,7 @@ export default defineConfig({
   },
   transformPageData(pageData) {
     markProductPage(pageData);
+    // 清理页面标题（<title>/浏览器标签页）中的 Emoji，保持标题纯净与 SEO 规范
     for (const { pattern } of languageBrandPatterns) {
       pageData.title = pageData.title.replace(pattern, '');
     }
