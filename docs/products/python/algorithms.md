@@ -1,22 +1,25 @@
-# Python 算法
+# Python 算法实战全景
 
-Python 倾向于通过 `key` 函数描述排序目标，并用标准库模块组合成熟算法，而不是传入传统三路比较器。
+Python 在算法实现上拥有**极其简洁的代码表达力与强大的标准算法生态**：
+* **函数式列表推导式**：用极简语法表达分治划分、过滤与映射。
+* **TimSort 核心算法**：内置 `list.sort()` 与 `sorted()` 采用高度自适应的 TimSort（结合归并与插入排序），在现实数据上具备优异性能。
 
-## 常用能力
+---
 
-| 操作 | API | 复杂度 |
-| --- | --- | --- |
-| 稳定排序 | `sorted(..., key=...)` | O(n log n) |
-| 二分定位 | `bisect_left` / `bisect_right` | 查找 O(log n) |
-| 队列遍历 | `deque.popleft` | 每次 O(1) |
-| Top-K | `heapq.nsmallest` / `nlargest` | O(n log k) |
+## 📊 核心算法与复杂度
 
-## 语言特性
+| 算法专题 | 典型问题 / 算法 | 核心思想 | 时间复杂度 | 空间复杂度 |
+| :--- | :--- | :--- | :--- | :--- |
+| **排序** | Functional QuickSort / TimSort | 列表推导式分治 / 自适应分段归并 | $O(n \log n)$ | $O(n)$ |
+| **二分查找** | `bisect.bisect_left` / `bisect_right` | 二分检索插入索引 | $O(\log n)$ | $O(1)$ |
+| **图遍历** | BFS (`deque`) / DFS (递归) | 队列层序遍历 / 回溯 | $O(V + E)$ | $O(V)$ |
 
-排序使用稳定的 Timsort，相同主键的元素可以保留原顺序。生成器适合惰性流水线；图搜索仍需显式维护 `seen`，避免环导致重复访问。
+---
 
-## 综合示例
+## 1. 排序算法：函数式快速排序 (QuickSort)
 
-<<< ../../../demos/python/algorithms_demo.py
+利用列表推导式实现直观清晰的快速排序，并与 Python 原生 TimSort 对比：
 
-<DockerOutput image="python:3.12-slim" sourceFile="demos/python/algorithms_demo.py" />
+<<< ../../../demos/python/dsa/sorting/quick_sort.py
+
+<DockerOutput image="python:3.12-slim" sourceFile="demos/python/dsa/sorting/quick_sort.py" />

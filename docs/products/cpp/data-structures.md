@@ -1,28 +1,69 @@
-# C 与 C++ 数据结构
+# C 与 C++ 数据结构深度解析
 
-C 与 C++ 都能精确控制内存布局，但抽象层次不同：C 通过结构体、指针和所有权约定组织结构；C++ 通常优先使用 RAII 容器与智能指针。
+C 与 C++ 都能精确控制内存布局与生命周期，但二者的抽象哲学截然不同：
+* **C 语言**：采用命令式内存管理，通过 `malloc`/`free`、指针算术与显式结构体布局构建数据结构，由开发者全权负责资源销毁与所有权。
+* **C++ (C++20)**：采用 RAII（资源获取即初始化）、泛型模板与现代智能指针（`std::unique_ptr`/`std::shared_ptr`），标准库（STL）提供了兼具零成本抽象与工业级强度的容器体系。
 
-## 结构对照
+---
 
-| 需求 | C | C++ | 典型复杂度 |
-| --- | --- | --- | --- |
-| 连续序列 | 数组 / 动态分配缓冲区 | `std::vector` | 索引 O(1) |
-| 链式节点 | `struct` + 指针 | `std::list` 或智能指针节点 | 已知节点插删 O(1) |
-| 有序映射 | 手写树或第三方库 | `std::map` | O(log n) |
-| 优先队列 | 手写堆 | `std::priority_queue` | O(log n) |
+## 📊 核心结构对照矩阵
 
-## C：显式所有权
+| 数据结构分类 | C 语言底层模式 | C++20 现代实现 | 核心时间复杂度 | 内存特征 |
+| :--- | :--- | :--- | :--- | :--- |
+| **动态数组** | `struct` + `malloc`/`realloc` | `std::vector<T>` / 自定义模板 Vector | 随机访问 $O(1)$，尾部均摊 $O(1)$ | 连续内存，自动倍增扩容 |
+| **单/双向链表** | 裸指针节点 + 手动遍历释放 | `std::forward_list` / `std::list` / 智能指针链表 | 头部/已知节点插删 $O(1)$，随机访问 $O(n)$ | 非连续节点分散存储 |
+| **栈 (LIFO)** | 固定数组或链表栈 | `std::stack<T>` (底层默认 `std::deque`) | Push / Pop $O(1)$ | 适配器模式，保护栈语义 |
+| **双端队列** | 循环数组模运算 | `std::deque<T>` / `std::queue<T>` | 首尾插删 $O(1)$ | 分段连续中控缓冲区 |
+| **二叉搜索树** | 递归指针节点 | `std::set<T>` / `std::map<T>` (红黑树底座) | 增删查 $O(\log n)$ | 严格自平衡，节点开销 |
+| **二叉堆 / 优先队列** | 数组扁平化上浮下沉 | `std::priority_queue<T>` (`std::make_heap`) | 堆顶 $O(1)$，入堆出堆 $O(\log n)$ | 隐式完全二叉树，无指针开销 |
 
-C 示例手写单链表，创建失败、释放顺序和空指针都由调用方负责。
+---
 
-<<< ../../../demos/cpp/c_data_structures_demo.c
+## 1. 线性结构：动态数组 (Vector)
 
-<DockerOutput image="gcc:13" sourceFile="demos/cpp/c_data_structures_demo.c" />
+### C 语言实现：手动 realloc 扩容与显式内存管理
+C 语言需显式维护 `size` 和 `capacity`，并在超出容量时通过 `realloc` 进行双倍扩容：
 
-## C++：RAII 与泛型容器
+<<< ../../../demos/cpp/dsa/linear/dynamic_array.c
 
-C++ 示例组合 `vector`、`map`、优先队列与 `unique_ptr` 树；容器析构会自动释放拥有的资源。
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/dynamic_array.c" />
 
-<<< ../../../demos/cpp/data_structures_demo.cpp
+### C++ 实现：RAII 泛型动态数组与 std::vector 对照
+利用模板类与析构函数自动释放堆内存，移动语义避免深拷贝：
 
-<DockerOutput image="gcc:13" sourceFile="demos/cpp/data_structures_demo.cpp" />
+<<< ../../../demos/cpp/dsa/linear/dynamic_array.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/dynamic_array.cpp" />
+
+---
+
+## 2. 链式结构：单向链表 (Linked List)
+
+### C 语言实现：显式所有权与递归/迭代析构
+<<< ../../../demos/cpp/dsa/linear/linked_list.c
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/linked_list.c" />
+
+### C++ 实现：std::forward_list 与 std::unique_ptr 现代节点
+<<< ../../../demos/cpp/dsa/linear/linked_list.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/linear/linked_list.cpp" />
+
+---
+
+## 3. 树与堆：BST 与优先队列
+
+### C 语言二叉搜索树 (BST)
+<<< ../../../demos/cpp/dsa/trees/bst.c
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/trees/bst.c" />
+
+### C++ 现代智能指针二叉树遍历
+<<< ../../../demos/cpp/dsa/trees/binary_tree.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/trees/binary_tree.cpp" />
+
+### C++ 优先队列 (Priority Queue / Heap)
+<<< ../../../demos/cpp/dsa/trees/heap.cpp
+
+<DockerOutput image="gcc:13" sourceFile="demos/cpp/dsa/trees/heap.cpp" />

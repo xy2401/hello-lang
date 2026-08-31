@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Go Generics Binary Search Tree ===
+Go Generic BST search verified successfully.

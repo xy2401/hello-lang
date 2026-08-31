@@ -1,21 +1,25 @@
-# TypeScript 算法
+# TypeScript 算法实战全景
 
-TypeScript 可以把比较器、图节点和返回值都参数化，使通用算法在编译期保持输入输出一致。
+TypeScript 的算法实现充分利用了**高阶函数（Higher-Order Functions）、比较器函数（Comparators）与类型推导**：
+* **强类型算法签名**：通过比较器 `compare: (a: T, b: T) => number` 实现真正的通用泛型算法。
+* **不可变状态转换**：借助 `filter`、`map`、展开运算符 `...` 编写纯函数风格的算法流程。
 
-## 常用模式
+---
 
-| 操作 | 实现方式 | 复杂度 |
-| --- | --- | --- |
-| 排序 | 复制数组后调用 `sort(compare)` | O(n log n) |
-| 二分查找 | 泛型比较器 | O(log n) |
-| BFS | `Map<T, readonly T[]>` + `Set<T>` | O(V + E) |
+## 📊 核心算法与复杂度
 
-## 类型安全边界
+| 算法专题 | 典型问题 / 算法 | 核心思想 | 时间复杂度 | 空间复杂度 |
+| :--- | :--- | :--- | :--- | :--- |
+| **排序** | Generic QuickSort / `Array.prototype.sort` | 泛型比较器、递归分治 / V8 TimSort | $O(n \log n)$ | $O(n)$ |
+| **查找** | `Array.prototype.indexOf` / `find` | 谓词匹配查找 | $O(n)$ | $O(1)$ |
+| **图/树遍历** | DFS / BFS | 递归 / 数组队列操作 | $O(V + E)$ | $O(V)$ |
 
-比较器必须满足自反、反对称和传递关系。`readonly` 输入可以防止算法意外改写调用方数据，但生成的新数组仍可在内部排序。
+---
 
-## 综合示例
+## 1. 泛型排序算法：快速排序 (QuickSort)
 
-<<< ../../../demos/typescript/algorithms_demo.ts
+利用泛型类型 `<T>` 与自定义比较器实现不可变风格快速排序：
 
-<DockerOutput image="node:20-alpine" sourceFile="demos/typescript/algorithms_demo.ts" />
+<<< ../../../demos/typescript/dsa/sorting/quick_sort.ts
+
+<DockerOutput image="node:20-alpine" sourceFile="demos/typescript/dsa/sorting/quick_sort.ts" />

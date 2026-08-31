@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ Dijkstra Shortest Path ===
+Shortest path to node 3: 4
+C++ Dijkstra tests passed successfully.

@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Python list & collections.deque ===
+Python list: [10, 20], deque: ['front', 'middle', 'back']
+Python Dynamic Array tests passed successfully.

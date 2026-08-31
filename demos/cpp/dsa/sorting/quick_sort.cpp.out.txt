@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ std::sort (Introsort) & QuickSort ===
+Sorted result: 11 12 22 25 64 
+C++ Sort tests passed successfully.

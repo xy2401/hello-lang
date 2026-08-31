@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ std::vector & Custom Vector ===
+CustomVector elements: Hello, DataStructures, C++20
+C++ Dynamic Array tests passed successfully.

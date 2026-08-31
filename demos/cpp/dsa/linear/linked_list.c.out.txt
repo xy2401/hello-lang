@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C Singly Linked List ===
+List traversal: 10 -> 20 -> 30 -> NULL
+C Linked List tests passed successfully.

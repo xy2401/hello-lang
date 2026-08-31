@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Go Slices & Generic Vector ===
+Slice len=3, cap=4, elements=[10 20 30]
+Go Dynamic Array tests passed successfully.

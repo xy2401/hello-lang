@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C Dynamic Array ===
+DynamicArray size=3, cap=4, elements=[10, 20, 30]
+C Dynamic Array tests passed successfully.

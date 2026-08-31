@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ 0/1 Knapsack Dynamic Programming ===
+Max knapsack value for W=5: 7
+C++ Knapsack DP tests passed successfully.

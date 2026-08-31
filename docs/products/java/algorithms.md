@@ -1,24 +1,25 @@
-# Java 算法
+# Java 算法实战全景
 
-Java 的算法通常围绕集合接口、`Comparator` 和 Stream 管道组织。需要原地修改时使用集合算法；需要声明式转换时再选择 Stream。
+Java 在大规模企业级算法应用中，以**强类型安全、JIT 即时编译优化与内存自动回收**见长：
+* **标准算法工具箱**：`Collections.sort()`、`Arrays.binarySearch()`、`Arrays.parallelSort()` 提供高度优化的高性能底座。
+* **动态规划与状态机**：利用扁平数组高效处理状态压缩，JIT 能够将循环自动向量化。
 
-## 常用能力
+---
 
-| 操作 | API | 复杂度 |
-| --- | --- | --- |
-| 比较排序 | `List.sort(Comparator)` | O(n log n) |
-| 二分查找 | `Collections.binarySearch` | O(log n)，前提是输入已排序 |
-| 广度优先遍历 | `ArrayDeque` + `Set` | O(V + E) |
-| Top-K | `PriorityQueue` | O(n log k) |
+## 📊 算法专题与复杂度
 
-## 语言特性
+| 算法专题 | 典型问题 / 算法 | 核心思想 | 时间复杂度 | 空间复杂度 |
+| :--- | :--- | :--- | :--- | :--- |
+| **排序** | Dual-Pivot Quicksort / TimSort | 双基准快排（基本类型）/ 归并 TimSort（对象类型） | $O(n \log n)$ | $O(n)$ 或 $O(1)$ |
+| **二分查找** | `Arrays.binarySearch` | 变种二分（负值返回插入点 `-(insertion_point) - 1`） | $O(\log n)$ | $O(1)$ |
+| **动态规划** | 0/1 背包问题 | 1D 数组反向遍历更新 | $O(N \cdot W)$ | $O(W)$ |
 
-`Comparator.comparing` 可以组合多级排序规则，Record 的访问器可直接作为方法引用。图遍历优先使用 `ArrayDeque`，避免把 `LinkedList` 当作默认队列。
+---
 
-## 综合示例
+## 1. 动态规划：0/1 背包问题
 
-下面按分数降序、姓名升序排列 Record，并演示二分查找和 BFS。
+实现 0/1 背包问题的空间优化转移：
 
-<<< ../../../demos/java/AlgorithmsDemo.java
+<<< ../../../demos/java/dsa/dp/KnapsackDemo.java
 
-<DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/AlgorithmsDemo.java" />
+<DockerOutput image="eclipse-temurin:21-jdk-alpine" sourceFile="demos/java/dsa/dp/KnapsackDemo.java" />

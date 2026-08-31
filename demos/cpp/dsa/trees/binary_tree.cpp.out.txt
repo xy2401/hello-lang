@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== C++ Binary Tree with Smart Pointers ===
+Inorder traversal: 1, 2, 3
+C++ Binary Tree tests passed successfully.

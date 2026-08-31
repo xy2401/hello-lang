@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java ArrayList & Vector Demo ===
+Java ArrayList size=3, sum=60
+Java Dynamic Array tests passed successfully.

@@ -1,0 +1,7 @@
+---
+status: verified
+exitCode: 0
+---
+=== Java 0/1 Knapsack DP ===
+Max Knapsack Value: 7
+Java Knapsack DP tests passed successfully.

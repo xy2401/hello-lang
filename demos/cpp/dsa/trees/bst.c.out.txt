@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== C Binary Search Tree (BST) ===
+C BST search verified successfully.

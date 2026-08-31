@@ -1,0 +1,6 @@
+---
+status: verified
+exitCode: 0
+---
+=== Rust quick_sort ===
+Rust DSA tests passed successfully.
