@@ -1,4 +1,4 @@
-# C# 常用外部依赖库（NuGet）
+# C# 常用第三方库（NuGet）
 
 ## 📦 Web 框架（ASP.NET Core）
 

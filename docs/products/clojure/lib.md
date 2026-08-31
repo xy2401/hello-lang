@@ -1,4 +1,4 @@
-# Clojure 常用外部依赖库（Clojars/Maven）
+# Clojure 常用第三方库（Clojars/Maven）
 
 ## 📦 Web 框架
 

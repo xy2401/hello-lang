@@ -1,4 +1,4 @@
-# HTML 常用类库索引
+# HTML 常用第三方库与特性索引
 
 HTML 是 Web 页面的基础标记语言，配合 CSS 和 JavaScript 使用。
 

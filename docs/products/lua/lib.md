@@ -1,4 +1,4 @@
-# Lua 常用外部依赖库（Luarocks）
+# Lua 常用第三方库（Luarocks）
 
 ## 📦 Web 框架
 

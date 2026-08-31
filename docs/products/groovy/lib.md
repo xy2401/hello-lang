@@ -1,4 +1,4 @@
-# Groovy 常用外部依赖库（Gradle/Maven）
+# Groovy 常用第三方库（Gradle/Maven）
 
 ## 📦 Web 框架
 

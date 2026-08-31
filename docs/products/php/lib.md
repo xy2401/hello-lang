@@ -1,4 +1,4 @@
-# PHP 常用外部依赖库（Composer）
+# PHP 常用第三方库（Composer）
 
 ## 📦 Web 框架
 

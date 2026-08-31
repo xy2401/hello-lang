@@ -120,10 +120,10 @@ export default defineConfig({
           text: 'TypeScript',
           items: [
             { text: 'TypeScript 5.x 类型系统', link: '/products/typescript/' },
-            { text: '常用外部依赖库', link: '/products/typescript/lib' },
             { text: '安装与切换', link: '/products/typescript/install' },
             { text: '编译与运行', link: '/products/typescript/cli' },
             { text: '依赖与包管理', link: '/products/typescript/package' },
+            { text: '常用第三方库', link: '/products/typescript/lib' },
             { text: '数据结构', link: '/products/typescript/data-structures' },
             { text: '算法', link: '/products/typescript/algorithms' },
             {
@@ -147,10 +147,10 @@ export default defineConfig({
           text: 'Java',
           items: [
             { text: '概览', link: '/products/java/' },
-            { text: '常用外部依赖库', link: '/products/java/lib' },
             { text: '安装与切换', link: '/products/java/install' },
             { text: '编译与运行', link: '/products/java/cli' },
             { text: '依赖与包管理', link: '/products/java/package' },
+            { text: '常用第三方库', link: '/products/java/lib' },
             { text: '基础语法', link: '/products/java/basic' },
             { text: '数据结构', link: '/products/java/data-structures' },
             { text: '算法', link: '/products/java/algorithms' },
@@ -181,10 +181,10 @@ export default defineConfig({
           text: 'Python',
           items: [
             { text: '版本总览', link: '/products/python/' },
-            { text: '常用外部依赖库', link: '/products/python/lib' },
             { text: '安装与切换', link: '/products/python/install' },
             { text: '编译与运行', link: '/products/python/cli' },
             { text: '依赖与包管理', link: '/products/python/package' },
+            { text: '常用第三方库', link: '/products/python/lib' },
             { text: '基础语法', link: '/products/python/basic' },
             { text: '数据结构', link: '/products/python/data-structures' },
             { text: '算法', link: '/products/python/algorithms' },
@@ -210,10 +210,10 @@ export default defineConfig({
           text: 'Rust',
           items: [
             { text: 'Edition 总览', link: '/products/rust/' },
-            { text: '常用外部依赖库', link: '/products/rust/lib' },
             { text: '安装与切换', link: '/products/rust/install' },
             { text: '编译与运行', link: '/products/rust/cli' },
             { text: '依赖与包管理', link: '/products/rust/package' },
+            { text: '常用第三方库', link: '/products/rust/lib' },
             { text: '基础语法', link: '/products/rust/basic' },
             { text: '数据结构', link: '/products/rust/data-structures' },
             { text: '算法', link: '/products/rust/algorithms' },
@@ -237,10 +237,10 @@ export default defineConfig({
           text: 'Go',
           items: [
             { text: '版本总览', link: '/products/go/' },
-            { text: '常用外部依赖库', link: '/products/go/lib' },
             { text: '安装与切换', link: '/products/go/install' },
             { text: '编译与运行', link: '/products/go/cli' },
             { text: '依赖与包管理', link: '/products/go/package' },
+            { text: '常用第三方库', link: '/products/go/lib' },
             { text: '基础语法', link: '/products/go/basic' },
             { text: '数据结构', link: '/products/go/data-structures' },
             { text: '算法', link: '/products/go/algorithms' },
@@ -269,10 +269,10 @@ export default defineConfig({
           text: 'JavaScript',
           items: [
             { text: '版本总览', link: '/products/javascript/' },
-            { text: '常用外部依赖库', link: '/products/javascript/lib' },
             { text: '安装与切换', link: '/products/javascript/install' },
             { text: '编译与运行', link: '/products/javascript/cli' },
             { text: '依赖与包管理', link: '/products/javascript/package' },
+            { text: '常用第三方库', link: '/products/javascript/lib' },
             { text: '基础语法', link: '/products/javascript/basic' },
             { text: '数据结构', link: '/products/javascript/data-structures' },
             { text: '算法', link: '/products/javascript/algorithms' },
@@ -302,10 +302,10 @@ export default defineConfig({
           text: 'C & C++',
           items: [
             { text: 'C / C++ 总览', link: '/products/cpp/' },
-            { text: '常用外部依赖库', link: '/products/cpp/lib' },
             { text: '安装与切换', link: '/products/cpp/install' },
             { text: '编译与运行', link: '/products/cpp/cli' },
             { text: '依赖与包管理', link: '/products/cpp/package' },
+            { text: '常用第三方库', link: '/products/cpp/lib' },
             { text: 'C 语言介绍', link: '/products/cpp/c' },
             { text: 'C++ 基础语法', link: '/products/cpp/basic' },
             { text: '数据结构', link: '/products/cpp/data-structures' },
@@ -335,10 +335,10 @@ export default defineConfig({
           text: 'PHP',
           items: [
             { text: '版本总览', link: '/products/php/' },
-            { text: '常用外部依赖库', link: '/products/php/lib' },
             { text: '安装与切换', link: '/products/php/install' },
             { text: '编译与运行', link: '/products/php/cli' },
             { text: '依赖与包管理', link: '/products/php/package' },
+            { text: '常用第三方库', link: '/products/php/lib' },
             { text: '基础语法', link: '/products/php/basic' },
             { text: '数据结构', link: '/products/php/data-structures' },
             { text: '算法', link: '/products/php/algorithms' },
@@ -363,10 +363,10 @@ export default defineConfig({
           text: 'C#',
           items: [
             { text: '版本总览', link: '/products/csharp/' },
-            { text: '常用外部依赖库', link: '/products/csharp/lib' },
             { text: '安装与切换', link: '/products/csharp/install' },
             { text: '编译与运行', link: '/products/csharp/cli' },
             { text: '依赖与包管理', link: '/products/csharp/package' },
+            { text: '常用第三方库', link: '/products/csharp/lib' },
             { text: '基础语法', link: '/products/csharp/basic' },
             { text: '数据结构', link: '/products/csharp/data-structures' },
             { text: '算法', link: '/products/csharp/algorithms' },
@@ -391,10 +391,10 @@ export default defineConfig({
           text: 'Ruby',
           items: [
             { text: '版本总览', link: '/products/ruby/' },
-            { text: '常用外部依赖库', link: '/products/ruby/lib' },
             { text: '安装与切换', link: '/products/ruby/install' },
             { text: '编译与运行', link: '/products/ruby/cli' },
             { text: '依赖与包管理', link: '/products/ruby/package' },
+            { text: '常用第三方库', link: '/products/ruby/lib' },
             { text: '基础语法', link: '/products/ruby/basic' },
             { text: '数据结构', link: '/products/ruby/data-structures' },
             { text: '算法', link: '/products/ruby/algorithms' },
@@ -418,10 +418,10 @@ export default defineConfig({
           text: 'Kotlin',
           items: [
             { text: '版本总览', link: '/products/kotlin/' },
-            { text: '常用外部依赖库', link: '/products/kotlin/lib' },
             { text: '安装与切换', link: '/products/kotlin/install' },
             { text: '编译与运行', link: '/products/kotlin/cli' },
             { text: '依赖与包管理', link: '/products/kotlin/package' },
+            { text: '常用第三方库', link: '/products/kotlin/lib' },
             { text: '基础语法', link: '/products/kotlin/basic' },
             { text: '数据结构', link: '/products/kotlin/data-structures' },
             { text: '算法', link: '/products/kotlin/algorithms' },
@@ -443,10 +443,10 @@ export default defineConfig({
       '/products/groovy/': [
         { text: 'Groovy', items: [
           { text: '总览', link: '/products/groovy/' },
-          { text: '常用外部依赖库', link: '/products/groovy/lib' },
           { text: '安装与切换', link: '/products/groovy/install' },
           { text: '编译与运行', link: '/products/groovy/cli' },
           { text: '依赖与包管理', link: '/products/groovy/package' },
+          { text: '常用第三方库', link: '/products/groovy/lib' },
           { text: '基础语法', link: '/products/groovy/basic' },
           { text: '版本演进', link: '/products/groovy/version/', collapsed: false, items: [
             { text: 'Groovy 5.1', link: '/products/groovy/version/groovy-5.1' },
@@ -461,10 +461,10 @@ export default defineConfig({
       '/products/scala/': [
         { text: 'Scala', items: [
           { text: '总览', link: '/products/scala/' },
-          { text: '常用外部依赖库', link: '/products/scala/lib' },
           { text: '安装与切换', link: '/products/scala/install' },
           { text: '编译与运行', link: '/products/scala/cli' },
           { text: '依赖与包管理', link: '/products/scala/package' },
+          { text: '常用第三方库', link: '/products/scala/lib' },
           { text: '基础语法', link: '/products/scala/basic' },
           { text: '版本演进', link: '/products/scala/version/', collapsed: false, items: [
             { text: 'Scala 3.8', link: '/products/scala/version/scala-3.8' },
@@ -478,10 +478,10 @@ export default defineConfig({
       '/products/clojure/': [
         { text: 'Clojure', items: [
           { text: '总览', link: '/products/clojure/' },
-          { text: '常用外部依赖库', link: '/products/clojure/lib' },
           { text: '安装与切换', link: '/products/clojure/install' },
           { text: '编译与运行', link: '/products/clojure/cli' },
           { text: '依赖与包管理', link: '/products/clojure/package' },
+          { text: '常用第三方库', link: '/products/clojure/lib' },
           { text: '基础语法', link: '/products/clojure/basic' },
           { text: '版本演进', link: '/products/clojure/version/', collapsed: false, items: [
             { text: 'Clojure 1.12', link: '/products/clojure/version/clojure-1.12' },
@@ -497,7 +497,7 @@ export default defineConfig({
           text: 'Lisp 家族',
           items: [
             { text: '家族总览', link: '/products/lisp/' },
-            { text: '常用外部依赖库', link: '/products/lisp/lib' },
+            { text: '常用第三方库', link: '/products/lisp/lib' },
             { text: '基础语法', link: '/products/lisp/basic' },
             { text: '数据结构', link: '/products/lisp/data-structures' },
             { text: '算法', link: '/products/lisp/algorithms' },
@@ -517,7 +517,7 @@ export default defineConfig({
           text: 'Lua',
           items: [
             { text: '版本总览', link: '/products/lua/' },
-            { text: '常用外部依赖库', link: '/products/lua/lib' },
+            { text: '常用第三方库', link: '/products/lua/lib' },
             { text: '基础语法', link: '/products/lua/basic' },
             { text: '数据结构', link: '/products/lua/data-structures' },
             { text: '算法', link: '/products/lua/algorithms' },
@@ -537,6 +537,7 @@ export default defineConfig({
             { text: '安装与切换', link: '/products/html/install' },
             { text: '预览与验证', link: '/products/html/cli' },
             { text: '工程依赖', link: '/products/html/package' },
+            { text: '常用第三方库', link: '/products/html/lib' },
             { text: '基础语法', link: '/products/html/basic' },
             { text: '数据结构', link: '/products/html/data-structures' },
             { text: '算法', link: '/products/html/algorithms' },
@@ -563,6 +564,7 @@ export default defineConfig({
             { text: '安装与切换', link: '/products/css/install' },
             { text: '预览与验证', link: '/products/css/cli' },
             { text: '工程依赖', link: '/products/css/package' },
+            { text: '常用第三方库', link: '/products/css/lib' },
             { text: '基础语法', link: '/products/css/basic' },
             { text: '数据结构', link: '/products/css/data-structures' },
             { text: '算法', link: '/products/css/algorithms' },

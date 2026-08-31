@@ -1,4 +1,4 @@
-# JavaScript 常用外部依赖库
+# JavaScript 常用第三方库
 
 ## 📦 Web 框架（前端）
 

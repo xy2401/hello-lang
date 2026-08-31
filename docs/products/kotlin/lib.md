@@ -1,4 +1,4 @@
-# Kotlin 常用外部依赖库（Maven/Gradle）
+# Kotlin 常用第三方库（Maven/Gradle）
 
 ## 📦 Web 框架
 

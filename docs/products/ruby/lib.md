@@ -1,4 +1,4 @@
-# Ruby 常用外部依赖库（Gem）
+# Ruby 常用第三方库（Gem）
 
 ## 📦 Web 框架
 

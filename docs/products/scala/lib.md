@@ -1,4 +1,4 @@
-# Scala 常用外部依赖库（Sbt/Maven）
+# Scala 常用第三方库（Sbt/Maven）
 
 ## 📦 Web 框架
 

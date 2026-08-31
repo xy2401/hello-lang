@@ -1,4 +1,4 @@
-# Rust 常用外部依赖库（Crate）
+# Rust 常用第三方库（Crate）
 
 ## 📦 Web 框架
 

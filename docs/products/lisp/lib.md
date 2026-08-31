@@ -1,4 +1,4 @@
-# Lisp 常用外部依赖库
+# Lisp 常用第三方库
 
 ## 📦 Common Lisp
 
