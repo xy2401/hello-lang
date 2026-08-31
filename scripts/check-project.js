@@ -107,8 +107,8 @@ for (const productId of topicProductIds) {
 
 const familyRoutes = [
   '/products/lisp/common-lisp', '/products/lisp/scheme', '/products/lisp/clojure', '/products/lisp/racket',
-  '/products/lisp/version/', '/products/lisp/DockerTooling', '/products/lua/lua-55',
-  '/products/lua/version/', '/products/lua/DockerTooling',
+  '/products/lisp/version/', '/products/lisp/docker-tooling', '/products/lua/lua-55',
+  '/products/lua/version/', '/products/lua/docker-tooling',
 ];
 for (const route of familyRoutes) {
   if (!vitepressConfig.includes(`link: '${route}'`)) errors.push(`侧栏缺少新增产品路由: ${route}`);
