@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "python-basic",
+  "title": "Python 3.12 公共采集试点",
+  "kind": "container",
+  "platform": "linux/amd64",
+  "timeoutMs": 180000,
+  "images": { "runtime": { "envFile": ".env.versions", "envKey": "PYTHON_3_12_SLIM_IMAGE" } },
+  "imageRole": "runtime",
+  "mounts": [{ "source": "demos/python/basic_demo.py", "target": "/demos/basic_demo.py", "readOnly": true }],
+  "command": ["python", "/demos/basic_demo.py"],
+  "assertions": [
+    { "id": "language-name", "stream": "stdout", "op": "includes", "value": "Language: Python" },
+    { "id": "calculated-bonus", "stream": "stdout", "op": "includes", "value": "Calculated Bonus: $850.05" },
+    { "id": "person-info", "stream": "stdout", "op": "includes", "value": "Person Info: Alice (25 years old)" }
+  ],
+  "output": { "evidenceDir": "demos/python/docker-pilot", "page": "docs/products/python/docker-pilot.md" }
+}

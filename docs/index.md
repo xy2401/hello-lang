@@ -16,7 +16,7 @@ hero:
       text: 📊 横向对比矩阵
       link: /matrix/
     - theme: alt
-      text: ⚡ 浏览器实验台
+      text: ⚡ 浏览器语言实验台
       link: /playground/
 
 features:
@@ -48,21 +48,21 @@ features:
 
 <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 24px;">
 
-<a href="/products/" style="text-decoration: none;">
+<a :href="withBase('/products/')" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
     <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">📚 查看全部 18 个产品分卷</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">包括 JVM 家族、Lisp 家族、Lua、脚本语言、系统语言以及 HTML、CSS 工程链</p>
   </div>
 </a>
 
-<a href="/matrix/" style="text-decoration: none;">
+<a :href="withBase('/matrix/')" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
     <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚖️ 横向能力对比矩阵</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">基础语法、面向对象、并发模型、内存管理、包管理、类型系统六大维度深度对比</p>
   </div>
 </a>
 
-<a href="/playground/" style="text-decoration: none;">
+<a :href="withBase('/playground/')" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
     <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚡ 浏览器语言实验台</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">JavaScript、Python、PHP、Ruby 在线编辑器实时试写代码并查看效果</p>
@@ -72,6 +72,7 @@ features:
 </div>
 
 <script setup>
+import { withBase } from "vitepress";
 import { javaVersions } from './.vitepress/theme/data/versionData';
 import { getOutput, getTimeMs } from './.vitepress/theme/data/outputsHelper';
 import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveExamples';
@@ -88,15 +89,22 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 ---
 
+<a id="💡-学习方法"></a>
+<a id="📖-阅读指南"></a>
+
 ## 💡 学习方法建议
 
-1. **先看统一语法** (`/#core-concepts`) —— 理解跨语言的共性模式
-2. **再选目标语言** (`/products/{lang}/`) —— 掌握具体特性与最佳实践
-3. **最后看矩阵** (`/matrix/`) —— 建立全局选型依据
+1. **先看核心概念**（[语义速览](#core-concepts)）——理解共性，再读[统一语法骨架](/matrix/basic-syntax-concept)。
+2. **再选目标语言**（[产品分卷](/products/)）——从版本、安装和基础语法进入。
+3. **最后看矩阵**（[横向对比](/matrix/)）——结合[浏览器实验台](/playground/)和[复现手册](/reference/docker-validation)观察行为。
 
 适合目标读者：**希望系统学习多门语言、深入理解编程范式的开发者**
 
 ---
+
+<a id="hello-lang-基础概念"></a>
+<a id="核心内容"></a>
+<a id="_1-统一语法骨架"></a>
 
 ## 🧠 核心概念速览 {#core-concepts}
 
@@ -111,59 +119,12 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 | **内存管理** | 手动/引用计数/GC 回收/所有权 | [见 memory](/matrix/memory) |
 | **并发范式** | 线程/Goroutine/Event Loop/async-await | [见 concurrency](/matrix/concurrency) |
 
-### 延伸概念
-
-**内存管理模型**
-
-| 类别 | 代表语言 | 特点 |
-|------|---------|------|
-| 手动管理 | C, C++ | 最大灵活度，最高风险 |
-| 引用计数 | Python, Swift | 自动回收，但有循环引用问题 |
-| GC 回收 | Java, Go, JS | 自动 GC，有停顿问题 |
-| 所有权系统 | Rust | 零开销抽象，无 GC |
-
-**并发模型对比**
-
-| 模型 | 代表 | 特点 |
-|------|------|------|
-| 线程池 | Java, C++ | 传统方式，资源消耗大 |
-| 虚拟线程 | Java (Project Loom) | 轻量级，高密度 |
-| Goroutine | Go | 极轻量的协程 |
-| Event Loop | Node.js | 单线程异步 |
-| async/await | Rust, TS | 结构化并发 |
-
-适合目标读者：**希望横向学习多门语言、深入理解编程范式的开发者**
-# Hello Lang - 基础概念
-
-> 掌握编程语言的**统一语义骨架**，再深入具体语言细节。
-
-## 📖 阅读指南
-
-本栏目讲解所有编程语言的共性理论，与具体实现无关。建议按以下顺序学习：
-
----
-
-## 核心内容
-
-### 1. [统一语法骨架](/matrix/basic-syntax-concept)
-
-对比一组代表性命令式语言的核心语法；Groovy、Scala、Clojure 保留独立产品分卷，不强行扩入现有深度矩阵：
-
-- 变量声明与常量
-- 基本数据类型
-- 函数定义
-- 控制流（if/else、循环）
-- 面向对象模型
-- HTML/CSS 声明式模型
-
----
+<a id="延伸概念"></a>
 
 ## 🧠 延伸概念
 
 ### 内存管理
 
-不同语言的内存模型差异显著：
-
 | 类别 | 代表语言 | 特点 |
 |------|---------|------|
 | 手动管理 | C, C++ | 最大灵活度，最高风险 |
@@ -171,13 +132,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 | GC 回收 | Java, Go, JS | 自动 GC，有停顿问题 |
 | 所有权系统 | Rust | 零开销抽象，无 GC |
 
-详见：`docs/products/*/concepts.md` 各语言的具体章节
-
----
-
 ### 并发模型
-
-主流并发范式的对比：
 
 | 模型 | 代表 | 特点 |
 |------|------|------|
@@ -192,16 +147,9 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 ## 🔗 相关资源
 
 - **产品分卷**: [`/products`](/products/) - 18 个语言与 Web 技术产品的详细文档
-- **横向对比**: [`/matrix`](/matrix/basic-syntax) - 6 大技术维度深度对比
-- **实验验证**: [`demos`](https://github.com/xy2401/hello-lang/tree/main/demos) - Docker 自动化运行验证
-
----
-
-## 💡 学习方法
-
-1. **先看统一语法**（[统一语法骨架](/matrix/basic-syntax-concept)）——理解共性模式
-2. **再看具体语言** (`/products/{lang}/`) —— 了解特性差异
-3. **最后看矩阵对比** (`/matrix/`) —— 掌握选型依据
+- **横向对比**: [矩阵目录](/matrix/) - 6 大技术维度深度对比
+- **浏览器实验台**：[在线编辑与运行](/playground/)
+- **复现手册**：[Docker 验证说明](/reference/docker-validation)，原始脚本位于仓库 `demos/`。
 
 ---
 
@@ -212,5 +160,3 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 | 统一语法骨架 | ★★☆☆☆ | 30 分钟 |
 | 内存模型 | ★★★☆☆ | 45 分钟 |
 | 并发模型 | ★★★★☆ | 60 分钟 |
-
-适合目标读者：**希望横向学习多门语言的开发者**

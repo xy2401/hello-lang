@@ -35,3 +35,19 @@ ISO C++ 委员会通常以约 3 年为周期推进标准更新：
 - [**C++11：现代 C++ 奠基标准**](/products/cpp/version/cpp-11)（`auto`、Lambda、移动语义、智能指针）
 - [**C++20**](/products/cpp/version/cpp-20)（Concepts、Modules、Coroutines、Ranges）
 - [**C++23：标准库与语言能力补充**](/products/cpp/version/cpp-23)（`std::expected`、`std::print`、Deducing `this`）
+
+## 适用边界
+
+适合原生系统与性能敏感代码；语言标准、编译器实现和标准库支持需分别检查。浏览器容器示例不能代表所有平台 ABI。
+
+## 版本阅读范围
+
+[完整版本目录](./version/)收录本仓库已有专题（如 c-11、c-17、c-23）。这些是教学与兼容性对照入口；运行环境的具体版本以安装页、工作台或采集证据为准。
+
+## 推荐学习路线
+
+[安装与环境](./install) → [基础语法](./basic) → [数据结构](./data-structures) → [算法](./algorithms) → [完整版本目录](./version/)。先完成最小示例，再阅读版本差异。
+
+## 实验入口与范围
+
+[容器浏览器工作台](/playground/container-cpp)提供 RISC-V 容器体验，首次使用可能需要较大的运行时下载，先阅读页面资源说明。 [Docker 验证证据](./docker-tooling)展示已有采集结果与缺口。

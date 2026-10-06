@@ -105,7 +105,7 @@ const activeIndex = ref(0);
 }
 
 .tab-btn.active {
-  background: var(--vp-c-brand-1);
+  background: var(--doc-action-bg);
   color: #ffffff;
   border-color: var(--vp-c-brand-2);
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);

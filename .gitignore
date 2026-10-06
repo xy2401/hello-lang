@@ -39,3 +39,7 @@ lerna-debug.log*
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Shared Docker pilot workflow workspace
+.artifacts/
+.hello-docker/

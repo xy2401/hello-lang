@@ -19,7 +19,9 @@
     "check:cli": "node scripts/check-cli-docs.js",
     "check:packages": "node scripts/check-package-docs.js",
     "check:c2w": "node scripts/check-c2w-runtimes.js",
-    "check": "npm run check:versions && npm run check:installs && npm run check:cli && npm run check:packages && npm run check:c2w && node scripts/check-project.js && npm run check:docker-catalog && npm run check:web && npm run docs:build"
+    "check": "npm run check:versions && npm run check:installs && npm run check:cli && npm run check:packages && npm run check:c2w && node scripts/check-project.js && npm run check:docker-catalog && npm run check:web && npm run docs:build",
+    "docker:plan": "node scripts/docker-pilot.mjs plan",
+    "docker:check": "node scripts/docker-pilot.mjs check-manifest"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

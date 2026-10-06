@@ -4,7 +4,7 @@ import { rubyPlaygroundCode } from '../.vitepress/theme/data/playgroundExamples'
 
 # <span class="language-brand-icon language-brand-icon--ruby" aria-hidden="true"></span> Ruby 工作台
 
-Ruby 代码由 Ruby-WASM 提供的 CRuby WebAssembly 运行时在浏览器本地执行。
+Ruby 代码由 Ruby-WASM 提供的 CRuby 3.3 WebAssembly 运行时在浏览器本地执行。`puts` 与 `warn` 分别显示在 stdout、stderr 中，表达式返回值显示在“Ruby 求值结果”中。
 
 <CodeRunner
   language="ruby"

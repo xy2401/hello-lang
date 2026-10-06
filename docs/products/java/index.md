@@ -7,6 +7,8 @@
 
 ## Java LTS 版本
 
+[完整版本目录](./version/)列出本仓库已收录的版本主题；已有运行基线与镜像证据继续以本页说明为准。
+
 ```mermaid
 timeline
     title Java LTS 版本路线
@@ -64,3 +66,15 @@ timeline
 </a>
 
 </div>
+
+## 适用边界
+
+适合 JVM 应用与强类型生态；语言级别、JDK 与运行时配置需对应，浏览器容器不提供完整生产部署环境。
+
+## 推荐学习路线
+
+[安装与环境](./install) → [基础语法](./basic) → [数据结构](./data-structures) → [算法](./algorithms) → [完整版本目录](./version/)。先完成最小示例，再阅读版本差异。
+
+## 实验入口与范围
+
+[容器浏览器工作台](/playground/container-java)提供 RISC-V 容器体验，首次使用可能需要较大的运行时下载，先阅读页面资源说明。 [Docker 验证证据](./docker-tooling)展示已有采集结果与缺口。

@@ -33,15 +33,17 @@
           v-model="editableCode"
           class="live-editor"
           :aria-label="`可编辑 ${languageLabel} 源码`"
+          :aria-describedby="keyboardHintId"
           spellcheck="false"
           wrap="soft"
           @scroll="syncScroll"
-          @keydown.tab.prevent="insertIndent"
+          @keydown="handleEditorKeydown"
+          @blur="resetEditorNavigation"
           @keydown.ctrl.enter.prevent="showPreview"
           @keydown.meta.enter.prevent="showPreview"
         ></textarea>
       </div>
-      <p class="live-hint">修改后切换到“效果”即可刷新预览 · Ctrl/⌘ + Enter</p>
+      <p :id="keyboardHintId" class="live-hint" aria-live="polite">{{ keyboardHint }}<br>修改后切换到“效果”刷新预览 · Ctrl/⌘ + Enter</p>
     </section>
 
     <section v-show="activeView === 'live'" class="live-view" role="tabpanel" aria-labelledby="live-tab">
@@ -62,8 +64,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, useId, watch } from 'vue';
 import { useData } from 'vitepress';
+import { useEditorKeyboard } from './editorKeyboard';
 
 const props = withDefaults(defineProps<{
   mode: 'html' | 'css' | 'javascript';
@@ -83,6 +86,8 @@ const previewRevision = ref(0);
 const consoleLines = ref<string[]>([]);
 const highlightLayer = ref<HTMLPreElement | null>(null);
 const editorInput = ref<HTMLTextAreaElement | null>(null);
+const keyboardHintId = useId();
+const { keyboardHint, handleEditorKeydown, resetEditorNavigation } = useEditorKeyboard(editableCode, editorInput);
 const channelId = `web-live-${Math.random().toString(36).slice(2)}`;
 let refreshTimer: number | undefined;
 
@@ -350,17 +355,6 @@ function syncScroll() {
   highlightLayer.value.scrollLeft = editorInput.value.scrollLeft;
 }
 
-function insertIndent() {
-  const editor = editorInput.value;
-  if (!editor) return;
-  const start = editor.selectionStart;
-  const end = editor.selectionEnd;
-  editableCode.value = `${editableCode.value.slice(0, start)}  ${editableCode.value.slice(end)}`;
-  nextTick(() => {
-    editor.selectionStart = editor.selectionEnd = start + 2;
-  });
-}
-
 function receiveMessage(event: MessageEvent) {
   if (event.data?.channel !== channelId) return;
   const prefix = event.data.type === 'log' ? '' : `[${String(event.data.type).toUpperCase()}] `;
@@ -439,13 +433,13 @@ onBeforeUnmount(() => {
   --live-token-punctuation: #94a3b8;
 }
 .workbench-bar, .toolbar-left { display: flex; align-items: center; }
-.workbench-bar { min-height: 2.25rem; justify-content: space-between; gap: 1rem; padding: 0 .15rem .65rem; }
-.toolbar-left { gap: .65rem; }
+.workbench-bar { min-height: 2.25rem; flex-wrap: wrap; justify-content: space-between; gap: .55rem 1rem; padding: 0 .15rem .65rem; }
+.toolbar-left { min-width: 0; flex-wrap: wrap; gap: .65rem; }
 .language-label { color: var(--vp-c-text-2); font: 700 .7rem/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
 .view-tabs { display: inline-flex; gap: .15rem; padding: .18rem; border-radius: 8px; background: var(--vp-c-bg-soft); }
 .view-tabs button { min-width: 3.8rem; border: 0; border-radius: 6px; padding: .38rem .7rem; background: transparent; color: var(--vp-c-text-2); cursor: pointer; font-size: .82rem; font-weight: 650; line-height: 1; }
 .view-tabs button.active { background: var(--vp-c-bg); color: var(--vp-c-brand-1); box-shadow: 0 1px 5px rgb(15 23 42 / 10%); }
-.reset-button { border: 0; padding: .35rem .5rem; border-radius: 6px; background: transparent; color: var(--vp-c-text-2); cursor: pointer; font-size: .78rem; }
+.reset-button { flex-shrink: 0; border: 0; padding: .35rem .5rem; border-radius: 6px; background: transparent; color: var(--vp-c-text-2); cursor: pointer; font-size: .78rem; }
 .reset-button:hover { color: var(--vp-c-text-1); background: var(--vp-c-bg-soft); }
 .source-view, .live-view { margin: 0; }
 .editor-shell { position: relative; height: clamp(290px, 46vh, 430px); overflow: hidden; border: 1px solid var(--live-editor-border); border-radius: 10px; background: var(--live-editor-bg); }

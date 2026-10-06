@@ -6,11 +6,15 @@
         <strong>{{ title || '浏览器本地即时运行沙箱' }}</strong>
         <span class="lang-badge">{{ language.toUpperCase() }}</span>
       </div>
-      <button class="run-btn" :disabled="isRunning" @click="runCode">
-        <span v-if="isRunning">⏳ WASM 执行中...</span>
-        <span v-else>▶️ 运行代码 ({{ runtimeLabel }})</span>
+      <button class="run-btn" type="button" :disabled="isRunning" @click="runCode">
+        {{ runState === 'loading' ? '加载运行时…' : isRunning ? '运行中…' : runState === 'error' || runState === 'timeout' ? '重新运行' : '运行代码' }}
+        <span>({{ runtimeLabel }})</span>
       </button>
     </div>
+    <p class="runner-status" :data-state="runState" role="status" aria-live="polite">
+      <span>{{ statusText }}</span>
+      <span v-if="execTime !== null">耗时: {{ execTime }}ms</span>
+    </p>
 
     <div class="editor-area">
       <div class="editor-shell">
@@ -20,27 +24,43 @@
           v-model="editableCode"
           class="code-input"
           :aria-label="`${language.toUpperCase()} 可编辑源码`"
+          :aria-describedby="keyboardHintId"
           spellcheck="false"
           wrap="off"
           @scroll="syncScroll"
-          @keydown.tab.prevent="insertIndent"
+          @keydown="handleEditorKeydown"
+          @blur="resetEditorNavigation"
         ></textarea>
       </div>
+      <p :id="keyboardHintId" class="editor-hint" aria-live="polite">{{ keyboardHint }}</p>
     </div>
 
     <div class="output-area" v-if="output !== null">
       <div class="output-header">
-        <span>控制台输出日志 (stdout):</span>
-        <span class="exec-duration" v-if="execTime">耗时: {{ execTime }}ms</span>
+        <span>标准输出 (stdout)</span>
       </div>
-      <pre class="output-content"><code>{{ output }}</code></pre>
+      <pre v-if="output" class="output-content"><code>{{ output }}</code></pre>
+      <p v-else class="empty-output">{{ runState === 'success' ? '程序执行成功，无输出。' : isRunning ? '等待程序输出…' : '本次执行没有输出。' }}</p>
+    </div>
+    <div v-if="rubyResult !== null" class="output-area">
+      <div class="output-header"><span>Ruby 求值结果</span></div>
+      <pre class="output-content"><code>{{ rubyResult }}</code></pre>
+    </div>
+    <div v-if="standardError" class="stderr-area">
+      <strong>错误输出 (stderr)</strong>
+      <pre><code>{{ standardError }}</code></pre>
+    </div>
+    <div v-if="executionError" class="execution-error" role="alert">
+      <strong>{{ languageLabel }} {{ runState === 'timeout' ? failedDuringLoading ? '运行时加载超时' : '执行超时' : failedDuringLoading ? '运行时加载失败' : '执行失败' }}</strong>
+      <pre><code>{{ executionError }}</code></pre>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, ref, useId, watch } from 'vue';
 import { useData } from 'vitepress';
+import { useEditorKeyboard } from './editorKeyboard';
 
 const props = withDefaults(
   defineProps<{
@@ -60,12 +80,51 @@ function formatCode(raw: string): string {
 }
 
 const editableCode = ref(formatCode(props.initialCode));
-const isRunning = ref(false);
+type RunState = 'idle' | 'loading' | 'running' | 'success' | 'error' | 'timeout';
+const runState = ref<RunState>('idle');
+const isRunning = computed(() => runState.value === 'loading' || runState.value === 'running');
 const output = ref<string | null>(null);
+const rubyResult = ref<string | null>(null);
+const standardError = ref('');
+const executionError = ref('');
+const failedDuringLoading = ref(false);
 const execTime = ref<number | null>(null);
 const highlightLayer = ref<HTMLPreElement | null>(null);
 const editorInput = ref<HTMLTextAreaElement | null>(null);
-const runtimeLabel = props.language === 'javascript' ? 'Web Worker' : 'Client WASM';
+const keyboardHintId = useId();
+const { keyboardHint, handleEditorKeydown, resetEditorNavigation } = useEditorKeyboard(editableCode, editorInput);
+const languageLabel = computed(() => ({ javascript: 'JavaScript', python: 'Python', php: 'PHP', ruby: 'Ruby' })[props.language]);
+const runtimeLabel = computed(() => ({ javascript: 'Web Worker', python: 'Pyodide WASM', php: 'PHP WASM', ruby: 'Ruby WASM' })[props.language]);
+const statusText = computed(() => {
+  const labels: Record<RunState, string> = {
+    idle: '尚未运行', loading: '正在加载运行时', running: '正在执行',
+    success: output.value || rubyResult.value !== null ? '执行成功' : '执行成功 · 无输出',
+    error: failedDuringLoading.value ? '运行时加载失败 · 可重试' : '执行失败 · 可重试',
+    timeout: failedDuringLoading.value ? '运行时加载超时 · 可重试' : '执行超时 · 可重试',
+  };
+  return `${languageLabel.value} / ${runtimeLabel.value} · ${labels[runState.value]}`;
+});
+let cancelActiveWorker: (() => void) | undefined;
+let cancelPyodideInitialization: (() => void) | undefined;
+let cancelRuntimeInitialization: (() => void) | undefined;
+
+function initializeRuntime<T>(label: string, load: () => Promise<T>): Promise<T> {
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    const cancel = () => finish(new Error(`${label} 运行时初始化已取消`));
+    const timer = window.setTimeout(() => finish(new RunnerTimeoutError(`${label} 运行时初始化超过 30 秒，请重试`)), 30000);
+    cancelRuntimeInitialization = cancel;
+    function finish(error?: unknown, value?: T) {
+      if (settled) return;
+      settled = true;
+      window.clearTimeout(timer);
+      if (cancelRuntimeInitialization === cancel) cancelRuntimeInitialization = undefined;
+      if (error) reject(error);
+      else resolve(value as T);
+    }
+    Promise.resolve().then(load).then(value => finish(undefined, value), error => finish(error));
+  });
+}
 
 type RunnerLanguage = 'javascript' | 'python' | 'php' | 'ruby';
 
@@ -218,18 +277,13 @@ function syncScroll() {
   highlightLayer.value.scrollLeft = editorInput.value.scrollLeft;
 }
 
-function insertIndent() {
-  const editor = editorInput.value;
-  if (!editor) return;
-  const start = editor.selectionStart;
-  const end = editor.selectionEnd;
-  editableCode.value = `${editableCode.value.slice(0, start)}  ${editableCode.value.slice(end)}`;
-  nextTick(() => {
-    editor.selectionStart = editor.selectionEnd = start + 2;
-  });
+class RunnerTimeoutError extends Error {}
+
+function appendOutput(value: string) {
+  output.value = (output.value || '') + value;
 }
 
-function runJavaScriptInWorker(code: string, timeoutMs = 5000): Promise<string> {
+function runJavaScriptInWorker(code: string, timeoutMs = 5000): Promise<void> {
   return new Promise((resolve, reject) => {
     const workerSource = `
       self.fetch = undefined;
@@ -241,150 +295,232 @@ function runJavaScriptInWorker(code: string, timeoutMs = 5000): Promise<string> 
       self.importScripts = undefined;
 
       self.onmessage = async ({ data }) => {
-        const logs = [];
         const stringify = (value) => {
           if (typeof value !== 'object' || value === null) return String(value);
           try { return JSON.stringify(value); } catch { return String(value); }
         };
         const safeConsole = {
-          log: (...args) => logs.push(args.map(stringify).join(' ')),
-          error: (...args) => logs.push('[ERROR] ' + args.map(stringify).join(' ')),
-          warn: (...args) => logs.push('[WARN] ' + args.map(stringify).join(' ')),
+          log: (...args) => self.postMessage({ type: 'stdout', output: args.map(stringify).join(' ') + '\\n' }),
+          error: (...args) => self.postMessage({ type: 'stderr', output: '[ERROR] ' + args.map(stringify).join(' ') + '\\n' }),
+          warn: (...args) => self.postMessage({ type: 'stderr', output: '[WARN] ' + args.map(stringify).join(' ') + '\\n' }),
         };
 
         try {
           const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
           const execute = new AsyncFunction('console', '"use strict";\\n' + data);
           const result = await execute(safeConsole);
-          if (result !== undefined) logs.push('=> ' + stringify(result));
-          self.postMessage({ type: 'done', output: logs.join('\\n') || '(程序已运行，无输出)' });
+          if (result !== undefined) self.postMessage({ type: 'stdout', output: '=> ' + stringify(result) + '\\n' });
+          self.postMessage({ type: 'done' });
         } catch (error) {
-          self.postMessage({ type: 'error', message: error?.message || String(error) });
+          self.postMessage({ type: 'error', message: error?.stack || error?.message || String(error) });
         }
       };
     `;
 
     const objectUrl = URL.createObjectURL(new Blob([workerSource], { type: 'text/javascript' }));
-    const worker = new Worker(objectUrl);
+    let worker: Worker;
+    try {
+      worker = new Worker(objectUrl);
+    } catch (error) {
+      URL.revokeObjectURL(objectUrl);
+      reject(error);
+      return;
+    }
+    let settled = false;
+    let timer: number | undefined;
     const cleanup = () => {
+      window.clearTimeout(timer);
       worker.terminate();
       URL.revokeObjectURL(objectUrl);
+      if (cancelActiveWorker === cancel) cancelActiveWorker = undefined;
     };
-    const timer = window.setTimeout(() => {
+    const finish = (error?: Error) => {
+      if (settled) return;
+      settled = true;
       cleanup();
-      reject(new Error(`执行超过 ${timeoutMs}ms，Worker 已终止`));
-    }, timeoutMs);
+      if (error) reject(error);
+      else resolve();
+    };
+    const cancel = () => finish(new Error('JavaScript 执行已取消，Web Worker 已终止'));
+    cancelActiveWorker = cancel;
+    timer = window.setTimeout(() => finish(new RunnerTimeoutError(`执行超过 ${timeoutMs}ms，Web Worker 已终止`)), timeoutMs);
 
     worker.onmessage = ({ data }) => {
-      window.clearTimeout(timer);
-      cleanup();
-      if (data.type === 'done') resolve(data.output);
-      else reject(new Error(data.message || 'Worker 执行失败'));
+      if (settled) return;
+      if (data.type === 'stdout') appendOutput(data.output);
+      else if (data.type === 'stderr') standardError.value += data.output;
+      else if (data.type === 'done') finish();
+      else if (data.type === 'error') finish(new Error(data.message || 'JavaScript Web Worker 执行失败'));
     };
     worker.onerror = (event) => {
-      window.clearTimeout(timer);
-      cleanup();
-      reject(new Error(event.message || 'Worker 加载失败'));
+      finish(new Error(event.message || 'JavaScript Web Worker 加载失败'));
     };
-    worker.postMessage(code);
+    try { worker.postMessage(code); } catch (error) { finish(error instanceof Error ? error : new Error(String(error))); }
   });
 }
+
+function loadRuntimeScript(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    const timer = window.setTimeout(() => fail(new RunnerTimeoutError('运行时脚本加载超过 30 秒，请检查网络后重试')), 30000);
+    function fail(error: Error) {
+      window.clearTimeout(timer);
+      script.onload = null;
+      script.onerror = null;
+      script.remove();
+      reject(error);
+    }
+    script.onload = () => { window.clearTimeout(timer); resolve(); };
+    script.onerror = () => fail(new Error(`运行时脚本加载失败：${url}`));
+    document.head.appendChild(script);
+  });
+}
+
+function initializePyodide(): Promise<any> {
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    const timer = window.setTimeout(() => fail(new RunnerTimeoutError('Pyodide 运行时初始化超过 30 秒，请重试')), 30000);
+    const cancel = () => fail(new Error('Pyodide 运行时初始化已取消'));
+    cancelPyodideInitialization = cancel;
+    function cleanup() {
+      window.clearTimeout(timer);
+      if (cancelPyodideInitialization === cancel) cancelPyodideInitialization = undefined;
+    }
+    function fail(error: unknown) {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      reject(error);
+    }
+    Promise.resolve().then(() => (window as any).loadPyodide()).then((pyodide) => {
+      // Initialization cannot be forcibly stopped; discard a VM that arrives after timeout or unmount.
+      if (settled) return;
+      settled = true;
+      cleanup();
+      (window as any).pyodide = pyodide;
+      resolve(pyodide);
+    }, fail);
+  });
+}
+
+async function fetchRuntime(url: string) {
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) throw new Error(`运行时下载失败：HTTP ${response.status}`);
+    return await response.arrayBuffer();
+  } catch (error) {
+    if (controller.signal.aborted) throw new RunnerTimeoutError('运行时下载超过 30 秒，请检查网络后重试');
+    throw error;
+  } finally {
+    window.clearTimeout(timer);
+  }
+}
+
+onBeforeUnmount(() => {
+  cancelActiveWorker?.();
+  cancelPyodideInitialization?.();
+  cancelRuntimeInitialization?.();
+});
 
 watch(() => props.initialCode, (newVal) => {
   editableCode.value = formatCode(newVal);
 });
 
 async function runCode() {
-  isRunning.value = true;
+  if (isRunning.value) return;
+  runState.value = props.language === 'javascript' ? 'running' : 'loading';
   output.value = '';
+  rubyResult.value = null;
+  standardError.value = '';
+  executionError.value = '';
+  failedDuringLoading.value = false;
+  execTime.value = null;
   const startTime = performance.now();
 
   try {
     // 1. JavaScript (原生 Web Worker 沙箱)
     if (props.language === 'javascript') {
-      output.value = await runJavaScriptInWorker(editableCode.value);
+      await runJavaScriptInWorker(editableCode.value);
     }
 
     // 2. Python (Pyodide CPython WASM 虚拟机)
     else if (props.language === 'python') {
-      output.value = '⏳ 正在纯前端加载 Pyodide CPython WebAssembly 虚拟机...';
       if (!(window as any).pyodide) {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js';
-        document.head.appendChild(script);
-        await new Promise((resolve, reject) => {
-          script.onload = resolve;
-          script.onerror = reject;
-        });
-        (window as any).pyodide = await (window as any).loadPyodide();
+        if (!(window as any).loadPyodide) await loadRuntimeScript('https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js');
+        await initializePyodide();
       }
       const pyodide = (window as any).pyodide;
-      let logsBuffer = '';
+      runState.value = 'running';
       pyodide.setStdout({
-        batched: (str: string) => {
-          logsBuffer += str + '\n';
-        },
+        batched: (str: string) => appendOutput(str + '\n'),
       });
+      pyodide.setStderr({ batched: (str: string) => { standardError.value += str + '\n'; } });
       const result = await pyodide.runPythonAsync(editableCode.value);
       if (result !== undefined && result !== null) {
-        logsBuffer += `=> ${result}`;
+        appendOutput(`=> ${result}`);
       }
-      output.value = logsBuffer.trim() || '(程序已运行，无输出)';
     }
 
     // 3. PHP (PHP-WASM 纯前端 Emscripten 解释器)
     else if (props.language === 'php') {
-      output.value = '⏳ 正在纯前端加载 PHP-WASM WebAssembly 解释器...';
-      if (!(window as any).PhpWeb) {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/php-wasm@0.0.9/php-web.js';
-        document.head.appendChild(script);
-        await new Promise((resolve, reject) => {
-          script.onload = resolve;
-          script.onerror = reject;
-        });
-      }
-      const php = new (window as any).PhpWeb();
-      let logsBuffer = '';
+      const php = await initializeRuntime('PHP', async () => {
+        if (!(window as any).PhpWeb) {
+          const url = 'https://cdn.jsdelivr.net/npm/php-wasm@0.2.0/PhpWeb.mjs';
+          const { PhpWeb } = await import(/* @vite-ignore */ url);
+          (window as any).PhpWeb = PhpWeb;
+        }
+        const instance = new (window as any).PhpWeb({ version: '8.4', autoTransaction: false });
+        await instance.binary;
+        return instance;
+      });
       php.addEventListener('output', (event: any) => {
-        logsBuffer += event.detail;
+        appendOutput(String(event.detail));
       });
       php.addEventListener('error', (event: any) => {
-        logsBuffer += '[PHP ERROR] ' + event.detail;
+        standardError.value += String(event.detail) + '\n';
       });
-      await php.run(editableCode.value);
-      output.value = logsBuffer.trim() || '(PHP 脚本执行完毕，无输出)';
+      runState.value = 'running';
+      const exitCode = await php.run(editableCode.value);
+      if (exitCode !== 0) throw new Error(`PHP 退出码 ${exitCode}，请查看输出中的错误详情。`);
     }
 
     // 4. Ruby (Ruby-WASM 官方 CRuby WebAssembly 虚拟机)
     else if (props.language === 'ruby') {
-      output.value = '⏳ 正在纯前端加载 Ruby-WASM CRuby WebAssembly 虚拟机...';
       if (!(window as any).rubyVmInstance) {
-        if (!(window as any)['@ruby/wasm-wasi']) {
-          const script = document.createElement('script');
-          script.src = 'https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.5.0/dist/browser.umd.js';
-          document.head.appendChild(script);
-          await new Promise((resolve, reject) => {
-            script.onload = resolve;
-            script.onerror = reject;
-          });
-        }
-        const { DefaultRubyVM } = (window as any)['@ruby/wasm-wasi'];
-        const response = await fetch('https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.5.0/dist/ruby.wasm');
-        const buffer = await response.arrayBuffer();
-        const module = await WebAssembly.compile(buffer);
-        const { vm } = await DefaultRubyVM.create(module);
+        const vm = await initializeRuntime('Ruby', async () => {
+          if (!(window as any)['ruby-wasm-wasi']) {
+            await loadRuntimeScript('https://cdn.jsdelivr.net/npm/@ruby/wasm-wasi@2.5.0/dist/browser.umd.js');
+          }
+          const { DefaultRubyVM } = (window as any)['ruby-wasm-wasi'];
+          const buffer = await fetchRuntime('https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.5.0/dist/ruby.wasm');
+          const module = await WebAssembly.compile(buffer);
+          const { vm } = await DefaultRubyVM(module);
+          return vm;
+        });
         (window as any).rubyVmInstance = vm;
       }
       const vm = (window as any).rubyVmInstance;
-      const res = vm.eval(editableCode.value);
-      output.value = String(res.toString());
+      runState.value = 'running';
+      vm.eval('require "stringio"; $hello_lang_stdout = $stdout; $hello_lang_stderr = $stderr; $hello_lang_output = StringIO.new; $hello_lang_errors = StringIO.new; $stdout = $hello_lang_output; $stderr = $hello_lang_errors');
+      try {
+        const result = vm.eval(editableCode.value);
+        rubyResult.value = String(result.toString());
+      } finally {
+        appendOutput(String(vm.eval('$hello_lang_output.string').toString()));
+        standardError.value = String(vm.eval('$hello_lang_errors.string').toString());
+        vm.eval('$stdout = $hello_lang_stdout; $stderr = $hello_lang_stderr');
+      }
     }
+    runState.value = 'success';
   } catch (err: any) {
-    output.value = `❌ WASM 执行错误: ${err.message || String(err)}`;
+    failedDuringLoading.value = runState.value === 'loading';
+    executionError.value = err.message || String(err);
+    runState.value = err instanceof RunnerTimeoutError ? 'timeout' : 'error';
   } finally {
     execTime.value = Math.round(performance.now() - startTime);
-    isRunning.value = false;
   }
 }
 </script>
@@ -448,17 +584,28 @@ async function runCode() {
 
 .runner-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: .75rem;
   margin-bottom: 12px;
 }
 
 .runner-title {
   display: flex;
+  flex: 1 1 14rem;
+  flex-wrap: wrap;
+  min-width: 0;
   align-items: center;
   gap: 8px;
   font-size: 1rem;
 }
+
+.runner-title strong { min-width: 0; overflow-wrap: anywhere; }
+.runner-icon, .lang-badge { flex-shrink: 0; }
+.runner-status { display: flex; flex-wrap: wrap; gap: .3rem .8rem; margin: 0 0 .7rem; color: var(--vp-c-text-2); font-size: .75rem; overflow-wrap: anywhere; }
+.runner-status[data-state="error"], .runner-status[data-state="timeout"] { color: var(--vp-c-danger-1); }
+.editor-hint { margin: .45rem 0 0; color: var(--vp-c-text-2); font-size: .72rem; }
 
 .lang-badge {
   background: var(--runner-badge-bg);
@@ -470,7 +617,9 @@ async function runCode() {
 }
 
 .run-btn {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  flex: 0 1 auto;
+  max-width: 100%;
+  background: var(--doc-success-bg);
   color: #ffffff;
   border: none;
   padding: 6px 16px;
@@ -479,18 +628,24 @@ async function runCode() {
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .run-btn:hover:not(:disabled) {
-  opacity: 0.9;
+  background: var(--doc-success-hover-bg);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
+
+.run-btn:active:not(:disabled) { background: var(--doc-success-active-bg); }
 
 .run-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.run-btn:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
 
 .editor-shell {
   position: relative;
@@ -591,5 +746,16 @@ async function runCode() {
   font-family: 'Fira Code', monospace;
   font-size: 0.875rem;
   white-space: pre-wrap;
+}
+
+.empty-output { margin: 0; color: var(--runner-output-meta); font-size: .8rem; }
+.stderr-area, .execution-error { margin-top: 12px; padding: 12px; border: 1px solid var(--vp-c-divider); border-radius: 8px; background: var(--runner-output-bg); font-size: .8rem; }
+.execution-error { border-color: var(--vp-c-danger-1); background: var(--vp-c-danger-soft); color: var(--vp-c-danger-1); }
+.stderr-area pre, .execution-error pre { max-height: 16rem; margin: .4rem 0 0; overflow: auto; background: transparent; color: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+@media (max-width: 520px) {
+  .code-runner { padding: .75rem; }
+  .runner-header { align-items: flex-start; }
+  .runner-title, .run-btn { flex-basis: 100%; }
 }
 </style>

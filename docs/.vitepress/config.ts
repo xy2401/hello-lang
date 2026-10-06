@@ -1,3 +1,4 @@
+import { sharedThemeLabels } from './shared-ui';
 import { defineConfig } from 'vitepress';
 import { fileURLToPath } from 'node:url';
 import { allLanguages, featuredLanguages, moreLanguages } from './theme/data/languageNavigation';
@@ -72,6 +73,7 @@ function markProductPage(pageData: any) {
 }
 
 export default defineConfig({
+  lang: 'zh-CN',
   base: docsBase,
   title: 'Hello Lang',
   titleTemplate: ':title | 编程语言手册',
@@ -95,6 +97,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    ...sharedThemeLabels,
     logo: '/favicon.svg',
     outline: {
       level: [2, 3],
@@ -116,7 +119,7 @@ export default defineConfig({
           })),
         ],
       },
-      { text: '🧪 实验台', link: '/playground/' },
+      { text: '浏览器语言实验台', link: '/playground/' },
       { text: '⚖️ 对比矩阵', link: '/matrix/' },
       { text: '📚 参考资料', link: '/reference/' },
     ],
@@ -208,6 +211,7 @@ export default defineConfig({
               ],
             },
             { text: 'Docker 验证', link: '/products/python/docker-tooling' },
+            { text: '公共 Docker 采集试点', link: '/products/python/docker-pilot' },
           ],
         },
       ],
@@ -614,7 +618,7 @@ export default defineConfig({
         {
           text: '轻量 WebAssembly',
           items: [
-            { text: '实验台总览', link: '/playground/' },
+            { text: '浏览器语言实验台', link: '/playground/' },
             { text: 'JavaScript', link: '/playground/javascript' },
             { text: 'Python', link: '/playground/python' },
             { text: 'PHP', link: '/playground/php' },
@@ -675,6 +679,5 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Hello-Lang Platform',
     },
-    search: { provider: 'local' },
   },
 });
