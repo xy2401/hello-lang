@@ -594,10 +594,9 @@ export default defineConfig({
           ],
         },
       ],
-      '/products/': allLanguages.map(l => ({
-        text: l.name,
-        link: l.link ?? `/products/${l.id}/`,
-      })),
+      '/products/': [{ text: '语言总览', items: [
+        { text: '总览', link: '/products/' },
+      ] }],
       '/matrix/': [
         {
           text: '🌐 横向概念矩阵',
