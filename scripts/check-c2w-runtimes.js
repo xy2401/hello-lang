@@ -48,7 +48,7 @@ expect(component.includes("crypto.subtle.digest('SHA-256'"), '组件必须校验
 expect(headers.includes('Cross-Origin-Embedder-Policy: require-corp'), '缺少 Cross-Origin Isolation 响应头')
 expect(viteConfig.includes("'Cross-Origin-Opener-Policy': 'same-origin'") && viteConfig.includes("'Cross-Origin-Embedder-Policy': 'require-corp'"), '本地 Vite 服务缺少 Cross-Origin Isolation 响应头')
 expect(viteConfig.includes("envDir: '..'"), '本地 Vite 服务未从项目根目录读取环境变量')
-expect(developmentEnv.includes('VITE_WASM_RUNTIME_BASE=http://127.0.0.1:5177/runtime'), '本地开发未指向 Hello WASM 5177 运行时')
+expect(developmentEnv.includes('VITE_WASM_RUNTIME_BASE=http://127.0.0.1:24044/runtime'), '本地开发未指向 Hello WASM 24044 运行时')
 expect(!headers.includes('/runtime/c2w-*/*.gz'), 'Hello Lang 不应再声明本地 gzip 运行时')
 
 for (const file of engineFiles) {

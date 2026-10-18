@@ -77,4 +77,4 @@ timeline
 
 ## 实验入口与范围
 
-[容器浏览器工作台](/playground/container-java)提供 RISC-V 容器体验，首次使用可能需要较大的运行时下载，先阅读页面资源说明。 [Docker 验证证据](./docker-tooling)展示已有采集结果与缺口。
+[容器浏览器工作台](/playground/container-java)提供 RISC-V 容器体验，首次使用可能需要较大的运行时下载，先阅读页面资源说明。[容器内命令](./docker-commands)提供完整文件清单及命令归属，[命令示例与结果](./docker-command-ops)按步骤展示采集记录；[历史 Docker 证据](./docker-tooling)保留原环境结果。

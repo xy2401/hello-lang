@@ -86,7 +86,9 @@ npm run collect-outputs
 ```bash
 npm run docs:dev
 ```
-访问 `http://localhost:5173/` 或控制台输出的地址即可进行实时预览。
+访问 `http://127.0.0.1:24042/` 或控制台输出的地址即可进行实时预览。
+
+容器实验台通过 `.env.development` 从 `http://127.0.0.1:24044/runtime` 读取运行时，本地使用时需同时启动 Hello WASM。修改该环境文件后需重启 Hello Lang。
 
 ### 5. 构建生产静态页面
 ```bash
@@ -94,6 +96,12 @@ npm run docs:build
 ```
 
 ---
+
+## 容器命令与完整文件数据
+
+Java 新入口：[容器内命令](docs/products/java/docker-commands.md)、[命令示例与结果](docs/products/java/docker-command-ops.md)。新采集基线为 Ubuntu 26.04 / Temurin 25.0.3+9；旧 Docker 页面保留历史环境记录。
+
+完整文件清单、安装锁和采集历史归 [Hello Docker](https://github.com/xy2401/hello-docker/blob/codex/hello-docker/docs/support/software-capture.md) 管理。本站只保存导入并校验过的 `docs/public/docker-data/java/` 展示包，构建不读取相邻仓库。初始 `pending` 包只有计划命令及案例，不代表已经运行。
 
 ## 📜 许可证 (License)
 

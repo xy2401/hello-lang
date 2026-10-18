@@ -6,6 +6,7 @@ import CodeRunner from './components/CodeRunner.vue';
 import WebLivePlayground from './components/WebLivePlayground.vue';
 import VersionDiff from './components/VersionDiff.vue';
 import DockerTooling from './components/DockerTooling.vue';
+import DockerCommands from './components/docker-commands/DockerCommands.vue';
 import LanguageContainerWorkbench from './components/LanguageContainerWorkbench.vue';
 import './doc-baseline.css';
 import './browser-workbench.css';
@@ -21,6 +22,7 @@ export default {
     app.component('WebLivePlayground', WebLivePlayground);
     app.component('VersionDiff', VersionDiff);
     app.component('DockerTooling', DockerTooling);
+    app.component('DockerCommands', DockerCommands);
     app.component('LanguageContainerWorkbench', LanguageContainerWorkbench);
   },
 };

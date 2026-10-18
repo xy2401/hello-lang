@@ -13,10 +13,10 @@ hero:
       text: 探索语言体系
       link: /products/
     - theme: alt
-      text: 📊 横向对比矩阵
+      text: ⚖️ 对比矩阵
       link: /matrix/
     - theme: alt
-      text: ⚡ 浏览器语言实验台
+      text: 🧪 实验台
       link: /playground/
 
 features:
@@ -57,14 +57,14 @@ features:
 
 <a :href="withBase('/matrix/')" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
-    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚖️ 横向能力对比矩阵</h3>
+    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚖️ 对比矩阵</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">基础语法、面向对象、并发模型、内存管理、包管理、类型系统六大维度深度对比</p>
   </div>
 </a>
 
 <a :href="withBase('/playground/')" style="text-decoration: none;">
   <div style="background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); padding: 20px; border-radius: 12px; height: 100%; transition: all 0.3s ease;">
-    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">⚡ 浏览器语言实验台</h3>
+    <h3 style="margin: 0 0 8px 0; color: var(--vp-c-brand-1);">🧪 实验台</h3>
     <p style="margin: 0; font-size: 0.875rem; color: var(--vp-c-text-2);">JavaScript、Python、PHP、Ruby 在线编辑器实时试写代码并查看效果</p>
   </div>
 </a>
@@ -96,7 +96,7 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 
 1. **先看核心概念**（[语义速览](#core-concepts)）——理解共性，再读[统一语法骨架](/matrix/basic-syntax-concept)。
 2. **再选目标语言**（[产品分卷](/products/)）——从版本、安装和基础语法进入。
-3. **最后看矩阵**（[横向对比](/matrix/)）——结合[浏览器实验台](/playground/)和[复现手册](/reference/docker-validation)观察行为。
+3. **最后看矩阵**（[⚖️ 对比矩阵](/matrix/)）——结合[🧪 实验台](/playground/)和[复现手册](/reference/docker-validation)观察行为。
 
 适合目标读者：**希望系统学习多门语言、深入理解编程范式的开发者**
 
@@ -147,8 +147,8 @@ import { homeJsLiveCode, homeJsLiveMarkup } from './.vitepress/theme/data/liveEx
 ## 🔗 相关资源
 
 - **产品分卷**: [`/products`](/products/) - 18 个语言与 Web 技术产品的详细文档
-- **横向对比**: [矩阵目录](/matrix/) - 6 大技术维度深度对比
-- **浏览器实验台**：[在线编辑与运行](/playground/)
+- [⚖️ 对比矩阵](/matrix/)：6 大技术维度深度对比。
+- [🧪 实验台](/playground/)：在线编辑与运行。
 - **复现手册**：[Docker 验证说明](/reference/docker-validation)，原始脚本位于仓库 `demos/`。
 
 ---

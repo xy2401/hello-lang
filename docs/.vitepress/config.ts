@@ -119,7 +119,7 @@ export default defineConfig({
           })),
         ],
       },
-      { text: '浏览器语言实验台', link: '/playground/' },
+      { text: '🧪 实验台', link: '/playground/' },
       { text: '⚖️ 对比矩阵', link: '/matrix/' },
       { text: '📚 参考资料', link: '/reference/' },
     ],
@@ -181,7 +181,9 @@ export default defineConfig({
                 { text: 'GraalVM', link: '/products/java/version/graalvm' },
               ],
             },
-            { text: 'Docker 验证', link: '/products/java/docker-tooling' },
+            { text: '容器内命令', link: '/products/java/docker-commands' },
+            { text: '命令示例与结果', link: '/products/java/docker-command-ops' },
+            { text: '历史 Docker 证据', link: '/products/java/docker-tooling' },
           ],
         },
       ],
@@ -599,9 +601,9 @@ export default defineConfig({
       ] }],
       '/matrix/': [
         {
-          text: '🌐 横向概念矩阵',
+          text: '⚖️ 对比矩阵',
           items: [
-            { text: '总览', link: '/matrix/' },
+            { text: '⚖️ 对比矩阵', link: '/matrix/' },
             { text: '📌 基础语法', link: '/matrix/basic-syntax' },
             { text: '🧩 面向对象', link: '/matrix/object-model' },
             { text: '⚡ 并发与异步', link: '/matrix/concurrency' },
@@ -617,7 +619,7 @@ export default defineConfig({
         {
           text: '轻量 WebAssembly',
           items: [
-            { text: '浏览器语言实验台', link: '/playground/' },
+            { text: '🧪 实验台', link: '/playground/' },
             { text: 'JavaScript', link: '/playground/javascript' },
             { text: 'Python', link: '/playground/python' },
             { text: 'PHP', link: '/playground/php' },
@@ -657,9 +659,9 @@ export default defineConfig({
           ],
         },
         {
-          text: '参考资料',
+          text: '📚 参考资料',
           items: [
-            { text: '参考资料总览', link: '/reference/' },
+            { text: '📚 参考资料', link: '/reference/' },
             { text: 'Docker 验证说明', link: '/reference/docker-validation' },
             { text: 'C++ 交互展示', link: '/reference/showcases/cpp' },
             { text: 'Go 交互展示', link: '/reference/showcases/go' },

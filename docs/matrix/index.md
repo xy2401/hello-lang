@@ -1,4 +1,4 @@
-# 横向概念矩阵大屏 (Cross-Language Concept Matrix)
+# ⚖️ 对比矩阵 {#横向概念矩阵大屏-cross-language-concept-matrix}
 
 本页面按 **并发模型**、**内存管理** 与 **类型系统** 对代表性编程语言进行横向深度对比；完整产品清单以各语言分卷为准。
 

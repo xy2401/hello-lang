@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "product": "java",
+  "captureId": "pending-e43c0878b24d6598",
+  "manifestFile": "runs/pending-e43c0878b24d6598/manifest.json",
+  "sourceRepository": "https://github.com/xy2401/hello-docker",
+  "sourceSha": null,
+  "dataRevision": null,
+  "manifestSha256": "f169ddbc4709ff289888ff727f49503b8c894900d46174c01e9f0c532cf9f2ef"
+}
