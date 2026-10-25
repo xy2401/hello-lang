@@ -1,0 +1,3157 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018164031963-ebf1509d",
+  "directory": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1",
+  "files": [
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jar.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamFyLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "18588",
+      "blocks": "40",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "20480",
+      "blockSize": 4096,
+      "inode": "146897",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945314777
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945138704
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "ee65cbd13aafa0a37490f3cd0a5d5c8fb96a5a8f359072546353f48625e082fc",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jarsigner.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamFyc2lnbmVyLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "48324",
+      "blocks": "96",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "49152",
+      "blockSize": 4096,
+      "inode": "146898",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945375288
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945314777
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "304b1f74ada84a0b0579f3710f0b776e10b8dd3c09b7bd88853ddb7c909d5447",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/java.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamF2YS4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "105871",
+      "blocks": "208",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "106496",
+      "blockSize": 4096,
+      "inode": "146899",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945546802
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945375288
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "ac12036e8c2d3937bc81766748fab41d2079e07a90b1c82da26888fa99ebe1c7",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/javac.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamF2YWMuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "52940",
+      "blocks": "104",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "53248",
+      "blockSize": 4096,
+      "inode": "146900",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945681514
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945546802
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "e371ad0bd4c5e041659512dfd7a76a64fb08fa59bd90f0cd6ea8916d206cc689",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/javadoc.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamF2YWRvYy4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "169026",
+      "blocks": "336",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "172032",
+      "blockSize": 4096,
+      "inode": "146901",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945901118
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945681514
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "75672fbca9220f70a87b6535effc068d4cb32152e8d4d8a551e8923b7b68d8b5",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/javap.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamF2YXAuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "9431",
+      "blocks": "24",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "12288",
+      "blockSize": 4096,
+      "inode": "146902",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945951459
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945901118
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "dd2ec84d79ad35c53212ac72d4fb3bf2680ee916785fca959aafa181a459d36d",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jcmd.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamNtZC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "6697",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146903",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 945983650
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945951459
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "e96957ecadaa3753f1c4f100f38d27a8288e53a552285ed0438a30142769fcf8",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jconsole.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamNvbnNvbGUuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "5163",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146904",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946052301
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 945983650
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "60da483580968f248b3304255d33ea7e0a7d500cd6a505683e07203c05bf2fa3",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jdb.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamRiLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "12710",
+      "blocks": "32",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "16384",
+      "blockSize": 4096,
+      "inode": "146905",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946188744
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946052301
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "15c243524ed0a7bc8468a8ee143813b8e48ba45b48ee1ab7c2170792232114d2",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jdeps.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamRlcHMuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "16472",
+      "blocks": "40",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "20480",
+      "blockSize": 4096,
+      "inode": "146906",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946292866
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946188744
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "adb01fa5f5c8738a88981b40cf51b87faf0ebefff9c142844b55fa184d517a6c",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jinfo.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvamluZm8uMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "4853",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146907",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946342707
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946292866
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "113d63cb46fcab897434b2e51504acb9de4f29e8f74d987bd135f3b73376a1fa",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jjs.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvampzLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "5921",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146908",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946400588
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946342707
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "af6584b5783423a54b1b4e89242609e71a3afce7eea63258bdf2a35d595ea803",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jmap.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvam1hcC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "6129",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146909",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946446499
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946400588
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "94684b7d56664d06d74edd1b341a6efc0d455f89b116d9b86d88467f3e8faff7",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jps.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvanBzLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "9748",
+      "blocks": "24",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "12288",
+      "blockSize": 4096,
+      "inode": "146910",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946520180
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946446499
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "ab081479a856f9723ffc53e30710fb6ae77e259d53270f8e89a6338754fe4d69",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jrunscript.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvanJ1bnNjcmlwdC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "6408",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146911",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946640173
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946520180
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "0516fe1dc7ae84ebde66c284de0f3287267561226cd798310a0e16e9a5a2a48f",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jstack.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvanN0YWNrLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "5478",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146912",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946735254
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946640173
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "acfc6b6ef9c768ecaa6c063e160ff5ee0adb5e3578ff1981a122a5610602bbf3",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jstat.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvanN0YXQuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "24279",
+      "blocks": "48",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "24576",
+      "blockSize": 4096,
+      "inode": "146913",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946844437
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946735254
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "cb767bd44f9747eec83ea926073b21ae1b66860940370b5172e65b6f3050370b",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/jstatd.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvanN0YXRkLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "9446",
+      "blocks": "24",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "12288",
+      "blockSize": 4096,
+      "inode": "146914",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 946921228
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946844437
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "7b4a3678f4f560b9c4010e4b9cc20c3e5e5e865d873d88c18657443f44521b5e",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/keytool.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEva2V5dG9vbC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "87872",
+      "blocks": "176",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "90112",
+      "blockSize": 4096,
+      "inode": "146915",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947165283
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 946921228
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "cd06308eb1f85a8a01a1d06302ae8fbce0c7b2e624e6556555e7ee791448628f",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/pack200.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvcGFjazIwMC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "12592",
+      "blocks": "32",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "16384",
+      "blockSize": 4096,
+      "inode": "146916",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947286265
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947165283
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "97ba9e8c99179a88316b1b65ba0f00e1b783c0da5743b5f62d215329307fd508",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/rmic.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvcm1pYy4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "13174",
+      "blocks": "32",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "16384",
+      "blockSize": 4096,
+      "inode": "146917",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947387397
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947286265
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "981393a9cbd634c9dde769c47ff64dbcc5a65d6ab7dd67de58b906deb9f65bb1",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/rmid.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvcm1pZC4x",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "16948",
+      "blocks": "40",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "20480",
+      "blockSize": 4096,
+      "inode": "146918",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947512410
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947387397
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "c91e0d0ba24d9c2b39ab330bb1ec2e26a4476548e571ec5107c5959fde107c5d",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/rmiregistry.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvcm1pcmVnaXN0cnkuMQ==",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "4418",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146919",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947636522
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947512410
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "b9e0e608e31c8c5eb07e2b442bb155592cdff9547e2554669f54092a7b10505d",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/serialver.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvc2VyaWFsdmVyLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "4208",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146920",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947711104
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947636522
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "b2a8413cfe829a701b8d0c2e300999149e9f8290c8b455a96f51bcc05e8930b9",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/11.0.31-tem/man/man1/unpack200.1",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMTEuMC4zMS10ZW0vbWFuL21hbjEvdW5wYWNrMjAwLjE=",
+      "type": "file",
+      "stage": "jdk",
+      "mode": 33188,
+      "permissionsOctal": "0644",
+      "permissions": "-rw-r--r--",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": false
+        },
+        "group": {
+          "read": true,
+          "write": false,
+          "execute": false
+        },
+        "other": {
+          "read": true,
+          "write": false,
+          "execute": false
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "5213",
+      "blocks": "16",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "8192",
+      "blockSize": 4096,
+      "inode": "146921",
+      "device": "93",
+      "deviceMajor": 0,
+      "deviceMinor": 93,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1777123821",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792341102",
+          "nanoseconds": 947786965
+        },
+        "created": {
+          "seconds": "1792341102",
+          "nanoseconds": 947711104
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": "--------------e-------",
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "available"
+        },
+        "linuxFileFlags": {
+          "status": "available"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": null,
+      "linkTargetBytesBase64": null,
+      "xattrs": {},
+      "acl": {
+        "format": "getfacl-numeric",
+        "entries": [
+          "user::rw-",
+          "group::r--",
+          "other::r--"
+        ],
+        "support": "mode entries alone do not prove extended ACL support"
+      },
+      "capabilities": null,
+      "sha256": "cf27f93112e69d045f15cb7592c41b306cc555f8a625802c6d80f579bd87de50",
+      "hashStatus": "complete",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/11.0.31-tem",
+        "imageId": "df3513875bcdbd414416b46dcc519631804fb0dc0f3c518c86463d11b3d1e99f",
+        "recipeSha256": "d6c507d9e45ccae56608452aa006756d3d01b427e792db95e2516545adb87059",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    }
+  ]
+}

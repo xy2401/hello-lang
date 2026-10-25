@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018163744481-d51b3445",
+  "total": 1104,
+  "chunks": [
+    "runs/capture-20261018163744481-d51b3445/diff/0.json",
+    "runs/capture-20261018163744481-d51b3445/diff/1.json",
+    "runs/capture-20261018163744481-d51b3445/diff/2.json",
+    "runs/capture-20261018163744481-d51b3445/diff/3.json",
+    "runs/capture-20261018163744481-d51b3445/diff/4.json"
+  ],
+  "transitions": [
+    {
+      "id": "ubuntu-to-sdkman",
+      "label": "Ubuntu 26.04 基线 → SDKMAN",
+      "count": 50,
+      "chunks": [
+        "runs/capture-20261018163744481-d51b3445/diff/0.json"
+      ]
+    },
+    {
+      "id": "sdkman-to-jdk",
+      "label": "SDKMAN → Temurin 8u492-b09",
+      "count": 502,
+      "chunks": [
+        "runs/capture-20261018163744481-d51b3445/diff/0.json",
+        "runs/capture-20261018163744481-d51b3445/diff/1.json",
+        "runs/capture-20261018163744481-d51b3445/diff/2.json"
+      ]
+    },
+    {
+      "id": "ubuntu-to-jdk",
+      "label": "Ubuntu 26.04 基线 → Temurin 8u492-b09",
+      "count": 552,
+      "chunks": [
+        "runs/capture-20261018163744481-d51b3445/diff/2.json",
+        "runs/capture-20261018163744481-d51b3445/diff/3.json",
+        "runs/capture-20261018163744481-d51b3445/diff/4.json"
+      ]
+    }
+  ]
+}

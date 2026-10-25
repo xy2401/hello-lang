@@ -1,0 +1,4 @@
+# Scripts must execute in Linux even when checked out from Windows.
+/support/capture/** text eol=lf
+# These bytes are addressed by SHA-256; checkout must not rewrite newlines.
+/docs/public/docker-data/** -text

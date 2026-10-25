@@ -1,0 +1,20 @@
+services:
+  sdkman:
+    image: ${SDKMAN_IMAGE:?Set SDKMAN_IMAGE}
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: sdkman.Dockerfile
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:?Set BASE_IMAGE}
+  jdk:
+    image: ${JDK_IMAGE:?Set JDK_IMAGE}
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: jdk.Dockerfile
+      args:
+        SDKMAN_IMAGE: ${SDKMAN_PARENT:?Set SDKMAN_PARENT}
+        JDK_ID: ${JDK_ID:?Set JDK_ID}
+        JDK_SHA256: ${JDK_SHA256:?Set JDK_SHA256}
+        JDK_SOURCE: ${JDK_SOURCE:?Set JDK_SOURCE}

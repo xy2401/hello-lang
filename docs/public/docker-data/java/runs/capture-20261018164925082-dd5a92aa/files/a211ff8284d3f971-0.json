@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018164925082-dd5a92aa",
+  "directory": "/root/.sdkman/candidates/java/25.0.3-tem/legal/jdk.internal.ed",
+  "files": [
+    {
+      "path": "/root/.sdkman/candidates/java/25.0.3-tem/legal/jdk.internal.ed/ADDITIONAL_LICENSE_INFO",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMjUuMC4zLXRlbS9sZWdhbC9qZGsuaW50ZXJuYWwuZWQvQURESVRJT05BTF9MSUNFTlNFX0lORk8=",
+      "type": "symlink",
+      "stage": "jdk",
+      "mode": 41471,
+      "permissionsOctal": "0777",
+      "permissions": "lrwxrwxrwx",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "group": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "other": {
+          "read": true,
+          "write": true,
+          "execute": true
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "36",
+      "blocks": "0",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "0",
+      "blockSize": 4096,
+      "inode": "144278",
+      "device": "98",
+      "deviceMajor": 0,
+      "deviceMinor": 98,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792340943",
+          "nanoseconds": 357852521
+        },
+        "created": {
+          "seconds": "1792340943",
+          "nanoseconds": 357817420
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": null,
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "unsupported",
+          "reason": "Linux POSIX ACL does not apply to symlink itself"
+        },
+        "linuxFileFlags": {
+          "status": "unsupported",
+          "reason": "No FS_IOC_GETFLAGS result; see attributes stderr/raw records"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": "../java.base/ADDITIONAL_LICENSE_INFO",
+      "linkTargetBytesBase64": "Li4vamF2YS5iYXNlL0FERElUSU9OQUxfTElDRU5TRV9JTkZP",
+      "xattrs": {},
+      "acl": {},
+      "capabilities": null,
+      "sha256": null,
+      "hashStatus": "not-applicable",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "linkState": "resolved",
+      "resolvedPath": "/root/.sdkman/candidates/java/25.0.3-tem/legal/java.base/ADDITIONAL_LICENSE_INFO",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/25.0.3-tem",
+        "imageId": "aa91617aa5d8ac083b3ee03418dda0e9aa68770fa0c2800347401cd9bd109b8c",
+        "recipeSha256": "a23e7baa2d8a79d10a79c67a721ebc40de1afbfed6e1ef1245b6a368c25ff775",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/25.0.3-tem/legal/jdk.internal.ed/ASSEMBLY_EXCEPTION",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMjUuMC4zLXRlbS9sZWdhbC9qZGsuaW50ZXJuYWwuZWQvQVNTRU1CTFlfRVhDRVBUSU9O",
+      "type": "symlink",
+      "stage": "jdk",
+      "mode": 41471,
+      "permissionsOctal": "0777",
+      "permissions": "lrwxrwxrwx",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "group": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "other": {
+          "read": true,
+          "write": true,
+          "execute": true
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "31",
+      "blocks": "0",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "0",
+      "blockSize": 4096,
+      "inode": "144279",
+      "device": "98",
+      "deviceMajor": 0,
+      "deviceMinor": 98,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792340943",
+          "nanoseconds": 357872211
+        },
+        "created": {
+          "seconds": "1792340943",
+          "nanoseconds": 357852521
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": null,
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "unsupported",
+          "reason": "Linux POSIX ACL does not apply to symlink itself"
+        },
+        "linuxFileFlags": {
+          "status": "unsupported",
+          "reason": "No FS_IOC_GETFLAGS result; see attributes stderr/raw records"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": "../java.base/ASSEMBLY_EXCEPTION",
+      "linkTargetBytesBase64": "Li4vamF2YS5iYXNlL0FTU0VNQkxZX0VYQ0VQVElPTg==",
+      "xattrs": {},
+      "acl": {},
+      "capabilities": null,
+      "sha256": null,
+      "hashStatus": "not-applicable",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "linkState": "resolved",
+      "resolvedPath": "/root/.sdkman/candidates/java/25.0.3-tem/legal/java.base/ASSEMBLY_EXCEPTION",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/25.0.3-tem",
+        "imageId": "aa91617aa5d8ac083b3ee03418dda0e9aa68770fa0c2800347401cd9bd109b8c",
+        "recipeSha256": "a23e7baa2d8a79d10a79c67a721ebc40de1afbfed6e1ef1245b6a368c25ff775",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    },
+    {
+      "path": "/root/.sdkman/candidates/java/25.0.3-tem/legal/jdk.internal.ed/LICENSE",
+      "pathBytesBase64": "L3Jvb3QvLnNka21hbi9jYW5kaWRhdGVzL2phdmEvMjUuMC4zLXRlbS9sZWdhbC9qZGsuaW50ZXJuYWwuZWQvTElDRU5TRQ==",
+      "type": "symlink",
+      "stage": "jdk",
+      "mode": 41471,
+      "permissionsOctal": "0777",
+      "permissions": "lrwxrwxrwx",
+      "accessBits": {
+        "owner": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "group": {
+          "read": true,
+          "write": true,
+          "execute": true
+        },
+        "other": {
+          "read": true,
+          "write": true,
+          "execute": true
+        }
+      },
+      "specialBits": {
+        "setuid": false,
+        "setgid": false,
+        "sticky": false
+      },
+      "uid": 0,
+      "gid": 0,
+      "user": "root",
+      "group": "root",
+      "sizeBytes": "20",
+      "blocks": "0",
+      "blockUnitBytes": 512,
+      "allocatedBytes": "0",
+      "blockSize": 4096,
+      "inode": "144280",
+      "device": "98",
+      "deviceMajor": 0,
+      "deviceMinor": 98,
+      "rdevMajor": 0,
+      "rdevMinor": 0,
+      "hardlinkCount": 1,
+      "hardlinkKey": null,
+      "times": {
+        "accessed": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "modified": {
+          "seconds": "1792340940",
+          "nanoseconds": 0
+        },
+        "changed": {
+          "seconds": "1792340943",
+          "nanoseconds": 357890741
+        },
+        "created": {
+          "seconds": "1792340943",
+          "nanoseconds": 357872211
+        }
+      },
+      "attributes": null,
+      "attributesMask": null,
+      "statxMask": null,
+      "linuxFileFlags": null,
+      "fieldAvailability": {
+        "statx": {
+          "status": "unsupported",
+          "reason": "Linux CLI does not expose statx result/support masks"
+        },
+        "birthTime": {
+          "status": "available"
+        },
+        "user": {
+          "status": "available"
+        },
+        "group": {
+          "status": "available"
+        },
+        "xattrs": {
+          "status": "available"
+        },
+        "acl": {
+          "status": "unsupported",
+          "reason": "Linux POSIX ACL does not apply to symlink itself"
+        },
+        "linuxFileFlags": {
+          "status": "unsupported",
+          "reason": "No FS_IOC_GETFLAGS result; see attributes stderr/raw records"
+        },
+        "capabilities": {
+          "status": "absent",
+          "reason": "security.capability xattr; supplementary getcap output saved separately"
+        }
+      },
+      "linkTarget": "../java.base/LICENSE",
+      "linkTargetBytesBase64": "Li4vamF2YS5iYXNlL0xJQ0VOU0U=",
+      "xattrs": {},
+      "acl": {},
+      "capabilities": null,
+      "sha256": null,
+      "hashStatus": "not-applicable",
+      "errors": [],
+      "packages": [],
+      "packageVersions": [],
+      "rdev": "0",
+      "linkState": "resolved",
+      "resolvedPath": "/root/.sdkman/candidates/java/25.0.3-tem/legal/java.base/LICENSE",
+      "origin": "product",
+      "introducedAt": "jdk",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/25.0.3-tem",
+        "imageId": "aa91617aa5d8ac083b3ee03418dda0e9aa68770fa0c2800347401cd9bd109b8c",
+        "recipeSha256": "a23e7baa2d8a79d10a79c67a721ebc40de1afbfed6e1ef1245b6a368c25ff775",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      }
+    }
+  ]
+}

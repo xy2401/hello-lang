@@ -1,0 +1,122 @@
+name: Capture Java image layers
+on:
+  workflow_dispatch:
+    inputs:
+      tool_sha:
+        description: Published full 40-character hello-docker commit SHA
+        type: string
+        required: true
+      candidate:
+        description: Fixed SDKMAN Java candidate
+        type: choice
+        default: 25.0.3-tem
+        options:
+          - 8.0.492-tem
+          - 11.0.31-tem
+          - 17.0.19-tem
+          - 21.0.11-tem
+          - 25.0.3-tem
+permissions:
+  contents: read
+concurrency:
+  group: capture-java-${{ inputs.candidate }}
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      ENGINE: podman
+      PODMAN_COMPOSE_PROVIDER: podman-compose
+      CANDIDATE: ${{ inputs.candidate }}
+      EVIDENCE_DIR: ${{ github.workspace }}/.artifacts/java-capture
+      COMMON_BUILD_DIR: ${{ github.workspace }}/.artifacts/common-build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Require an immutable common tool reference
+        env:
+          TOOL_SHA: ${{ inputs.tool_sha }}
+        run: '[[ "$TOOL_SHA" =~ ^[a-f0-9]{40}$ ]]'
+      - uses: actions/checkout@v4
+        with:
+          repository: xy2401/hello-docker
+          ref: ${{ inputs.tool_sha }}
+          path: .hello-docker
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare rootless Podman and Compose provider
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+          pipx install --force podman-compose==1.5.0
+          export PODMAN_COMPOSE_PROVIDER="$HOME/.local/bin/podman-compose"
+          echo "PODMAN_COMPOSE_PROVIDER=$PODMAN_COMPOSE_PROVIDER" >> "$GITHUB_ENV"
+          test "$(podman info --format '{{.Host.Security.Rootless}}')" = true
+          podman compose version
+      - name: Build shared Ubuntu, SDKMAN, and selected JDK
+        run: |
+          mkdir -p "$EVIDENCE_DIR/build" "$COMMON_BUILD_DIR"
+          BASE_IMAGE=localhost/hello-capture/ubuntu:26.04 \
+            bash .hello-docker/support/capture/ubuntu/build.sh \
+            > "$COMMON_BUILD_DIR/ubuntu.stdout.log" \
+            2> "$COMMON_BUILD_DIR/ubuntu.stderr.log"
+          BASE_IMAGE=localhost/hello-capture/ubuntu:26.04 \
+            bash support/capture/java/build.sh "$CANDIDATE" "$EVIDENCE_DIR/build"
+      - name: Capture files and execute five example groups
+        run: |
+          source "$EVIDENCE_DIR/build/images.env"
+          bash .hello-docker/scripts/capture/run.sh \
+            --recipe "$EVIDENCE_DIR/build/recipe.json" \
+            --workspace "$EVIDENCE_DIR/capture" \
+            --stage "ubuntu=$BASE_IMAGE" \
+            --stage "sdkman=$SDKMAN_IMAGE" \
+            --stage "jdk=$JDK_IMAGE"
+      - name: Prepare metadata-only upload, including failed captures
+        if: always()
+        run: |
+          upload="$GITHUB_WORKSPACE/.artifacts/upload"
+          mkdir -p "$upload"
+          if node .hello-docker/scripts/capture/bundle.mjs archive "$EVIDENCE_DIR/capture" "$upload/archive" \
+            > "$upload/archive.stdout.log" 2> "$upload/archive.stderr.log"; then
+            printf 'verified\n' > "$upload/archive-status.txt"
+          else
+            printf 'archive failed; preserving incomplete diagnostics without work files\n' > "$upload/archive-status.txt"
+          fi
+          node --input-type=module - "$EVIDENCE_DIR/capture" "$upload" "$EVIDENCE_DIR/build" "$COMMON_BUILD_DIR" <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const [capture, upload, build, common] = process.argv.slice(2);
+          function copyTree(source, target) {
+            if (!fs.existsSync(source) || fs.lstatSync(source).isSymbolicLink()) return;
+            if (fs.lstatSync(source).isDirectory()) {
+              fs.mkdirSync(target, { recursive: true });
+              for (const name of fs.readdirSync(source)) copyTree(path.join(source, name), path.join(target, name));
+            } else if (fs.lstatSync(source).isFile()) {
+              fs.mkdirSync(path.dirname(target), { recursive: true });
+              fs.copyFileSync(source, target);
+            }
+          }
+          copyTree(build, path.join(upload, 'product-build'));
+          copyTree(common, path.join(upload, 'common-build'));
+          if (fs.readFileSync(path.join(upload, 'archive-status.txt'), 'utf8').trim() !== 'verified') {
+            const diagnostics = path.join(upload, 'diagnostics');
+            for (const name of ['scripts', 'results']) copyTree(path.join(capture, name), path.join(diagnostics, name));
+            if (fs.existsSync(capture)) for (const name of fs.readdirSync(capture)) {
+              const file = path.join(capture, name);
+              if (/\.(json|jsonl)$/.test(name) && fs.lstatSync(file).isFile()) copyTree(file, path.join(diagnostics, name));
+            }
+          }
+          NODE
+      - name: Preserve evidence, actual build sources, and source hashes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-${{ inputs.candidate }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .artifacts/upload/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "vendor": "Eclipse Temurin",
+  "platform": "linux/amd64",
+  "default": "25.0.3-tem",
+  "verification": {
+    "checkedAt": "2026-10-19",
+    "method": "HEAD https://api.sdkman.io/2/broker/download/java/<candidate>/linuxx64; all selected IDs returned 302 to the listed official archive",
+    "note": "These are fixed candidates from the same release cycle, not floating latest aliases. Download availability does not claim successful local builds."
+  },
+  "versions": [
+    {
+      "major": 8,
+      "candidate": "8.0.492-tem",
+      "version": "8u492-b09",
+      "versionOutput": "1.8.0_492",
+      "sha256": "da257f161d7f8c6ca5b0e5d9e4090f65ac28c5e398072e68b8ae87988b1d1a2e",
+      "source": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u492-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u492b09.tar.gz"
+    },
+    {
+      "major": 11,
+      "candidate": "11.0.31-tem",
+      "version": "11.0.31+11",
+      "versionOutput": "11.0.31",
+      "sha256": "1e9de64586b519c0a981319489257cabedd9457599f3823424a87c3158fbe939",
+      "source": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.31%2B11/OpenJDK11U-jdk_x64_linux_hotspot_11.0.31_11.tar.gz"
+    },
+    {
+      "major": 17,
+      "candidate": "17.0.19-tem",
+      "version": "17.0.19+10",
+      "versionOutput": "17.0.19",
+      "sha256": "d8afc263758141a66e0e3aafc321e783f7016696f4eaea067d340a269037d331",
+      "source": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.19%2B10/OpenJDK17U-jdk_x64_linux_hotspot_17.0.19_10.tar.gz"
+    },
+    {
+      "major": 21,
+      "candidate": "21.0.11-tem",
+      "version": "21.0.11+10",
+      "versionOutput": "21.0.11",
+      "sha256": "4b2220e232a97997b436ca6ab15cbf70171ecff52958a46159dfa5a8c44ca4de",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.11%2B10/OpenJDK21U-jdk_x64_linux_hotspot_21.0.11_10.tar.gz"
+    },
+    {
+      "major": 25,
+      "candidate": "25.0.3-tem",
+      "version": "25.0.3+9",
+      "versionOutput": "25.0.3",
+      "sha256": "69264a7a211bf5029830d07bc3370f879769d62ebc5b5488e90c9343a2da0e1f",
+      "source": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.3%2B9/OpenJDK25U-jdk_x64_linux_hotspot_25.0.3_9.tar.gz"
+    }
+  ]
+}

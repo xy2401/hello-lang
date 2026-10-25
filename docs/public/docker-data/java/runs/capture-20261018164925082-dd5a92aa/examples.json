@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018164925082-dd5a92aa",
+  "product": {
+    "id": "java",
+    "name": "Java",
+    "version": "Temurin 25.0.3+9"
+  },
+  "preparation": {
+    "command": "mkdir -p /capture/work\ncat > /capture/work/Main.java <<'JAVA'\npublic class Main { public static void main(String[] args) { System.out.println(\"hello-java-capture\"); } }\nJAVA\n",
+    "stdout": "",
+    "stderr": "",
+    "exitCode": 0
+  },
+  "examples": [
+    {
+      "id": "version",
+      "title": "版本",
+      "notes": [
+        "固定 SDKMAN 候选 25.0.3-tem；java -version 兼容 Java 8，版本信息在 stderr。"
+      ],
+      "steps": [
+        {
+          "id": "java-version",
+          "argv": [
+            "java",
+            "-version"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stderr",
+              "op": "includes",
+              "value": "25.0.3",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "",
+          "stderr": "openjdk version \"25.0.3\" 2026-04-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.3+9 (build 25.0.3+9-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.3+9 (build 25.0.3+9-LTS, mixed mode, sharing)\n",
+          "exitCode": 0,
+          "status": "passed"
+        },
+        {
+          "id": "javac-version",
+          "argv": [
+            "javac",
+            "-version"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stdout",
+              "op": "includes",
+              "value": "25.0.3",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "javac 25.0.3\n",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "compile-run",
+      "title": "编译与运行",
+      "notes": [
+        "使用挂载目录 /capture/work；命令退出码和输出分别保留。"
+      ],
+      "steps": [
+        {
+          "id": "compile",
+          "argv": [
+            "bash",
+            "-c",
+            "javac /capture/work/Main.java && test -s /capture/work/Main.class"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        },
+        {
+          "id": "run",
+          "argv": [
+            "java",
+            "-cp",
+            "/capture/work",
+            "Main"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stdout",
+              "op": "includes",
+              "value": "hello-java-capture",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "hello-java-capture\n",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "jar",
+      "title": "JAR 打包与列表",
+      "notes": [
+        "使用 Java 8 及后续版本均支持的 cf/tf 选项，案例自行编译。"
+      ],
+      "steps": [
+        {
+          "id": "package",
+          "argv": [
+            "bash",
+            "-c",
+            "javac /capture/work/Main.java && jar cf /capture/work/main.jar -C /capture/work Main.class && test -s /capture/work/main.jar"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        },
+        {
+          "id": "list",
+          "argv": [
+            "jar",
+            "tf",
+            "/capture/work/main.jar"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stdout",
+              "op": "includes",
+              "value": "Main.class",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "META-INF/\nMETA-INF/MANIFEST.MF\nMain.class\n",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "javap",
+      "title": "字节码查看",
+      "notes": [
+        "先编译，再用 javap 查看指令。"
+      ],
+      "steps": [
+        {
+          "id": "prepare-class",
+          "argv": [
+            "javac",
+            "/capture/work/Main.java"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        },
+        {
+          "id": "disassemble",
+          "argv": [
+            "javap",
+            "-c",
+            "/capture/work/Main.class"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stdout",
+              "op": "includes",
+              "value": "invokevirtual",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "Compiled from \"Main.java\"\npublic class Main {\n  public Main();\n    Code:\n         0: aload_0\n         1: invokespecial #1                  // Method java/lang/Object.\"<init>\":()V\n         4: return\n\n  public static void main(java.lang.String[]);\n    Code:\n         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;\n         3: ldc           #13                 // String hello-java-capture\n         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V\n         8: return\n}\n",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "id": "jdeps",
+      "title": "依赖分析",
+      "notes": [
+        "先编译，依赖分析结果应包含 java.base。"
+      ],
+      "steps": [
+        {
+          "id": "prepare-class",
+          "argv": [
+            "javac",
+            "/capture/work/Main.java"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        },
+        {
+          "id": "dependencies",
+          "argv": [
+            "jdeps",
+            "/capture/work/Main.class"
+          ],
+          "cwd": "/capture/work",
+          "assertions": [
+            {
+              "stream": "exitCode",
+              "op": "equals",
+              "value": 0,
+              "passed": true
+            },
+            {
+              "stream": "stdout",
+              "op": "includes",
+              "value": "java.base",
+              "passed": true
+            }
+          ],
+          "stdin": null,
+          "stdout": "Main.class -> java.base\n   <unnamed>                                          -> java.io                                            java.base\n   <unnamed>                                          -> java.lang                                          java.base\n",
+          "stderr": "",
+          "exitCode": 0,
+          "status": "passed"
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

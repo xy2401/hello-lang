@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018164725316-d340d10c",
+  "product": {
+    "id": "java",
+    "name": "Java",
+    "version": "Temurin 21.0.11+10"
+  },
+  "commands": [
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeprscan",
+      "name": "jdeprscan",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeprscan",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeprscan",
+      "sha256": "b1fe0144cc48cc8ff14011b273bb4848cb68620b433852d957f6261913a10805",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jshell",
+      "name": "jshell",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jshell",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jshell",
+      "sha256": "3ff02fb0830a69781d7be534bb4f59a9c889d5597872e06fa847414715a1d83f",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "交互执行 Java 表达式。",
+      "category": "交互",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/keytool",
+      "name": "keytool",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/keytool",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/keytool",
+      "sha256": "3f7cf92ac894438a6665c01eb524056ce32e8e949fb6a299b2052b97a88e2e79",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jimage",
+      "name": "jimage",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jimage",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jimage",
+      "sha256": "0bba524636234d22fb8d38ffa60521efb77b2c4eed506e8b39709ebd92986b81",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javac",
+      "name": "javac",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javac",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javac",
+      "sha256": "b8758785a1e8997761452f12f7195ee47f28a288f1dbe8707cf3f062a5cfdffd",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "将 Java 源文件编译为 class 文件。",
+      "category": "编译",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javap",
+      "name": "javap",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javap",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javap",
+      "sha256": "5dce67c23a0b600e78583fdf6eb1d0d3b1ef6fc8417959b0e6015eb2b66262e7",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "查看 class 的结构和字节码。",
+      "category": "分析",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jrunscript",
+      "name": "jrunscript",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jrunscript",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jrunscript",
+      "sha256": "4c4b16f1742fc7b9ab257ea14faba3072c16de7da5bb27ef7480eeb5eb62c314",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jlink",
+      "name": "jlink",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jlink",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jlink",
+      "sha256": "578bd4b571ea3c96a72d9046c5d93eb48b91b3c751be2490953769cab17796c4",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "生成定制 Java 运行时。",
+      "category": "打包",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmod",
+      "name": "jmod",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmod",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmod",
+      "sha256": "c46352c704fab56a14b7a20a1adaf17884e48b819fd270d81caa41712df72eca",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jpackage",
+      "name": "jpackage",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jpackage",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jpackage",
+      "sha256": "e31106f6691d10f67a22e1b41eb910e8a50adf5c31f3fe3b75044d05848a5f03",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javadoc",
+      "name": "javadoc",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javadoc",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/javadoc",
+      "sha256": "b5051c484c88082c9e29f6333c98356baaec903c0f9260606789bf216823fc9a",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstat",
+      "name": "jstat",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstat",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstat",
+      "sha256": "9007dd6d3706e7933b7e3af031f11a17d7c8d5339d1b820098b1d5ec74d7b000",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmap",
+      "name": "jmap",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmap",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jmap",
+      "sha256": "2a5221d2918f0e36fc1780d41403826f10d225c26e75bb876adfc44976478d1a",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstatd",
+      "name": "jstatd",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstatd",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstatd",
+      "sha256": "f5171c17f3dbeef115255f7c48816dee1dd9106e81e28ac8e0381886245d3354",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdb",
+      "name": "jdb",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdb",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdb",
+      "sha256": "5745eb06017ee80dfda78516168bb0cfa555ec2e5fb157c578555a2fe5dce91f",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeps",
+      "name": "jdeps",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeps",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jdeps",
+      "sha256": "43333b7bcb84749605eb614d15999d7bfb139cff680b338fa8357f09770e3834",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "分析类与模块依赖。",
+      "category": "分析",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstack",
+      "name": "jstack",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstack",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jstack",
+      "sha256": "65f68dad562f184d0e6992d4edd611c783322f81fab0c3b241914933ae7c4de2",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jinfo",
+      "name": "jinfo",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jinfo",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jinfo",
+      "sha256": "10cc821ed052dfbd30914b6d45b29d11ca47d07a07a2732422e208c474323f0f",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/java",
+      "name": "java",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/java",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/java",
+      "sha256": "b1b0a09aaa036695716c829cd7c5213ea055eecd475d1462020330e251b717b2",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "运行 Java 类或 JAR；查看运行时版本。",
+      "category": "运行",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jps",
+      "name": "jps",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jps",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jps",
+      "sha256": "eacbe112528da1d78e7071d07d753e0c9c27a441e1d4301644796aa203bf3d23",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jwebserver",
+      "name": "jwebserver",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jwebserver",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jwebserver",
+      "sha256": "1e7a7248d5df2e4cfe22a229c622d08241053e852918bd425f4147eff5cc1c65",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/serialver",
+      "name": "serialver",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/serialver",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/serialver",
+      "sha256": "70c7c522bf38860b503aeebab73314085da7f1f0ab3bfe8c6d59ac322dcc07c2",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jar",
+      "name": "jar",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jar",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jar",
+      "sha256": "783ce2bf49d44d867a9db58f2afa4c6bdea83a2ccef2881698e46dcd72cb9b52",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "创建、查看和解包 JAR 归档。",
+      "category": "打包",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jhsdb",
+      "name": "jhsdb",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jhsdb",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jhsdb",
+      "sha256": "4c0916a1ac9c02d323301c58714e2d971e61dcbe7b2f1ac06d6a004ae387873f",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jcmd",
+      "name": "jcmd",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jcmd",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jcmd",
+      "sha256": "e54c087fd764feead6896d2a37f986a92a5af302b16087e316f79f0660d04dad",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "向运行中的 JVM 发送诊断命令。",
+      "category": "诊断",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jfr",
+      "name": "jfr",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jfr",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jfr",
+      "sha256": "e959e53121f6df8068d3a09caec17d708110689b88fbcb29f985f671bd052cb2",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/rmiregistry",
+      "name": "rmiregistry",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/rmiregistry",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/rmiregistry",
+      "sha256": "b6a0d11e05d54eceb120f46740826ba8806195954aadd16369fb1121e04662f3",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jconsole",
+      "name": "jconsole",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jconsole",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jconsole",
+      "sha256": "3f20c9cb58b6854648a9779275ec300d4b0c89ae69629f9876f8d74cb23e10ca",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    },
+    {
+      "id": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jarsigner",
+      "name": "jarsigner",
+      "path": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jarsigner",
+      "realPath": "/root/.sdkman/candidates/java/21.0.11-tem/bin/jarsigner",
+      "sha256": "376d69cac18165faf31890e17513f96c63d3794c123c173ff8c26349e2c8c9e0",
+      "ownership": {
+        "method": "declared-install-root",
+        "root": "/root/.sdkman/candidates/java/21.0.11-tem",
+        "imageId": "bb2e934edbca005af2a83c2d19ace1febdf6115031bee8f99f12eb3ad6ef2455",
+        "recipeSha256": "e66b515de2d756658665fa3d80753f72f936cf5eba182d12b3fc26e5b48096a7",
+        "note": "安装目录归属；缓存、系统工具及包装脚本不计为产品命令。"
+      },
+      "purpose": "发行包内辅助命令；用途说明待补充。",
+      "category": "辅助工具",
+      "verified": true
+    }
+  ],
+  "plannedCommands": []
+}

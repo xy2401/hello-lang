@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "versions": [
+    {
+      "version": "Temurin 25.0.3+9",
+      "captureId": "capture-20261018164925082-dd5a92aa",
+      "manifestFile": "runs/capture-20261018164925082-dd5a92aa/manifest.json",
+      "manifestSha256": "1d2081336267c2a022d324c2ce3fb1d1737f9111cd5ba2ecc4315cb77f4a7df6",
+      "product": "java",
+      "status": "passed"
+    },
+    {
+      "version": "Temurin 21.0.11+10",
+      "captureId": "capture-20261018164725316-d340d10c",
+      "manifestFile": "runs/capture-20261018164725316-d340d10c/manifest.json",
+      "manifestSha256": "8098c5bc422ba4c6378b399284d842093529e835a70c873b7bea63bb02d3fb37",
+      "product": "java",
+      "status": "passed"
+    },
+    {
+      "version": "Temurin 17.0.19+10",
+      "captureId": "capture-20261018164359111-43bbfb8f",
+      "manifestFile": "runs/capture-20261018164359111-43bbfb8f/manifest.json",
+      "manifestSha256": "f4dde0e48c7a457147da05332bc26f8a40fabda5dba230ff04f02f15f3cdbf37",
+      "product": "java",
+      "status": "passed"
+    },
+    {
+      "version": "Temurin 11.0.31+11",
+      "captureId": "capture-20261018164031963-ebf1509d",
+      "manifestFile": "runs/capture-20261018164031963-ebf1509d/manifest.json",
+      "manifestSha256": "9c30b77c2d3e9e010a5efcbbf14aef166395460dc2bd696c7ec5f3d45eba1685",
+      "product": "java",
+      "status": "passed"
+    },
+    {
+      "version": "Temurin 8u492-b09",
+      "captureId": "capture-20261018163744481-d51b3445",
+      "manifestFile": "runs/capture-20261018163744481-d51b3445/manifest.json",
+      "manifestSha256": "31c7fff1c003558316e96d3f5d32b94e299e5cfe6bd9f9f9bc56609af79fa394",
+      "product": "java",
+      "status": "passed"
+    }
+  ]
+}

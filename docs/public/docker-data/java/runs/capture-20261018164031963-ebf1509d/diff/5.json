@@ -1,0 +1,4222 @@
+{
+  "schemaVersion": 1,
+  "captureId": "capture-20261018164031963-ebf1509d",
+  "changes": [
+    {
+      "path": "/root/.sdkman/src/sdkman-flush.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-flush.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLWZsdXNoLnNo",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "1575",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140572",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948375694
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948344443
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "5ef8833d6e9af28636cc21916465cf56bf650e37c17793ed6a164f158a6155ec",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-help.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-help.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLWhlbHAuc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "2556",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140573",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948407784
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948375694
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "247617360ddba9283ba03d2d5bb8a3fd4d1b79d0d2040264eb4ea060fef17ec1",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-home.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-home.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLWhvbWUuc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "1299",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140574",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948447685
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948407784
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "129e36d416fd24779b0b5f8ba08093f6d86ab8125a428d6d8a7ada1ab3344aaf",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-install.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-install.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLWluc3RhbGwuc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "7854",
+        "blocks": "16",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "8192",
+        "blockSize": 4096,
+        "inode": "140575",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948485166
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948447685
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "1c9c40c554a1bd74d803c119575c9770398b6ca5f439e334731bc23344b4eee6",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-list.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-list.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLWxpc3Quc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "3439",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140576",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948522366
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948485166
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "4c4043c9e44e522652ab209110454b5502a29aa840b0c6a567115999b671428a",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-main.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-main.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLW1haW4uc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "3191",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140577",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948558487
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948522366
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "7faec4b29440467428ef0d7900dfb23959d66b9e1993f47baaa1c68cbc96e8e9",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-path-helpers.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-path-helpers.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXBhdGgtaGVscGVycy5zaA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "2702",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140578",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 948593308
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948558487
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "d6df7d04a85a5687eb4f8652ce0cd18592e79b2334f50d12476c6eeb3719b614",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-selfupdate.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-selfupdate.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXNlbGZ1cGRhdGUuc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "2357",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140579",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949033316
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 948593308
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "d171613a9910843c7bc90f1a8a61cc9170946335a04a103a6a9eb16f5488f208",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-uninstall.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-uninstall.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXVuaW5zdGFsbC5zaA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "1503",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140580",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949090478
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949033316
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "81cc5ce816c7e237c6ec7ef38ccf8d15633d9f95067ad400a413554bf77c970d",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-update.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-update.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXVwZGF0ZS5zaA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "2357",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140581",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949119398
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949090478
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "3e1186321f8b3ecc35b478e89df497f7db25e39452c6ae480bb9d46c8bedd89a",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-upgrade.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-upgrade.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXVwZ3JhZGUuc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "3443",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140582",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949146029
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949119398
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "4e77791377fcbf289cc90b6961a1eb017cc3e4025a9df370cb22082687aa14ed",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-use.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-use.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXVzZS5zaA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "1957",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140583",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949174219
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949146029
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "5fbf7388780f44477dfb3555d717d8c2a5f158042ee83bd0f038b9ddb8a781bc",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-utils.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-utils.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXV0aWxzLnNo",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "3552",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140584",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949199670
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949174219
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "e1206db90e8b96b461098e840390244d8af66a4fd13960a962b447f49669bb49",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/src/sdkman-version.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/src/sdkman-version.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi9zcmMvc2RrbWFuLXZlcnNpb24uc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "791",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140585",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340713",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949224930
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949199670
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "6f9a701dc48fb649ab22f2987af1db81d2aa91ec0d0b0a23cf036773970845fb",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/tmp",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/tmp",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi90bXA=",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146924",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341097",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341102",
+            "nanoseconds": 947858306
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/tmp/hook_post_java_11.0.31-tem.sh",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/tmp/hook_post_java_11.0.31-tem.sh",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi90bXAvaG9va19wb3N0X2phdmFfMTEuMC4zMS10ZW0uc2g=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "925",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146925",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341089",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341089",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341102",
+            "nanoseconds": 948277605
+          },
+          "created": {
+            "seconds": "1792341102",
+            "nanoseconds": 948231264
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "48a1ccf7de1753ea4da5c33e986416521e432636141568ffb8f165223d5a31b8",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/tmp/java-11.0.31-tem.headers.tmp",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/tmp/java-11.0.31-tem.headers.tmp",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi90bXAvamF2YS0xMS4wLjMxLXRlbS5oZWFkZXJzLnRtcA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "6904",
+        "blocks": "16",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "8192",
+        "blockSize": 4096,
+        "inode": "146926",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341078",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341078",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341102",
+            "nanoseconds": 948348516
+          },
+          "created": {
+            "seconds": "1792341102",
+            "nanoseconds": 948277605
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "cffcd75e6261244742a3a98587971f59a9764d95ad2615df2c35544158521922",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/tmp/java-11.0.31-tem.zip",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/tmp/java-11.0.31-tem.zip",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi90bXAvamF2YS0xMS4wLjMxLXRlbS56aXA=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "200680380",
+        "blocks": "391960",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "200683520",
+        "blockSize": 4096,
+        "inode": "146927",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341096",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341096",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 204222929
+          },
+          "created": {
+            "seconds": "1792341102",
+            "nanoseconds": 948348516
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "91cd089822d9b8a0f47e3fd43e9c5fe573ab3e492b9b4b23da1bc35c8fe5e1ef",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/tmp/out",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/tmp/out",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi90bXAvb3V0",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146928",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 2,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341099",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 204222929
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXI=",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146929",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341076",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 204676058
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/candidates",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/candidates",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvY2FuZGlkYXRlcw==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "595",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140588",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340711",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340711",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949914383
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949889153
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "5ff70d6c7231ac6bc043a8997a6a4192bad7db2d34c760a323958e8d524faffb",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/delay_upgrade",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/delay_upgrade",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvZGVsYXlfdXBncmFkZQ==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "0",
+        "blocks": "0",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "0",
+        "blockSize": 4096,
+        "inode": "140589",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949936564
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949914383
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/metadata",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/metadata",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvbWV0YWRhdGE=",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146930",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 2,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 205020685
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/metadata/java-11.0.31-tem.headers",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/metadata/java-11.0.31-tem.headers",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvbWV0YWRhdGEvamF2YS0xMS4wLjMxLXRlbS5oZWFkZXJz",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "0",
+        "blocks": "0",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "0",
+        "blockSize": 4096,
+        "inode": "146931",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 205402572
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 205359641
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/platform",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/platform",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvcGxhdGZvcm0=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "9",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140590",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340711",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340711",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949960854
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949936564
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "772394b2de31aa33d1cef6f972ae6c6f250d3a72a1ac9113f44831e550b12c2a",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/version",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/version",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvdmVyc2lvbg==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "7",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140591",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 949984955
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949960854
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "a417aaac336e50ff1332ff0e89c99eabea19c9daa23a20530c0488c4296c0544",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/root/.sdkman/var/version_native",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/root/.sdkman/var/version_native",
+        "pathBytesBase64": "L3Jvb3QvLnNka21hbi92YXIvdmVyc2lvbl9uYXRpdmU=",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "7",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140592",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340716",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 950008885
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 949984955
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "c2d07968e98451e86b5b825f5a2f03afbc4b04308fc14ace605ac14f18b208fa",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/tmp/hsperfdata_root",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/tmp/hsperfdata_root",
+        "pathBytesBase64": "L3RtcC9oc3BlcmZkYXRhX3Jvb3Q=",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146933",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 2,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341100",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 205777208
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJl",
+        "type": "directory",
+        "stage": "jdk",
+        "mode": 16877,
+        "permissionsOctal": "0755",
+        "permissions": "drwxr-xr-x",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": true
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": true
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": true
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "4096",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146940",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341103",
+            "nanoseconds": 209687708
+          },
+          "modified": {
+            "seconds": "1792341100",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 207174365
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rwx",
+            "group::r-x",
+            "other::r-x"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": null,
+        "hashStatus": "not-applicable",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture/jdk-archive.sha256",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture/jdk-archive.sha256",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJlL2pkay1hcmNoaXZlLnNoYTI1Ng==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "105",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146942",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207729016
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 207674515
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "6542328b3aaebb2ae5c32486b02865244fd78965683e07613eca6e1c7273c031",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture/jdk-candidate.txt",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture/jdk-candidate.txt",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJlL2pkay1jYW5kaWRhdGUudHh0",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "12",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146943",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341100",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341100",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207757166
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 207729016
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "af91a5be5f760f4c0ec46addc9502da4a6fa04c02222b84eb66607c7c3346d6e",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture/jdk-source.txt",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture/jdk-source.txt",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJlL2pkay1zb3VyY2UudHh0",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "133",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "146944",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792341088",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792341103",
+            "nanoseconds": 207790667
+          },
+          "created": {
+            "seconds": "1792341103",
+            "nanoseconds": 207757166
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "200784315891bf427ca71b26c60b448110d3b6c79101bc6a634173e7c6c4f30b",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture/sdkman-installer.sha256",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture/sdkman-installer.sha256",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJlL3Nka21hbi1pbnN0YWxsZXIuc2hhMjU2",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "89",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140598",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340710",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340710",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 951736178
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 951700057
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "f96934e1b6fb670aa5e14a775d4a471d174de55f41e93482a496081afb15e550",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    },
+    {
+      "path": "/usr/local/share/hello-capture/sdkman-version.txt",
+      "transition": "ubuntu-to-jdk",
+      "change": "added",
+      "fields": [],
+      "before": null,
+      "after": {
+        "path": "/usr/local/share/hello-capture/sdkman-version.txt",
+        "pathBytesBase64": "L3Vzci9sb2NhbC9zaGFyZS9oZWxsby1jYXB0dXJlL3Nka21hbi12ZXJzaW9uLnR4dA==",
+        "type": "file",
+        "stage": "jdk",
+        "mode": 33188,
+        "permissionsOctal": "0644",
+        "permissions": "-rw-r--r--",
+        "accessBits": {
+          "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+          },
+          "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+          },
+          "other": {
+            "read": true,
+            "write": false,
+            "execute": false
+          }
+        },
+        "specialBits": {
+          "setuid": false,
+          "setgid": false,
+          "sticky": false
+        },
+        "uid": 0,
+        "gid": 0,
+        "user": "root",
+        "group": "root",
+        "sizeBytes": "55",
+        "blocks": "8",
+        "blockUnitBytes": 512,
+        "allocatedBytes": "4096",
+        "blockSize": 4096,
+        "inode": "140599",
+        "device": "93",
+        "deviceMajor": 0,
+        "deviceMinor": 93,
+        "rdevMajor": 0,
+        "rdevMinor": 0,
+        "hardlinkCount": 1,
+        "hardlinkKey": null,
+        "times": {
+          "accessed": {
+            "seconds": "1792340717",
+            "nanoseconds": 0
+          },
+          "modified": {
+            "seconds": "1792340717",
+            "nanoseconds": 0
+          },
+          "changed": {
+            "seconds": "1792340717",
+            "nanoseconds": 951763359
+          },
+          "created": {
+            "seconds": "1792340717",
+            "nanoseconds": 951736178
+          }
+        },
+        "attributes": null,
+        "attributesMask": null,
+        "statxMask": null,
+        "linuxFileFlags": "--------------e-------",
+        "fieldAvailability": {
+          "statx": {
+            "status": "unsupported",
+            "reason": "Linux CLI does not expose statx result/support masks"
+          },
+          "birthTime": {
+            "status": "available"
+          },
+          "user": {
+            "status": "available"
+          },
+          "group": {
+            "status": "available"
+          },
+          "xattrs": {
+            "status": "available"
+          },
+          "acl": {
+            "status": "available"
+          },
+          "linuxFileFlags": {
+            "status": "available"
+          },
+          "capabilities": {
+            "status": "absent",
+            "reason": "security.capability xattr; supplementary getcap output saved separately"
+          }
+        },
+        "linkTarget": null,
+        "linkTargetBytesBase64": null,
+        "xattrs": {},
+        "acl": {
+          "format": "getfacl-numeric",
+          "entries": [
+            "user::rw-",
+            "group::r--",
+            "other::r--"
+          ],
+          "support": "mode entries alone do not prove extended ACL support"
+        },
+        "capabilities": null,
+        "sha256": "2bccc83008eab41aeb5c9503ee9ca451f6b3c04f3cf1e1e1fe1e123cb169ff77",
+        "hashStatus": "complete",
+        "errors": [],
+        "packages": [],
+        "packageVersions": [],
+        "rdev": "0"
+      }
+    }
+  ]
+}
