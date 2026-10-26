@@ -109,7 +109,7 @@ npm run docs:build
 
 Java 新入口：[容器内命令](docs/products/java/docker-commands.md)、[命令示例与结果](docs/products/java/docker-command-ops.md)。新采集基线为 Ubuntu 26.04 / Temurin 25.0.3+9；旧 Docker 页面保留历史环境记录。
 
-完整文件清单、安装锁和采集历史归 [Hello Docker](https://github.com/xy2401/hello-docker/blob/codex/hello-docker/docs/support/software-capture.md) 管理。本站只保存导入并校验过的 `docs/public/docker-data/java/` 展示包，构建不读取相邻仓库。初始 `pending` 包只有计划命令及案例，不代表已经运行。
+完整文件清单、安装锁和采集历史归 [Hello Docker](https://github.com/xy2401/hello-docker/blob/main/docs/support/software-capture.md) 管理。本站只保存导入并校验过的 `docs/public/docker-data/java/` 展示包，构建不读取相邻仓库。初始 `pending` 包只有计划命令及案例，不代表已经运行。
 
 ## 📜 许可证 (License)
 
